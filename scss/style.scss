@@ -1,0 +1,14 @@
+//sass --watch scss/style.scss css/style.css
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'variables';
+@import 'reset';
+@import 'form';
+@import 'styles';
+@import 'header';
+@import 'footer';
+@import 'task_progress_bar';
+@import 'calendar';
+@import 'day_schedule';
+@import 'event';
+@import 'schedule-user';

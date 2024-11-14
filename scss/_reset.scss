@@ -1,0 +1,241 @@
+html {
+  min-height: 100vh;
+}
+body {
+  font-family: $font-stack-popins;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  background-color: $body-color;
+  color: $white;
+  min-height: 100vh;
+}
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-button {
+  background-image: url();
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: $primary-default;
+  height: 80px;
+}
+
+::-webkit-scrollbar-track {
+  background: $white;
+}
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: $primary-default;
+}
+/* background. */
+.bg-balck {
+  background-color: $black-color !important;
+}
+.bg-balck-2 {
+  background-color: $black-color-2 !important;
+}
+.bg-balck-3 {
+  background-color: $black-color-3 !important;
+}
+.bg-primary-default {
+  background-color: $primary-default !important;
+}
+.bg-primary-2 {
+  background-color: $primary-2 !important;
+}
+.bg-white {
+  background-color: $white !important;
+}
+.bg-white-2 {
+  background-color: $white-2 !important;
+}
+.bg-white-3 {
+  background-color: $white-3 !important;
+}
+.bg-lightgray {
+  background-color: $lightgray !important;
+}
+.bg-gray {
+  background-color: $gray !important;
+}
+.bg-gray-3 {
+  background-color: $gray-3 !important;
+}
+.bg-gray-4 {
+  background-color: $gray-4 !important;
+}
+.bg-gray-5 {
+  background-color: $gray-5 !important;
+}
+.bg-pink {
+  background-color: $pink !important;
+}
+.bg-violet {
+  background-color: $violet !important;
+}
+.bg-violet-2 {
+  background-color: $violet-2 !important;
+}
+.bg-violet-3 {
+  background-color: $violet-2 !important;
+}
+.bg-blue {
+  background-color: $blue !important;
+}
+.bg-blue-2 {
+  background-color: $blue-2 !important;
+}
+.bg-blue-3 {
+  background-color: $blue-3 !important;
+}
+.bg-blue-4 {
+  background-color: $blue-4 !important;
+}
+.bg-orange-light {
+  background-color: $orange-light !important;
+}
+.bg-orange-light-2 {
+  background-color: $orange-light-2 !important;
+}
+.bg-yellow-light {
+  background-color: $yellow-light !important;
+}
+
+/* color. */
+.color-balck {
+  color: $black-color !important;
+}
+.color-balck-2 {
+  color: $black-color-2 !important;
+}
+.color-balck-3 {
+  color: $black-color-3 !important;
+}
+.color-primary-default {
+  color: $primary-default !important;
+}
+.color-primary-2 {
+  color: $primary-2 !important;
+}
+.color-white {
+  color: $white !important;
+}
+.color-white-2 {
+  color: $white-2 !important;
+}
+.color-white-3 {
+  color: $white-3 !important;
+}
+.color-lightgray {
+  color: $lightgray !important;
+}
+.color-gray {
+  color: $gray !important;
+}
+.color-gray-3 {
+  color: $gray-3 !important;
+}
+.color-gray-4 {
+  color: $gray-4 !important;
+}
+.color-gray-5 {
+  color: $gray-5 !important;
+}
+.color-pink {
+  color: $pink !important;
+}
+.color-violet {
+  color: $violet !important;
+}
+.color-violet-2 {
+  color: $violet-2 !important;
+}
+.color-violet-3 {
+  color: $violet-3 !important;
+}
+.color-blue {
+  color: $blue !important;
+}
+.color-blue-2 {
+  color: $blue-2 !important;
+}
+.color-blue-3 {
+  color: $blue-3 !important;
+}
+.color-blue-4 {
+  color: $blue-4 !important;
+}
+.color-orange-light {
+  color: $orange-light !important;
+}
+.color-orange-light-2 {
+  color: $orange-light-2 !important;
+}
+.color-yellow-light {
+  color: $yellow-light !important;
+}
+.icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  color: $black-color;
+  font-size: 16px;
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+  }
+}
+.alert {
+  color: $black-color;
+  text-align: right;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: $font-stack-popins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+  padding: 4px 0px;
+  border-radius: 10px;
+  background: $primary-default;
+  border: none;
+  width: 100%;
+  @include border-radius(10px);
+  @include transition(0.3s);
+  img {
+    margin-right: 10px;
+    vertical-align: top;
+  }
+}
+.progress,
+.progress-stacked {
+  @include border-radius(40px);
+  height: 10px;
+  background-color: $white;
+}
+.progress-bar {
+  @include border-radius(40px);
+}

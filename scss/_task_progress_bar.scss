@@ -1,0 +1,82 @@
+.wrap-task-progress-bar {
+  padding: 16px;
+  @include border-radius(20px);
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  background: $primary-default;
+  .progress-badge {
+    display: inline-flex;
+    padding: 8px 12px;
+    align-items: center;
+    border-radius: 22px;
+    background: $white-3;
+    backdrop-filter: blur(2.5px);
+    color: $black-color-3;
+    font-family: $font-stack-popins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.028px;
+    margin-bottom: 12px;
+    .icon {
+      color: $black-color;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  h2 {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* H2 - 28 M */
+    font-family: $font-stack-popins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    padding-top: 24px;
+    span {
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+    }
+    margin: 0;
+  }
+  .description {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: $font-stack-popins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 144.444% */
+    margin-top: 10px;
+  }
+  .wrap-progress {
+    margin-top: 12px;
+    .text {
+      color: $black-color;
+      text-align: right;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* H3 - 24 M */
+      font-family: $font-stack-popins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px; /* 133.333% */
+      margin-bottom: 8px;
+    }
+  }
+  .progress-badge + h2 {
+    padding-top: 0;
+  }
+  &.detail {
+    .progress-badge {
+      margin-bottom: 60px;
+    }
+  }
+}

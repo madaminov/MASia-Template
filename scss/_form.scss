@@ -1,0 +1,151 @@
+button,
+.btn {
+  @include transition(0.3s);
+}
+.btn-home {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  background: $primary-default;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $black-color;
+    width: 24px;
+    height: 24px;
+  }
+  &:hover {
+    background: $white;
+  }
+  &:active,
+  &:focus {
+    background: $white;
+  }
+}
+.btn-calendar {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $gray;
+    width: 24px;
+    height: 24px;
+  }
+  &:hover {
+    background: transparent;
+    svg {
+      fill: $white-2;
+    }
+  }
+  &:active,
+  &:focus {
+    background: transparent;
+  }
+}
+.btn-add {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  @include border-radius(40px);
+  border: none;
+  background: $primary-default;
+  box-shadow: 0px 4px 4px 0px #dddcff inset;
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $black-color;
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    background: $white-2;
+  }
+  &:active,
+  &:focus {
+    background: $white-2;
+  }
+}
+.btn-list {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $gray;
+    width: 24px;
+    height: 24px;
+  }
+  &:hover {
+    background: transparent;
+    svg {
+      fill: $white-2;
+    }
+  }
+  &:active,
+  &:focus {
+    background: transparent;
+  }
+}
+.btn-action {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $black-color;
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    color: $gray-2;
+    background: transparent;
+    svg {
+      fill: $gray-2;
+    }
+  }
+  &:active,
+  &:focus {
+    background: transparent;
+  }
+}

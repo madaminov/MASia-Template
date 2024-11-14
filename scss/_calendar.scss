@@ -1,0 +1,210 @@
+.wrap-calendar {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 16px;
+  position: relative;
+  .carousel-inner {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 22px;
+    height: 40px;
+    position: absolute;
+    top: 16px;
+    opacity: 1;
+  }
+  .carousel-control-prev {
+    right: 46px;
+    left: auto;
+    .carousel-control-prev-icon {
+      width: 22px;
+      height: 40px;
+      background-image: url(../images/prev-btn.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .carousel-control-next {
+    right: 16px;
+    .carousel-control-next-icon {
+      width: 22px;
+      height: 40px;
+      background-image: url(../images/next-btn.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .switch_view_calendar {
+    width: 80px;
+    height: 4px;
+    border-radius: 0px 0px 4px 4px;
+    background: $violet-2;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+.calendar-container {
+  color: $black-color;
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 16px;
+  @include border-radius(20px);
+  background: $white;
+  @include transition(0.3s);
+  position: relative;
+  .calendar {
+    position: relative;
+    @include transition(0.3s);
+  }
+  .front {
+    .head {
+      gap: 16px 16px;
+      margin-bottom: 10px;
+      .icon {
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+        @include border-radius(8px);
+        background-color: $primary-default;
+        background-image: url(../images/icon-calendar.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+      }
+      .month-year {
+        .month {
+          color: $black-color;
+          font-family: $font-stack-popins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px; /* 150% */
+          letter-spacing: 0.032px;
+        }
+        .year {
+          color: $gray-2;
+          font-family: $font-stack-popins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px; /* 142.857% */
+          letter-spacing: 0.028px;
+        }
+      }
+    }
+  }
+  .current-month {
+    .week-days {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 36px;
+      gap: 5px 5px;
+      li {
+        color: $black-color;
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: $font-stack-popins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.032px;
+        width: 30px;
+      }
+    }
+  }
+  .weeks {
+    .first,
+    .second,
+    .third,
+    .fourth,
+    .fifth {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 36px;
+      gap: 5px 5px;
+      padding: 3px 6px;
+      @include transition(0.3s);
+      span {
+        color: $black-color-2;
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: $font-stack-popins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.032px;
+        display: flex;
+        width: 24px;
+        height: 24px;
+        padding: 1px;
+        justify-content: center;
+        align-items: center;
+        @include border-radius(8px);
+        border: 1px solid transparent;
+      }
+      .last-month {
+        color: $gray-3;
+      }
+      .active {
+        background-color: $black-color;
+        border-color: $black-color;
+        color: $white;
+      }
+      .weekend {
+        background-color: $white;
+        border-color: $pink;
+        color: $pink;
+      }
+      .action-1 {
+        background-color: $white;
+        border-color: $violet;
+        color: $violet;
+      }
+      .action-2 {
+        background-color: $white;
+        border-color: $blue;
+        color: $blue;
+      }
+    }
+    .second,
+    .third,
+    .fourth,
+    .fifth {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(0.3s);
+    }
+  }
+}
+.wrap-calendar {
+  &.open {
+    .calendar-container .weeks {
+      .second,
+      .third,
+      .fourth,
+      .fifth {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        @include transition(0.3s);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+$font-stack-inter: 'Inter', sans-serif;
+$font-stack-popins: 'Poppins', sans-serif;
+$font-stack-quicksand: 'Quicksand', sans-serif;
+
+$font-size: 15px;
+$line-height: 120%;
+$font-weight: 400;
+
+$body-color: #1e1e1e;
+$black-color: #000000;
+$black-color-2: #212529;
+$black-color-3: #292d32;
+
+$primary-default: #d3bff9 !default;
+$white: #ffffff !default;
+$white-2: #f6f6f6 !default;
+$white-3: #fbfafd !default;
+$lightgray: lightgray !default;
+$gray: #939393 !default;
+$gray-2: #646363 !default;
+$gray-3: #adb5bd !default;
+$gray-4: #bfbfbf !default;
+$gray-5: #ede3ff !default;
+$pink: #e567b9 !default;
+$violet: #59447e !default;
+$violet-2: #ae8cee !default;
+$violet-3: #8170d7 !default;
+$blue: #4f93f6 !default;
+$blue-2: #dcd8ff !default;
+$blue-3: #b3d2fe !default;
+$blue-4: #d7e7ff !default;
+$orange-light: #f9c486 !default;
+$orange-light-2: #fef5da !default;
+$yellow-light: #f4feb3 !default;
+
+$primary-2: #f9e5ab !default;
+
+@mixin transition($transition) {
+  -moz-transition: all $transition ease;
+  -o-transition: all $transition ease;
+  -webkit-transition: all $transition ease;
+  -ms-transition: all $transition ease;
+  transition: all $transition ease;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
