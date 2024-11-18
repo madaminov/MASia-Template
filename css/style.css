@@ -13593,6 +13593,7 @@ footer {
   position: fixed;
   bottom: 80px;
   width: calc(100% - 8px);
+  max-width: cacl(760px);
   margin: 0 auto;
   left: 0;
   right: 0;
