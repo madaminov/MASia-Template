@@ -1,0 +1,58 @@
+.tip_card_container {
+  position: fixed;
+  bottom: 80px;
+  width: calc(100% - 8px);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  .container {
+    font-family: $font-stack-popins;
+    padding: 20px 16px;
+    width: 100%;
+    min-height: 148px;
+    @include border-radius(20px);
+    background: $violet-5;
+    position: relative;
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10.5px solid transparent;
+      border-right: 10.5px solid transparent;
+      border-top: 11px solid $violet-5;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  .tip_card_badge {
+    color: $black-color-3;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Caption1 - 12 M */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.048px;
+    display: inline-flex;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 8px;
+    @include border-radius(22px);
+    background: $white-3;
+    backdrop-filter: blur(2.5px);
+    & + * {
+      margin-top: 24px;
+    }
+  }
+  h3 {
+    color: $black-color;
+    margin-bottom: 8px;
+  }
+  p {
+    color: $black-color;
+  }
+}

@@ -12,29 +12,36 @@ button,
   gap: 8px;
   flex-shrink: 0;
   border: none;
-  background: $primary-default;
+  background: transparent;
   @include border-radius(8px);
   @include transition(0.3s);
   svg {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    fill: $black-color;
+    fill: $gray;
     width: 24px;
     height: 24px;
   }
   &:hover {
     background: $white;
+    svg {
+      fill: $black;
+    }
   }
+  &.active,
   &:active,
   &:focus {
     background: $white;
+    svg {
+      fill: $black;
+    }
   }
 }
 .btn-calendar {
   display: flex;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   padding: 16px;
   justify-content: center;
   align-items: center;
@@ -53,14 +60,18 @@ button,
     height: 24px;
   }
   &:hover {
-    background: transparent;
+    background: $white;
     svg {
-      fill: $white-2;
+      fill: $black;
     }
   }
+  &.active,
   &:active,
   &:focus {
-    background: transparent;
+    background: $white;
+    svg {
+      fill: $black;
+    }
   }
 }
 .btn-add {
@@ -94,8 +105,8 @@ button,
 }
 .btn-list {
   display: flex;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   padding: 16px;
   justify-content: center;
   align-items: center;
@@ -114,14 +125,18 @@ button,
     height: 24px;
   }
   &:hover {
-    background: transparent;
+    background: $white;
     svg {
-      fill: $white-2;
+      fill: $black;
     }
   }
+  &.active,
   &:active,
   &:focus {
-    background: transparent;
+    background: $white;
+    svg {
+      fill: $black;
+    }
   }
 }
 .btn-action {
@@ -147,5 +162,41 @@ button,
   &:active,
   &:focus {
     background: transparent;
+  }
+}
+.btn-user {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $gray;
+    width: 24px;
+    height: 25px;
+  }
+  &:hover {
+    background: $white;
+    svg {
+      fill: $black;
+    }
+  }
+  &.active,
+  &:active,
+  &:focus {
+    background: $white;
+    svg {
+      fill: $black;
+    }
   }
 }
