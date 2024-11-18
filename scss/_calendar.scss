@@ -17,27 +17,31 @@
     margin: 0 auto;
     cursor: pointer;
   }
-  .datepicker-grid {
-    .datepicker-cell {
-      display: none;
-    }
-    .datepicker-cell:nth-child(1),
-    .datepicker-cell:nth-child(2),
-    .datepicker-cell:nth-child(3),
-    .datepicker-cell:nth-child(4),
-    .datepicker-cell:nth-child(5),
-    .datepicker-cell:nth-child(6),
-    .datepicker-cell:nth-child(7) {
-      display: flex;
+  .datepicker-view {
+    .datepicker-grid {
+      .datepicker-cell {
+        display: none;
+      }
+      .datepicker-cell:nth-child(1),
+      .datepicker-cell:nth-child(2),
+      .datepicker-cell:nth-child(3),
+      .datepicker-cell:nth-child(4),
+      .datepicker-cell:nth-child(5),
+      .datepicker-cell:nth-child(6),
+      .datepicker-cell:nth-child(7) {
+        display: flex;
+      }
     }
   }
 }
 
 .wrap-calendar {
   &.open {
-    .datepicker-grid {
-      .datepicker-cell {
-        display: flex;
+    .datepicker-view {
+      .datepicker-grid {
+        .datepicker-cell {
+          display: flex;
+        }
       }
     }
   }
@@ -223,6 +227,10 @@
   gap: 5px;
   justify-items: center;
   align-items: center;
+}
+.datepicker-grid.months,
+.datepicker-grid.years {
+  grid-template-columns: repeat(6, 1fr);
 }
 .datepicker-grid span {
   display: flex;
