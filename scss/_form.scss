@@ -2,6 +2,36 @@ button,
 .btn {
   @include transition(0.3s);
 }
+.btn-icon {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  @include border-radius(8px);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $primary-default;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    background: $white;
+    svg {
+      fill: $white;
+    }
+  }
+  &.active,
+  &:active,
+  &:focus {
+    background: $white;
+    svg {
+      fill: $white;
+    }
+  }
+}
 .btn-home {
   display: flex;
   width: 40px;
@@ -198,5 +228,24 @@ button,
     svg {
       fill: $black;
     }
+  }
+}
+.btn-list-area {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  @include border-radius(8px);
+  background-image: url(../images/list-icon-area.svg);
+  background-color: $primary-default;
+  &:hover {
+    background-color: $primary-default;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    background: $body-color;
+    background-image: url(../images/list-icon-area-active.svg);
   }
 }

@@ -429,3 +429,6 @@
 .icon-orange-light-2 .datepicker-icon {
   background-color: $orange-light-2 !important;
 }
+.wrap-calendar.open .datepicker-view .datepicker-grid .datepicker-cell {
+  position: relative;
+}

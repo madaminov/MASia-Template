@@ -12,7 +12,7 @@ const elem = document.getElementById('calendar');
 const datepicker = new Datepicker(elem, {
   todayHighlight: true,
   weekStart: 1,
-  language: 'en-GB',
+  maxNumberOfDates: 2,
   beforeShowDay(date) {
     if (date.getMonth() == new Date().getMonth()) {
       switch (date.getDate()) {
@@ -34,3 +34,4 @@ const datepicker = new Datepicker(elem, {
     }
   },
 });
+//datepicker.getFocusedDate('19/11/2024');

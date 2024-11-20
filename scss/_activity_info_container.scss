@@ -1,0 +1,17 @@
+.activity_info_container {
+  position: relative;
+  padding: 12px 16px;
+  gap: 5px;
+  .text {
+    color: $white-2;
+    text-align: left;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body - 16 R */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.032px;
+  }
+}

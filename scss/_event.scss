@@ -137,3 +137,104 @@
     margin-left: 2px;
   }
 }
+.event-time-line {
+  padding-left: 16px;
+  padding-right: 16px;
+  @include transition(0.4s);
+  .item {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .time {
+      color: $gray-4;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Caption1 - 12 R */
+      font-family: $font-stack-popins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      letter-spacing: 0.048px;
+      width: 50px;
+      position: relative;
+      &::before {
+        content: attr(data-start);
+        display: block;
+      }
+      &::after {
+        content: attr(data-end);
+        display: block;
+        margin-top: 24px;
+      }
+      &.none-end::after {
+        display: none;
+      }
+    }
+    .events {
+      padding-top: 10px;
+      width: calc(100% - 50px - 8px);
+      @include transition(0.3s);
+    }
+    .event {
+      padding: 8px 0px;
+      border-radius: 4px;
+      background: $white;
+      border-left: 2px solid $blue-5;
+      .content-event {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 0px 8px;
+        .text {
+          color: $black-color;
+          font-feature-settings: 'liga' off, 'clig' off;
+          /* Caption1 - 12 M */
+          font-family: $font-stack-popins;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px; /* 150% */
+          letter-spacing: 0.048px;
+        }
+        .time-period {
+          color: $black-color;
+          font-feature-settings: 'liga' off, 'clig' off;
+          /* Caption2 - 10 M */
+          font-family: $font-stack-popins;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 14px; /* 140% */
+          letter-spacing: 0.04px;
+        }
+      }
+    }
+    .line {
+      display: block;
+      width: 100%;
+      height: 0px;
+      border: 1px solid $black-color-4;
+      background-color: $black-color-4;
+      position: relative;
+    }
+    .line-dot {
+      background-color: $pink-2;
+      border-color: $pink-2;
+      &::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: inherit;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -1px;
+        top: -4px;
+      }
+    }
+  }
+}
