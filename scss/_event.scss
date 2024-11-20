@@ -52,7 +52,7 @@
   .event-day {
     padding: 8px;
     gap: 10px;
-    @include border-radius(10px);
+    @include border-radius(12px);
     background: $gray-5;
     .text {
       color: $black-color;

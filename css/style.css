@@ -12256,6 +12256,10 @@ body {
   border-color: #f4feb3 !important;
 }
 
+.border-color-balck-opacity {
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
 .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -12610,6 +12614,56 @@ button,
   background-image: url(../images/list-icon-area-active.svg);
 }
 
+.context-menu button {
+  color: #000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  display: flex;
+  height: 52px;
+  padding: 12px 4px 12px 12px;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  background-color: #fff;
+  border: 0;
+  width: 100%;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.context-menu button svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #000;
+  width: 16px;
+  height: 16px;
+}
+.context-menu button:hover {
+  color: #337ded;
+}
+.context-menu button:hover svg {
+  fill: #337ded;
+}
+.context-menu button.active, .context-menu button:active, .context-menu button:focus {
+  color: #d3bff9;
+}
+.context-menu button.active svg, .context-menu button:active svg, .context-menu button:focus svg {
+  fill: #d3bff9;
+}
+
 #root {
   max-width: 768px;
   min-height: 100vh;
@@ -12736,6 +12790,42 @@ h5, .h5 {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.context-menu {
+  display: flex;
+  width: 214px;
+  flex-direction: column;
+  align-items: flex-start;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+}
+
+.modal-dialog-end {
+  display: flex;
+  align-items: end;
+  min-height: calc(100% - 16px);
+}
+
+.modal-dialog {
+  margin-left: 22px;
+  margin-right: 14px;
+}
+
+.modal {
+  background: rgba(30, 30, 30, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.evandModal .modal-body {
+  padding: 0;
+}
+.evandModal .modal-content {
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
 
 header {
@@ -13437,10 +13527,10 @@ footer {
 .event .event-day {
   padding: 8px;
   gap: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
   background: #ede3ff;
 }
 .event .event-day .text {
