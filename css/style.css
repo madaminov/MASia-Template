@@ -13594,7 +13594,7 @@ footer {
   display: none;
 }
 .event-time-line .item .events {
-  padding-top: 10px;
+  padding-top: 8px;
   width: calc(100% - 50px - 8px);
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
