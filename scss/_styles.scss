@@ -6,9 +6,11 @@
   position: relative;
   padding-bottom: 70px;
 }
-h1 {
+h1,
+.h1 {
   color: $black-color-3;
   font-feature-settings: 'liga' off, 'clig' off;
+  text-overflow: ellipsis;
   /* H1 - 32 R */
   font-family: $font-stack-popins;
   font-size: 32px;
@@ -16,9 +18,11 @@ h1 {
   font-weight: 400;
   line-height: 40px; /* 125% */
 }
-h2 {
+h2,
+.h2 {
   color: $black-color-3;
   font-feature-settings: 'liga' off, 'clig' off;
+  text-overflow: ellipsis;
   /* H1 - 32 R */
   font-family: $font-stack-popins;
   font-size: 28px;
@@ -26,9 +30,11 @@ h2 {
   font-weight: 400;
   line-height: 36px;
 }
-h3 {
+h3,
+.h3 {
   color: $black-color-3;
   font-feature-settings: 'liga' off, 'clig' off;
+  text-overflow: ellipsis;
   /* H1 - 32 R */
   font-family: $font-stack-popins;
   font-size: 24px;
@@ -36,7 +42,8 @@ h3 {
   font-weight: 400;
   line-height: 32px; /* 133.333% */
 }
-h4 {
+h4,
+.h4 {
   color: $black-color-3;
   font-feature-settings: 'liga' off, 'clig' off;
   /* H1 - 32 R */
@@ -46,9 +53,11 @@ h4 {
   font-weight: 400;
   line-height: 30px; /* 133.333% */
 }
-h5 {
+h5,
+.h5 {
   color: $black-color-3;
   font-feature-settings: 'liga' off, 'clig' off;
+  text-overflow: ellipsis;
   /* H1 - 32 R */
   font-family: $font-stack-popins;
   font-size: 18px;
@@ -56,9 +65,11 @@ h5 {
   font-weight: 400;
   line-height: 26px; /* 133.333% */
 }
-h5 {
+h6,
+.h6 {
   color: $black-color-3;
   font-feature-settings: 'liga' off, 'clig' off;
+  text-overflow: ellipsis;
   /* H1 - 32 R */
   font-family: $font-stack-popins;
   font-size: 16px;
@@ -109,10 +120,17 @@ h5 {
 }
 .context-menu {
   display: flex;
-  width: 214px;
+  width: 194px;
   flex-direction: column;
   align-items: flex-start;
   @include border-radius(12px);
+  margin-left: 82px;
+  &.vertical {
+    width: 214px;
+  }
+  &.grid {
+    width: 194px;
+  }
 }
 .modal-dialog-end {
   display: flex;
@@ -120,12 +138,27 @@ h5 {
   min-height: calc(100% - 16px);
 }
 .modal-dialog {
-  margin-left: 22px;
-  margin-right: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 22px;
+  padding-right: 14px;
+  max-width: 768px !important;
+}
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+  transform: scale(0.8);
+}
+.modal.show .modal-dialog {
+  transform: scale(1);
 }
 .modal {
   background: rgba(30, 30, 30, 0.2);
   backdrop-filter: blur(10px);
+  transform: scale(0.8);
+  &.show {
+    transform: scale(1);
+  }
 }
 .evandModal {
   .modal-body {

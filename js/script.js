@@ -35,3 +35,11 @@ const datepicker = new Datepicker(elem, {
   },
 });
 //datepicker.getFocusedDate('19/11/2024');
+btn_close_windowAttach = document.querySelector(
+  '.window-attach .btn-close-windowAttach'
+);
+if (btn_close_windowAttach) {
+  btn_close_windowAttach.addEventListener('click', (e) => {
+    document.querySelector('.window-attach').classList.remove('show');
+  });
+}

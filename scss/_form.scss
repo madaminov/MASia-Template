@@ -249,6 +249,48 @@ button,
     background-image: url(../images/list-icon-area-active.svg);
   }
 }
+.btn-options {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $white;
+  height: 32px;
+  width: 32px;
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: currentColor;
+    width: 32px;
+    height: 4px;
+  }
+  &:hover {
+    color: $white;
+    background: transparent;
+    svg {
+      fill: $white;
+    }
+  }
+  &:active,
+  &:focus {
+    background: transparent;
+  }
+}
+.btn-close {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/icon-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  padding: 0;
+  background-size: cover;
+}
+.btn-close-gray {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon-close-gray.svg);
+}
 .context-menu {
   button {
     color: $black;

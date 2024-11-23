@@ -184,16 +184,96 @@
 				</svg>
 			</button>
 		</footer>
+		<!--window-attach simple-->
+		<div class="window-attach" id="windowAttach">
+			<div class="window-attach-header">
+				<div class="title">Event details</div>
+				<button type="button" class="btn-close btn-close-windowAttach"></button>
+			</div>
+			<div class="window-attach-body">
+				<div class="title-section w-100">
+					<div class="title">Family breakfast</div>
+					<button class="btn-options">
+						<svg>
+							<use href="images/button-options.svg#button-options" />
+						</svg>
+					</button>
+				</div>
+				<div class="info-group">
+					<div class="section">
+						<div class="row g-0">
+							<div class="col col-auto">Date:</div>
+							<div class="col col-auto">01 October, Saturday</div>
+						</div>
+						<div class="row g-0">
+							<div class="col col-auto">Time:</div>
+							<div class="col col-auto">09:00 - 10:30 (GMT+3)</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="row g-0">
+							<div class="col col-auto">Repeat:</div>
+							<div class="col col-auto">Every week</div>
+						</div>
+						<div class="row g-0">
+							<div class="col col-auto">Reminder:</div>
+							<div class="col col-auto">No</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="row g-0">
+							<div class="col col-auto">Notes:</div>
+							<div class="col col-auto">Order Sarah a salad.</div>
+						</div>
+					</div>
+					<div class="section section-members-list">
+						<h5 class="title font-bold color-white-2">Attached Family members</h5>
+						<div class="members-list">
+							<div class="item">
+								<div class="person">
+									<img src="images/user_avatar.png" alt="" class="img-fluid">
+								</div>
+								<div class="name">Robby</div>
+								<button class="btn-close btn-close-gray"></button>
+							</div>
+							<div class="item">
+								<div class="person">
+									<img src="images/user_img_1.jpg" alt="" class="img-fluid">
+								</div>
+								<div class="name">Sara</div>
+								<button class="btn-close btn-close-gray"></button>
+							</div>
+							<div class="item">
+								<div class="person">
+									<img src="images/user_img_5.jpg" alt="" class="img-fluid">
+								</div>
+								<div class="name">Tom</div>
+								<button class="btn-close btn-close-gray"></button>
+							</div>
+							<div class="item">
+								<div class="person">
+									<img src="images/user_img_6.jpg" alt="" class="img-fluid">
+								</div>
+								<div class="name">Mira (Granny)</div>
+								<button class="btn-close btn-close-gray"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--window-attach end-->
+
 		<!--modal-->
 		<div class="modal evandModal fade" id="evandModal" tabindex="-1" aria-labelledby="evandModalLabel"
 			aria-hidden="true">
 			<div class="modal-dialog modal-dialog-end">
-				<div class="modal-content">
+				<div class="modal-content mb-5">
 					<div class="modal-body">
 						<div class="event w-100 d-flex align-self-stretch">
 							<div class="wrap-time d-flex flex-column">
-								<div class="time color-gray-4">20:30</div>
-								<div class="hour">1,5 hour</div>
+								<div class="time">18:00</div>
+								<div class="time color-gray">19:00</div>
 							</div>
 							<div class="event-day bg-white w-100 d-flex justify-content-between">
 								<div class="inner w-100 d-flex flex-wrap">
@@ -202,7 +282,7 @@
 											<use href="images/list.svg#list" />
 										</svg>
 									</div>
-									<div class="text">Sarah`s school parent-teacher conference</div>
+									<div class="text">Family breakfast</div>
 									<div class="users">
 										<div class="user"><img src="images/user_img_1.jpg" alt="" class="img-fluid">
 										</div>
@@ -216,38 +296,14 @@
 							</div>
 						</div>
 						<!--event end-->
-						<div class="context-menu vertical mt-1 bg-white">
+						<div class="context-menu mt-1 ms-auto bg-white">
 							<div class="row g-0 w-100">
-								<div class="col-6 border-end border-bottom border-1 border-color-balck-opacity">
-									<button class="btn-edit">
+								<div class="col-12 border-end border-bottom border-color-balck-opacity">
+									<button class="btn-paste">
 										<svg>
-											<use href="images/icon-pencil.svg#pencil" />
+											<use href="images/icon-paste.svg#paste" />
 										</svg>
-										Edit
-									</button>
-								</div>
-								<div class="col-6 border-bottom border-1 border-color-balck-opacity">
-									<button class="btn-copy">
-										<svg>
-											<use href="images/icon-copy.svg#copy" />
-										</svg>
-										Copy
-									</button>
-								</div>
-								<div class="col-12 border-bottom border-1 border-color-balck-opacity">
-									<button class="btn-cut">
-										<svg>
-											<use href="images/icon-cut.svg#cut" />
-										</svg>
-										Cut
-									</button>
-								</div>
-								<div class="col-12">
-									<button class="btn-delete">
-										<svg>
-											<use href="images/icon-delete.svg#delete" />
-										</svg>
-										Delete
+										Paste
 									</button>
 								</div>
 							</div>
@@ -264,10 +320,8 @@
 	<script src="js/datepicker.js"></script>
 	<script src="js/script.js"></script>
 	<script>
-		var evandModal = new bootstrap.Modal(document.getElementById("evandModal"), {});
-		document.onreadystatechange = function () {
-			evandModal.show();
-		};
+		windowAttach = document.getElementById("windowAttach");
+		windowAttach.classList.add('show');
 	</script>
 </body>
 
