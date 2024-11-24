@@ -170,3 +170,15 @@ h6,
     background: transparent;
   }
 }
+.capbody {
+  display: block;
+  background: rgba(30, 30, 30, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}

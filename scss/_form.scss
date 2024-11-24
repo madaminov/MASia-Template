@@ -133,6 +133,67 @@ button,
     background: $white-2;
   }
 }
+.btn-add-plus {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  padding: 12px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: 1px solid $gray-6;
+  @include border-radius(50%);
+  background: transparent;
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $gray-6;
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    background: transparent;
+    border: 1px solid $white;
+  }
+  &:active,
+  &:focus {
+    background: transparent;
+    border: 1px solid $white;
+  }
+}
+.btn-add-plus-full {
+  display: flex;
+  max-width: 329px;
+  width: 100%;
+  height: 46px;
+  padding: 12px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: 1px solid $gray-6;
+  @include border-radius(40px);
+  background: transparent;
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $gray-6;
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    background: transparent;
+    border: 1px solid $white;
+  }
+  &:active,
+  &:focus {
+    background: transparent;
+    border: 1px solid $white;
+  }
+}
 .btn-list {
   display: flex;
   width: 40px;
@@ -290,6 +351,7 @@ button,
   width: 16px;
   height: 16px;
   background-image: url(../images/icon-close-gray.svg);
+  background-size: 8px;
 }
 .context-menu {
   button {

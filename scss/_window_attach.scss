@@ -4,8 +4,25 @@
   position: fixed;
   top: 0;
   left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
   background-color: $body-color;
   height: calc(100vh - 70px);
+  display: none;
+  z-index: -200;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+  @include transition(0.3s);
+  &.show {
+    display: block;
+    z-index: 3;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    @include transition(0.3s);
+  }
   .window-attach-header {
     display: flex;
     width: 100%;
@@ -15,6 +32,8 @@
     align-items: center;
     flex-shrink: 0;
     background: linear-gradient(180deg, $gray-5 57.32%, #8e8899 181.25%);
+    position: relative;
+    z-index: 1;
     .title {
       color: $black;
       text-align: right;
@@ -26,6 +45,12 @@
       font-weight: 500;
       line-height: 26px; /* 144.444% */
     }
+  }
+  .window-attach-body {
+    overflow-y: auto;
+    max-height: calc(100vh - 140px);
+    position: relative;
+    z-index: 1;
   }
   .title-section {
     display: inline-flex;
@@ -74,11 +99,52 @@
       margin-bottom: 16px;
     }
   }
+  .window-attach-context-menu {
+    display: block;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.2);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -100;
+    @include transition(0.3s);
+    .context-menu {
+      display: none;
+      position: relative;
+      z-index: -100;
+      margin-left: auto;
+      margin-right: 16px;
+      margin-top: 60px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    &.show {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      @include transition(0.3s);
+      .context-menu {
+        transition: all 0.3s ease;
+        display: block;
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 .members-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: 16px 8px;
   width: 100%;
   .item {
     display: flex;
@@ -89,6 +155,9 @@
     border: 1px solid $gray-6;
     @include border-radius(40px);
     @include transition(0.3s);
+    &:hover {
+      border: 1px solid $white;
+    }
     .person {
       width: 38px;
       height: 38px;
