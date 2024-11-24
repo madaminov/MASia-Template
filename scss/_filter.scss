@@ -1,0 +1,33 @@
+.wrap-filter {
+  position: relative;
+  width: 100%;
+  .container-text-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .text {
+    width: calc(60% - 12px);
+    color: $white-2;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body - 16 R */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.032px;
+  }
+  .form-filter {
+    width: calc(40% - 12px);
+  }
+}
+.form-filter {
+  .row {
+    gap: 8px;
+  }
+}

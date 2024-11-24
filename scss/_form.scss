@@ -353,6 +353,74 @@ button,
   background-image: url(../images/icon-close-gray.svg);
   background-size: 8px;
 }
+.btn-sort {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $white;
+  height: 40px;
+  width: 40px;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $white;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    color: $white;
+    background: $primary-default;
+    svg {
+      fill: $black;
+      @include transition(0.3s);
+    }
+  }
+  &:active,
+  &:focus,
+  &.active {
+    background: $primary-default;
+    svg {
+      fill: $black;
+    }
+  }
+}
+.btn-task-filter {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $white;
+  height: 40px;
+  width: 40px;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $white;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    color: $white;
+    background: $primary-default;
+    svg {
+      fill: $black;
+      @include transition(0.3s);
+    }
+  }
+  &:active,
+  &:focus,
+  &.active {
+    background: $primary-default;
+    svg {
+      fill: $black;
+    }
+  }
+}
 .context-menu {
   button {
     color: $black;
