@@ -116,7 +116,8 @@ body {
 .bg-blue-2 {
   background-color: $blue-2 !important;
 }
-.bg-blue-3 {
+.bg-blue-3,
+.bg-medium {
   background-color: $blue-3 !important;
 }
 .bg-blue-4 {
@@ -125,7 +126,8 @@ body {
 .bg-blue-5 {
   background-color: $blue-5 !important;
 }
-.bg-orange-light {
+.bg-orange-light,
+.bg-hight {
   background-color: $orange-light !important;
 }
 .bg-orange-light-2 {
@@ -134,8 +136,18 @@ body {
 .bg-orange-light-3 {
   background-color: $orange-light-3 !important;
 }
-.bg-yellow-light {
+.bg-orange-light-4,
+.bg-in-progress,
+.bg-progress {
+  background-color: $orange-light-3 !important;
+}
+.bg-yellow-light,
+.bg-low {
   background-color: $yellow-light !important;
+}
+.bg-green-light,
+.bg-completed {
+  background-color: $green-light !important;
 }
 
 /* color. */

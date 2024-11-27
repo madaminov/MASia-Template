@@ -21,5 +21,25 @@
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
+    margin-bottom: 16px;
+  }
+  .schedule + .title {
+    padding-top: 16px;
+  }
+  .schedule + .unscheduled {
+    padding-top: 16px;
+  }
+  .unscheduled {
+    .title {
+      color: $white-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 M */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+    }
   }
 }

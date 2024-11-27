@@ -11991,7 +11991,8 @@ body {
   background-color: #dcd8ff !important;
 }
 
-.bg-blue-3 {
+.bg-blue-3,
+.bg-medium {
   background-color: #b3d2fe !important;
 }
 
@@ -12003,7 +12004,8 @@ body {
   background-color: #337ded !important;
 }
 
-.bg-orange-light {
+.bg-orange-light,
+.bg-hight {
   background-color: #f9c486 !important;
 }
 
@@ -12015,8 +12017,20 @@ body {
   background-color: #f1d377 !important;
 }
 
-.bg-yellow-light {
+.bg-orange-light-4,
+.bg-in-progress,
+.bg-progress {
+  background-color: #f1d377 !important;
+}
+
+.bg-yellow-light,
+.bg-low {
   background-color: #f4feb3 !important;
+}
+
+.bg-green-light,
+.bg-completed {
+  background-color: #d3f9d4 !important;
 }
 
 /* color. */
@@ -12739,12 +12753,15 @@ button,
 }
 
 .btn-sort {
-  padding: 0;
+  padding: 0px;
   border: none;
   background-color: transparent;
   color: #fff;
   height: 40px;
   width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -12760,8 +12777,8 @@ button,
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   fill: #fff;
-  width: 40px;
-  height: 40px;
+  width: 16px;
+  height: 16px;
 }
 .btn-sort:hover {
   color: #fff;
@@ -12780,6 +12797,10 @@ button,
 }
 .btn-sort:active svg, .btn-sort:focus svg, .btn-sort.active svg {
   fill: #000;
+}
+.btn-sort[data-default=desc] svg {
+  width: 16px;
+  height: 16px;
 }
 
 .btn-task-filter {
@@ -13719,6 +13740,24 @@ footer {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+  margin-bottom: 16px;
+}
+.wrap-day-schedule .schedule + .title {
+  padding-top: 16px;
+}
+.wrap-day-schedule .schedule + .unscheduled {
+  padding-top: 16px;
+}
+.wrap-day-schedule .unscheduled .title {
+  color: #f6f6f6;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
 }
 
 .event-list {
@@ -14465,6 +14504,50 @@ footer {
 
 .form-filter .row {
   gap: 8px;
+}
+
+.selected-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px 16px 16px;
+}
+.selected-filter .link {
+  color: #000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Caption2 - 10 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 140% */
+  letter-spacing: 0.04px;
+  text-decoration: none !important;
+  display: flex;
+  height: 20px;
+  padding: 4px 8px;
+  align-items: center;
+  gap: 4px;
+  background: #dcd8ff;
+  position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.selected-filter .link:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-image: url(../images/icon-close-small.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
