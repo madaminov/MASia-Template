@@ -13733,10 +13733,10 @@ footer {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 21.6px */
+  line-height: 26px; /* 144.444% */
   margin-bottom: 0;
   padding: 0px 16px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .wrap-day-schedule .schedule {
   display: flex;
@@ -13763,6 +13763,10 @@ footer {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.032px;
+}
+
+.wrap-day-schedule + .wrap-day-schedule .title {
+  padding-top: 14px;
 }
 
 .event-list {
@@ -14304,6 +14308,10 @@ footer {
   letter-spacing: 0.032px;
 }
 
+.activity_info_container + .wrap-day-schedule {
+  padding-top: 16px;
+}
+
 .window-attach {
   width: 100%;
   max-width: 768px;
@@ -14402,6 +14410,7 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 144.444% */
+  margin-bottom: 12px;
 }
 .window-attach .section .row .col:first-child {
   font-weight: 600;
@@ -14518,6 +14527,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .wrap-filter .text {
   width: calc(60% - 12px);
@@ -14581,6 +14595,10 @@ footer {
   background-image: url(../images/icon-close-small.svg);
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.wrap-calendar.open + .wrap-filter .container-text-form {
+  padding: 24px 16px 12px 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

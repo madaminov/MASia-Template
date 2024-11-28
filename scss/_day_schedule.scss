@@ -8,10 +8,10 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 21.6px */
+    line-height: 26px; /* 144.444% */
     margin-bottom: 0;
     padding: 0px 16px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .schedule {
     display: flex;
@@ -41,4 +41,7 @@
       letter-spacing: 0.032px;
     }
   }
+}
+.wrap-day-schedule + .wrap-day-schedule .title {
+  padding-top: 14px;
 }

@@ -77,7 +77,7 @@
 					<div class="item">
 						<div class="time" data-start="10:00" data-end="11:00"></div>
 						<div class="events">
-							<div class="event border-color-orange-light-3">
+							<div class="event border-color-orange-light-3 bg-orange-light-2">
 								<div class="content-event">
 									<div class="text">Meeting with Olha</div>
 									<div class="time-period">10:00 - 11:15</div>
@@ -224,6 +224,35 @@
 				box.classList.add('none-end')
 			}
 		})
+	</script>
+	<script>
+		const elem = document.getElementById('calendar');
+		const datepicker = new Datepicker(elem, {
+			todayHighlight: true,
+			weekStart: 1,
+			maxNumberOfDates: 2,
+			beforeShowDay(date) {
+				if (date.getMonth() == new Date().getMonth()) {
+					switch (date.getDate()) {
+						case 4:
+							return {
+								classes: 'color-violet border-color-violet',
+							};
+						case 8:
+							return { classes: 'color-blue border-color-blue' };
+						case 12:
+							return { classes: 'color-pink bg-color-pink border-color-pink' };
+						case 15:
+							return { classes: 'color-pink bg-color-pink border-color-pink' };
+						case 21:
+							return {
+								classes: 'color-violet border-color-violet',
+							};
+					}
+				}
+			},
+		});
+		//datepicker.getFocusedDate('19/11/2024');
 	</script>
 </body>
 
