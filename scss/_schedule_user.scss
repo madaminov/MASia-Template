@@ -75,7 +75,6 @@
   .prizes {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     position: relative;
     .prize:nth-child(n + 2) {
       margin-left: -19px;

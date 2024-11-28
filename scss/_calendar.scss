@@ -71,7 +71,7 @@
   display: flex;
   flex-direction: column;
   @include border-radius(20px);
-  background: $white-2;
+  background: $white;
   padding: 16px;
 }
 .datepicker-header {
@@ -95,6 +95,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
+}
+.wrap-calendar-task .datepicker-header .datepicker-icon {
+  background-image: url(../images/icon-task.svg);
 }
 .datepicker-header .datepicker-controls .view-switch {
   order: 0;
@@ -153,6 +156,7 @@
 
 .datepicker-controls {
   display: flex;
+  gap: 8px;
 }
 
 .datepicker-header .datepicker-controls {

@@ -364,7 +364,7 @@ body {
 }
 .alert {
   color: $black-color;
-  text-align: right;
+  text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: $font-stack-popins;
   font-size: 14px;
@@ -376,6 +376,7 @@ body {
   background: $primary-default;
   border: none;
   width: 100%;
+  margin-bottom: 8px;
   @include border-radius(10px);
   @include transition(0.3s);
   img {

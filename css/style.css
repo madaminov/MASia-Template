@@ -12309,7 +12309,7 @@ body {
 
 .alert {
   color: #000000;
-  text-align: right;
+  text-align: center;
   font-feature-settings: "liga" off, "clig" off;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -12321,6 +12321,7 @@ body {
   background: #d3bff9;
   border: none;
   width: 100%;
+  margin-bottom: 8px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -12998,7 +12999,7 @@ h6,
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
-  background-color: lightgray;
+  background-color: #d3bff9;
   border: none;
 }
 
@@ -13322,7 +13323,7 @@ footer {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   border-radius: 20px;
-  background: #f6f6f6;
+  background: #fff;
   padding: 16px;
 }
 
@@ -13352,6 +13353,10 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
+}
+
+.wrap-calendar-task .datepicker-header .datepicker-icon {
+  background-image: url(../images/icon-task.svg);
 }
 
 .datepicker-header .datepicker-controls .view-switch {
@@ -13416,6 +13421,7 @@ footer {
 
 .datepicker-controls {
   display: flex;
+  gap: 8px;
 }
 
 .datepicker-header .datepicker-controls {
@@ -13717,7 +13723,6 @@ footer {
 }
 
 .wrap-day-schedule {
-  padding-top: 16px;
   margin-bottom: 8px;
 }
 .wrap-day-schedule .title {
@@ -13738,7 +13743,7 @@ footer {
   padding: 0px 16px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0px;
   align-self: stretch;
   margin-bottom: 16px;
 }
@@ -13792,7 +13797,7 @@ footer {
   gap: 8px;
 }
 .event .inner .icon + .text {
-  width: calc(100% - 40px - 8px);
+  width: calc(100% - 20px - 8px);
 }
 .event .time {
   color: #bfbfbf;
@@ -13825,7 +13830,7 @@ footer {
 }
 .event .event-day {
   padding: 8px;
-  gap: 10px;
+  gap: 8px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
@@ -13860,28 +13865,57 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  flex: 0 0 auto;
+  width: calc(75% - 8px);
 }
 .properties .property {
   color: #000000;
-  text-align: right;
   font-feature-settings: "liga" off, "clig" off;
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 140% */
+  line-height: 12px;
   letter-spacing: 0.04px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   background-color: #dcd8ff;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  border-radius: 8px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.event .prize-progress {
+  gap: 4px;
+  flex: 0 0 auto;
+  width: calc(25% - 8px);
+}
+.event .prize-progress-text .number {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Caption2 - 10 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 140% */
+  letter-spacing: 0.04px;
+}
+.event .prize {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/dodecahedron-small.svg);
+}
+.event .prize-progress-text .prizes .prize:nth-child(n+2) {
+  margin-left: -9px;
 }
 
 .users {
@@ -14139,7 +14173,6 @@ footer {
 .prize-progress-text .prizes {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
 }
 .prize-progress-text .prizes .prize:nth-child(n+2) {

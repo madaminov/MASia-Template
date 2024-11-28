@@ -1,5 +1,4 @@
 .wrap-day-schedule {
-  padding-top: 16px;
   margin-bottom: 8px;
   .title {
     color: $white-2;
@@ -19,7 +18,7 @@
     padding: 0px 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 0px;
     align-self: stretch;
     margin-bottom: 16px;
   }

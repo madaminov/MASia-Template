@@ -19,7 +19,7 @@
   .inner {
     gap: 8px;
     .icon + .text {
-      width: calc(100% - 40px - 8px);
+      width: calc(100% - 20px - 8px);
     }
   }
 
@@ -51,7 +51,7 @@
   }
   .event-day {
     padding: 8px;
-    gap: 10px;
+    gap: 8px;
     @include border-radius(12px);
     background: $gray-5;
     .text {
@@ -80,20 +80,50 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  flex: 0 0 auto;
+  width: calc(75% - 8px);
   .property {
     color: $black-color;
-    text-align: right;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: $font-stack-popins;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.04px;
+    padding: 2px 8px;
+    background-color: $blue-2;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    @include border-radius(12px);
+    @include transition(0.3s);
+  }
+}
+.event {
+  .prize-progress {
+    gap: 4px;
+    flex: 0 0 auto;
+    width: calc(25% - 8px);
+  }
+  .prize-progress-text .number {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Caption2 - 10 M */
+    font-family: $font-stack-popins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 14px; /* 140% */
     letter-spacing: 0.04px;
-    padding: 4px 8px;
-    background-color: $blue-2;
-    @include border-radius(8px);
-    @include transition(0.3s);
+  }
+  .prize {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/dodecahedron-small.svg);
+  }
+  .prize-progress-text .prizes .prize:nth-child(n + 2) {
+    margin-left: -9px;
   }
 }
 .users {

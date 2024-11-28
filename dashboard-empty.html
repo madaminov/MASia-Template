@@ -28,7 +28,7 @@
 		</div>
 		<!--calendar-->
 		<div class="wrap-calendar">
-			<div id="calendar" data-date="11/17/2024"></div>
+			<div id="calendar" data-date="10/1/2024"></div>
 			<div class="switch_view_calendar"></div>
 		</div>
 		<!--calendar end-->
@@ -40,7 +40,7 @@
 		<!--tip_card_container-->
 		<div class="tip_card_container">
 			<div class="container">
-				<div class="tip_card_badge">💡 MASia’s Tip</div>
+				<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
 				<h3>Ready to conquer the day?</h3>
 				<p>Create your first task or event by tapping the ‘+’ button. Let’s start organizing!</p>
 			</div>
@@ -80,6 +80,15 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/datepicker.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		const elem = document.getElementById('calendar');
+		const datepicker = new Datepicker(elem, {
+			todayHighlight: true,
+			weekStart: 1,
+			maxNumberOfDates: 2,
+		});
+		//datepicker.getFocusedDate('19/11/2024');
+	</script>
 
 </body>
 
