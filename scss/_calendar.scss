@@ -98,6 +98,10 @@
 }
 .wrap-calendar-task .datepicker-header .datepicker-icon {
   background-image: url(../images/icon-task.svg);
+  background-color: $orange-light-2 !important;
+}
+.wrap-calendar-task .switch_view_calendar {
+  background-color: $orange-light-3;
 }
 .datepicker-header .datepicker-controls .view-switch {
   order: 0;
@@ -429,9 +433,6 @@
 .datepicker-input.in-edit:focus,
 .datepicker-input.in-edit:active {
   box-shadow: 0 0 0.25em 0.25em rgba(61, 86, 195, 0.2);
-}
-.icon-orange-light-2 .datepicker-icon {
-  background-color: $orange-light-2 !important;
 }
 .wrap-calendar.open .datepicker-view .datepicker-grid .datepicker-cell {
   position: relative;

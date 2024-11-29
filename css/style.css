@@ -12020,7 +12020,7 @@ body {
 .bg-orange-light-4,
 .bg-in-progress,
 .bg-progress {
-  background-color: #f1d377 !important;
+  background-color: #ffdcc4 !important;
 }
 
 .bg-yellow-light,
@@ -12992,6 +12992,10 @@ h6,
   font-weight: 600 !important;
 }
 
+.pt-16 {
+  padding-top: 16px !important;
+}
+
 .user-img {
   width: 48px;
   height: 48px;
@@ -13357,6 +13361,11 @@ footer {
 
 .wrap-calendar-task .datepicker-header .datepicker-icon {
   background-image: url(../images/icon-task.svg);
+  background-color: #fef5da !important;
+}
+
+.wrap-calendar-task .switch_view_calendar {
+  background-color: #f1d377;
 }
 
 .datepicker-header .datepicker-controls .view-switch {
@@ -13714,10 +13723,6 @@ footer {
   box-shadow: 0 0 0.25em 0.25em rgba(61, 86, 195, 0.2);
 }
 
-.icon-orange-light-2 .datepicker-icon {
-  background-color: #fef5da !important;
-}
-
 .wrap-calendar.open .datepicker-view .datepicker-grid .datepicker-cell {
   position: relative;
 }
@@ -13736,7 +13741,7 @@ footer {
   line-height: 26px; /* 144.444% */
   margin-bottom: 0;
   padding: 0px 16px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .wrap-day-schedule .schedule {
   display: flex;
