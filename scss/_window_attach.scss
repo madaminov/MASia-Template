@@ -8,7 +8,7 @@
   margin-right: auto;
   right: 0;
   background-color: $body-color;
-  height: calc(100vh - 70px);
+  height: calc(100% - 70px);
   display: none;
   z-index: -200;
   opacity: 0;
@@ -48,7 +48,7 @@
   }
   .window-attach-body {
     overflow-y: auto;
-    max-height: calc(100vh - 140px);
+    max-height: calc(100% - 70px);
     position: relative;
     z-index: 1;
   }

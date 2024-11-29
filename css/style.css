@@ -14327,7 +14327,7 @@ footer {
   margin-right: auto;
   right: 0;
   background-color: #1e1e1e;
-  height: calc(100vh - 70px);
+  height: calc(100% - 70px);
   display: none;
   z-index: -200;
   opacity: 0;
@@ -14376,7 +14376,7 @@ footer {
 }
 .window-attach .window-attach-body {
   overflow-y: auto;
-  max-height: calc(100vh - 140px);
+  max-height: calc(100% - 70px);
   position: relative;
   z-index: 1;
 }
