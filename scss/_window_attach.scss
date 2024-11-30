@@ -174,4 +174,15 @@
       }
     }
   }
+  .item-full {
+    width: calc(100% - 46px - 8px);
+    button {
+      margin-left: auto;
+    }
+  }
+}
+.window-attach-body {
+  .form {
+    padding: 40px 16px;
+  }  
 }

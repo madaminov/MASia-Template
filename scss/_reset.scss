@@ -41,7 +41,23 @@ body {
 }
 ::placeholder {
   /* Most modern browsers support this now. */
-  color: $primary-default;
+  color: $gray-7;
+}
+input:focus,
+select:focus {
+  border-color: inherit;
+  outline: 0;
+  box-shadow: none;
+}
+.wm-100 {
+  max-width: 100% !important;
+}
+.bg-liner {
+  background: linear-gradient(
+    180deg,
+    #dcccfa 57.32%,
+    #a67cf3 181.25%
+  ) !important;
 }
 /* background. */
 .bg-black {
@@ -55,6 +71,9 @@ body {
 }
 .bg-black-4 {
   background-color: $black-color-4 !important;
+}
+.bg-black-5 {
+  background-color: $black-color-5 !important;
 }
 .bg-primary-default {
   background-color: $primary-default !important;
@@ -88,6 +107,9 @@ body {
 }
 .bg-gray-6 {
   background-color: $gray-6 !important;
+}
+.bg-gray-7 {
+  background-color: $gray-7 !important;
 }
 .bg-pink {
   background-color: $pink !important;
@@ -126,6 +148,9 @@ body {
 .bg-blue-5 {
   background-color: $blue-5 !important;
 }
+.bg-blue-6 {
+  background-color: $blue-6 !important;
+}
 .bg-orange-light,
 .bg-hight {
   background-color: $orange-light !important;
@@ -163,6 +188,9 @@ body {
 .color-black-4 {
   color: $black-color-4 !important;
 }
+.color-black-5 {
+  color: $black-color-5 !important;
+}
 .color-primary-default {
   color: $primary-default !important;
 }
@@ -195,6 +223,9 @@ body {
 }
 .color-gray-6 {
   color: $gray-6 !important;
+}
+.color-gray-7 {
+  color: $gray-7 !important;
 }
 .color-pink {
   color: $pink !important;
@@ -232,6 +263,9 @@ body {
 .color-blue-5 {
   color: $blue-5 !important;
 }
+.color-blue-6 {
+  color: $blue-6 !important;
+}
 .color-orange-light {
   color: $orange-light !important;
 }
@@ -256,6 +290,9 @@ body {
 }
 .border-color-black-4 {
   border-color: $black-color-4 !important;
+}
+.border-color-black-5 {
+  border-color: $black-color-5 !important;
 }
 .border-color-primary-default {
   border-color: $primary-default !important;
@@ -289,6 +326,9 @@ body {
 }
 .border-color-gray-6 {
   border-color: $gray-6 !important;
+}
+.border-color-gray-7 {
+  border-color: $gray-7 !important;
 }
 .border-color-pink {
   border-color: $pink !important;
@@ -325,6 +365,9 @@ body {
 }
 .border-color-blue-5 {
   border-color: $blue-5 !important;
+}
+.border-color-blue-6 {
+  border-color: $blue-6 !important;
 }
 .border-color-light {
   border-color: $orange-light !important;

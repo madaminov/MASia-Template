@@ -1,6 +1,29 @@
 button,
 .btn {
+  color: $black;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Body - 16 R */
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
   @include transition(0.3s);
+}
+.btn-light {
+  padding: 12px 16px;
+  @include border-radius(12px);
+  border: 1px solid $blue-6;
+  background: $gray-5;
+  &:hover {
+    background: $gray-5;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    background: $gray-5;
+  }
 }
 .btn-icon {
   padding: 0;
@@ -474,5 +497,145 @@ button,
         fill: $primary-default;
       }
     }
+  }
+}
+.form {
+  .row-form {
+    gap: 7px;
+    .col {
+      width: calc(50% - 7px);
+    }
+  }
+}
+.form-control {
+  color: $gray-7;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Headline - 18 R */
+  font-family: $font-stack-popins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+  padding: 8px 8px 8px 16px;
+  border: none;
+  @include border-radius(12px);
+  @include transition(0.3s);
+  background-color: $black-color-5;
+  &::placeholder {
+    color: $gray-7;
+    opacity: 1;
+  }
+  &:focus {
+    color: $gray-7;
+    background-color: $black-color-5;
+    border-color: inherit;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+textarea.form-control {
+  height: 90px;
+  resize: vertical;
+}
+.form-number {
+  width: 62px;
+  padding: 8px 12px;
+  text-align: center;
+}
+.form-control-date {
+  position: relative;
+  background-image: url(../images/icon-calendar-gray.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) 14px;
+  background-size: 16px 16px;
+  &::before {
+    content: attr(placeholder);
+    color: $gray-7;
+    background-color: $black-color-5;
+    position: absolute;
+    @include transition(0.3s);
+  }
+  &:focus::before,
+  &.hide-placeholder::before {
+    display: none;
+  }
+  &::-webkit-calendar-picker-indicator {
+    background-image: none;
+  }
+}
+
+.form-select {
+  color: $gray-7;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Headline - 18 R */
+  font-family: $font-stack-popins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+  padding: 8px 8px 8px 16px;
+  border: none;
+  @include border-radius(12px);
+  @include transition(0.3s);
+  background-color: $black-color-5;
+  background-image: url(../images/icon-down.svg);
+  background-position: calc(100% - 12px) 16px;
+  background-size: 12px 12px;
+  &:focus {
+    border-color: inherit;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+.form-group {
+  margin-bottom: 20px;
+  .form-label {
+    overflow: hidden;
+    color: $white;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
+    /* Callout - 15 M */
+    font-family: $font-stack-popins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: 0.03px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    margin-bottom: 8px;
+  }
+  .form-group-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .counter {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .minus {
+      background-image: url(../images/icon-minus.svg);
+    }
+    .plus {
+      background-image: url(../images/icon-plus.svg);
+    }
+  }
+  .bottom-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Caption1 - 12 R */
+    font-family: $font-stack-popins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.048px;
+    margin-top: 8px;
+    display: block;
   }
 }
