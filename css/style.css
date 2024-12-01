@@ -11854,7 +11854,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  background-color: #1e1e1e;
+  background-color: #212529;
   letter-spacing: 0.032px;
   color: #fff;
   min-height: 100vh;
@@ -11930,6 +11930,10 @@ select:focus {
   background-color: #363636 !important;
 }
 
+.bg-black-6 {
+  background-color: #242424 !important;
+}
+
 .bg-primary-default {
   background-color: #d3bff9 !important;
 }
@@ -11976,6 +11980,14 @@ select:focus {
 
 .bg-gray-7 {
   background-color: #9f9f9f !important;
+}
+
+.bg-gray-8 {
+  background-color: #333333 !important;
+}
+
+.bg-gray-9 {
+  background-color: #333333 !important;
 }
 
 .bg-pink {
@@ -12081,6 +12093,10 @@ select:focus {
   color: #363636 !important;
 }
 
+.color-black-6 {
+  color: #242424 !important;
+}
+
 .color-primary-default {
   color: #d3bff9 !important;
 }
@@ -12127,6 +12143,14 @@ select:focus {
 
 .color-gray-7 {
   color: #9f9f9f !important;
+}
+
+.color-gray-8 {
+  color: #333333 !important;
+}
+
+.color-gray-9 {
+  color: #e1d1ff !important;
 }
 
 .color-pink {
@@ -12217,6 +12241,10 @@ select:focus {
   border-color: #363636 !important;
 }
 
+.border-color-black-6 {
+  border-color: #242424 !important;
+}
+
 .border-color-primary-default {
   border-color: #d3bff9 !important;
 }
@@ -12263,6 +12291,14 @@ select:focus {
 
 .border-color-gray-7 {
   border-color: #9f9f9f !important;
+}
+
+.border-color-gray-8 {
+  border-color: #333333 !important;
+}
+
+.border-color-gray-9 {
+  border-color: #e1d1ff !important;
 }
 
 .border-color-pink {
@@ -12422,8 +12458,19 @@ button,
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+button:hover,
+.btn:hover {
+  color: #000;
+}
+button.active, button:active, button:focus,
+.btn.active,
+.btn:active,
+.btn:focus {
+  color: #000;
+}
 
 .btn-light {
+  color: #000;
   padding: 12px 16px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -12433,10 +12480,55 @@ button,
   background: #ede3ff;
 }
 .btn-light:hover {
-  background: #ede3ff;
+  color: #000 !important;
+  background: #ede3ff !important;
+  border: 1px solid #ede3ff !important;
 }
 .btn-light.active, .btn-light:active, .btn-light:focus {
-  background: #ede3ff;
+  color: #000 !important;
+  background: #ede3ff !important;
+  border: 1px solid #ede3ff !important;
+}
+
+.btn-light-2 {
+  padding: 12px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #e1d1ff;
+  background: #e1d1ff;
+}
+.btn-light-2:hover {
+  color: #000 !important;
+  background: #e1d1ff !important;
+  border: 1px solid #e1d1ff !important;
+}
+.btn-light-2.active, .btn-light-2:active, .btn-light-2:focus {
+  color: #000 !important;
+  background: #e1d1ff !important;
+  border: 1px solid #e1d1ff !important;
+}
+
+.btn-dark {
+  padding: 12px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #242424;
+  background: #242424;
+  color: #333333;
+}
+.btn-dark:hover {
+  color: #000 !important;
+  background: #ede3ff !important;
+  border: 1px solid #ede3ff !important;
+}
+.btn-dark.active, .btn-dark:active, .btn-dark:focus {
+  color: #000 !important;
+  background: #ede3ff !important;
+  border: 1px solid #ede3ff !important;
 }
 
 .btn-icon {
@@ -12469,6 +12561,21 @@ button,
 }
 .btn-icon.active svg, .btn-icon:active svg, .btn-icon:focus svg {
   fill: #fff;
+}
+
+.btn-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.btn-svg svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: inherit;
+  width: 16px;
+  height: 16px;
 }
 
 .btn-home {
@@ -12780,7 +12887,7 @@ button,
   background-color: #d3bff9;
 }
 .btn-list-area.active, .btn-list-area:active, .btn-list-area:focus {
-  background: #1e1e1e;
+  background: #212529;
   background-image: url(../images/list-icon-area-active.svg);
 }
 
@@ -13233,6 +13340,14 @@ h6,
   padding-top: 16px !important;
 }
 
+.p-24 {
+  padding: 24px !important;
+}
+
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+
 .gap-8 {
   gap: 8px;
 }
@@ -13412,7 +13527,7 @@ header .user_badge .user_role {
 footer {
   padding: 7px 16px;
   gap: 10px 10px;
-  background-color: #1e1e1e;
+  background-color: #212529;
   max-width: 768px;
   position: fixed;
   bottom: 0px;
@@ -14567,7 +14682,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   right: 0;
-  background-color: #1e1e1e;
+  background-color: #212529;
   height: calc(100% - 70px);
   display: none;
   z-index: -200;

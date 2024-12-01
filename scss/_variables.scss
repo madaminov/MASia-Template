@@ -9,12 +9,13 @@ $font-size: 16px;
 $line-height: 24px;
 $font-weight: 400;
 
-$body-color: #1e1e1e;
-$black-color: #000000;
-$black-color-2: #212529;
-$black-color-3: #292d32;
-$black-color-4: #2e2e2e;
-$black-color-5: #363636;
+$body-color: #1e1e1e !default;
+$black-color: #000000 !default;
+$black-color-2: #212529 !default;
+$black-color-3: #292d32 !default;
+$black-color-4: #2e2e2e !default;
+$black-color-5: #363636 !default;
+$black-color-6: #242424 !default;
 
 $primary-default: #d3bff9 !default;
 $white: #ffffff !default;
@@ -28,6 +29,8 @@ $gray-4: #bfbfbf !default;
 $gray-5: #ede3ff !default;
 $gray-6: #e6e6e6 !default;
 $gray-7: #9f9f9f !default;
+$gray-8: #333333 !default;
+$gray-9: #e1d1ff !default;
 $pink: #e567b9 !default;
 $pink-2: #ca52f6 !default;
 $violet: #59447e !default;
