@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="root">
+		<header class="d-flex align-items-center justify-content-between">
+			<div class="wrap_logo">
+				<a href="/">MAS.AI</a>
+			</div>
+			<div class="user_badge d-flex align-items-center">
+				<div class="user-info">
+					<div class="user_name text-end">Ann</div>
+					<div class="user_role">Queen</div>
+				</div>
+				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+			</div>
+		</header>
+
+		<footer class="d-flex align-items-center justify-content-between">
+			<button title="home" class="btn-home">
+				<svg>
+					<use href="images/icons.svg#home" />
+				</svg>
+			</button>
+			<button title="calendar" class="btn-calendar">
+				<svg>
+					<use href="images/icons.svg#calendar" />
+				</svg>
+			</button>
+			<button title="add" class="btn-add">
+				<svg>
+					<use href="images/icons.svg#plus" />
+				</svg>
+			</button>
+			<button title="list" class="btn-list">
+				<svg>
+					<use href="images/icons.svg#list" />
+				</svg>
+			</button>
+			<button class="btn-user">
+				<svg>
+					<use href="images/icon-user.svg#user" />
+				</svg>
+			</button>
+		</footer>
+		<!--window-attach simple-->
+		<div class="window-attach" id="windowAttach">
+			<div class="window-attach-header bg-liner">
+				<div class="title">Pick a category to create</div>
+				<button type="button" class="btn-close btn-close-windowAttach"></button>
+			</div>
+			<div class="window-attach-body">
+				<form action="" class="form">
+
+					<div class="form-group mb-0">
+						<button class="btn btn-light w-100" type="submit">Create</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+		<!--window-attach end-->
+
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		windowAttach = document.getElementById("windowAttach");
+		windowAttach.classList.add('show');
+		document.querySelector('body').classList.add('overflow-hidden');
+
+	</script>
+</body>
+
+</html>
