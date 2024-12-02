@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="root">
+		<header class="d-flex align-items-center justify-content-between">
+			<div class="wrap_logo">
+				<a href="/">MAS.AI</a>
+			</div>
+			<div class="user_badge d-flex align-items-center">
+				<div class="user-info">
+					<div class="user_name text-end">Ann</div>
+					<div class="user_role">Queen</div>
+				</div>
+				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+			</div>
+		</header>
+		<!--calendar-->
+		<div class="wrap-calendar wrap-calendar-task mb-0">
+			<div id="calendar" data-date="11/17/2024"></div>
+			<div class="switch_view_calendar"></div>
+		</div>
+		<!--calendar end-->
+		<div class="wrap-filter">
+			<div class="container-text-form">
+				<div class="text">
+					<h6>1 Oct, Sat - 11 Oct, Tue</h6>
+					<p>You have 12 tasks</p>
+				</div>
+				<form action="" class="form-filter">
+					<div class="row g-0 align-items-center justify-content-end">
+						<div class="col-auto">
+							<button class="btn-sort active" data-default="asc">
+								<svg>
+									<use href="images/icon-sort.svg#sort" />
+								</svg>
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="btn-task-filter active show-menu">
+								<svg>
+									<use href="images/icon-filter.svg#filter" />
+								</svg>
+							</button>
+							<div class="context-menu show grid mt-1 bg-white">
+								<div class="row g-0 w-100">
+									<div class="col-12">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="filter_New"
+												checked>
+											<label class="form-check-label" for="filter_New">
+												New
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value=""
+												id="filter_In_Progress" checked>
+											<label class="form-check-label" for="filter_In_Progress">
+												In Progress
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value=""
+												id="filter_Reviewed">
+											<label class="form-check-label" for="filter_Reviewed">
+												Reviewed
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value=""
+												id="filter_Completed">
+											<label class="form-check-label" for="filter_Completed">
+												Completed
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="filter_Failed">
+											<label class="form-check-label" for="filter_Failed">
+												Failed
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="selected-filter">
+				<a class="link">New</a>
+				<a class="link bg-progress">In progress</a>
+				<a class="link bg-completed">Completed</a>
+			</div>
+		</div>
+		<!--Day Schedule-->
+		<div class="wrap-day-schedule pt-16">
+			<h2 class="title">01 October, Saturday</h2>
+			<div class="schedule">
+				<div class="event-list w-100">
+					<!--event-->
+					<div class="event w-100 d-flex align-self-stretch">
+						<div class="wrap-time d-flex flex-column">
+							<div class="time">20:30</div>
+							<div class="hour bg-orange-light-2">1,5 hour</div>
+						</div>
+						<div class="event-day bg-orange-light-2 w-100 d-flex justify-content-between">
+							<div class="inner w-100 d-flex flex-wrap">
+								<div class="icon bg-primary-2">
+									<svg>
+										<use href="images/icons-event.svg#task" />
+									</svg>
+								</div>
+								<div class="text">Plan weekend family trip</div>
+								<div class="properties">
+									<div class="property">New</div>
+									<div class="property bg-hight">Hight</div>
+								</div>
+								<div class="prize-progress prize-progress-text ms-auto">
+									<div class="number">10</div>
+									<div class="prizes">
+										<div class="prize"></div>
+										<div class="prize"></div>
+										<div class="prize"></div>
+									</div>
+								</div>
+							</div>
+							<button class="btn-action">
+								<svg>
+									<use href="images/more.svg#more" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--event end-->
+				</div>
+			</div>
+			<h2 class="title">05 October, Saturday</h2>
+			<div class="schedule">
+				<div class="event-list w-100">
+					<!--event-->
+					<div class="event w-100 d-flex align-self-stretch">
+						<div class="wrap-time d-flex flex-column">
+							<div class="time">13:30</div>
+							<div class="hour bg-orange-light-2">45 min</div>
+						</div>
+						<div class="event-day bg-orange-light-2 w-100 d-flex justify-content-between">
+							<div class="inner w-100 d-flex flex-wrap">
+								<div class="icon bg-primary-2">
+									<svg>
+										<use href="images/icons-event.svg#task" />
+									</svg>
+								</div>
+								<div class="text">Pick up the dress from dry cleaner</div>
+								<div class="properties">
+									<div class="property bg-in-progress">In progress</div>
+									<div class="property bg-hight">Hight</div>
+								</div>
+								<div class="prize-progress prize-progress-text ms-auto">
+									<div class="number">10</div>
+									<div class="prizes">
+										<div class="prize"></div>
+										<div class="prize"></div>
+										<div class="prize"></div>
+									</div>
+								</div>
+							</div>
+							<button class="btn-action">
+								<svg>
+									<use href="images/more.svg#more" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--event end-->
+					<!--event-->
+					<div class="event w-100 d-flex align-self-stretch">
+						<div class="wrap-time d-flex flex-column">
+							<div class="time">15:45</div>
+							<div class="hour bg-orange-light-2">15 min</div>
+						</div>
+						<div class="event-day bg-orange-light-2 w-100 d-flex justify-content-between">
+							<div class="inner w-100 d-flex flex-wrap">
+								<div class="icon bg-primary-2">
+									<svg>
+										<use href="images/icons-event.svg#task" />
+									</svg>
+								</div>
+								<div class="text">Pay monthly bills</div>
+								<div class="properties">
+									<div class="property">New</div>
+									<div class="property bg-medium">Medium</div>
+								</div>
+								<div class="prize-progress prize-progress-text ms-auto">
+									<div class="number">10</div>
+									<div class="prizes">
+										<div class="prize"></div>
+										<div class="prize"></div>
+										<div class="prize"></div>
+									</div>
+								</div>
+							</div>
+							<button class="btn-action">
+								<svg>
+									<use href="images/more.svg#more" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--event end-->
+					<!--event-->
+					<div class="event w-100 d-flex align-self-stretch">
+						<div class="wrap-time d-flex flex-column">
+							<div class="time color-white">10:15</div>
+							<div class="hour bg-orange-light-2">30 min</div>
+						</div>
+						<div class="event-day bg-orange-light-2 w-100 d-flex justify-content-between">
+							<div class="inner w-100 d-flex flex-wrap">
+								<div class="icon bg-primary-2">
+									<svg>
+										<use href="images/icons-event.svg#task" />
+									</svg>
+								</div>
+								<div class="text">Book hotel for conference</div>
+								<div class="properties">
+									<div class="property bg-completed">Completed</div>
+									<div class="property bg-low">Low</div>
+								</div>
+								<div class="prize-progress prize-progress-text ms-auto">
+									<div class="number">10</div>
+									<div class="prizes">
+										<div class="prize"></div>
+										<div class="prize"></div>
+										<div class="prize"></div>
+									</div>
+								</div>
+							</div>
+							<button class="btn-action">
+								<svg>
+									<use href="images/more.svg#more" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--event end-->
+
+				</div>
+			</div>
+
+		</div>
+
+		<!--Day Schedule end-->
+		<footer class="d-flex align-items-center justify-content-between">
+			<button title="home" class="btn-home">
+				<svg>
+					<use href="images/icons.svg#home" />
+				</svg>
+			</button>
+			<button title="calendar" class="btn-calendar">
+				<svg>
+					<use href="images/icons.svg#calendar" />
+				</svg>
+			</button>
+			<button title="add" class="btn-add">
+				<svg>
+					<use href="images/icons.svg#plus" />
+				</svg>
+			</button>
+			<button title="list" class="btn-list active">
+				<svg>
+					<use href="images/icons.svg#list" />
+				</svg>
+			</button>
+			<button class="btn-user">
+				<svg>
+					<use href="images/icon-user.svg#user" />
+				</svg>
+			</button>
+		</footer>
+		<div class="capbody show"></div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		const elem = document.getElementById('calendar');
+		const datepicker = new Datepicker(elem, {
+			todayHighlight: true,
+			weekStart: 1,
+			maxNumberOfDates: 2,
+			beforeShowDay(date) {
+				if (date.getMonth() == new Date().getMonth()) {
+					switch (date.getDate()) {
+						case 4:
+							return {
+								classes: 'color-violet border-color-violet',
+							};
+						case 8:
+							return { classes: 'color-blue border-color-blue' };
+						case 12:
+							return { classes: 'color-pink bg-color-pink border-color-pink' };
+						case 15:
+							return { classes: 'color-pink bg-color-pink border-color-pink' };
+						case 21:
+							return {
+								classes: 'color-violet border-color-violet',
+							};
+					}
+				}
+			},
+		});
+		//datepicker.getFocusedDate('19/11/2024');
+		document.querySelector('.capbody').addEventListener('click', event => {
+			document.querySelector('.capbody').classList.remove('show');
+			document.querySelector('.form-filter .context-menu').classList.remove('show');
+			document.querySelector('.btn-task-filter').classList.remove('show-menu');
+
+		})
+		document.querySelector('.btn-task-filter').addEventListener('click', event => {
+			event.preventDefault();
+			document.querySelector('.capbody').classList.add('show');
+			document.querySelector('.form-filter .context-menu').classList.add('show');
+			document.querySelector('.btn-task-filter').classList.add('show-menu');
+
+		})
+	</script>
+</body>
+
+</html>

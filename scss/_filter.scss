@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 12px;
+    position: relative;
     @include transition(0.3s);
   }
   .text {
@@ -48,12 +49,51 @@
     }
   }
   .form-filter {
+    position: relative;
     width: calc(40% - 12px);
   }
 }
 .form-filter {
+  position: relative;
+  * {
+    position: relative;
+  }
   .row {
     gap: 8px;
+  }
+  .btn-task-filter {
+    &.show-menu {
+      position: relative;
+      z-index: 5;
+    }
+  }
+  .context-menu {
+    position: absolute;
+    display: none;
+    position: absolute;
+    display: none;
+    margin-left: 0;
+    width: 177px;
+    top: 100%;
+    margin-top: 8px !important;
+    right: 0px;
+    z-index: -15;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(0.3s);
+    .col-12 {
+      padding: 12px 4px 12px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      &:last-child {
+        border: none;
+      }
+    }
+    &.show {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      z-index: 5;
+    }
   }
 }
 .selected-filter {
@@ -62,6 +102,7 @@
   align-items: center;
   gap: 4px;
   padding: 8px 16px 16px 16px;
+  position: relative;
   .link {
     color: $black;
     font-feature-settings: 'liga' off, 'clig' off;
