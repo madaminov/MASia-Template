@@ -1,6 +1,6 @@
 #root {
   max-width: 768px;
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -89,8 +89,14 @@ h6,
 .p-24 {
   padding: 24px !important;
 }
+.pt-24 {
+  padding-top: 24px !important;
+}
 .mb-8 {
   margin-bottom: 8px !important;
+}
+.mt-16 {
+  margin-top: 16px !important;
 }
 .gap-8 {
   gap: 8px;
@@ -137,6 +143,18 @@ h6,
   align-items: flex-start;
   @include border-radius(12px);
   margin-left: 82px;
+  .col-12 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .col-12:last-child {
+    border: none;
+  }
+  .col-6 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .col-6:nth-child(n + 1) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
   &.vertical {
     width: 214px;
   }

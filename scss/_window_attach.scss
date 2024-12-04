@@ -75,6 +75,10 @@
     margin-bottom: 32px;
     .row {
       gap: 8px;
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 12px;
+      }
       .col {
         color: $white-2;
         text-align: right;
@@ -85,7 +89,6 @@
         font-style: normal;
         font-weight: 400;
         line-height: 26px; /* 144.444% */
-        margin-bottom: 12px;
       }
       .col:first-child {
         font-weight: 600;
@@ -184,5 +187,5 @@
 .window-attach-body {
   .form {
     padding: 40px 16px;
-  }  
+  }
 }

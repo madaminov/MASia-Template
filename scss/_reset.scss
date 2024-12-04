@@ -1,5 +1,5 @@
 html {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 body {
   font-family: $font-stack-popins;
@@ -9,7 +9,7 @@ body {
   background-color: $body-color;
   letter-spacing: 0.032px;
   color: $white;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 ::-webkit-resizer {
   background-image: url('');

@@ -10,7 +10,7 @@
     font-weight: 500;
     line-height: 26px; /* 144.444% */
     margin-bottom: 0;
-    padding: 0px 16px;
+    padding: 16px 16px 0px 16px;
     margin-bottom: 16px;
   }
   .schedule {
@@ -24,10 +24,7 @@
   }
   .schedule + .title {
     padding-top: 16px;
-  }
-  .schedule + .unscheduled {
-    padding-top: 16px;
-  }
+  } 
   .unscheduled {
     .title {
       color: $white-2;
