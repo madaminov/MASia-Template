@@ -36,7 +36,6 @@
     z-index: 1;
     .title {
       color: $black;
-      text-align: right;
       font-feature-settings: 'liga' off, 'clig' off;
       /* Headline - 18 M */
       font-family: $font-stack-popins;
@@ -81,7 +80,6 @@
       }
       .col {
         color: $white-2;
-        text-align: right;
         font-feature-settings: 'liga' off, 'clig' off;
         /* Headline - 18 SB */
         font-family: $font-stack-popins;

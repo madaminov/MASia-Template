@@ -126,6 +126,9 @@ select:focus {
 .bg-pink-2 {
   background-color: $pink-2 !important;
 }
+.bg-pink-3 {
+  background-color: $pink-3 !important;
+}
 .bg-violet {
   background-color: $violet !important;
 }
@@ -144,7 +147,8 @@ select:focus {
 .bg-blue {
   background-color: $blue !important;
 }
-.bg-blue-2 {
+.bg-blue-2,
+.bg-new {
   background-color: $blue-2 !important;
 }
 .bg-blue-3,
@@ -250,6 +254,9 @@ select:focus {
 }
 .color-pink-2 {
   color: $pink-2 !important;
+}
+.color-pink-3 {
+  color: $pink-3 !important;
 }
 .color-violet {
   color: $violet !important;
@@ -362,6 +369,9 @@ select:focus {
 }
 .border-color-pink-2 {
   border-color: $pink-2 !important;
+}
+.border-color-pink-3 {
+  border-color: $pink-3 !important;
 }
 .border-color-violet {
   border-color: $violet !important;

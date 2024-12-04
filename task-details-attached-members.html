@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="root">
+		<header class="d-flex align-items-center justify-content-between">
+			<div class="wrap_logo">
+				<a href="/">MAS.AI</a>
+			</div>
+			<div class="user_badge d-flex align-items-center">
+				<div class="user-info">
+					<div class="user_name text-end">Ann</div>
+					<div class="user_role">Queen</div>
+				</div>
+				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+			</div>
+		</header>
+
+		<footer class="d-flex align-items-center justify-content-between">
+			<button title="home" class="btn-home">
+				<svg>
+					<use href="images/icons.svg#home" />
+				</svg>
+			</button>
+			<button title="calendar" class="btn-calendar">
+				<svg>
+					<use href="images/icons.svg#calendar" />
+				</svg>
+			</button>
+			<button title="add" class="btn-add">
+				<svg>
+					<use href="images/icons.svg#plus" />
+				</svg>
+			</button>
+			<button title="list" class="btn-list active">
+				<svg>
+					<use href="images/icons.svg#list" />
+				</svg>
+			</button>
+			<button class="btn-user">
+				<svg>
+					<use href="images/icon-user.svg#user" />
+				</svg>
+			</button>
+		</footer>
+		<!--window-attach simple-->
+		<div class="window-attach" id="windowAttach">
+			<div class="window-attach-header bg-liner">
+				<div class="title">Task details</div>
+				<button type="button" class="btn-close btn-close-windowAttach"></button>
+			</div>
+			<div class="window-attach-body h-100">
+				<div class="title-section w-100 flex-wrap">
+					<div class="wrap-tags-task-detail tags">
+						<div class="tag bg-new">New</div>
+						<div class="tag bg-medium">Medium</div>
+					</div>
+					<button class="btn-options">
+						<svg>
+							<use href="images/button-options.svg#button-options" />
+						</svg>
+					</button>
+					<div class="title w-100 mt-20">Pick up the package</div>
+				</div>
+				<div class="info-group">
+					<div class="section">
+						<div class="row g-0">
+							<div class="col col-auto">Date:</div>
+							<div class="col col-auto">01 October, Saturday</div>
+						</div>
+
+					</div>
+					<div class="section">
+						<div class="row g-0">
+							<div class="col col-auto">Time:</div>
+							<div class="col col-auto">17:00</div>
+						</div>
+						<div class="row g-0">
+							<div class="col col-auto">Duration:</div>
+							<div class="col col-auto">
+								<div class="tag-item bg-pink-3">15 min</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="row g-0">
+							<div class="col col-auto">Repeat:</div>
+							<div class="col col-auto">No</div>
+						</div>
+						<div class="row g-0">
+							<div class="col col-auto">Reminder:</div>
+							<div class="col col-auto">No</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="row g-0 align-items-center">
+							<div class="col col-auto">Award:</div>
+							<div class="col col-auto">
+								<div class="prize-progress prize-progress-text prize-progress-text-2">
+									<div class="number">10</div>
+									<div class="prizes">
+										<div class="prize"></div>
+										<div class="prize"></div>
+										<div class="prize"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<div class="row g-0 flex-nowrap">
+							<div class="col col-auto">Notes:</div>
+							<div class="col">Pick up the package from the DPD pickup point, code 36253.</div>
+						</div>
+					</div>
+					<div class="section section-members-list">
+						<h5 class="title font-bold color-white-2">Attached Family members</h5>
+						<div class="members-list">
+							<div class="item">
+								<div class="person">
+									<img src="images/user_avatar.png" alt="" class="img-fluid">
+								</div>
+								<div class="name">Robby</div>
+								<button class="btn-close btn-close-gray"></button>
+							</div>
+							<button class="btn-add-plus ">
+								<svg>
+									<use href="images/icons.svg#plus" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!--window-attach end-->
+
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		windowAttach = document.getElementById("windowAttach");
+		windowAttach.classList.add('show');
+		document.querySelector('body').classList.add('overflow-hidden');
+
+	</script>
+</body>
+
+</html>

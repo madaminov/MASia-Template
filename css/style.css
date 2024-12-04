@@ -12003,6 +12003,10 @@ select:focus {
   background-color: #ca52f6 !important;
 }
 
+.bg-pink-3 {
+  background-color: #e7bbd8 !important;
+}
+
 .bg-violet {
   background-color: #59447e !important;
 }
@@ -12027,7 +12031,8 @@ select:focus {
   background-color: #0d6efd !important;
 }
 
-.bg-blue-2 {
+.bg-blue-2,
+.bg-new {
   background-color: #dcd8ff !important;
 }
 
@@ -12164,6 +12169,10 @@ select:focus {
 
 .color-pink-2 {
   color: #ca52f6 !important;
+}
+
+.color-pink-3 {
+  color: #e7bbd8 !important;
 }
 
 .color-violet {
@@ -12312,6 +12321,10 @@ select:focus {
 
 .border-color-pink-2 {
   border-color: #ca52f6 !important;
+}
+
+.border-color-pink-3 {
+  border-color: #e7bbd8 !important;
 }
 
 .border-color-violet {
@@ -13401,6 +13414,10 @@ h6,
   margin-top: 16px !important;
 }
 
+.mt-20 {
+  margin-top: 20px !important;
+}
+
 .gap-8 {
   gap: 8px;
 }
@@ -13429,14 +13446,20 @@ h6,
 }
 .tags .tag {
   color: #000000;
-  text-align: right;
+  text-align: center;
   font-feature-settings: "liga" off, "clig" off;
+  /* Footnote - 14 R */
   font-family: "Poppins", sans-serif;
-  font-size: 10px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 140% */
-  letter-spacing: 0.04px;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.028px;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   padding: 4px 8px;
   background-color: #dcd8ff;
   -webkit-border-radius: 8px;
@@ -13448,6 +13471,51 @@ h6,
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.tag-item {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Footnote - 14 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.028px;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  background-color: #dcd8ff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrap-tags-task-detail .tag {
+  display: flex;
+  height: 24px;
+  padding: 4px 8px;
+  align-items: center;
+  gap: 4px;
+}
+.wrap-tags-task-detail .tag::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/icon-down-for-tags.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
 }
 
 .context-menu {
@@ -14602,7 +14670,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 12px;
+  gap: 8px;
 }
 
 .prize-progress-text .number {
@@ -14622,6 +14690,18 @@ footer {
 }
 .prize-progress-text .prizes .prize:nth-child(n+2) {
   margin-left: -19px;
+}
+
+.prize-progress-text-2 .number {
+  color: #f6f6f6;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
 }
 
 .prize {
@@ -14822,7 +14902,6 @@ footer {
 }
 .window-attach .window-attach-header .title {
   color: #000;
-  text-align: right;
   font-feature-settings: "liga" off, "clig" off;
   /* Headline - 18 M */
   font-family: "Poppins", sans-serif;
@@ -14867,7 +14946,6 @@ footer {
 }
 .window-attach .section .row .col {
   color: #f6f6f6;
-  text-align: right;
   font-feature-settings: "liga" off, "clig" off;
   /* Headline - 18 SB */
   font-family: "Poppins", sans-serif;
