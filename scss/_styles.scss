@@ -134,7 +134,7 @@ h6,
     font-weight: 400;
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.028px;
-    display: flex;   
+    display: flex;
     height: 24px;
     justify-content: center;
     align-items: center;
@@ -155,7 +155,7 @@ h6,
   font-weight: 400;
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.028px;
-  display: flex;  
+  display: flex;
   height: 24px;
   justify-content: center;
   align-items: center;
@@ -207,6 +207,82 @@ h6,
   }
   &.grid {
     width: 194px;
+  }
+}
+.context-menu-user {
+  display: flex;
+  width: 121px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $white;
+  @include border-radius(12px);
+  position: absolute;
+  right: 16px;
+  bottom: 70px;
+  z-index: 6;
+  .col-12 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .col-12:last-child {
+    border: none;
+    .user {
+      border-radius: 0px 0px 12px 12px;
+    }
+  }
+  .user {
+    display: flex;
+    padding: 4px 4px 4px 12px;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+    img {
+      width: 32px;
+      height: 32px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+    }
+    .name {
+      color: $black-color;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Footnote - 14 M */
+      font-family: $font-stack-popins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: 0.028px;
+    }
+  }
+  .user-main {
+    padding: 4px;
+    background: $gray-5;
+    img {
+      width: 38px;
+      height: 38px;
+    }
+    .user-role {
+      color: $black-color-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Caption1 - 12 M */
+      font-family: $font-stack-popins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px; /* 150% */
+      letter-spacing: 0.048px;
+      display: flex;
+      padding: 2px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      @include border-radius(8px);
+      background: $white;
+      margin-top: 2px;
+    }
   }
 }
 .modal-dialog-end {

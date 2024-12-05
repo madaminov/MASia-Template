@@ -13600,6 +13600,89 @@ h6,
   width: 194px;
 }
 
+.context-menu-user {
+  display: flex;
+  width: 121px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  position: absolute;
+  right: 16px;
+  bottom: 70px;
+  z-index: 6;
+}
+.context-menu-user .col-12 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.context-menu-user .col-12:last-child {
+  border: none;
+}
+.context-menu-user .col-12:last-child .user {
+  border-radius: 0px 0px 12px 12px;
+}
+.context-menu-user .user {
+  display: flex;
+  padding: 4px 4px 4px 12px;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.context-menu-user .user img {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.context-menu-user .user .name {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Footnote - 14 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.028px;
+}
+.context-menu-user .user-main {
+  padding: 4px;
+  background: #ede3ff;
+}
+.context-menu-user .user-main img {
+  width: 38px;
+  height: 38px;
+}
+.context-menu-user .user-main .user-role {
+  color: #212529;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Caption1 - 12 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.048px;
+  display: flex;
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 2px;
+}
+
 .modal-dialog-end {
   display: flex;
   align-items: end;
@@ -13736,6 +13819,22 @@ footer {
   bottom: 0px;
   width: 100%;
   z-index: 3;
+}
+footer.show-context-menu-user::before {
+  content: "";
+  content: "";
+  background: rgba(30, 30, 30, 0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+footer .btn-user.show-menu {
+  position: relative;
+  z-index: 5;
 }
 
 .wrap-task-progress-bar {
