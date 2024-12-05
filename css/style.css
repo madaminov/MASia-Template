@@ -13822,15 +13822,15 @@ footer {
 }
 footer.show-context-menu-user::before {
   content: "";
-  content: "";
   background: rgba(30, 30, 30, 0.2);
   backdrop-filter: blur(10px);
   width: 100%;
-  height: 100%;
+  height: 100svh;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 4;
+  overflow: hidden;
 }
 footer .btn-user.show-menu {
   position: relative;
