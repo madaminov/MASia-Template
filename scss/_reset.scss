@@ -59,6 +59,13 @@ select:focus {
     #a67cf3 181.25%
   ) !important;
 }
+.bg-liner-blue {
+  background: linear-gradient(
+    180deg,
+    #a4caf9 57.32%,
+    #74aef6 181.25%
+  ) !important;
+}
 /* background. */
 .bg-black {
   background-color: $black-color !important;
@@ -77,6 +84,9 @@ select:focus {
 }
 .bg-black-6 {
   background-color: $black-color-6 !important;
+}
+.bg-black-7 {
+  background-color: $black-color-7 !important;
 }
 .bg-primary-default {
   background-color: $primary-default !important;
@@ -164,6 +174,12 @@ select:focus {
 .bg-blue-6 {
   background-color: $blue-6 !important;
 }
+.bg-blue-7 {
+  background-color: $blue-7 !important;
+}
+.bg-blue-8 {
+  background-color: $blue-8 !important;
+}
 .bg-orange-light,
 .bg-hight {
   background-color: $orange-light !important;
@@ -187,6 +203,9 @@ select:focus {
 .bg-completed {
   background-color: $green-light !important;
 }
+.bg-red {
+  background-color: $red !important;
+}
 
 /* color. */
 .color-black {
@@ -206,6 +225,9 @@ select:focus {
 }
 .color-black-6 {
   color: $black-color-6 !important;
+}
+.color-black-7 {
+  color: $black-color-7 !important;
 }
 .color-primary-default {
   color: $primary-default !important;
@@ -291,6 +313,12 @@ select:focus {
 .color-blue-6 {
   color: $blue-6 !important;
 }
+.color-blue-7 {
+  color: $blue-7 !important;
+}
+.color-blue-8 {
+  color: $blue-8 !important;
+}
 .color-orange-light {
   color: $orange-light !important;
 }
@@ -302,6 +330,9 @@ select:focus {
 }
 .color-yellow-light {
   color: $yellow-light !important;
+}
+.color-red {
+  color: $red !important;
 }
 
 .border-color-black {
@@ -321,6 +352,9 @@ select:focus {
 }
 .border-color-black-6 {
   border-color: $black-color-6 !important;
+}
+.border-color-black-7 {
+  border-color: $black-color-7 !important;
 }
 .border-color-primary-default {
   border-color: $primary-default !important;
@@ -406,6 +440,12 @@ select:focus {
 .border-color-blue-6 {
   border-color: $blue-6 !important;
 }
+.border-color-blue-7 {
+  border-color: $blue-7 !important;
+}
+.border-color-blue-8 {
+  border-color: $blue-8 !important;
+}
 .border-color-light {
   border-color: $orange-light !important;
 }
@@ -420,6 +460,9 @@ select:focus {
 }
 .border-color-balck-opacity {
   border-color: $balck-opacity !important;
+}
+.border-color-red {
+  border-color: $red !important;
 }
 
 .icon {

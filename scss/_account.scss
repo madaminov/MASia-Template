@@ -1,0 +1,126 @@
+.account {
+  .user_avatar_section {
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .user-img {
+      width: 120px;
+      height: 120px;
+      background: $primary-default;
+    }
+  }
+  .user_info_section {
+    display: flex;
+    width: 100%;
+    padding: 4px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    .name {
+      color: $white-2;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* H3 - 24 M */
+      font-family: $font-stack-popins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px; /* 133.333% */
+      margin-bottom: 4px;
+    }
+    .user_role {
+      color: $black-color-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Footnote - 14 R */
+      font-family: $font-stack-popins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: 0.028px;
+      display: flex;
+      width: 100%;
+      padding: 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      @include border-radius(8px);
+      background: $primary-default;
+    }
+  }
+  .section-inputs {
+    display: flex;
+    width: 100%;
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .section {
+    width: 100%;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .row-input {
+    color: $white;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body - 16 R */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.032px;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    padding: 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0px 0px;
+    border-bottom: 1px solid $black-color-7;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      fill: $white;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.account-blue {
+  background-color: $blue-7;
+  .user_avatar_section {
+    .user-img {
+      background: $primary-default;
+    }
+  }
+  .user_info_section {
+    .name {
+      color: $black-color;
+    }
+    .user_role {
+      background: $blue-8;
+    }
+  }
+  .row-input {
+    color: $black-color;
+    border-bottom: 1px solid $blue-8;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      fill: $black-color;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -16,11 +16,14 @@ $black-color-3: #292d32 !default;
 $black-color-4: #2e2e2e !default;
 $black-color-5: #363636 !default;
 $black-color-6: #242424 !default;
+$black-color-7: #303030 !default;
 
 $primary-default: #d3bff9 !default;
+
 $white: #ffffff !default;
 $white-2: #f6f6f6 !default;
 $white-3: #fbfafd !default;
+
 $lightgray: lightgray !default;
 $gray: #939393 !default;
 $gray-2: #646363 !default;
@@ -31,27 +34,39 @@ $gray-6: #e6e6e6 !default;
 $gray-7: #9f9f9f !default;
 $gray-8: #333333 !default;
 $gray-9: #e1d1ff !default;
+
+$red: #f75757 !default;
+
 $pink: #e567b9 !default;
 $pink-2: #ca52f6 !default;
 $pink-3: #e7bbd8 !default;
+
 $violet: #59447e !default;
 $violet-2: #ae8cee !default;
 $violet-3: #8170d7 !default;
 $violet-4: #8e72c3 !default;
 $violet-5: #e4c8e6 !default;
+
 $blue: #4f93f6 !default;
 $blue-2: #dcd8ff !default;
 $blue-3: #b3d2fe !default;
 $blue-4: #d7e7ff !default;
 $blue-5: #337ded !default;
 $blue-6: #0d6efd !default;
+$blue-7: #deecfd !default;
+$blue-8: #a4caf9 !default;
+
 $orange-light: #f9c486 !default;
 $orange-light-2: #fef5da !default;
 $orange-light-3: #f1d377 !default;
 $orange-light-4: #ffdcc4 !default;
+
 $yellow-light: #f4feb3 !default;
+
 $green-light: #d3f9d4 !default;
+
 $balck-opacity: rgba(0, 0, 0, 0.05) !default;
+
 $primary-2: #f9e5ab !default;
 
 @mixin transition($transition) {
