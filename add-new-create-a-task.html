@@ -76,10 +76,9 @@
 							<div class="item item-full">
 								<input type="hidden" name="person[]">
 								<div class="person">
-									<img src="images/user_avatar.png" alt="" class="img-fluid">
+									<img src="images/user_avatar_1.png" alt="" class="img-fluid">
 								</div>
 								<div class="name">Anna (You)</div>
-								<button class="btn-close btn-close-gray"></button>
 							</div>
 							<button class="btn-add-plus">
 								<svg>
@@ -87,13 +86,13 @@
 								</svg>
 							</button>
 						</div>
-						<span class="bottom-text">Select the person responsible for completing this task; it will appear
-							in their task list</span>
+						<span class="bottom-text">Select the person who will monitor task progress and approve its
+							completion</span>
 					</div>
 					<div class="form-group">
 						<label for="priority" class="form-label">Priority*</label>
 						<select name="priority" id="priority" class="form-select" required>
-							<option selected disabled>Please select</option>
+							<option selected disabled>Select task priority</option>
 							<option value="high">High</option>
 							<option value="middle">Middle</option>
 							<option value="low">Low</option>
@@ -104,9 +103,9 @@
 						<input type="text" class="form-control" name="title" placeholder="Add a task title" required>
 					</div>
 					<div class="form-group">
-						<label for="date" class="form-label">Data</label>
+						<label for="date" class="form-label">Data*</label>
 						<input type="date" class="form-control form-control-date" name="date" value=""
-							placeholder="Select a data" id="date"
+							placeholder="Select a data" id="date" required
 							onchange="(this.value.length > 0) ? this.classList.add('hide-placeholder') : this.classList.remove('hide-placeholder')">
 					</div>
 					<div class="row g-0 row-form">
@@ -171,7 +170,7 @@
 					<div class="form-group">
 						<label for="reminder" class="form-label">Reminder</label>
 						<select name="reminder" id="reminder" class="form-select" required>
-							<option selected disabled>Set a Reminder</option>
+							<option selected disabled>Set a reminder</option>
 							<option value="Yes">Yes</option>
 							<option value="No">No</option>
 						</select>

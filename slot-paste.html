@@ -50,7 +50,7 @@
 							<div class="time">06:00</div>
 							<div class="hour bg-gray-5">1,5 hour</div>
 						</div>
-						<div class="event-day w-100 d-flex justify-content-between">
+						<div class="event-day event-day-simple  w-100 d-flex justify-content-between">
 							<div class="inner w-100 d-flex flex-wrap align-items-center">
 								<div class="text">Morning routine</div>
 							</div>
@@ -79,14 +79,6 @@
 								<div class="properties">
 									<div class="property">New</div>
 									<div class="property bg-medium">Medium</div>
-								</div>
-								<div class="prize-progress prize-progress-text ms-auto">
-									<div class="number">10</div>
-									<div class="prizes">
-										<div class="prize"></div>
-										<div class="prize"></div>
-										<div class="prize"></div>
-									</div>
 								</div>
 							</div>
 							<button class="btn-action">
@@ -177,14 +169,6 @@
 									<div class="property">New</div>
 									<div class="property bg-medium">Medium</div>
 								</div>
-								<div class="prize-progress prize-progress-text ms-auto">
-									<div class="number">10</div>
-									<div class="prizes">
-										<div class="prize"></div>
-										<div class="prize"></div>
-										<div class="prize"></div>
-									</div>
-								</div>
 							</div>
 							<button class="btn-action">
 								<svg>
@@ -225,67 +209,53 @@
 				</svg>
 			</button>
 		</footer>
-		<!--modal-->
-		<div class="modal evandModal fade" id="evandModal" tabindex="-1" aria-labelledby="evandModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-dialog-end">
-				<div class="modal-content mb-5">
-					<div class="modal-body">
-						<div class="event w-100 d-flex align-self-stretch">
-							<div class="wrap-time d-flex flex-column">
-								<div class="time">09:00</div>
-								<div class="time color-gray">10:30</div>
-							</div>
-							<div class="event-day bg-white w-100 d-flex justify-content-between">
-								<div class="inner w-100 d-flex flex-wrap">
-									<div class="icon bg-blue-4">
-										<svg>
-											<use href="images/icons-event.svg#calendar" />
-										</svg>
-									</div>
-									<div class="text">Family breakfast</div>
-									<div class="users">
-										<div class="user"><img src="images/user_img_1.jpg" alt="" class="img-fluid">
-										</div>
-										<div class="user"><img src="images/user_avatar.png" alt="" class="img-fluid">
-										</div>
-										<div class="user"> <img src="images/user_avatar_1.png" alt="" class="img-fluid">
-										</div>
-										<div class="more-user">+2</div>
-									</div>
-								</div>
-							</div>
+		<div class="slot show">
+			<div class="event w-100 d-flex align-self-stretch">
+				<div class="wrap-time d-flex flex-column">
+					<div class="time">09:00</div>
+					<div class="time color-gray">10:30</div>
+				</div>
+				<div class="event-day bg-white w-100 d-flex justify-content-between">
+					<div class="inner w-100 d-flex flex-wrap">
+						<div class="icon bg-blue-4">
+							<svg>
+								<use href="images/icons-event.svg#calendar" />
+							</svg>
 						</div>
-						<!--event end-->
-						<div class="context-menu mt-1 ms-auto bg-white">
-							<div class="row g-0 w-100">
-								<div class="col-12">
-									<button class="btn-paste">
-										<svg>
-											<use href="images/icon-paste.svg#paste" />
-										</svg>
-										Paste
-									</button>
-								</div>
+						<div class="text">Family breakfast</div>
+						<div class="users">
+							<div class="user"><img src="images/user_img_1.jpg" alt="" class="img-fluid">
 							</div>
+							<div class="user"><img src="images/user_avatar.png" alt="" class="img-fluid">
+							</div>
+							<div class="user"> <img src="images/user_avatar_1.png" alt="" class="img-fluid">
+							</div>
+							<div class="more-user">+2</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!--event end-->
+			<div class="context-menu mt-1 ms-auto bg-white">
+				<div class="row g-0 w-100">
+					<div class="col-12">
+						<button class="btn-paste">
+							<svg>
+								<use href="images/icon-paste.svg#paste" />
+							</svg>
+							Paste
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
-		<!--modal end-->
 	</div>
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/datepicker.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-		var evandModal = new bootstrap.Modal(document.getElementById("evandModal"), {});
-		document.onreadystatechange = function () {
-			evandModal.show();
-		};
-	</script>
+
 	<script>
 		const elem = document.getElementById('calendar');
 		const datepicker = new Datepicker(elem, {
