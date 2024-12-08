@@ -26,19 +26,24 @@ body {
 ::-webkit-scrollbar-button {
   background-image: url();
   background-repeat: no-repeat;
-  width: 6px;
+  width: 4px;
   height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 6px;
-  border-radius: 6px;
-  background-color: $primary-default;
+  border-radius: 10px;
+  background-color: $gray-11;
   height: 80px;
 }
 
 ::-webkit-scrollbar-track {
-  background: $white;
+  background: $body-color;
+}
+.scrollbar-hidden {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 ::placeholder {
   /* Most modern browsers support this now. */
@@ -132,7 +137,16 @@ select:focus {
   background-color: $gray-8 !important;
 }
 .bg-gray-9 {
-  background-color: $gray-8 !important;
+  background-color: $gray-9 !important;
+}
+.bg-gray-10 {
+  background-color: $gray-10 !important;
+}
+.bg-gray-11 {
+  background-color: $gray-11 !important;
+}
+.bg-gray-12 {
+  background-color: $gray-12 !important;
 }
 .bg-pink {
   background-color: $pink !important;
@@ -278,6 +292,15 @@ select:focus {
 .color-gray-9 {
   color: $gray-9 !important;
 }
+.color-gray-10 {
+  color: $gray-10 !important;
+}
+.color-gray-11 {
+  color: $gray-11 !important;
+}
+.color-gray-12 {
+  color: $gray-12 !important;
+}
 .color-pink {
   color: $pink !important;
 }
@@ -407,6 +430,15 @@ select:focus {
 }
 .border-color-gray-9 {
   border-color: $gray-9 !important;
+}
+.border-color-gray-10 {
+  border-color: $gray-10 !important;
+}
+.border-color-gray-11 {
+  border-color: $gray-11 !important;
+}
+.border-color-gray-12 {
+  border-color: $gray-12 !important;
 }
 .border-color-pink {
   border-color: $pink !important;

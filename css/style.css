@@ -11880,19 +11880,23 @@ body {
 ::-webkit-scrollbar-button {
   background-image: url();
   background-repeat: no-repeat;
-  width: 6px;
+  width: 4px;
   height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 6px;
-  border-radius: 6px;
-  background-color: #d3bff9;
+  border-radius: 10px;
+  background-color: #666;
   height: 80px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: #1e1e1e;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0;
 }
 
 ::placeholder {
@@ -12005,7 +12009,19 @@ select:focus {
 }
 
 .bg-gray-9 {
-  background-color: #333333 !important;
+  background-color: #e1d1ff !important;
+}
+
+.bg-gray-10 {
+  background-color: #757575 !important;
+}
+
+.bg-gray-11 {
+  background-color: #666 !important;
+}
+
+.bg-gray-12 {
+  background-color: #cccccc !important;
 }
 
 .bg-pink {
@@ -12196,6 +12212,18 @@ select:focus {
   color: #e1d1ff !important;
 }
 
+.color-gray-10 {
+  color: #757575 !important;
+}
+
+.color-gray-11 {
+  color: #666 !important;
+}
+
+.color-gray-12 {
+  color: #cccccc !important;
+}
+
 .color-pink {
   color: #e567b9 !important;
 }
@@ -12366,6 +12394,18 @@ select:focus {
 
 .border-color-gray-9 {
   border-color: #e1d1ff !important;
+}
+
+.border-color-gray-10 {
+  border-color: #757575 !important;
+}
+
+.border-color-gray-11 {
+  border-color: #666 !important;
+}
+
+.border-color-gray-12 {
+  border-color: #cccccc !important;
 }
 
 .border-color-pink {
