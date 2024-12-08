@@ -59,9 +59,10 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 8px;
+  gap: 12px;
 }
 .prize-progress-text {
+  gap: 8px;
   .number {
     color: $black-color-3;
     font-feature-settings: 'liga' off, 'clig' off;
@@ -103,8 +104,7 @@
   background-size: contain;
   @include transition(0.3s);
   &.prize_not {
-    background-image: url(../images/dodecahedron_gray.svg);
-    opacity: 0.7;
+    opacity: 0.15;
   }
 }
 .role {

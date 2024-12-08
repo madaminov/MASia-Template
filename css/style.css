@@ -14820,9 +14820,12 @@ footer .btn-user.show-menu {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 8px;
+  gap: 12px;
 }
 
+.prize-progress-text {
+  gap: 8px;
+}
 .prize-progress-text .number {
   color: #292d32;
   font-feature-settings: "liga" off, "clig" off;
@@ -14868,8 +14871,7 @@ footer .btn-user.show-menu {
   transition: all 0.3s ease;
 }
 .prize.prize_not {
-  background-image: url(../images/dodecahedron_gray.svg);
-  opacity: 0.7;
+  opacity: 0.15;
 }
 
 .role {
