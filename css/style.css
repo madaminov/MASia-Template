@@ -13255,6 +13255,16 @@ textarea.form-control {
   text-align: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .form-control-date {
   position: relative;
   background-image: url(../images/icon-calendar-gray.svg);
@@ -14889,7 +14899,7 @@ footer .btn-user.show-menu {
 .prize {
   width: 32px;
   height: 32px;
-  background-image: url(../images/dodecahedron.svg);
+  background-image: url(../images/icon-awards.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

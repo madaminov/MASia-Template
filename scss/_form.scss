@@ -638,6 +638,14 @@ textarea.form-control {
   padding: 8px 12px;
   text-align: center;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
 .form-control-date {
   position: relative;
   background-image: url(../images/icon-calendar-gray.svg);
