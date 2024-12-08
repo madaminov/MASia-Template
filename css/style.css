@@ -13382,6 +13382,7 @@ input[type=number] {
   margin: 0 auto;
   position: relative;
   padding-bottom: 70px;
+  background-color: #1e1e1e;
 }
 
 h1,
