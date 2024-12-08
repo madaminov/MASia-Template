@@ -20,13 +20,13 @@ if (btn_close_windowAttach) {
     document.querySelector('body').classList.remove('overflow-hidden');
   });
 }
-btn_options = document.querySelector('.window-attach .btn-options');
+btn_options = document.querySelector('.modal .btn-options');
 if (btn_options) {
   btn_options.addEventListener('click', (e) => {
-    document.querySelector('.window-attach-context-menu').classList.add('show');
+    document.querySelector('.modal-context-menu').classList.add('show');
   });
 }
-wacm = document.querySelector('.window-attach-context-menu');
+wacm = document.querySelector('.modal-context-menu');
 if (wacm) {
   wacm.addEventListener('click', (e) => {
     e.preventDefault();

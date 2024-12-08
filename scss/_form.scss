@@ -597,6 +597,7 @@ button,
 }
 .form {
   .row-form {
+    width: 100%;
     gap: 7px;
     .col {
       width: calc(50% - 7px);
@@ -692,7 +693,6 @@ input[type='number'] {
   }
 }
 .form-group {
-  margin-bottom: 20px;
   .form-label {
     overflow: hidden;
     color: $white;

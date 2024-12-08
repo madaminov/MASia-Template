@@ -51,75 +51,80 @@
 				</svg>
 			</button>
 		</footer>
-		<!--window-attach simple-->
-		<div class="window-attach" id="windowAttach">
-			<div class="window-attach-header bg-liner-blue">
-				<div class="title">Account</div>
-				<button type="button" class="btn-close btn-close-windowAttach"></button>
-			</div>
-			<div class="window-attach-body h-100">
-				<div class="account account-blue">
-					<div class="user_avatar_section">
-						<div class="user-img">
-							<img src="images/user_avatar_big_2.png" alt="" class="img-fluid">
-						</div>
+		<!--modal-->
+		<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header bg-liner-blue">
+						<h2 class="modal-title" id="fullModalLabel">Account</h2>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
-					<div class="user_info_section">
-						<h2 class="name">Tom</h2>
-						<div class="user_role">
-							Prince
-						</div>
-					</div>
-					<div class="section-inputs">
-						<div class="section">
-							<div class="row-input">
-								Email
-								<svg>
-									<use href="images/icon-arrow-right.svg#arrow-right" />
-								</svg>
+					<div class="modal-body overflow-auto">
+						<div class="account account-blue">
+							<div class="user_avatar_section">
+								<div class="user-img">
+									<img src="images/user_avatar_big_2.png" alt="" class="img-fluid">
+								</div>
 							</div>
-							<div class="row-input">
-								Phone number
-								<svg>
-									<use href="images/icon-arrow-right.svg#arrow-right" />
-								</svg>
+							<div class="user_info_section">
+								<h2 class="name">Tom</h2>
+								<div class="user_role">
+									Prince
+								</div>
 							</div>
-							<div class="row-input">
-								Password
-								<svg>
-									<use href="images/icon-arrow-right.svg#arrow-right" />
-								</svg>
+							<div class="section-inputs">
+								<div class="section">
+									<div class="row-input">
+										Email
+										<svg>
+											<use href="images/icon-arrow-right.svg#arrow-right" />
+										</svg>
+									</div>
+									<div class="row-input">
+										Phone number
+										<svg>
+											<use href="images/icon-arrow-right.svg#arrow-right" />
+										</svg>
+									</div>
+									<div class="row-input">
+										Password
+										<svg>
+											<use href="images/icon-arrow-right.svg#arrow-right" />
+										</svg>
+									</div>
+								</div>
+
+								<div class="section">
+									<div class="row-input">
+										Members
+										<svg>
+											<use href="images/icon-arrow-right.svg#arrow-right" />
+										</svg>
+									</div>
+									<div class="row-input">
+										Notes
+										<svg>
+											<use href="images/icon-arrow-right.svg#arrow-right" />
+										</svg>
+									</div>
+								</div>
+								<div class="section">
+									<div class="row-input border-0 color-red">
+										Deactivate Account
+									</div>
+								</div>
+
 							</div>
 						</div>
 
-						<div class="section">
-							<div class="row-input">
-								Members
-								<svg>
-									<use href="images/icon-arrow-right.svg#arrow-right" />
-								</svg>
-							</div>
-							<div class="row-input">
-								Notes
-								<svg>
-									<use href="images/icon-arrow-right.svg#arrow-right" />
-								</svg>
-							</div>
-						</div>
-						<div class="section">
-							<div class="row-input border-0 color-red">
-								Deactivate Account
-							</div>
-						</div>
 
 					</div>
 				</div>
 
-
 			</div>
-
 		</div>
-		<!--window-attach end-->
+		<!--modal end-->
 
 	</div>
 
@@ -128,10 +133,10 @@
 	<script src="js/datepicker.js"></script>
 	<script src="js/script.js"></script>
 	<script>
-		windowAttach = document.getElementById("windowAttach");
-		windowAttach.classList.add('show');
-		document.querySelector('body').classList.add('overflow-hidden');
-
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
 	</script>
 </body>
 
