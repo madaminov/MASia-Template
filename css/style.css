@@ -11852,6 +11852,7 @@ textarea.form-control-lg {
 }
 html {
   min-height: 100dvh;
+  background-color: #1e1e1e;
 }
 
 body {
