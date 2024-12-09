@@ -12850,6 +12850,12 @@ button.active, button:active, button:focus,
   border: 1px solid #fff;
 }
 
+.btn-add-plus-2 {
+  width: 48px;
+  height: 48px;
+  padding: 12px 14px;
+}
+
 .btn-add-plus-full {
   display: flex;
   max-width: 329px;
@@ -13701,6 +13707,7 @@ h6,
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  background-color: #d3bff9;
 }
 .context-menu-user .user .name {
   color: #000000;
@@ -15335,6 +15342,17 @@ footer .btn-user.show-menu {
   font-weight: 500;
   line-height: 32px; /* 133.333% */
 }
+.modal-body .title-section .title-2 {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
 .modal-body .info-group {
   display: flex;
   width: 100%;
@@ -15703,6 +15721,124 @@ footer .btn-user.show-menu {
   fill: #000000;
   width: 40px;
   height: 40px;
+}
+
+.family-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.family-list .item-user {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.family-list .item-user .tools {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  right: -160px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.family-list .item-user .tools button {
+  border: none;
+}
+.family-list .item-user .tools .btn-edit,
+.family-list .item-user .tools .btn-delete {
+  width: 80px;
+  height: 84px;
+  flex-shrink: 0;
+  background: #383838;
+}
+.family-list .item-user .tools .btn-edit svg,
+.family-list .item-user .tools .btn-delete svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+.family-list .item-user .tools .btn-delete {
+  background: #424242;
+}
+.family-list .item-user.show-tools .user {
+  background: #2a2a2a;
+  left: -50px;
+}
+.family-list .item-user.show-tools .tools {
+  right: 0;
+}
+.family-list .user {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+  flex: 0 0 100%;
+  position: relative;
+  left: 0;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.family-list .user img {
+  width: 48px;
+  height: 48px;
+  background-color: #d3bff9;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.family-list .user .name {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+}
+.family-list .user .user-role {
+  color: #212529;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.048px;
+  display: flex;
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  background: #d3bff9;
+  margin-top: 4px;
+}
+.family-list .user .user-role.queen {
+  background-color: #fff;
 }
 
 .slot {

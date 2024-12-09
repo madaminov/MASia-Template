@@ -125,3 +125,103 @@
     }
   }
 }
+.family-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  .item-user {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    @include transition(0.3s);
+    .tools {
+      display: inline-flex;
+      align-items: center;
+      position: absolute;
+      right: -160px;
+      @include transition(0.3s);
+      button {
+        border: none;
+      }
+      .btn-edit,
+      .btn-delete {
+        width: 80px;
+        height: 84px;
+        flex-shrink: 0;
+        background: $black-color-9;
+        svg {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+          fill: $white;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .btn-delete {
+        background: $black-color-10;
+      }
+    }
+    &.show-tools {
+      .user {
+        background: $black-color-11;
+        left: -50px;
+      }
+      .tools {
+        right: 0;
+      }
+    }
+  }
+  .user {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+    flex: 0 0 100%;
+    position: relative;
+    left: 0;
+    @include transition(0.3s);
+    img {
+      width: 48px;
+      height: 48px;
+      background-color: $primary-default;
+      @include border-radius(50%);
+    }
+    .name {
+      color: $white;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Headline - 18 M */
+      font-family: $font-stack-popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 144.444% */
+    }
+    .user-role {
+      color: $black-color-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.048px;
+      display: flex;
+      padding: 2px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      @include border-radius(8px);
+      background: $primary-default;
+      margin-top: 4px;
+      &.queen {
+        background-color: $white;
+      }
+    }
+  }
+}
