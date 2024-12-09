@@ -97,6 +97,15 @@ select:focus {
 .bg-black-8 {
   background-color: $black-color-8 !important;
 }
+.bg-black-9 {
+  background-color: $black-color-9 !important;
+}
+.bg-black-10 {
+  background-color: $black-color-10 !important;
+}
+.bg-black-11 {
+  background-color: $black-color-11 !important;
+}
 .bg-primary-default {
   background-color: $primary-default !important;
 }
@@ -148,6 +157,9 @@ select:focus {
 .bg-gray-12 {
   background-color: $gray-12 !important;
 }
+.bg-gray-13 {
+  background-color: $gray-13 !important;
+}
 .bg-pink {
   background-color: $pink !important;
 }
@@ -171,6 +183,15 @@ select:focus {
 }
 .bg-violet-5 {
   background-color: $violet-5 !important;
+}
+.bg-violet-6 {
+  background-color: $violet-6 !important;
+}
+.bg-violet-7 {
+  background-color: $violet-7 !important;
+}
+.bg-violet-8 {
+  background-color: $violet-8 !important;
 }
 .bg-blue {
   background-color: $blue !important;
@@ -250,6 +271,15 @@ select:focus {
 .color-black-8 {
   color: $black-color-8 !important;
 }
+.color-black-9 {
+  color: $black-color-9 !important;
+}
+.color-black-10 {
+  color: $black-color-10 !important;
+}
+.color-black-11 {
+  color: $black-color-11 !important;
+}
 .color-primary-default {
   color: $primary-default !important;
 }
@@ -301,6 +331,9 @@ select:focus {
 .color-gray-12 {
   color: $gray-12 !important;
 }
+.color-gray-13 {
+  color: $gray-13 !important;
+}
 .color-pink {
   color: $pink !important;
 }
@@ -324,6 +357,12 @@ select:focus {
 }
 .color-violet-5 {
   color: $violet-5 !important;
+}
+.color-violet-6 {
+  color: $violet-6 !important;
+}
+.color-violet-7 {
+  color: $violet-7 !important;
 }
 .color-blue {
   color: $blue !important;
@@ -389,6 +428,15 @@ select:focus {
 .border-color-black-8 {
   border-color: $black-color-8 !important;
 }
+.border-color-black-9 {
+  border-color: $black-color-9 !important;
+}
+.border-color-black-10 {
+  border-color: $black-color-10 !important;
+}
+.border-color-black-11 {
+  border-color: $black-color-11 !important;
+}
 .border-color-primary-default {
   border-color: $primary-default !important;
 }
@@ -440,6 +488,9 @@ select:focus {
 .border-color-gray-12 {
   border-color: $gray-12 !important;
 }
+.border-color-gray-13 {
+  border-color: $gray-13 !important;
+}
 .border-color-pink {
   border-color: $pink !important;
 }
@@ -463,6 +514,12 @@ select:focus {
 }
 .border-color-violet-5 {
   border-color: $violet-5 !important;
+}
+.border-color-violet-6 {
+  border-color: $violet-6 !important;
+}
+.border-color-violet-7 {
+  border-color: $violet-7 !important;
 }
 .border-color-blue {
   border-color: $blue !important;
@@ -548,6 +605,12 @@ select:focus {
     margin-right: 10px;
     vertical-align: top;
   }
+}
+.alert-success {
+  background-color: $blue-8;
+}
+.alert-primary {
+  background-color: $primary-default;
 }
 .progress,
 .progress-stacked {

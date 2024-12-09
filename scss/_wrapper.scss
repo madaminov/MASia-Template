@@ -1,11 +1,89 @@
-.wrapper {
-  max-width: 768px;
-  min-height: 100dvh;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 70px;
-}
 .wrap-prince {
   background: $blue-7;
+  color: $black-color;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+  }
+  header .wrap_logo a {
+    color: $black-color;
+  }
+  header .user_badge .user_name {
+    color: $black-color;
+  }
+  .datepicker-header .datepicker-icon {
+    background-color: $blue-9;
+  }
+  .wrap-calendar .switch_view_calendar {
+    background-color: $blue-8;
+  }
+  .activity_info_container .text {
+    color: $black-color;
+  }
+  .btn-list-area {
+    background-color: $white;
+    &:hover {
+      background-color: $blue-9;
+    }
+    &.active,
+    &:active,
+    &:focus {
+      background: $blue-9;
+      background-image: url(../images/list-icon-area.svg);
+    }
+  }
+  .wrap-day-schedule .title {
+    color: $black-color;
+  }
+  .event .time {
+    color: $gray-13;
+  }
+}
+
+.wrap-princess {
+  background: $violet-6;
+  color: $black-color;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+  }
+  header .wrap_logo a {
+    color: $black-color;
+  }
+  header .user_badge .user_name {
+    color: $black-color;
+  }
+  .datepicker-header .datepicker-icon {
+    background-color: $primary-default;
+  }
+  .wrap-calendar .switch_view_calendar {
+    background-color: $violet-7;
+  }
+  .activity_info_container .text {
+    color: $black-color;
+  }
+  .btn-list-area {
+    background-color: $primary-default;
+    &:hover {
+      background-color: $primary-default;
+    }
+    &.active,
+    &:active,
+    &:focus {
+      background: $primary-default;
+      background-image: url(../images/list-icon-area.svg);
+    }
+  }
+  .wrap-day-schedule .title {
+    color: $black-color;
+  }
+  .event .time {
+    color: $gray-13;
+  }
 }

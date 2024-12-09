@@ -10,98 +10,99 @@
 </head>
 
 <body>
-	<div id="root" class="wrapper">
-		<header class="d-flex align-items-center justify-content-between">
-			<div class="wrap_logo">
-				<a href="/">MAS.AI</a>
-			</div>
-			<div class="user_badge d-flex align-items-center">
-				<div class="user-info">
-					<div class="user_name text-end">Ann</div>
-					<div class="user_role">Queen</div>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header class="d-flex align-items-center justify-content-between">
+				<div class="wrap_logo">
+					<a href="/">MAS.AI</a>
 				</div>
-				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
-			</div>
-		</header>
-
-		<footer >
-		<div class="container-fluid d-flex align-items-center justify-content-between">
-			<button title="home" class="btn-home">
-				<svg>
-					<use href="images/icons.svg#home" />
-				</svg>
-			</button>
-			<button title="calendar" class="btn-calendar">
-				<svg>
-					<use href="images/icons.svg#calendar" />
-				</svg>
-			</button>
-			<button title="add" class="btn-add">
-				<svg>
-					<use href="images/icons.svg#plus" />
-				</svg>
-			</button>
-			<button title="list" class="btn-list">
-				<svg>
-					<use href="images/icons.svg#list" />
-				</svg>
-			</button>
-			<button class="btn-user">
-				<svg>
-					<use href="images/icon-user.svg#user" />
-				</svg>
-			</button>
-			</div>
-		</footer>
-
-		<!--modal-->
-		<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header  bg-liner">
-						<h2 class="modal-title" id="fullModalLabel">Pick a category to create</h2>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="user_badge d-flex align-items-center">
+					<div class="user-info">
+						<div class="user_name text-end">Ann</div>
+						<div class="user_role">Queen</div>
 					</div>
-					<div class="modal-body overflow-auto">
-						<div class="d-flex flex-column justify-content-center h-100 w-100 p-24">
-							<div class="form-group mb-8">
-								<button class="btn btn-light-2 btn-svg w-100">
-									<svg>
-										<use href="images/icon-calendar-15-16.svg#calendar" />
-									</svg>
-									Event
-								</button>
-							</div>
-							<div class="form-group mb-8">
-								<button class="btn btn-light-2 btn-svg w-100">
-									<svg>
-										<use href="images/icon-task-15-15.svg#task" />
-									</svg>
-									Task
-								</button>
-							</div>
-							<div class="form-group mb-8">
-								<button class="btn btn-dark w-100">
-									List
-								</button>
-							</div>
-							<div class="form-group mb-0">
-								<button class="btn btn-dark w-100">
-									Contact
-								</button>
-							</div>
+					<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+				</div>
+			</header>
+
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+
+			<!--modal-->
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header  bg-liner">
+							<h2 class="modal-title" id="fullModalLabel">Pick a category to create</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
+						<div class="modal-body overflow-auto">
+							<div class="d-flex flex-column justify-content-center h-100 w-100 p-24">
+								<div class="form-group mb-8">
+									<button class="btn btn-light-2 btn-svg w-100">
+										<svg>
+											<use href="images/icon-calendar-15-16.svg#calendar" />
+										</svg>
+										Event
+									</button>
+								</div>
+								<div class="form-group mb-8">
+									<button class="btn btn-light-2 btn-svg w-100">
+										<svg>
+											<use href="images/icon-task-15-15.svg#task" />
+										</svg>
+										Task
+									</button>
+								</div>
+								<div class="form-group mb-8">
+									<button class="btn btn-dark w-100">
+										List
+									</button>
+								</div>
+								<div class="form-group mb-0">
+									<button class="btn btn-dark w-100">
+										Contact
+									</button>
+								</div>
+							</div>
 
+						</div>
 					</div>
+
 				</div>
-
 			</div>
+			<!--modal end-->
 		</div>
-		<!--modal end-->
-
-
 	</div>
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>

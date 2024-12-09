@@ -10,70 +10,73 @@
 </head>
 
 <body>
-	<div id="root" class="wrapper">
-		<header class="d-flex align-items-center justify-content-between">
-			<div class="wrap_logo">
-				<a href="/">MAS.AI</a>
-			</div>
-			<div class="user_badge d-flex align-items-center">
-				<div class="user-info">
-					<div class="user_name text-end">Ann</div>
-					<div class="user_role">Queen</div>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header class="d-flex align-items-center justify-content-between">
+				<div class="wrap_logo">
+					<a href="/">MAS.AI</a>
 				</div>
-				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+				<div class="user_badge d-flex align-items-center">
+					<div class="user-info">
+						<div class="user_name text-end">Ann</div>
+						<div class="user_role">Queen</div>
+					</div>
+					<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+				</div>
+			</header>
+			<!--calendar-->
+			<div class="wrap-calendar wrap-calendar-task icon-orange-light-2">
+				<div id="calendar" data-date="11/17/2024"></div>
+				<div class="switch_view_calendar bg-orange-light-3"></div>
 			</div>
-		</header>
-		<!--calendar-->
-		<div class="wrap-calendar wrap-calendar-task icon-orange-light-2">
-			<div id="calendar" data-date="11/17/2024"></div>
-			<div class="switch_view_calendar bg-orange-light-3"></div>
-		</div>
-		<!--calendar end-->
-		<!--Day Schedule-->
-		<div class="wrap-day-schedule">
-			<h2 class="title">01 October, Saturday</h2>
+			<!--calendar end-->
+			<!--Day Schedule-->
+			<div class="wrap-day-schedule">
+				<h2 class="title">01 October, Saturday</h2>
 
-		</div>
-		<!--tip_card_container-->
-		<div class="tip_card_container">
-			<div class="container">
-				<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
-				<h3>Ready to conquer the day?</h3>
-				<p>Create your first task or event by tapping the ‘+’ button. Let’s start organizing!</p>
 			</div>
-		</div>
-		<!--tip_card_container end-->
-		<!--Day Schedule end-->
-		<footer>
-		<div class="container-fluid d-flex align-items-center justify-content-between">
-			<button title="home" class="btn-home">
-				<svg>
-					<use href="images/icons.svg#home" />
-				</svg>
-			</button>
-			<button title="calendar" class="btn-calendar">
-				<svg>
-					<use href="images/icons.svg#calendar" />
-				</svg>
-			</button>
-			<button title="add" class="btn-add">
-				<svg>
-					<use href="images/icons.svg#plus" />
-				</svg>
-			</button>
-			<button title="list" class="btn-list active">
-				<svg>
-					<use href="images/icons.svg#list" />
-				</svg>
-			</button>
-			<button class="btn-user">
-				<svg>
-					<use href="images/icon-user.svg#user" />
-				</svg>
-			</button>
+			<!--tip_card_container-->
+			<div class="tip_card_container">
+				<div class="container">
+					<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
+					<h3>Ready to conquer the day?</h3>
+					<p>Create your first task or event by tapping the ‘+’ button. Let’s start organizing!</p>
+				</div>
 			</div>
-		</footer>
+			<!--tip_card_container end-->
+			<!--Day Schedule end-->
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list active">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+		</div>
 	</div>
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>

@@ -10,121 +10,125 @@
 </head>
 
 <body>
-	<div id="root" class="wrapper">
-		<header class="d-flex align-items-center justify-content-between">
-			<div class="wrap_logo">
-				<a href="/">MAS.AI</a>
-			</div>
-			<div class="user_badge d-flex align-items-center">
-				<div class="user-info">
-					<div class="user_name text-end">Ann</div>
-					<div class="user_role">Queen</div>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header class="d-flex align-items-center justify-content-between">
+				<div class="wrap_logo">
+					<a href="/">MAS.AI</a>
 				</div>
-				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
-			</div>
-		</header>
-		<div class="wrap-task-progress-bar detail">
-			<div class="progress-badge">
-				<div class="icon">
-					<svg>
-						<use href="images/icons.svg#progress" />
-					</svg>
+				<div class="user_badge d-flex align-items-center">
+					<div class="user-info">
+						<div class="user_name text-end">Ann</div>
+						<div class="user_role">Queen</div>
+					</div>
+					<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
 				</div>
-				Daily progress
-			</div>
-			<h2>My Queen, <span>the day has come to an end! </span></h2>
-			<div class="description">All tasks are completed, and your subjects can sleep peacefully.</div>
+			</header>
+			<div class="wrap-task-progress-bar detail">
+				<div class="progress-badge">
+					<div class="icon">
+						<svg>
+							<use href="images/icons.svg#progress" />
+						</svg>
+					</div>
+					Daily progress
+				</div>
+				<h2>My Queen, <span>the day has come to an end! </span></h2>
+				<div class="description">All tasks are completed, and your subjects can sleep peacefully.</div>
 
+			</div>
+			<!--Day Schedule user-->
+			<div class="wrap-day-schedule-user">
+				<div class="schedule-user">
+					<div class="status">Royal Income</div>
+					<div class="wrap-user-prize">
+						<div class="user">
+							<button class="user-img"
+								style="background-image: url(images/user_avatar_48-48_3.png) ;"></button>
+						</div>
+						<div class="prize-progress">
+							<div class="prize"></div>
+							<div class="prize"></div>
+							<div class="prize"></div>
+							<div class="prize"></div>
+							<div class="prize prize_not"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="schedule-user">
+					<div class="status">Daily Yield</div>
+					<div class="wrap-user-prize">
+						<div class="user">
+							<button class="user-img"
+								style="background-image: url(images/user_avatar_48-48.png) ;"></button>
+							<div class="name">
+								<span>Sara</span>
+								<span class="role">Princess</span>
+							</div>
+						</div>
+						<div class="prize-progress prize-progress-text">
+							<div class="number">7/10</div>
+							<div class="prizes">
+								<div class="prize"></div>
+								<div class="prize"></div>
+								<div class="prize"></div>
+							</div>
+						</div>
+					</div>
+					<div class="wrap-user-prize">
+						<div class="user">
+							<button class="user-img" style="background-image: url(images/user_img_5.jpg) ;"></button>
+							<div class="name">
+								<span>Tom</span>
+								<span class="role">Prince</span>
+							</div>
+						</div>
+						<div class="prize-progress prize-progress-text">
+							<div class="number">3/10</div>
+							<div class="prizes">
+								<div class="prize"></div>
+								<div class="prize"></div>
+								<div class="prize"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Day Schedule user end-->
+
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home active">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
 		</div>
-		<!--Day Schedule user-->
-		<div class="wrap-day-schedule-user">
-			<div class="schedule-user">
-				<div class="status">Royal Income</div>
-				<div class="wrap-user-prize">
-					<div class="user">
-						<button class="user-img"
-							style="background-image: url(images/user_avatar_48-48_3.png) ;"></button>
-					</div>
-					<div class="prize-progress">
-						<div class="prize"></div>
-						<div class="prize"></div>
-						<div class="prize"></div>
-						<div class="prize"></div>
-						<div class="prize prize_not"></div>
-					</div>
-				</div>
-
-			</div>
-			<div class="schedule-user">
-				<div class="status">Daily Yield</div>
-				<div class="wrap-user-prize">
-					<div class="user">
-						<button class="user-img" style="background-image: url(images/user_avatar_48-48.png) ;"></button>
-						<div class="name">
-							<span>Sara</span>
-							<span class="role">Princess</span>
-						</div>
-					</div>
-					<div class="prize-progress prize-progress-text">
-						<div class="number">7/10</div>
-						<div class="prizes">
-							<div class="prize"></div>
-							<div class="prize"></div>
-							<div class="prize"></div>
-						</div>
-					</div>
-				</div>
-				<div class="wrap-user-prize">
-					<div class="user">
-						<button class="user-img" style="background-image: url(images/user_img_5.jpg) ;"></button>
-						<div class="name">
-							<span>Tom</span>
-							<span class="role">Prince</span>
-						</div>
-					</div>
-					<div class="prize-progress prize-progress-text">
-						<div class="number">3/10</div>
-						<div class="prizes">
-							<div class="prize"></div>
-							<div class="prize"></div>
-							<div class="prize"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--Day Schedule user end-->
-
-		<footer>
-			<div class="container-fluid d-flex align-items-center justify-content-between">
-			<button title="home" class="btn-home active">
-				<svg>
-					<use href="images/icons.svg#home" />
-				</svg>
-			</button>
-			<button title="calendar" class="btn-calendar">
-				<svg>
-					<use href="images/icons.svg#calendar" />
-				</svg>
-			</button>
-			<button title="add" class="btn-add">
-				<svg>
-					<use href="images/icons.svg#plus" />
-				</svg>
-			</button>
-			<button title="list" class="btn-list">
-				<svg>
-					<use href="images/icons.svg#list" />
-				</svg>
-			</button>
-			<button class="btn-user">
-				<svg>
-					<use href="images/icon-user.svg#user" />
-				</svg>
-			</button>
-			</div>
-		</footer>
 	</div>
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>

@@ -10,156 +10,160 @@
 </head>
 
 <body>
-	<div id="root" class="wrapper">
-		<header class="d-flex align-items-center justify-content-between">
-			<div class="wrap_logo">
-				<a href="/">MAS.AI</a>
-			</div>
-			<div class="user_badge d-flex align-items-center">
-				<div class="user-info">
-					<div class="user_name text-end">Ann</div>
-					<div class="user_role">Queen</div>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header class="d-flex align-items-center justify-content-between">
+				<div class="wrap_logo">
+					<a href="/">MAS.AI</a>
 				</div>
-				<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
-			</div>
-		</header>
-
-		<footer>
-		<div class="container-fluid d-flex align-items-center justify-content-between">
-			<button title="home" class="btn-home">
-				<svg>
-					<use href="images/icons.svg#home" />
-				</svg>
-			</button>
-			<button title="calendar" class="btn-calendar">
-				<svg>
-					<use href="images/icons.svg#calendar" />
-				</svg>
-			</button>
-			<button title="add" class="btn-add">
-				<svg>
-					<use href="images/icons.svg#plus" />
-				</svg>
-			</button>
-			<button title="list" class="btn-list active">
-				<svg>
-					<use href="images/icons.svg#list" />
-				</svg>
-			</button>
-			<button class="btn-user">
-				<svg>
-					<use href="images/icon-user.svg#user" />
-				</svg>
-			</button>
-			</div>
-		</footer>
-		<!--modal-->
-		<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header bg-liner">
-						<h2 class="modal-title" id="fullModalLabel">Task details</h2>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="user_badge d-flex align-items-center">
+					<div class="user-info">
+						<div class="user_name text-end">Ann</div>
+						<div class="user_role">Queen</div>
 					</div>
-					<div class="modal-body overflow-auto">
+					<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+				</div>
+			</header>
 
-						<div class="title-section w-100 flex-wrap">
-							<div class="wrap-tags-task-detail tags">
-								<div class="tag bg-new">New</div>
-								<div class="tag bg-medium">Medium</div>
-							</div>
-							<button class="btn-options">
-								<svg>
-									<use href="images/button-options.svg#button-options" />
-								</svg>
-							</button>
-							<div class="title w-100 mt-20">Pick up the package</div>
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list active">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+			<!--modal-->
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-liner">
+							<h2 class="modal-title" id="fullModalLabel">Task details</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<div class="info-group">
-							<div class="section">
-								<div class="row g-0">
-									<div class="col col-auto">Date:</div>
-									<div class="col col-auto">01 October, Saturday</div>
-								</div>
+						<div class="modal-body overflow-auto">
 
-							</div>
-							<div class="section">
-								<div class="row g-0">
-									<div class="col col-auto">Time:</div>
-									<div class="col col-auto">17:00</div>
+							<div class="title-section w-100 flex-wrap">
+								<div class="wrap-tags-task-detail tags">
+									<div class="tag bg-new">New</div>
+									<div class="tag bg-medium">Medium</div>
 								</div>
-								<div class="row g-0">
-									<div class="col col-auto">Duration:</div>
-									<div class="col col-auto">
-										<div class="tag-item bg-pink-3">15 min</div>
+								<button class="btn-options">
+									<svg>
+										<use href="images/button-options.svg#button-options" />
+									</svg>
+								</button>
+								<div class="title w-100 mt-20">Pick up the package</div>
+							</div>
+							<div class="info-group">
+								<div class="section">
+									<div class="row g-0">
+										<div class="col col-auto">Date:</div>
+										<div class="col col-auto">01 October, Saturday</div>
+									</div>
+
+								</div>
+								<div class="section">
+									<div class="row g-0">
+										<div class="col col-auto">Time:</div>
+										<div class="col col-auto">17:00</div>
+									</div>
+									<div class="row g-0">
+										<div class="col col-auto">Duration:</div>
+										<div class="col col-auto">
+											<div class="tag-item bg-pink-3">15 min</div>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="section">
-								<div class="row g-0">
-									<div class="col col-auto">Repeat:</div>
-									<div class="col col-auto">No</div>
+								<div class="section">
+									<div class="row g-0">
+										<div class="col col-auto">Repeat:</div>
+										<div class="col col-auto">No</div>
+									</div>
+									<div class="row g-0">
+										<div class="col col-auto">Reminder:</div>
+										<div class="col col-auto">No</div>
+									</div>
 								</div>
-								<div class="row g-0">
-									<div class="col col-auto">Reminder:</div>
-									<div class="col col-auto">No</div>
+								<div class="section">
+									<div class="row g-0 flex-nowrap">
+										<div class="col col-auto">Notes:</div>
+										<div class="col">Pick up the package from the DPD pickup point, code 36253.
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="section">
-								<div class="row g-0 flex-nowrap">
-									<div class="col col-auto">Notes:</div>
-									<div class="col">Pick up the package from the DPD pickup point, code 36253.</div>
-								</div>
+
 							</div>
 
 						</div>
-
 					</div>
-				</div>
-				<div class="modal-context-menu">
-					<div class="context-menu grid bg-white">
-						<div class="row g-0 w-100">
-							<div class="col-12 border-end border-bottom border-color-balck-opacity">
-								<button class="btn-edit">
-									<svg>
-										<use href="images/icon-pencil.svg#pencil" />
-									</svg>
-									Edit
-								</button>
-							</div>
-							<div class="col-12 border-bottom border-1 border-color-balck-opacity">
-								<button class="btn-copy">
-									<svg>
-										<use href="images/icon-copy.svg#copy" />
-									</svg>
-									Copy
-								</button>
-							</div>
-							<div class="col-12 border-bottom border-1 border-color-balck-opacity">
-								<button class="btn-cut">
-									<svg>
-										<use href="images/icon-cut.svg#cut" />
-									</svg>
-									Cut
-								</button>
-							</div>
-							<div class="col-12">
-								<button class="btn-delete">
-									<svg>
-										<use href="images/icon-delete.svg#delete" />
-									</svg>
-									Delete
-								</button>
+					<div class="modal-context-menu">
+						<div class="context-menu grid bg-white">
+							<div class="row g-0 w-100">
+								<div class="col-12 border-end border-bottom border-color-balck-opacity">
+									<button class="btn-edit">
+										<svg>
+											<use href="images/icon-pencil.svg#pencil" />
+										</svg>
+										Edit
+									</button>
+								</div>
+								<div class="col-12 border-bottom border-1 border-color-balck-opacity">
+									<button class="btn-copy">
+										<svg>
+											<use href="images/icon-copy.svg#copy" />
+										</svg>
+										Copy
+									</button>
+								</div>
+								<div class="col-12 border-bottom border-1 border-color-balck-opacity">
+									<button class="btn-cut">
+										<svg>
+											<use href="images/icon-cut.svg#cut" />
+										</svg>
+										Cut
+									</button>
+								</div>
+								<div class="col-12">
+									<button class="btn-delete">
+										<svg>
+											<use href="images/icon-delete.svg#delete" />
+										</svg>
+										Delete
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--modal end-->
+			<!--modal end-->
 
+		</div>
 	</div>
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
