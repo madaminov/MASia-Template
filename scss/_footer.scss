@@ -1,12 +1,17 @@
 footer {
-  padding: 7px 16px;
-  gap: 10px 10px;
+  width: 100%;
   background-color: $body-color;
-  max-width: 768px;
   position: fixed;
   bottom: 0px;
   width: 100%;
   z-index: 3;
+  .container-fluid {
+    padding: 7px 16px;
+    gap: 10px 10px;
+
+    max-width: 768px;
+  }
+
   &.show-context-menu-user {
     &::before {
       content: '';

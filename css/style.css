@@ -13419,8 +13419,8 @@ input[type=number] {
   display: block;
 }
 
-#root {
-  max-width: 768px;
+.wrapper {
+  max-width: 100vw;
   min-height: 100dvh;
   width: 100%;
   margin: 0 auto;
@@ -13838,14 +13838,17 @@ header .user_badge .user_role {
 }
 
 footer {
-  padding: 7px 16px;
-  gap: 10px 10px;
+  width: 100%;
   background-color: #1e1e1e;
-  max-width: 768px;
   position: fixed;
   bottom: 0px;
   width: 100%;
   z-index: 3;
+}
+footer .container-fluid, footer .container-sm, footer .container-md, footer .container-lg, footer .container-xl, footer .container-xxl {
+  padding: 7px 16px;
+  gap: 10px 10px;
+  max-width: 768px;
 }
 footer.show-context-menu-user::before {
   content: "";
@@ -14464,8 +14467,11 @@ footer .btn-user.show-menu {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.event-list .event + .event {
+.event-list .event {
   margin-top: 8px;
+}
+.event-list .event:first-child {
+  margin-top: 0px;
 }
 
 .event {
@@ -15874,6 +15880,19 @@ footer .btn-user.show-menu {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.wrapper {
+  max-width: 768px;
+  min-height: 100dvh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.wrap-prince {
+  background: #deecfd;
 }
 
 /*# sourceMappingURL=style.css.map */

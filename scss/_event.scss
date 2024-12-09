@@ -1,8 +1,11 @@
 .event-list {
   position: relative;
   @include transition(0.3s);
-  .event + .event {
+  .event {
     margin-top: 8px;
+  }
+  .event:first-child {
+    margin-top: 0px;
   }
 }
 .event {
