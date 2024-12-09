@@ -14475,6 +14475,9 @@ footer .btn-user.show-menu {
 .event-list .event:first-child {
   margin-top: 0px;
 }
+.event-list > .event:first-child {
+  margin-top: 0px;
+}
 
 .event {
   color: #000000;
