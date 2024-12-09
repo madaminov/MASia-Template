@@ -1,6 +1,7 @@
 footer {
   width: 100%;
   background-color: $body-color;
+  left: 0;
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -8,7 +9,7 @@ footer {
   .container-fluid {
     padding: 7px 16px;
     gap: 10px 10px;
-
+    position: relative;
     max-width: 768px;
   }
 

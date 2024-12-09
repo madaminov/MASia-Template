@@ -11,6 +11,7 @@
 .event {
   color: $black-color;
   gap: 32px;
+  cursor: pointer;
   @include transition(0.3s);
   .wrap-time {
     width: 50px;

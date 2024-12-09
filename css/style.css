@@ -13840,6 +13840,7 @@ header .user_badge .user_role {
 footer {
   width: 100%;
   background-color: #1e1e1e;
+  left: 0;
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -13848,6 +13849,7 @@ footer {
 footer .container-fluid, footer .container-sm, footer .container-md, footer .container-lg, footer .container-xl, footer .container-xxl {
   padding: 7px 16px;
   gap: 10px 10px;
+  position: relative;
   max-width: 768px;
 }
 footer.show-context-menu-user::before {
@@ -14477,6 +14479,7 @@ footer .btn-user.show-menu {
 .event {
   color: #000000;
   gap: 32px;
+  cursor: pointer;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
