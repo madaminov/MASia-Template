@@ -14564,7 +14564,10 @@ footer .btn-user.show-menu {
 .event-list .event:first-child {
   margin-top: 0px;
 }
-.event-list div > .event:first-child {
+.event-list > div {
+  margin-top: 8px;
+}
+.event-list > div:first-child {
   margin-top: 0px;
 }
 
