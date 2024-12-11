@@ -185,7 +185,7 @@
 				</div>
 			</div>
 			<!--Day Schedule end-->
-			<footer class="show-context-menu-user">
+			<footer>
 				<div class="container-fluid d-flex align-items-center justify-content-between">
 					<button title="home" class="btn-home">
 						<svg>
@@ -207,50 +207,66 @@
 							<use href="images/icons.svg#list" />
 						</svg>
 					</button>
-					<button class="btn-user active show-menu">
+					<button class="btn-user active">
 						<svg>
 							<use href="images/icon-user.svg#user" />
 						</svg>
 					</button>
-					<div class="context-menu-user">
-						<div class="row g-0 w-100">
-							<div class="col-12">
-								<div class="user">
-									<img src="images/user_avatar.png" alt="" class="img-fluid">
-									<div class="name">Robby</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="user">
-									<img src="images/user_img_1.jpg" alt="" class="img-fluid">
-									<div class="name">Sara</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="user">
-									<img src="images/user_img_5.jpg" alt="" class="img-fluid">
-									<div class="name">Tom</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="user">
-									<img src="images/user_img_6.jpg" alt="" class="img-fluid">
-									<div class="name">Mira</div>
-								</div>
-							</div>
-							<div class="col-12">
-								<div class="user user-main">
-									<img src="images/user_avatar_48-48_3.png" alt="" class="img-fluid">
-									<div>
-										<div class="name">Ann</div>
-										<div class="user-role">Queen</div>
+
+				</div>
+			</footer>
+
+			<!--modal-->
+			<div class="modal slotModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body overflow-auto">
+							<div class="context-menu-user">
+								<div class="row g-0 w-100">
+									<div class="col-12">
+										<div class="user">
+											<img src="images/user_avatar.png" alt="" class="img-fluid">
+											<div class="name">Robby</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="user">
+											<img src="images/user_img_1.jpg" alt="" class="img-fluid">
+											<div class="name">Sara</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="user">
+											<img src="images/user_img_5.jpg" alt="" class="img-fluid">
+											<div class="name">Tom</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="user">
+											<img src="images/user_img_6.jpg" alt="" class="img-fluid">
+											<div class="name">Mira</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="user user-main">
+											<img src="images/user_avatar_48-48_3.png" alt="" class="img-fluid">
+											<div>
+												<div class="name">Ann</div>
+												<div class="user-role">Queen</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+
+
 						</div>
 					</div>
+
 				</div>
-			</footer>
+			</div>
+			<!--modal end-->
 
 		</div>
 	</div>
@@ -288,6 +304,10 @@
 			},
 		});
 		//datepicker.getFocusedDate('19/11/2024');
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
 	</script>
 </body>
 
