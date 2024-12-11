@@ -12608,6 +12608,7 @@ select:focus {
   border: none;
   width: 100%;
   margin-bottom: 8px;
+  cursor: pointer;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -13595,6 +13596,10 @@ h6,
   line-height: 26px; /* 133.333% */
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .font-medium {
   font-weight: 500 !important;
 }
@@ -13671,6 +13676,7 @@ h6,
   gap: 10px;
   padding: 4px 8px;
   background-color: #dcd8ff;
+  cursor: pointer;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -15945,10 +15951,28 @@ footer .btn-user.show-menu {
   background-color: #fff;
 }
 
-.slot {
-  position: fixed;
-  z-index: 4;
+.slotModal {
+  background: rgba(30, 30, 30, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0;
+}
+.slotModal .modal-dialog {
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   max-width: 768px;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slotModal .modal-content {
+  background: none;
+}
+
+.slot {
   width: 100%;
   height: 100%;
   top: 0;
@@ -15957,22 +15981,6 @@ footer .btn-user.show-menu {
   flex-wrap: wrap;
   justify-content: flex-end;
   padding: 8px 8px 50px 22px;
-  background: rgba(30, 30, 30, 0.2);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  transform: scale(0.8);
-  visibility: hidden;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.slot.show {
-  z-index: 4;
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;

@@ -214,50 +214,66 @@
 					</button>
 				</div>
 			</footer>
-			<div class="slot show">
-				<div class="event w-100 d-flex align-self-stretch">
-					<div class="wrap-time d-flex flex-column">
-						<div class="time color-white">09:00</div>
-						<div class="time color-gray-12">10:30</div>
-					</div>
-					<div class="event-day bg-white w-100 d-flex justify-content-between">
-						<div class="inner w-100 d-flex flex-wrap">
-							<div class="icon bg-blue-4">
-								<svg>
-									<use href="images/icons-event.svg#calendar" />
-								</svg>
-							</div>
-							<div class="text">Family breakfast</div>
-							<div class="users">
-								<div class="user"><img src="images/user_img_1.jpg" alt="" class="img-fluid">
+			<!--modal-->
+			<div class="modal slotModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body overflow-auto">
+							<div class="slot">
+								<div class="event w-100 d-flex align-self-stretch">
+									<div class="wrap-time d-flex flex-column">
+										<div class="time color-white">09:00</div>
+										<div class="time color-gray-12">10:30</div>
+									</div>
+									<div class="event-day bg-white w-100 d-flex justify-content-between">
+										<div class="inner w-100 d-flex flex-wrap">
+											<div class="icon bg-blue-4">
+												<svg>
+													<use href="images/icons-event.svg#calendar" />
+												</svg>
+											</div>
+											<div class="text">Family breakfast</div>
+											<div class="users">
+												<div class="user"><img src="images/user_img_1.jpg" alt=""
+														class="img-fluid">
+												</div>
+												<div class="user"><img src="images/user_avatar.png" alt=""
+														class="img-fluid">
+												</div>
+												<div class="user"> <img src="images/user_avatar_1.png" alt=""
+														class="img-fluid">
+												</div>
+												<div class="more-user">+2</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="user"><img src="images/user_avatar.png" alt="" class="img-fluid">
+								<!--event end-->
+								<div class="context-menu mt-1 ms-auto bg-white">
+									<div class="row g-0 w-100">
+										<div class="col-12">
+											<button class="btn-paste">
+												<svg>
+													<use href="images/icon-paste.svg#paste" />
+												</svg>
+												Paste
+											</button>
+										</div>
+									</div>
 								</div>
-								<div class="user"> <img src="images/user_avatar_1.png" alt="" class="img-fluid">
-								</div>
-								<div class="more-user">+2</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!--event end-->
-				<div class="context-menu mt-1 ms-auto bg-white">
-					<div class="row g-0 w-100">
-						<div class="col-12">
-							<button class="btn-paste">
-								<svg>
-									<use href="images/icon-paste.svg#paste" />
-								</svg>
-								Paste
-							</button>
-						</div>
-					</div>
+
 				</div>
 			</div>
+			<!--modal end-->
+
 		</div>
 	</div>
 
-
+	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/datepicker.js"></script>
 	<script src="js/script.js"></script>
 
@@ -289,6 +305,10 @@
 			},
 		});
 		//datepicker.getFocusedDate('19/11/2024');
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
 	</script>
 </body>
 

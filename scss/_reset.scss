@@ -599,6 +599,7 @@ select:focus {
   border: none;
   width: 100%;
   margin-bottom: 8px;
+  cursor: pointer;
   @include border-radius(10px);
   @include transition(0.3s);
   img {
