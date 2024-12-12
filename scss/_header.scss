@@ -1,5 +1,17 @@
 header {
-  padding: 12px 16px;
+  width: 100%;
+  background-color: $body-color;
+  left: 0;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 3;
+  .container-fluid {
+    padding: 12px 16px;
+    gap: 10px 10px;
+    position: relative;
+    max-width: 768px;
+  }
   .wrap_logo {
     a {
       color: $white;

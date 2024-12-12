@@ -10,6 +10,7 @@
   margin: 0 auto;
   position: relative;
   padding-bottom: 70px;
+  padding-top: 74px;
 }
 h1,
 .h1 {
@@ -225,10 +226,14 @@ h6,
   align-items: flex-start;
   background-color: $white;
   @include border-radius(12px);
-  position: static; 
-  margin-bottom: 70px;  
+  position: absolute;
+  z-index: 5;
+  margin-bottom: 70px;
   margin-left: auto;
   margin-right: 16px;
+  left: auto;
+  right: 0;
+  bottom: 0;
   .col-12 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
@@ -245,6 +250,7 @@ h6,
     gap: 12px;
     flex: 1 0 0;
     align-self: stretch;
+    cursor: pointer;
     img {
       width: 32px;
       height: 32px;

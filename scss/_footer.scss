@@ -12,23 +12,37 @@ footer {
     position: relative;
     max-width: 768px;
   }
-
-  &.show-context-menu-user {
-    &::before {
-      content: '';
-      background: rgba(30, 30, 30, 0.2);
-      backdrop-filter: blur(10px);
-      width: 100%;
-      height: 100svh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 4;
-      overflow: hidden;
-    }
+  .toggleContextMenuUser {
+    background: rgba(30, 30, 30, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100svh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
   }
-  .btn-user {
-    &.show-menu {
+  .context-menu-user {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  &.show-context-menu-user {
+    .toggleContextMenuUser {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+    .context-menu-user {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
+    }
+    .btn-user {
       position: relative;
       z-index: 5;
     }

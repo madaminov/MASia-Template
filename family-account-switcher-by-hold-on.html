@@ -9,19 +9,21 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="overflow-hidden">
+<body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
-			<header class="d-flex align-items-center justify-content-between">
-				<div class="wrap_logo">
-					<a href="/">MAS.AI</a>
-				</div>
-				<div class="user_badge d-flex align-items-center">
-					<div class="user-info">
-						<div class="user_name text-end">Ann</div>
-						<div class="user_role">Queen</div>
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
 					</div>
-					<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+					</div>
 				</div>
 			</header>
 			<!--calendar-->
@@ -185,7 +187,7 @@
 				</div>
 			</div>
 			<!--Day Schedule end-->
-			<footer>
+			<footer class="show-context-menu-user">
 				<div class="container-fluid d-flex align-items-center justify-content-between">
 					<button title="home" class="btn-home">
 						<svg>
@@ -207,66 +209,54 @@
 							<use href="images/icons.svg#list" />
 						</svg>
 					</button>
-					<button class="btn-user active">
+					<button class="btn-user show-menu active">
 						<svg>
 							<use href="images/icon-user.svg#user" />
 						</svg>
 					</button>
 
-				</div>
-			</footer>
-
-			<!--modal-->
-			<div class="modal slotModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
-				aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-body overflow-auto">
-							<div class="context-menu-user">
-								<div class="row g-0 w-100">
-									<div class="col-12">
-										<div class="user">
-											<img src="images/user_avatar.png" alt="" class="img-fluid">
-											<div class="name">Robby</div>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="user">
-											<img src="images/user_img_1.jpg" alt="" class="img-fluid">
-											<div class="name">Sara</div>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="user">
-											<img src="images/user_img_5.jpg" alt="" class="img-fluid">
-											<div class="name">Tom</div>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="user">
-											<img src="images/user_img_6.jpg" alt="" class="img-fluid">
-											<div class="name">Mira</div>
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="user user-main">
-											<img src="images/user_avatar_48-48_3.png" alt="" class="img-fluid">
-											<div>
-												<div class="name">Ann</div>
-												<div class="user-role">Queen</div>
-											</div>
-										</div>
+					<div class="context-menu-user fade">
+						<div class="row g-0 w-100">
+							<div class="col-12">
+								<div class="user">
+									<img src="images/user_avatar.png" alt="" class="img-fluid">
+									<div class="name">Robby</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="user">
+									<img src="images/user_img_1.jpg" alt="" class="img-fluid">
+									<div class="name">Sara</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="user">
+									<img src="images/user_img_5.jpg" alt="" class="img-fluid">
+									<div class="name">Tom</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="user">
+									<img src="images/user_img_6.jpg" alt="" class="img-fluid">
+									<div class="name">Mira</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="user user-main">
+									<img src="images/user_avatar_48-48_3.png" alt="" class="img-fluid">
+									<div>
+										<div class="name">Ann</div>
+										<div class="user-role">Queen</div>
 									</div>
 								</div>
 							</div>
-
-
 						</div>
 					</div>
-
+					<div class="toggleContextMenuUser"></div>
 				</div>
-			</div>
-			<!--modal end-->
+			</footer>
+
+
 
 		</div>
 	</div>
@@ -304,10 +294,12 @@
 			},
 		});
 		//datepicker.getFocusedDate('19/11/2024');
-		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
-		document.onreadystatechange = function () {
-			fullModal.show();
-		};
+
+		document.querySelector('.toggleContextMenuUser').addEventListener('click', (e) => {
+			e.preventDefault();
+			document.querySelector('footer').classList.remove('show-context-menu-user');
+		});
+
 	</script>
 </body>
 

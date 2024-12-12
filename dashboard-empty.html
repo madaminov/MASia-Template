@@ -12,16 +12,18 @@
 <body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
-			<header class="d-flex align-items-center justify-content-between">
-				<div class="wrap_logo">
-					<a href="/">MAS.AI</a>
-				</div>
-				<div class="user_badge d-flex align-items-center">
-					<div class="user-info">
-						<div class="user_name text-end">Ann</div>
-						<div class="user_role">Queen</div>
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
 					</div>
-					<button class="user-img user-none-img"></button>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img user-none-img"></button>
+					</div>
 				</div>
 			</header>
 			<div class="wrap-task-progress-bar">
@@ -29,7 +31,7 @@
 			</div>
 			<!--calendar-->
 			<div class="wrap-calendar">
-				<div id="calendar" data-date="10/1/2024"></div>
+				<input type="hidden" name="range-start" class="input" id="calendar">
 				<div class="switch_view_calendar"></div>
 			</div>
 			<!--calendar end-->
@@ -83,17 +85,103 @@
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/datepicker.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
 	<script src="js/script.js"></script>
 	<script>
-		const elem = document.getElementById('calendar');
-		const datepicker = new Datepicker(elem, {
-			todayHighlight: true,
-			weekStart: 1,
-			maxNumberOfDates: 2,
+		var localeEn = {
+			days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+			daysMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+			months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+			today: 'Today',
+			clear: 'Clear',
+			dateFormat: 'MM/dd/yyyy',
+			timeFormat: 'hh:mm aa',
+			firstDay: 1
+		};
+		new AirDatepicker('#calendar', {
+			locale: localeEn,
+			inline: true,
+			range: true,
+			multipleDatesSeparator: ',',
+			dynamicRange: true,
+			startDate: '2024-10-01',
+			navTitles: {
+				days: 'MMMM <div>yyyy</div>',
+				months: 'yyyy',
+				years: 'yyyy1 - yyyy2',
+			},
+			//multipleDates: true,
+			selectedDates: ['2024-10-10', '2024-10-21'],
+			onRenderCell({ date, cellType }) {
+				// Disable all 12th dates in month
+				if (cellType === 'day') {
+					console.log(date);
+					if (date.getFullYear() === 2024 && date.getMonth() === 9 && date.getDate() === 12) {
+						return {
+							disabled: true,
+							classes: 'disabled-class',
+							attrs: {
+								title: 'Cell is disabled'
+							}
+						}
+					}
+				}
+			}
 		});
-		//datepicker.getFocusedDate('19/11/2024');
 	</script>
+	<script>
+
+
+		const weekPicker = (() => {
+			let i = 0;
+			let days = document.querySelectorAll('.-days- .-day-');
+			let iteration = 1;
+
+			let col = days.length / 7; // кол-во строк
+			for (i = 0; i < days.length; i++) {
+				days[i].classList.add('d-none');
+			}
+			for (i = 0; i < 7; i++) {
+				days[i].classList.remove('d-none');
+			}
+			const updateDisplay = () => {
+				for (i = 0; i < days.length; i++) {
+					days[i].classList.add('d-none');
+				}
+
+				for (i = (iteration * 7 - 7); i < iteration * 7; i++) {
+					days[i].classList.remove('d-none');
+				}
+			}
+			const changeWeek = (direction) => {
+
+				iteration = iteration + direction;
+				console.log(iteration);
+				if (iteration == 1) {
+					document.getElementById('prevWeek').disabled = true
+				} else {
+					document.getElementById('prevWeek').disabled = false
+				}
+				if (iteration == col) {
+					document.getElementById('nextWeek').disabled = true
+				} else {
+					document.getElementById('nextWeek').disabled = false
+				}
+				updateDisplay();
+			};
+
+			document.getElementById('prevWeek').addEventListener('click', () => changeWeek(-1));
+			document.getElementById('nextWeek').addEventListener('click', () => changeWeek(1));
+			updateDisplay();
+		});
+	</script>
+	<style>
+		.tip_card_container {
+			display: none;
+		}
+	</style>
 
 </body>
 

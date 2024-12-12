@@ -40,6 +40,11 @@ body {
 ::-webkit-scrollbar-track {
   background: $body-color;
 }
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
 .scrollbar-hidden {
   &::-webkit-scrollbar {
     width: 0;

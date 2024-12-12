@@ -26,10 +26,10 @@ if (btn_options) {
     document.querySelector('.modal-context-menu').classList.add('show');
   });
 }
-wacm = document.querySelector('.modal-context-menu');
+wacm = document.querySelector('.modal-context-menu .toggleClose');
 if (wacm) {
   wacm.addEventListener('click', (e) => {
     e.preventDefault();
-    wacm.classList.remove('show');
+    document.querySelector('.modal-context-menu').classList.remove('show');
   });
 }
