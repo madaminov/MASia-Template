@@ -30,7 +30,7 @@
 				<h2>Your Majesty,<br /> <span>Start your day strong!</span></h2>
 			</div>
 			<!--calendar-->
-			<div class="wrap-calendar">
+			<div class="wrap-calendar open">
 				<input type="hidden" name="range-start" class="input" id="calendar">
 				<div class="switch_view_calendar"></div>
 			</div>
@@ -105,23 +105,49 @@
 			inline: true,
 			range: true,
 			multipleDatesSeparator: ',',
-			dynamicRange: true,
+			toggleSelected: false,
+			multipleDates: true,
+			dynamicRange: false,
 			startDate: '2024-10-01',
 			navTitles: {
 				days: 'MMMM <div>yyyy</div>',
 				months: 'yyyy',
 				years: 'yyyy1 - yyyy2',
 			},
-			//multipleDates: true,
-			selectedDates: ['2024-10-10', '2024-10-21'],
+			//selectedDates: ['2024-10-10', '2024-10-21'],
+			onSelect({ date, formattedDate, datepicker }) {
+				console.log(datepicker);
+				if (date.length >= 2) {
+					if (datepicker.rangeDateFrom && datepicker.rangeDateTo)
+						for (i = datepicker.rangeDateFrom.getDate() + 1; i < datepicker.rangeDateTo.getDate(); i++) {
+							datepicker.$datepicker.querySelector('.-days- div[data-date="' + i + '"]').classList.add('-in-range-set-')
+						}
+					datepicker.$datepicker.querySelector('.-days- div[data-date="' + datepicker.rangeDateFrom.getDate() + '"]').classList.add('-range-from-set-')
+					datepicker.$datepicker.querySelector('.-days- div[data-date="' + datepicker.rangeDateTo.getDate() + '"]').classList.add('-range-to-set-')
+				} else {
+					datepicker.$datepicker.querySelectorAll('.-days- div').forEach(box => {
+						box.classList.remove('-in-range-set-', '-range-from-set-', '-range-to-set-')
+					})
+
+
+				}
+			},
 			onRenderCell({ date, cellType }) {
+
 				// Disable all 12th dates in month
 				if (cellType === 'day') {
 					console.log(date);
 					if (date.getFullYear() === 2024 && date.getMonth() === 9 && date.getDate() === 12) {
 						return {
-							disabled: true,
-							classes: 'disabled-class',
+							classes: '-focus-',
+							attrs: {
+								title: 'Cell is disabled'
+							}
+						}
+					}
+					if (date.getFullYear() === 2024 && date.getMonth() === 9 && date.getDate() === 11) {
+						return {
+							classes: '-focus-',
 							attrs: {
 								title: 'Cell is disabled'
 							}
@@ -133,32 +159,69 @@
 	</script>
 	<script>
 
+		document.querySelector('.switch_view_calendar').addEventListener('click', (e) => {
+			wrap_calendar = document.querySelector('.wrap-calendar');
+			if (wrap_calendar.classList.contains('open')) {
+				wrap_calendar.classList.remove('open');
+				//console.log('update weekPicker');
+				weekPicker();
+			} else {
+				wrap_calendar.classList.add('open');
+				document.querySelectorAll('.-days- .-day-').forEach(box => {
+					box.classList.add('fadeOut', 'd-none');
+				});
+				i = 1;
+				document.querySelectorAll('.-days- .-day-').forEach(box => {
+					setTimeout(() => {
+						box.classList.remove('fadeOut', 'd-none');
+						box.classList.add('fadeIn');
+					}, 20 * i);
+					i++;
+				});
+
+
+
+			}
+		});
 
 		const weekPicker = (() => {
 			let i = 0;
-			let days = document.querySelectorAll('.-days- .-day-');
 			let iteration = 1;
+			console.log('start ' + iteration);
+			let days = document.querySelectorAll('.-days- .-day-');
+			if (iteration == 1) {
+				document.getElementById('prevWeek').disabled = true;
+				document.getElementById('nextWeek').disabled = false;
+			}
+			//console.log(iterationIn);
 
 			let col = days.length / 7; // кол-во строк
 			for (i = 0; i < days.length; i++) {
-				days[i].classList.add('d-none');
+				days[i].classList.add('fadeOut', 'd-none');
 			}
 			for (i = 0; i < 7; i++) {
-				days[i].classList.remove('d-none');
+				days[i].classList.remove('fadeOut', 'd-none');
+				days[i].classList.add('fadeIn');
+
 			}
 			const updateDisplay = () => {
 				for (i = 0; i < days.length; i++) {
-					days[i].classList.add('d-none');
+					days[i].classList.remove('fadeIn');
+					days[i].classList.add('fadeOut', 'd-none');
 				}
 
 				for (i = (iteration * 7 - 7); i < iteration * 7; i++) {
-					days[i].classList.remove('d-none');
+					days[i].classList.remove('fadeOut', 'd-none');
+					days[i].classList.add('fadeIn');
 				}
 			}
 			const changeWeek = (direction) => {
 
 				iteration = iteration + direction;
-				console.log(iteration);
+				//console.log('итт - ' + iteration);
+				if (iteration < 1 || iteration > col) {
+					iteration = 1;
+				}
 				if (iteration == 1) {
 					document.getElementById('prevWeek').disabled = true
 				} else {

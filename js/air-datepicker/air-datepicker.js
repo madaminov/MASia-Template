@@ -483,7 +483,7 @@
           return this.customData.html;
         switch (this.type) {
           case i.days:
-            return !n && this.isOtherMonth ? '' : a;
+            return !n && this.isOtherMonth ? '' : `<span>${a}</span>`;
           case i.months:
             return this.dp.locale[this.opts.monthsField][s];
           case i.years:

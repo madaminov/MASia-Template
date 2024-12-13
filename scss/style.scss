@@ -1,19 +1,19 @@
 //sass --watch scss/style.scss css/style.css
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
-@import 'variables';
-@import 'reset';
-@import 'form';
-@import 'styles';
-@import 'header';
-@import 'footer';
-@import 'task_progress_bar';
-@import 'air_datepicker';
-@import 'calendar';
-@import 'day_schedule';
-@import 'event';
-@import 'schedule_user';
-@import 'tip_card_container';
+@import '_variables';
+@import '_reset';
+@import '_form';
+@import '_styles';
+@import '_header';
+@import '_footer';
+@import '_task_progress_bar';
+@import '_air_datepicker';
+@import '_calendar';
+@import '_day_schedule';
+@import '_event';
+@import '_schedule_user';
+@import '_tip_card_container';
 @import '_activity_info_container';
 @import '_window_attach';
 @import '_modal';
@@ -22,3 +22,4 @@
 @import '_account';
 @import '_slot';
 @import '_wrapper';
+@import '_animate';
