@@ -365,7 +365,7 @@
           $(this, 'select', () => {
             this.$cell.classList.add('-selected-'), (this.selected = !0);
           }),
-          $(this, 'removeSelect', () => {
+          $(this, 'removeSelect', () => {            
             this.$cell.classList.remove(
               '-selected-',
               '-range-from-',
@@ -382,7 +382,8 @@
             if (!e) return void (this.focused && this.removeFocus());
             let t = p(e, this.date, this.type);
             t ? this.focus() : !t && this.focused && this.removeFocus(),
-              this.opts.range && this._handleRangeStatus();
+              this.opts.range;
+            //this.opts.range && this._handleRangeStatus();
           }),
           $(
             this,
@@ -525,8 +526,8 @@
           '-range-to-': r && p(this.date, r, this.type),
         });
         var h, l, d;
-        this.$cell.classList.remove('-range-from-', '-range-to-', '-in-range-'),
-          o && this.$cell.classList.add(...o.split(' '));
+        this.$cell.classList.remove('-range-from-', '-range-to-', '-in-range-');
+        o && this.$cell.classList.add(...o.split(' '));
       }
       _handleSelectedStatus() {
         let e = this.dp._checkIfDateIsSelected(this.date, this.type);

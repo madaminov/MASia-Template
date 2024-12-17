@@ -1,3 +1,11 @@
+.wrap-calendar {
+  &.open {
+    .air-datepicker {
+      background-color: $white-2;
+      transition: all 0.3s ease;
+    }
+  }
+}
 .datepicker-icon {
   width: 36px;
   height: 36px;
@@ -8,6 +16,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
+}
+.wrap-calendar-task .datepicker-icon {
+  background-image: url(../images/icon-task.svg);
+  background-color: $orange-light-2 !important;
 }
 .wrap-week {
   height: 40px;
@@ -142,6 +154,7 @@
     border: 1px solid transparent;
     position: relative;
     z-index: 2;
+    transition: all 0.3s ease;
   }
 }
 .air-datepicker-cell.-year-.-other-decade- span,
@@ -159,16 +172,16 @@
 .-selected-.air-datepicker-cell.-year-.-other-decade- span,
 .-selected-.air-datepicker-cell.-day-.-other-month- span {
   color: #fff;
-  background: var(--adp-background-color-selected-other-month);
+  background: var(--adp-cell-background-color-selected);
 }
 .-selected-.-focus-.air-datepicker-cell.-year-.-other-decade- span,
 .-selected-.-focus-.air-datepicker-cell.-day-.-other-month- span {
-  background: var(--adp-background-color-selected-other-month-focused);
+  color: #fff;
+  border-color: var(--adp-cell-background-color-selected);
+  background: var(--adp-cell-background-color-selected);
 }
 .-in-range-.air-datepicker-cell.-year-.-other-decade-,
 .-in-range-.air-datepicker-cell.-day-.-other-month- {
-  background-color: var(--adp-background-color-in-range);
-  color: var(--adp-color);
 }
 .-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-,
 .-in-range-.-focus-.air-datepicker-cell.-day-.-other-month- {
@@ -224,10 +237,11 @@
   color: var(--adp-color-disabled);
 }
 .air-datepicker-cell.-in-range- {
-}
-.air-datepicker-cell.-in-range-set- {
   background: var(--adp-cell-background-color-in-range);
   border-radius: 0;
+}
+.wrap-calendar-task .air-datepicker-cell.-in-range- {
+  background: rgba(242, 223, 166, 0.32);
 }
 
 .air-datepicker-cell.-in-range-:hover,
@@ -241,8 +255,6 @@
   }
 }
 .air-datepicker-cell.-range-from- {
-}
-.air-datepicker-cell.-range-from-set- {
   &::before {
     background-color: transparent;
   }
@@ -250,9 +262,18 @@
     background-color: var(--adp-cell-background-color-in-range);
   }
 }
-.air-datepicker-cell.-range-to- {
+
+.wrap-calendar-task .air-datepicker-cell.-range-from- {
+  &::after {
+    background: linear-gradient(
+      90deg,
+      rgba(241, 211, 119, 0.32) 16.1%,
+      rgba(242, 223, 166, 0.32) 99.95%
+    );
+  }
 }
-.air-datepicker-cell.-range-to-set- {
+
+.air-datepicker-cell.-selected-.-range-to- {
   &::before {
     background: linear-gradient(
       90deg,
@@ -264,7 +285,24 @@
     background-color: transparent;
   }
 }
+.wrap-calendar-task .air-datepicker-cell.-selected-.-range-to- {
+  &::before {
+    background: rgba(242, 223, 166, 0.32);
+  }
+  &::after {
+    background-color: transparent;
+  }
+}
+
 .air-datepicker-cell.-focus-.-range-from-.-range-to- {
+  &::before {
+    background: transparent;
+  }
+  &::after {
+    background-color: transparent;
+  }
+}
+.air-datepicker-cell.-selected-.-range-from-.-range-to- {
   &::before {
     background: transparent;
   }
@@ -280,14 +318,26 @@
   border-color: var(--adp-cell-background-color-selected);
   background: var(--adp-cell-background-color-selected);
 }
-.air-datepicker-cell.-selected-.-current- {
+.wrap-calendar-task .air-datepicker-cell.-selected- span {
   color: #fff;
-  background: var(--adp-cell-background-color-selected);
+  border-color: $orange-light-3;
+  background: $orange-light-3;
+}
+.air-datepicker-cell.-selected-.-current- {
+  span {
+    color: #fff;
+    background: var(--adp-cell-background-color-selected);
+  }
 }
 .air-datepicker-cell.-selected-.-focus- span {
   color: #fff;
   border-color: var(--adp-cell-background-color-selected);
   background: var(--adp-cell-background-color-selected);
+}
+.wrap-calendar-task .air-datepicker-cell.-selected-.-focus- span {
+  color: #fff;
+  border-color: $orange-light-3;
+  background: $orange-light-3;
 }
 .air-datepicker-body {
   transition: all var(--adp-transition-duration) var(--adp-transition-ease);
@@ -707,6 +757,8 @@
   color: var(--adp-color);
   width: var(--adp-width);
   position: absolute;
+  transition: background-color var(--adp-transition-duration)
+    var(--adp-transition-ease);
   transition: opacity var(--adp-transition-duration) var(--adp-transition-ease),
     transform var(--adp-transition-duration) var(--adp-transition-ease);
   z-index: var(--adp-z-index);

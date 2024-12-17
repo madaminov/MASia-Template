@@ -28,7 +28,7 @@
 			</header>
 			<!--calendar-->
 			<div class="wrap-calendar">
-				<div id="calendar" data-date="11/17/2024"></div>
+				<input type="hidden" name="range-start" class="input" id="calendar">
 				<div class="switch_view_calendar"></div>
 			</div>
 			<!--calendar end-->
@@ -83,18 +83,9 @@
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/datepicker.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-picker.mixin.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-		const elem = document.getElementById('calendar');
-		const datepicker = new Datepicker(elem, {
-			allowOneSidedRange: true,
-			todayHighlight: true,
-			weekStart: 1,
-			maxNumberOfDates: 2,
-		});
-		//datepicker.getFocusedDate('19/11/2024');
-	</script>
 </body>
 
 </html>

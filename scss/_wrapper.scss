@@ -8,13 +8,16 @@
     height: 100%;
     background-color: inherit;
   }
+  header {
+    background: $blue-7;
+  }
   header .wrap_logo a {
     color: $black-color;
   }
   header .user_badge .user_name {
     color: $black-color;
   }
-  .datepicker-header .datepicker-icon {
+  .datepicker-icon {
     background-color: $blue-9;
   }
   .wrap-calendar .switch_view_calendar {
@@ -53,13 +56,16 @@
     height: 100%;
     background-color: inherit;
   }
+  header {
+    background: $violet-6;
+  }
   header .wrap_logo a {
     color: $black-color;
   }
   header .user_badge .user_name {
     color: $black-color;
   }
-  .datepicker-header .datepicker-icon {
+  .datepicker-icon {
     background-color: $primary-default;
   }
   .wrap-calendar .switch_view_calendar {

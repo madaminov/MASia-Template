@@ -14089,6 +14089,11 @@ footer.show-context-menu-user .btn-user {
   margin-bottom: 60px;
 }
 
+.wrap-calendar.open .air-datepicker {
+  background-color: #f6f6f6;
+  transition: all 0.3s ease;
+}
+
 .datepicker-icon {
   width: 36px;
   height: 36px;
@@ -14102,6 +14107,11 @@ footer.show-context-menu-user .btn-user {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
+}
+
+.wrap-calendar-task .datepicker-icon {
+  background-image: url(../images/icon-task.svg);
+  background-color: #fef5da !important;
 }
 
 .wrap-week {
@@ -14242,6 +14252,7 @@ footer.show-context-menu-user .btn-user {
   border: 1px solid transparent;
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .air-datepicker-cell.-year-.-other-decade- span,
@@ -14262,18 +14273,14 @@ footer.show-context-menu-user .btn-user {
 .-selected-.air-datepicker-cell.-year-.-other-decade- span,
 .-selected-.air-datepicker-cell.-day-.-other-month- span {
   color: #fff;
-  background: var(--adp-background-color-selected-other-month);
+  background: var(--adp-cell-background-color-selected);
 }
 
 .-selected-.-focus-.air-datepicker-cell.-year-.-other-decade- span,
 .-selected-.-focus-.air-datepicker-cell.-day-.-other-month- span {
-  background: var(--adp-background-color-selected-other-month-focused);
-}
-
-.-in-range-.air-datepicker-cell.-year-.-other-decade-,
-.-in-range-.air-datepicker-cell.-day-.-other-month- {
-  background-color: var(--adp-background-color-in-range);
-  color: var(--adp-color);
+  color: #fff;
+  border-color: var(--adp-cell-background-color-selected);
+  background: var(--adp-cell-background-color-selected);
 }
 
 .-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-,
@@ -14340,9 +14347,13 @@ footer.show-context-menu-user .btn-user {
   color: var(--adp-color-disabled);
 }
 
-.air-datepicker-cell.-in-range-set- {
+.air-datepicker-cell.-in-range- {
   background: var(--adp-cell-background-color-in-range);
   border-radius: 0;
+}
+
+.wrap-calendar-task .air-datepicker-cell.-in-range- {
+  background: rgba(242, 223, 166, 0.32);
 }
 
 .air-datepicker-cell.-focus-.-range-from- span {
@@ -14351,17 +14362,28 @@ footer.show-context-menu-user .btn-user {
   background: var(--adp-cell-background-color-selected);
 }
 
-.air-datepicker-cell.-range-from-set-::before {
+.air-datepicker-cell.-range-from-::before {
   background-color: transparent;
 }
-.air-datepicker-cell.-range-from-set-::after {
+.air-datepicker-cell.-range-from-::after {
   background-color: var(--adp-cell-background-color-in-range);
 }
 
-.air-datepicker-cell.-range-to-set-::before {
+.wrap-calendar-task .air-datepicker-cell.-range-from-::after {
+  background: linear-gradient(90deg, rgba(241, 211, 119, 0.32) 16.1%, rgba(242, 223, 166, 0.32) 99.95%);
+}
+
+.air-datepicker-cell.-selected-.-range-to-::before {
   background: linear-gradient(90deg, rgba(211, 191, 249, 0.32) 16.1%, rgba(142, 114, 195, 0.32) 99.95%);
 }
-.air-datepicker-cell.-range-to-set-::after {
+.air-datepicker-cell.-selected-.-range-to-::after {
+  background-color: transparent;
+}
+
+.wrap-calendar-task .air-datepicker-cell.-selected-.-range-to-::before {
+  background: rgba(242, 223, 166, 0.32);
+}
+.wrap-calendar-task .air-datepicker-cell.-selected-.-range-to-::after {
   background-color: transparent;
 }
 
@@ -14369,6 +14391,13 @@ footer.show-context-menu-user .btn-user {
   background: transparent;
 }
 .air-datepicker-cell.-focus-.-range-from-.-range-to-::after {
+  background-color: transparent;
+}
+
+.air-datepicker-cell.-selected-.-range-from-.-range-to-::before {
+  background: transparent;
+}
+.air-datepicker-cell.-selected-.-range-from-.-range-to-::after {
   background-color: transparent;
 }
 
@@ -14382,7 +14411,13 @@ footer.show-context-menu-user .btn-user {
   background: var(--adp-cell-background-color-selected);
 }
 
-.air-datepicker-cell.-selected-.-current- {
+.wrap-calendar-task .air-datepicker-cell.-selected- span {
+  color: #fff;
+  border-color: #f1d377;
+  background: #f1d377;
+}
+
+.air-datepicker-cell.-selected-.-current- span {
   color: #fff;
   background: var(--adp-cell-background-color-selected);
 }
@@ -14391,6 +14426,12 @@ footer.show-context-menu-user .btn-user {
   color: #fff;
   border-color: var(--adp-cell-background-color-selected);
   background: var(--adp-cell-background-color-selected);
+}
+
+.wrap-calendar-task .air-datepicker-cell.-selected-.-focus- span {
+  color: #fff;
+  border-color: #f1d377;
+  background: #f1d377;
 }
 
 .air-datepicker-body {
@@ -14868,6 +14909,7 @@ footer.show-context-menu-user .btn-user {
   color: var(--adp-color);
   width: var(--adp-width);
   position: absolute;
+  transition: background-color var(--adp-transition-duration) var(--adp-transition-ease);
   transition: opacity var(--adp-transition-duration) var(--adp-transition-ease), transform var(--adp-transition-duration) var(--adp-transition-ease);
   z-index: var(--adp-z-index);
 }
@@ -17072,13 +17114,16 @@ footer.show-context-menu-user .btn-user {
   height: 100%;
   background-color: inherit;
 }
+.wrap-prince header {
+  background: #deecfd;
+}
 .wrap-prince header .wrap_logo a {
   color: #000000;
 }
 .wrap-prince header .user_badge .user_name {
   color: #000000;
 }
-.wrap-prince .datepicker-header .datepicker-icon {
+.wrap-prince .datepicker-icon {
   background-color: #d4e6fc;
 }
 .wrap-prince .wrap-calendar .switch_view_calendar {
@@ -17115,13 +17160,16 @@ footer.show-context-menu-user .btn-user {
   height: 100%;
   background-color: inherit;
 }
+.wrap-princess header {
+  background: #ede7f7;
+}
 .wrap-princess header .wrap_logo a {
   color: #000000;
 }
 .wrap-princess header .user_badge .user_name {
   color: #000000;
 }
-.wrap-princess .datepicker-header .datepicker-icon {
+.wrap-princess .datepicker-icon {
   background-color: #d3bff9;
 }
 .wrap-princess .wrap-calendar .switch_view_calendar {
