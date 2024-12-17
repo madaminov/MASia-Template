@@ -155,9 +155,10 @@
         document.getElementById('prevWeek').disabled = true;
         document.getElementById('nextWeek').disabled = false;
       }
-      let col = days.length / 7;
+      let col = days.length / 7; //кол-во строк
+      //найдем текущую дату
       for (i = 0; i < days.length; i++) {
-        if (days[i].classList.contains('-selected-')) {
+        if (days[i].classList.contains('-current-')) {
           b = Math.floor(i / 7);
           ost = i / 7;
           if (ost > 0) {
@@ -167,7 +168,10 @@
           }
           break;
         }
-        if (days[i].classList.contains('-current-')) {
+      }
+      //найдем выбранную дату
+      for (i = 0; i < days.length; i++) {
+        if (days[i].classList.contains('-selected-')) {
           b = Math.floor(i / 7);
           ost = i / 7;
           if (ost > 0) {
