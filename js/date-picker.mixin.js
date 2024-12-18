@@ -2,7 +2,7 @@
 let datepickerCalendar = '';
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
-    let currentDates = [];   
+    let currentDates = [];
     var localeEn = {
       days: [
         'Sunday',
@@ -200,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         setTimeout(() => {
-          console.log(iteration);
           for (i = iteration * 7 - 7; i < iteration * 7; i++) {
             days[i].classList.remove('fadeOut');
             days[i].classList.remove('d-none');
