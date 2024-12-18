@@ -1,5 +1,8 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
+﻿//для вызова событий календаря
+let datepickerCalendar = '';
+document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
+    let currentDates = [];   
     var localeEn = {
       days: [
         'Sunday',
@@ -47,7 +50,7 @@
       firstDay: 1,
     };
 
-    new AirDatepicker('#calendar', {
+    datepickerCalendar = new AirDatepicker('#calendar', {
       locale: localeEn,
       inline: true,
       range: true,
@@ -60,9 +63,36 @@
         months: 'yyyy',
         years: 'yyyy1 - yyyy2',
       },
-
+      // onBeforeSelect({ date, datepicker }) {
+      //   console.log(date);
+      //   return true;
+      // },
       onSelect({ date, formattedDate, datepicker }) {
-        console.log(date);
+        if (formattedDate.length > 1) {
+          currentDates = formattedDate;
+        }
+        if (formattedDate.length == 1 && currentDates.length > 1) {
+          find_index = currentDates.indexOf(formattedDate[0]);
+          if (find_index >= 0) {
+            //значит есть такая дата в currentDates
+            if (find_index == 0) {
+              datepickerCalendar.selectDate(currentDates[1]);
+              datepickerCalendar.unselectDate(currentDates[0]);
+            } else {
+              datepickerCalendar.selectDate(currentDates[0]);
+              datepickerCalendar.unselectDate(currentDates[1]);
+            }
+            currentDates = '';
+          } else {
+            //нет такой даты в currentDates - удаляем из selectDate
+            datepickerCalendar.unselectDate(currentDates[0]);
+            datepickerCalendar.unselectDate(currentDates[1]);
+            //datepickerCalendar.selectDate(formattedDate[0]);
+            //datepickerCalendar.selectDate(formattedDate[0], { silent: true });
+            currentDates = formattedDate;
+          }
+        }
+
         if (date.length >= 2) {
           let dateFrom = datepicker.rangeDateFrom.getDate();
           let dateMothFrom = datepicker.rangeDateFrom.getMonth();
@@ -76,10 +106,6 @@
               dateYearFrom +
               '"]'
           );
-          if (day.classList.contains('-selected-')) {
-            //alert(2);
-          }
-          console.log(formattedDate);
         } else {
           datepicker.$datepicker
             .querySelectorAll('.-days- div')
@@ -91,38 +117,9 @@
           new CustomEvent('calendarDateUpdated', { detail: formattedDate })
         );
       },
-
-      onRenderCell({ date, cellType }) {
-        // Disable all 12th dates in month
-        if (cellType === 'day') {
-          if (
-            date.getFullYear() === 2024 &&
-            date.getMonth() === 9 &&
-            date.getDate() === 12
-          ) {
-            return {
-              classes: '-focus-',
-              attrs: {
-                title: 'Cell is disabled',
-              },
-            };
-          }
-          if (
-            date.getFullYear() === 2024 &&
-            date.getMonth() === 9 &&
-            date.getDate() === 11
-          ) {
-            return {
-              classes: '-focus-',
-              attrs: {
-                title: 'Cell is disabled',
-              },
-            };
-          }
-        }
-      },
     });
-
+    //datepickerCalendar.clear(); Очищает все выбранные даты.
+    //datepickerCalendar.selectDate(date | date[], opts?);Выбирает одну или сразу несколько дат, если передать массив. пример datepickerCalendar.selectDate('2024-12-12');
     document
       .querySelector('.switch_view_calendar')
       .addEventListener('click', (e) => {

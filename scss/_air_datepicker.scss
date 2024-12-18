@@ -211,6 +211,11 @@
   border-color: var(--adp-cell-background-color-hover);
   background: #fff;
 }
+.wrap-calendar-task .air-datepicker-cell.-focus- span {
+  color: #000000;
+  border-color: $orange-light-3;
+  background: #fff;
+}
 .air-datepicker-cell.-current- span {
   color: $white;
   background: #000;

@@ -14315,6 +14315,12 @@ footer.show-context-menu-user .btn-user {
   background: #fff;
 }
 
+.wrap-calendar-task .air-datepicker-cell.-focus- span {
+  color: #000000;
+  border-color: #f1d377;
+  background: #fff;
+}
+
 .air-datepicker-cell.-current- span {
   color: #fff;
   background: #000;
