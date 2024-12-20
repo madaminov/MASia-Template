@@ -1,5 +1,27 @@
 ﻿//для вызова событий календаря
 let datepickerCalendar = '';
+let weekPicker = '';
+let days_view = '';
+let iteration = 1;
+let col = 1;
+let changeWeek = '';
+document.addEventListener('airCalendarDateChanged', (event) => {
+  if (event.detail && event.detail.date) {
+    datepickerCalendar.clear({ silent: true });
+    datepickerCalendar.selectDate(event.detail.date);
+    datepickerCalendar.update();
+    wrap_calendar = document.querySelector('.wrap-calendar');
+    if (!wrap_calendar.classList.contains('open')) {
+      days_view = datepickerCalendar.getViewDates();
+      weekPicker();
+    }
+    // days_view = datepickerCalendar.getViewDates();
+    // col = days_view.length / 7;
+    //weekPicker();
+  }
+  console.log('отработал airCalendarDateChanged');
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     let currentDates = [];
@@ -63,10 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         months: 'yyyy',
         years: 'yyyy1 - yyyy2',
       },
-      // onBeforeSelect({ date, datepicker }) {
-      //   console.log(date);
-      //   return true;
-      // },
+
       onSelect({ date, formattedDate, datepicker }) {
         if (formattedDate.length > 1) {
           currentDates = formattedDate;
@@ -130,32 +149,46 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
           wrap_calendar.classList.add('open');
           document.querySelectorAll('.-days- .-day-').forEach((box) => {
-            box.classList.add('fadeOut', 'd-none');
+            box.classList.remove('fadeIn');
+            box.classList.add('fadeOut');
+            box.classList.add('d-none');
           });
-          i = 1;
+          j = 1;
           document.querySelectorAll('.-days- .-day-').forEach((box) => {
             setTimeout(() => {
               box.classList.remove('fadeOut', 'd-none');
               box.classList.add('fadeIn');
-            }, 20 * i);
-            i++;
+            }, 12 * j);
+            j++;
           });
         }
       });
 
-    const weekPicker = () => {
+    weekPicker = () => {
       let i = 0;
-      let iteration = 1;
 
-      let days = document.querySelectorAll('.-days- .-day-');
-      if (iteration == 1) {
-        document.getElementById('prevWeek').disabled = true;
-        document.getElementById('nextWeek').disabled = false;
-      }
-      let col = days.length / 7; //кол-во строк
+      days_view = datepickerCalendar.getViewDates();
+      let days_current = datepickerCalendar.viewDate;
+      let days_selected = datepickerCalendar.selectedDates;
+      console.log('days_selected ' + days_selected);
+
+      col = days_view.length / 7; //кол-во строк
+
       //найдем текущую дату
-      for (i = 0; i < days.length; i++) {
-        if (days[i].classList.contains('-current-')) {
+      for (i = 0; i < days_view.length; i++) {
+        formattedDate =
+          days_view[i].getFullYear() +
+          '-' +
+          days_view[i].getMonth() +
+          '-' +
+          days_view[i].getDate();
+        formattedDate_current =
+          days_current.getFullYear() +
+          '-' +
+          days_current.getMonth() +
+          '-' +
+          days_current.getDate();
+        if (formattedDate == formattedDate_current) {
           b = Math.floor(i / 7);
           ost = i / 7;
           if (ost > 0) {
@@ -167,72 +200,146 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
       //найдем выбранную дату
-      for (i = 0; i < days.length; i++) {
-        if (days[i].classList.contains('-selected-')) {
-          b = Math.floor(i / 7);
-          ost = i / 7;
-          if (ost > 0) {
-            iteration = b + 1;
-          } else {
-            iteration = b;
+      if (days_selected.length > 0) {
+        for (i = 0; i < days_view.length; i++) {
+          formattedDate =
+            days_view[i].getFullYear() +
+            '-' +
+            days_view[i].getMonth() +
+            '-' +
+            days_view[i].getDate();
+          formattedDate_seleted =
+            days_selected[0].getFullYear() +
+            '-' +
+            days_selected[0].getMonth() +
+            '-' +
+            days_selected[0].getDate();
+
+          if (formattedDate == formattedDate_seleted) {
+            b = Math.floor(i / 7);
+            ost = i / 7;
+            if (ost > 0) {
+              iteration = b + 1;
+            } else {
+              iteration = b;
+            }
+            break;
           }
-          break;
         }
       }
 
-      for (i = 0; i < days.length; i++) {
-        days[i].classList.remove('fadeIn');
-        days[i].classList.add('fadeOut', 'd-none');
+      for (i = 0; i < days_view.length; i++) {
+        year = days_view[i].getFullYear();
+        month = days_view[i].getMonth();
+        day = days_view[i].getDate();
+        element_day = document.querySelector(
+          '.-day-[data-year="' +
+            year +
+            '"][data-month="' +
+            month +
+            '"][data-date="' +
+            day +
+            '"]'
+        );
+        element_day.classList.remove('fadeIn');
+        element_day.classList.add('fadeOut', 'd-none');
       }
       if (iteration == 1) {
         for (i = 0; i < 7; i++) {
-          days[i].classList.remove('fadeOut', 'd-none');
-          setTimeout(() => {
-            days[i].classList.add('fadeIn');
-          }, 30 * i);
+          year = days_view[i].getFullYear();
+          month = days_view[i].getMonth();
+          day = days_view[i].getDate();
+          element_day = document.querySelector(
+            '.-day-[data-year="' +
+              year +
+              '"][data-month="' +
+              month +
+              '"][data-date="' +
+              day +
+              '"]'
+          );
+          element_day.classList.remove('fadeOut', 'd-none');
+          element_day.classList.add('fadeIn');
         }
       }
 
       const updateDisplay = () => {
-        for (i = 0; i < days.length; i++) {
-          days[i].classList.remove('fadeIn');
-          days[i].classList.add('fadeOut', 'd-none');
+        // console.log('итерация updateDisplay: ' + iteration);
+        // console.log('кол-во строк iupdateDisplay: ' + col);
+        for (i = 0; i < days_view.length; i++) {
+          year = days_view[i].getFullYear();
+          month = days_view[i].getMonth();
+          day = days_view[i].getDate();
+          element_day = document.querySelector(
+            '.-day-[data-year="' +
+              year +
+              '"][data-month="' +
+              month +
+              '"][data-date="' +
+              day +
+              '"]'
+          );
+          element_day.classList.remove('fadeIn');
+          element_day.classList.add('fadeOut');
+          element_day.classList.add('d-none');
         }
 
-        setTimeout(() => {
-          for (i = iteration * 7 - 7; i < iteration * 7; i++) {
-            days[i].classList.remove('fadeOut');
-            days[i].classList.remove('d-none');
-            days[i].classList.add('fadeIn');
-          }
-        }, 500);
+        for (i = iteration * 7 - 7; i < iteration * 7; i++) {
+          year = days_view[i].getFullYear();
+          month = days_view[i].getMonth();
+          day = days_view[i].getDate();
+          element_day = document.querySelector(
+            '.-day-[data-year="' +
+              year +
+              '"][data-month="' +
+              month +
+              '"][data-date="' +
+              day +
+              '"]'
+          );
+          element_day.classList.remove('fadeOut');
+          element_day.classList.remove('d-none');
+          element_day.classList.add('fadeIn');
+        }
       };
-      const changeWeek = (direction) => {
+
+      changeWeek = (direction) => {
+        console.log(direction);
+        console.log('итерация была: ' + iteration);
         iteration = iteration + direction;
-        if (iteration < 1 || iteration > col) {
+
+        console.log('итерация стала: ' + iteration);
+
+        if (iteration < 1) {
+          datepickerCalendar.prev();
+          days_view = datepickerCalendar.getViewDates();
+          iteration = days_view.length / 7;
+          col = days_view.length / 7;
+          //---
+          console.log('итерация iteration < 1:' + iteration);
+          console.log('кол-во строк iteration < 1:' + col);
+        }
+        if (iteration > col) {
+          datepickerCalendar.next();
+          days_view = datepickerCalendar.getViewDates();
           iteration = 1;
-        }
-        if (iteration == 1) {
-          document.getElementById('prevWeek').disabled = true;
-        } else {
-          document.getElementById('prevWeek').disabled = false;
-        }
-        if (iteration == col) {
-          document.getElementById('nextWeek').disabled = true;
-        } else {
-          document.getElementById('nextWeek').disabled = false;
+          col = days_view.length / 7;
+          //----
+          console.log('итерация iteration > col ' + iteration);
+          console.log('кол-во строк  iteration > col ' + col);
         }
         updateDisplay();
       };
 
-      document
-        .getElementById('prevWeek')
-        .addEventListener('click', () => changeWeek(-1));
-      document
-        .getElementById('nextWeek')
-        .addEventListener('click', () => changeWeek(1));
       updateDisplay();
     };
+    document
+      .getElementById('prevWeek')
+      .addEventListener('click', () => changeWeek(-1));
+    document.getElementById('nextWeek').addEventListener('click', () => {
+      changeWeek(1);
+      console.log('nextWeek');
+    });
     if (document.querySelector('.wrap-calendar').classList.contains('open')) {
       box.classList.remove('fadeOut', 'd-none');
       box.classList.add('fadeIn');
