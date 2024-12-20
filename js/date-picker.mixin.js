@@ -85,7 +85,14 @@ document.addEventListener('DOMContentLoaded', function () {
         months: 'yyyy',
         years: 'yyyy1 - yyyy2',
       },
-
+      onChangeViewDate({ month, year, decade }) {
+        wrap_calendar = document.querySelector('.wrap-calendar');
+        if (!wrap_calendar.classList.contains('open')) {
+          setTimeout(() => {
+            weekPicker();
+          }, 10);
+        }
+      },
       onSelect({ date, formattedDate, datepicker }) {
         if (formattedDate.length > 1) {
           currentDates = formattedDate;
