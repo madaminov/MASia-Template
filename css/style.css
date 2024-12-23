@@ -13788,15 +13788,10 @@ h6,
   left: auto;
   right: 0;
   bottom: 0;
+  overflow: hidden;
 }
 .context-menu-user .col-12 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-.context-menu-user .col-12:last-child {
-  border: none;
-}
-.context-menu-user .col-12:last-child .user {
-  border-radius: 0px 0px 12px 12px;
 }
 .context-menu-user .user {
   display: flex;
@@ -13919,6 +13914,11 @@ header .wrap_logo a:hover {
 }
 header .user_badge {
   gap: 12px 12px;
+}
+header .user_badge .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 header .user_badge .user_name {
   color: #fff;

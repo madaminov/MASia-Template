@@ -234,14 +234,9 @@ h6,
   left: auto;
   right: 0;
   bottom: 0;
+  overflow: hidden;
   .col-12 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  .col-12:last-child {
-    border: none;
-    .user {
-      border-radius: 0px 0px 12px 12px;
-    }
   }
   .user {
     display: flex;

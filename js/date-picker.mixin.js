@@ -1,5 +1,4 @@
-﻿//для вызова событий календаря
-let datepickerCalendar = '';
+﻿let datepickerCalendar = '';
 let weekPicker = '';
 let days_view = '';
 let iteration = 1;
@@ -15,11 +14,7 @@ document.addEventListener('airCalendarDateChanged', (event) => {
       days_view = datepickerCalendar.getViewDates();
       weekPicker();
     }
-    // days_view = datepickerCalendar.getViewDates();
-    // col = days_view.length / 7;
-    //weekPicker();
   }
-  console.log('отработал airCalendarDateChanged');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -100,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (formattedDate.length == 1 && currentDates.length > 1) {
           find_index = currentDates.indexOf(formattedDate[0]);
           if (find_index >= 0) {
-            //значит есть такая дата в currentDates
             if (find_index == 0) {
               datepickerCalendar.selectDate(currentDates[1]);
               datepickerCalendar.unselectDate(currentDates[0]);
@@ -110,11 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             currentDates = '';
           } else {
-            //нет такой даты в currentDates - удаляем из selectDate
             datepickerCalendar.unselectDate(currentDates[0]);
             datepickerCalendar.unselectDate(currentDates[1]);
-            //datepickerCalendar.selectDate(formattedDate[0]);
-            //datepickerCalendar.selectDate(formattedDate[0], { silent: true });
+
             currentDates = formattedDate;
           }
         }
@@ -144,8 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
       },
     });
-    //datepickerCalendar.clear(); Очищает все выбранные даты.
-    //datepickerCalendar.selectDate(date | date[], opts?);Выбирает одну или сразу несколько дат, если передать массив. пример datepickerCalendar.selectDate('2024-12-12');
     document
       .querySelector('.switch_view_calendar')
       .addEventListener('click', (e) => {
@@ -177,11 +167,9 @@ document.addEventListener('DOMContentLoaded', function () {
       days_view = datepickerCalendar.getViewDates();
       let days_current = datepickerCalendar.viewDate;
       let days_selected = datepickerCalendar.selectedDates;
-      console.log('days_selected ' + days_selected);
 
-      col = days_view.length / 7; //кол-во строк
+      col = days_view.length / 7;
 
-      //найдем текущую дату
       for (i = 0; i < days_view.length; i++) {
         formattedDate =
           days_view[i].getFullYear() +
@@ -206,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
           break;
         }
       }
-      //найдем выбранную дату
+
       if (days_selected.length > 0) {
         for (i = 0; i < days_view.length; i++) {
           formattedDate =
@@ -271,8 +259,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       const updateDisplay = () => {
-        // console.log('итерация updateDisplay: ' + iteration);
-        // console.log('кол-во строк iupdateDisplay: ' + col);
         for (i = 0; i < days_view.length; i++) {
           year = days_view[i].getFullYear();
           month = days_view[i].getMonth();
@@ -311,29 +297,19 @@ document.addEventListener('DOMContentLoaded', function () {
       };
 
       changeWeek = (direction) => {
-        console.log(direction);
-        console.log('итерация была: ' + iteration);
         iteration = iteration + direction;
-
-        console.log('итерация стала: ' + iteration);
 
         if (iteration < 1) {
           datepickerCalendar.prev();
           days_view = datepickerCalendar.getViewDates();
           iteration = days_view.length / 7;
           col = days_view.length / 7;
-          //---
-          console.log('итерация iteration < 1:' + iteration);
-          console.log('кол-во строк iteration < 1:' + col);
         }
         if (iteration > col) {
           datepickerCalendar.next();
           days_view = datepickerCalendar.getViewDates();
           iteration = 1;
           col = days_view.length / 7;
-          //----
-          console.log('итерация iteration > col ' + iteration);
-          console.log('кол-во строк  iteration > col ' + col);
         }
         updateDisplay();
       };
@@ -345,7 +321,6 @@ document.addEventListener('DOMContentLoaded', function () {
       .addEventListener('click', () => changeWeek(-1));
     document.getElementById('nextWeek').addEventListener('click', () => {
       changeWeek(1);
-      console.log('nextWeek');
     });
     if (document.querySelector('.wrap-calendar').classList.contains('open')) {
       box.classList.remove('fadeOut', 'd-none');
