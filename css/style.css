@@ -15731,6 +15731,9 @@ footer.show-context-menu-user .btn-user {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.event-list > div {
+  width: 100%;
+}
 
 .event {
   color: #000000;

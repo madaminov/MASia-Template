@@ -6,6 +6,9 @@
   align-self: stretch;
   position: relative;
   @include transition(0.3s);
+  & > div {
+    width: 100%;
+  }
 }
 .event {
   color: $black-color;
