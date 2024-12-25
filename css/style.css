@@ -12695,13 +12695,13 @@ button.active, button:active, button:focus,
 }
 .btn-light:hover {
   color: #000 !important;
-  background: #ede3ff !important;
-  border: 1px solid #ede3ff !important;
+  background: #f6f6f6 !important;
+  border: 1px solid #f6f6f6 !important;
 }
 .btn-light.active, .btn-light:active, .btn-light:focus {
   color: #000 !important;
-  background: #ede3ff !important;
-  border: 1px solid #ede3ff !important;
+  background: #f6f6f6 !important;
+  border: 1px solid #f6f6f6 !important;
 }
 
 .btn-light-2 {
@@ -12715,13 +12715,27 @@ button.active, button:active, button:focus,
 }
 .btn-light-2:hover {
   color: #000 !important;
-  background: #e1d1ff !important;
-  border: 1px solid #e1d1ff !important;
+  background: #f6f6f6 !important;
+  border: 1px solid #f6f6f6 !important;
 }
 .btn-light-2.active, .btn-light-2:active, .btn-light-2:focus {
   color: #000 !important;
-  background: #e1d1ff !important;
-  border: 1px solid #e1d1ff !important;
+  background: #f6f6f6 !important;
+  border: 1px solid #f6f6f6 !important;
+}
+
+.btn-outline-light {
+  color: #ede3ff;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid #ede3ff;
+  padding: 12px 16px;
+}
+.btn-outline-light.active, .btn-outline-light:active, .btn-outline-light:focus {
+  color: #f6f6f6;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid #f6f6f6;
 }
 
 .btn-dark {
@@ -13508,6 +13522,44 @@ input[type=number] {
   letter-spacing: 0.048px;
   margin-top: 8px;
   display: block;
+}
+
+.form_login {
+  display: flex;
+  height: calc(100dvh - 144px);
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.form_login .form_header {
+  margin-bottom: 64px;
+}
+.form_login .form_header .title {
+  color: #f6f6f6;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 128.571% */
+}
+.form_login .form_header .text {
+  color: #f6f6f6;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  margin-top: 8px;
+}
+.form_login .form-group {
+  margin-bottom: 14px;
 }
 
 .wrapper-main {
@@ -15667,6 +15719,11 @@ footer.show-context-menu-user .btn-user {
 }
 
 .event-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
   position: relative;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -15674,22 +15731,11 @@ footer.show-context-menu-user .btn-user {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.event-list .event {
-  margin-top: 8px;
-}
-.event-list .event:first-child {
-  margin-top: 0px;
-}
-.event-list > div {
-  margin-top: 8px;
-}
-.event-list > div:first-child {
-  margin-top: 0px;
-}
 
 .event {
   color: #000000;
-  gap: 32px;
+  gap: 15px;
+  justify-content: space-between;
   cursor: pointer;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -15698,11 +15744,12 @@ footer.show-context-menu-user .btn-user {
   transition: all 0.3s ease;
 }
 .event .wrap-time {
-  width: 50px;
+  width: 67px;
   flex: 0 0 auto;
+  align-items: flex-start;
 }
 .event .event-day {
-  width: calc(100% - 32px - 50px);
+  width: calc(100% - 15px - 50px);
 }
 .event .inner {
   gap: 8px;

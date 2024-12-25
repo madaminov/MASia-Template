@@ -27,15 +27,15 @@ button,
   background: $gray-5;
   &:hover {
     color: $black !important;
-    background: $gray-5 !important;
-    border: 1px solid $gray-5 !important;
+    background: $white-2 !important;
+    border: 1px solid $white-2 !important;
   }
   &.active,
   &:active,
   &:focus {
     color: $black !important;
-    background: $gray-5 !important;
-    border: 1px solid $gray-5 !important;
+    background: $white-2 !important;
+    border: 1px solid $white-2 !important;
   }
 }
 .btn-light-2 {
@@ -45,15 +45,30 @@ button,
   background: $gray-9;
   &:hover {
     color: $black !important;
-    background: $gray-9 !important;
-    border: 1px solid $gray-9 !important;
+    background: $white-2 !important;
+    border: 1px solid $white-2 !important;
   }
   &.active,
   &:active,
   &:focus {
     color: $black !important;
-    background: $gray-9 !important;
-    border: 1px solid $gray-9 !important;
+    background: $white-2 !important;
+    border: 1px solid $white-2 !important;
+  }
+}
+.btn-outline-light {
+  color: $gray-5;
+  border-radius: 12px;
+  background-color: transparent;
+  border: 1px solid $gray-5;
+  padding: 12px 16px;
+  &.active,
+  &:active,
+  &:focus {
+    color: $white-2;
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1px solid $white-2;
   }
 }
 .btn-dark {
@@ -746,5 +761,42 @@ input[type='number'] {
     letter-spacing: 0.048px;
     margin-top: 8px;
     display: block;
+  }
+}
+.form_login {
+  display: flex;
+  height: calc(100dvh - 144px);
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  .form_header {
+    margin-bottom: 64px;
+    .title {
+      color: $white-2;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 128.571% */
+    }
+    .text {
+      color: $white-2;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+      margin-top: 8px;
+    }
+  }
+  .form-group {
+    margin-bottom: 14px;
   }
 }
