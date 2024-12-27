@@ -11908,6 +11908,14 @@ body {
 ::placeholder {
   /* Most modern browsers support this now. */
   color: #9f9f9f;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
 }
 
 input:focus,
@@ -13363,16 +13371,20 @@ button.active, button:active, button:focus,
   width: calc(50% - 7px);
 }
 
+.form-group {
+  position: relative;
+}
+
 .form-control {
-  color: #9f9f9f;
+  color: #fff;
   font-feature-settings: "liga" off, "clig" off;
-  /* Headline - 18 R */
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 144.444% */
-  padding: 8px 8px 8px 16px;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 8px 12px 8px 16px;
   border: none;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -13383,7 +13395,8 @@ button.active, button:active, button:focus,
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-color: #363636;
+  background-color: #363636 !important;
+  height: 48px;
 }
 .form-control::placeholder {
   color: #9f9f9f;
@@ -13418,6 +13431,38 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+input[type=password] + .input-group-text,
+.form-control-password + .input-group-text {
+  background-image: url(../images/icon-eye.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) 15px;
+  background-size: 20px 20px;
+}
+
+.input-group-text {
+  color: #9f9f9f;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  min-width: 40px;
+  padding: 8px 12px 8px 8px;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #363636;
+}
+
 .form-control-date {
   position: relative;
   background-image: url(../images/icon-calendar-gray.svg);
@@ -13448,11 +13493,12 @@ input[type=number] {
   font-feature-settings: "liga" off, "clig" off;
   /* Headline - 18 R */
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 144.444% */
-  padding: 8px 8px 8px 16px;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 8px 12px 8px 16px;
   border: none;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -13467,6 +13513,7 @@ input[type=number] {
   background-image: url(../images/icon-down.svg);
   background-position: calc(100% - 12px) 16px;
   background-size: 12px 12px;
+  height: 48px;
 }
 .form-select:focus {
   border-color: inherit;
@@ -13562,6 +13609,16 @@ input[type=number] {
   margin-bottom: 14px;
 }
 
+.form-create-an-account .form-control-valid {
+  transition: none;
+}
+.form-create-an-account .form-control-valid:valid {
+  background-image: url(../images/valid-icon.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) 14px;
+  background-size: 18px 18px;
+}
+
 .wrapper-main {
   width: 100%;
   height: 100%;
@@ -13625,7 +13682,7 @@ h4,
   font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 30px; /* 133.333% */
 }
 
@@ -13669,6 +13726,10 @@ h6,
 
 .pt-16 {
   padding-top: 16px !important;
+}
+
+.pb-16 {
+  padding-bottom: 16px !important;
 }
 
 .p-24 {
@@ -13904,6 +13965,92 @@ h6,
   border-radius: 8px;
   background: #fff;
   margin-top: 2px;
+}
+
+.dropdown-menu {
+  width: 100%;
+  padding: 0;
+  color: #000000;
+  background-color: #fff;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.dropdown-menu li {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+  border-bottom: 1px solid #e6e6e6;
+  background: #fff;
+}
+.dropdown-menu:last-child {
+  border-bottom: 1px solid transparent;
+}
+.dropdown-menu .dropdown-item {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 12px 4px 12px 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active {
+  color: #000000;
+  background-color: #e6e6e6;
+}
+.dropdown-menu .dropdown-item-input {
+  padding: 12px 4px 12px 12px;
+  border: none;
+  background-color: #fff;
+  width: 100%;
+}
+
+.policy {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  width: 100%;
+  max-width: 236px;
+  margin: 0 auto;
+}
+.policy a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  color: #fff;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.policy a:hover {
+  text-decoration: none;
 }
 
 .capbody {
@@ -16278,6 +16425,21 @@ footer.show-context-menu-user .btn-user {
 }
 .tip_card_container p {
   color: #000000;
+}
+
+.tip_card_container-static {
+  position: static;
+}
+.tip_card_container-static .container::after {
+  display: none;
+}
+.tip_card_container-static h4, .tip_card_container-static .h4 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  margin-bottom: 8px;
 }
 
 .activity_info_container {

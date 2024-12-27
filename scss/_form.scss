@@ -624,20 +624,24 @@ button,
     }
   }
 }
+.form-group {
+  position: relative;
+}
 .form-control {
-  color: $gray-7;
+  color: $white;
   font-feature-settings: 'liga' off, 'clig' off;
-  /* Headline - 18 R */
   font-family: $font-stack-popins;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 144.444% */
-  padding: 8px 8px 8px 16px;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 8px 12px 8px 16px;
   border: none;
   @include border-radius(12px);
   @include transition(0.3s);
-  background-color: $black-color-5;
+  background-color: $black-color-5 !important;
+  height: 48px;
   &::placeholder {
     color: $gray-7;
     opacity: 1;
@@ -667,6 +671,31 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+input[type='password'],
+.form-control-password {
+  & + .input-group-text {
+    background-image: url(../images/icon-eye.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) 15px;
+    background-size: 20px 20px;
+  }
+}
+.input-group-text {
+  color: $gray-7;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: $font-stack-popins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  min-width: 40px;
+  padding: 8px 12px 8px 8px;
+  border: none;
+  @include border-radius(12px);
+  @include transition(0.3s);
+  background-color: $black-color-5;
+}
 .form-control-date {
   position: relative;
   background-image: url(../images/icon-calendar-gray.svg);
@@ -694,11 +723,12 @@ input[type='number'] {
   font-feature-settings: 'liga' off, 'clig' off;
   /* Headline - 18 R */
   font-family: $font-stack-popins;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px; /* 144.444% */
-  padding: 8px 8px 8px 16px;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 8px 12px 8px 16px;
   border: none;
   @include border-radius(12px);
   @include transition(0.3s);
@@ -706,6 +736,7 @@ input[type='number'] {
   background-image: url(../images/icon-down.svg);
   background-position: calc(100% - 12px) 16px;
   background-size: 12px 12px;
+  height: 48px;
   &:focus {
     border-color: inherit;
     outline: 0;
@@ -798,5 +829,16 @@ input[type='number'] {
   }
   .form-group {
     margin-bottom: 14px;
+  }
+}
+.form-create-an-account {
+  .form-control-valid {
+    transition: none;
+  }
+  .form-control-valid:valid {
+    background-image: url(../images/valid-icon.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px) 14px;
+    background-size: 18px 18px;
   }
 }

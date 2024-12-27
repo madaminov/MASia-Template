@@ -53,6 +53,14 @@ body {
 ::placeholder {
   /* Most modern browsers support this now. */
   color: $gray-7;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Callout - 15 R */
+  font-family: $font-stack-popins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
 }
 input:focus,
 select:focus {
