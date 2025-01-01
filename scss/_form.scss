@@ -9,6 +9,7 @@ button,
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.032px;
+  @include border-radius(12px);
   @include transition(0.3s);
   &:hover {
     color: $black;
@@ -18,6 +19,49 @@ button,
   &:focus {
     color: $black;
   }
+}
+.btn-primary {
+  padding: 12px 16px;
+  color: $white;
+  background: $violet-10;
+  border: 1px solid $violet-10;
+  &:disabled {
+    color: $gray-16;
+    padding: 12px 16px;
+    @include border-radius(12px);
+    border: 1px solid $gray-15;
+    background: $gray-15;
+  }
+  &:hover {
+    color: $white;
+    background: $violet-10;
+    border: 1px solid $violet-10;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $white;
+    background: $violet-10;
+    border: 1px solid $violet-10;
+  }
+}
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  color: $white;
+  background-color: $violet-10;
+  border-color: $violet-10;
+}
+.btn-sm {
+  display: flex;
+  height: 40px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 .btn-light {
   color: $black;
@@ -56,6 +100,25 @@ button,
     border: 1px solid $white-2 !important;
   }
 }
+.btn-light-3 {
+  color: $gray-16;
+  padding: 12px 16px;
+  @include border-radius(12px);
+  border: 1px solid $gray-15;
+  background: $gray-15;
+  &:hover {
+    color: $black !important;
+    background: $gray-15 !important;
+    border: 1px solid $gray-15 !important;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $black !important;
+    background: $gray-15 !important;
+    border: 1px solid $gray-15 !important;
+  }
+}
 .btn-outline-light {
   color: $gray-5;
   border-radius: 12px;
@@ -88,6 +151,25 @@ button,
     color: $black !important;
     background: $gray-9 !important;
     border: 1px solid $gray-9 !important;
+  }
+}
+.btn-dark-2 {
+  padding: 12px 16px;
+  @include border-radius(12px);
+  border: 1px solid $body-color;
+  background: $body-color;
+  color: $white;
+  &:hover {
+    color: $white !important;
+    background: $black-color-8 !important;
+    border: 1px solid $black-color-8 !important;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $white !important;
+    background: $black-color-8 !important;
+    border: 1px solid $black-color-8 !important;
   }
 }
 .btn-icon {
@@ -537,6 +619,71 @@ button,
     }
   }
 }
+.btn-collapse {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: $gray-5;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Body - 16 R */
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  transition: all 0.3 ease;
+  span {
+    transition: all 0.3s ease;
+  }
+  .yes-collapsed {
+    color: $gray-5;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: 48px;
+      height: 48px;
+      padding: 12px 14px;
+    }
+  }
+  .no-collapsed {
+    color: $violet-11;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: 48px;
+      height: 48px;
+    }
+  }
+  &.collapsed {
+    .yes-collapsed {
+      color: $gray-5;
+      display: block;
+    }
+    .no-collapsed {
+      opacity: 0;
+      display: none;
+    }
+  }
+  &:not(.collapsed) {
+    .yes-collapsed {
+      opacity: 0;
+      display: none;
+    }
+    .no-collapsed {
+      opacity: 1;
+      display: block;
+    }
+  }
+}
 .form-check-input[type='checkbox'] {
   width: 16px;
   height: 16px;
@@ -654,9 +801,34 @@ button,
     box-shadow: none;
   }
 }
+.form-control-gray {
+  background-color: $gray-14 !important;
+  color: $black-color;
+  &::placeholder {
+    color: $gray-7;
+    opacity: 1;
+  }
+  &:focus {
+    color: $black-color;
+  }
+}
+.form-control-dropdown {
+  padding: 8px 12px 8px 16px;
+  background-image: url(../images/icon-down.svg);
+  background-position: calc(100% - 12px) 20px;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  &:focus {
+    box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+  }
+}
 textarea.form-control {
   height: 90px;
   resize: vertical;
+  position: relative;
+  background-image: url(../images/icon-resizer.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px) calc(100% - 7px);
 }
 .form-number {
   width: 62px;
@@ -680,6 +852,15 @@ input[type='password'],
     background-size: 20px 20px;
   }
 }
+.input-group > .form-select {
+  width: 100%;
+}
+.input-group > .form-select:focus {
+  z-index: 11;
+  & + .input-group-text {
+    z-index: 12;
+  }
+}
 .input-group-text {
   color: $gray-7;
   font-feature-settings: 'liga' off, 'clig' off;
@@ -696,12 +877,50 @@ input[type='password'],
   @include transition(0.3s);
   background-color: $black-color-5;
 }
+.input-icon-reset {
+  position: relative;
+  .input-group-text {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    min-width: auto;
+    z-index: 10;
+  }
+  .input-icon {
+    background-image: url(../images/icon-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 100%;
+    padding: 0;
+    right: 12px;
+  }
+  .input-icon-calendar {
+    background-image: url(../images/icon-calendar-gray.svg);
+  }
+  .reset-value {
+    background-image: url(../images/icon-close-gray.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+    width: 16px;
+    height: 100%;
+    right: 38px;
+    padding: 0;
+    display: none;
+  }
+  .form-control,
+  .form-select {
+    border-radius: 12px !important;
+    &:valid {
+      & + .reset-value {
+        display: block;
+      }
+    }
+  }
+}
 .form-control-date {
   position: relative;
-  background-image: url(../images/icon-calendar-gray.svg);
-  background-repeat: no-repeat;
-  background-position: calc(100% - 12px) 14px;
-  background-size: 16px 16px;
   &::before {
     content: attr(placeholder);
     color: $gray-7;
@@ -718,8 +937,30 @@ input[type='password'],
   }
 }
 
+.form-control-date {
+  & + .air-datepicker.-inline- {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    .wrap-week {
+      display: none;
+    }
+  }
+  &:focus {
+    border-color: inherit;
+    outline: 0;
+    box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+  }
+}
+.form-control-open-calendar {
+  border-color: inherit;
+  outline: 0;
+  box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+}
+
 .form-select {
-  color: $gray-7;
+  color: $white;
   font-feature-settings: 'liga' off, 'clig' off;
   /* Headline - 18 R */
   font-family: $font-stack-popins;
@@ -734,13 +975,13 @@ input[type='password'],
   @include transition(0.3s);
   background-color: $black-color-5;
   background-image: url(../images/icon-down.svg);
-  background-position: calc(100% - 12px) 16px;
+  background-position: calc(100% - 12px) 20px;
   background-size: 12px 12px;
   height: 48px;
   &:focus {
     border-color: inherit;
     outline: 0;
-    box-shadow: none;
+    box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
   }
 }
 .form-group {
@@ -840,5 +1081,53 @@ input[type='password'],
     background-repeat: no-repeat;
     background-position: calc(100% - 18px) 14px;
     background-size: 18px 18px;
+  }
+}
+.form-group-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  .form-check {
+    display: flex;
+    padding: 0;
+    .form-check-input {
+      display: none;
+    }
+    .form-check-label {
+      color: $black;
+      text-align: right;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: 0.028px;
+      border-radius: 8px;
+      background: $blue-2;
+      display: flex;
+      height: 24px;
+      padding: 4px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      flex: 1 0 0;
+      min-width: 67px;
+      @include border-radius(8px);
+      @include transition(0.3s);
+      cursor: pointer;
+    }
+    .form-check-input:checked + .form-check-label {
+      background: $violet-9;
+    }
+  }
+}
+.form-create-task {
+  .collapse.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
   }
 }

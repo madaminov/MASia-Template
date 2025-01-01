@@ -42,8 +42,9 @@
 								<div class="form-group">
 									<label for="priority" class="form-label">Family Role</label>
 
-									<input type="text" class="form-control dropdown-toggle" data-bs-toggle="dropdown"
-										data-bs-auto-close="true" aria-expanded="false" name="role" readonly="readonly"
+									<input type="text" class="form-control form-control-dropdown dropdown-toggle"
+										data-bs-toggle="dropdown" data-bs-auto-close="true" data-bs-offset="0,8"
+										aria-expanded="false" name="role" readonly="readonly"
 										placeholder="Select Family Role">
 
 									<ul class="dropdown-menu dropdown-for-input">
@@ -155,9 +156,9 @@
 						collapseTip.hide()
 					}
 
+					event.clickEvent.preventDefault();
 
 				}
-				event.clickEvent.preventDefault();
 
 			})
 		})

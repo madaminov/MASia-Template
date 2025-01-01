@@ -20,7 +20,7 @@ document.addEventListener('airCalendarDateChanged', (event) => {
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     let currentDates = [];
-    var localeEn = {
+    let localeEn = {
       days: [
         'Sunday',
         'Monday',

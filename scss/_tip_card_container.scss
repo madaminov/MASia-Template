@@ -71,3 +71,40 @@
     margin-bottom: 8px;
   }
 }
+.tip_card_container_button {
+  .container {
+    background-color: $white;
+    &::after {
+      content: '';
+      border-top: 11px solid $white;
+    }
+  }
+  h4 {
+    color: $black-color;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body - 16 M */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.032px;
+  }
+  p {
+    color: $black-color;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Footnote - 14 R */
+    font-family: $font-stack-popins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.028px;
+    margin-bottom: 0;
+  }
+  .row-btn-group {
+    margin-top: 24px;
+  }
+}
