@@ -13724,6 +13724,7 @@ input[type=password] + .input-group-text,
   top: 100%;
   left: 0;
   margin-top: 8px;
+  border-radius: 20px !important;
 }
 .form-control-date + .air-datepicker.-inline- .wrap-week {
   display: none;
