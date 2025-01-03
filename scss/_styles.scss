@@ -335,7 +335,7 @@ h6,
   .dropdown-item:focus,
   .dropdown-item.active {
     color: $black-color;
-    background-color: $gray-6;
+    background-color: transparent;
   }
   .dropdown-item-input {
     padding: 12px 4px 12px 12px;
