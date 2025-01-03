@@ -353,6 +353,12 @@ button,
     background: transparent;
     border: 1px solid $white;
   }
+  &.show {
+    border: 1px solid $violet-11;
+    svg {
+      fill: $violet-11;
+    }
+  }
 }
 .btn-add-plus-2 {
   width: 48px;
@@ -388,6 +394,12 @@ button,
   &:focus {
     background: transparent;
     border: 1px solid $white;
+  }
+  &.show {
+    border: 1px solid $violet-11;
+    svg {
+      fill: $violet-11;
+    }
   }
 }
 .btn-list {

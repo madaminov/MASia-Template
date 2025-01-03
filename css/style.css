@@ -13060,6 +13060,12 @@ button.active, button:active, button:focus,
   background: transparent;
   border: 1px solid #fff;
 }
+.btn-add-plus.show {
+  border: 1px solid #a073f2;
+}
+.btn-add-plus.show svg {
+  fill: #a073f2;
+}
 
 .btn-add-plus-2 {
   width: 48px;
@@ -13099,6 +13105,12 @@ button.active, button:active, button:focus,
 .btn-add-plus-full:active, .btn-add-plus-full:focus {
   background: transparent;
   border: 1px solid #fff;
+}
+.btn-add-plus-full.show {
+  border: 1px solid #a073f2;
+}
+.btn-add-plus-full.show svg {
+  fill: #a073f2;
 }
 
 .btn-list {
@@ -17621,6 +17633,7 @@ footer.show-context-menu-user .btn-user {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  background-color: #d3bff9;
 }
 .members-list .item .person img {
   width: 38px;

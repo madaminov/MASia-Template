@@ -97,6 +97,60 @@ if (document.querySelectorAll('.dropdown-toggle')) {
   });
 }
 
+if (document.querySelectorAll('.dropdown-assignee')) {
+  const dropdownElementListAssignee =
+    document.querySelectorAll('.dropdown-assignee');
+  const dropdownListAssignee = [...dropdownElementListAssignee].map(
+    (dropdownToggleElAssignee) =>
+      new bootstrap.Dropdown(dropdownToggleElAssignee)
+  );
+  dropdownListAssignee.forEach((box) => {
+    box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
+      event.preventDefault();
+
+      if (event && event.clickEvent && event.clickEvent.target) {
+        el_target = event.clickEvent.target;
+        if (el_target.classList.contains('dropdown-item')) {
+          assignee_name = event.clickEvent.target.getAttribute('data-value');
+          assignee_avatar = event.clickEvent.target.getAttribute('data-avatar');
+          box['_element']
+            .closest('.wrap-choice-assignee')
+            .classList.add('visually-hidden');
+          members_list = document.querySelector('.members-list');
+          members_list.querySelector('input[name="person"]').value =
+            'person[' + assignee_name + ']';
+          members_list.querySelector('.name').textContent = assignee_name;
+          if (assignee_avatar) {
+            avatar = document.createElement('img');
+            avatar.setAttribute('src', assignee_avatar);
+            avatar.setAttribute('alt', assignee_name);
+            avatar.classList.add('img-fluid');
+            members_list.querySelector('.person').innerHTML = '';
+            members_list.querySelector('.person').appendChild(avatar);
+          } else {
+            members_list.querySelector('.person').innerHTML = '';
+          }
+          members_list.classList.remove('visually-hidden');
+          // console.log(box['_element']);
+        }
+
+        event.clickEvent.preventDefault();
+      }
+    });
+  });
+}
+if (document.querySelector('.members-list .btn-remove-assignee')) {
+  document
+    .querySelector('.members-list .btn-remove-assignee')
+    .addEventListener('click', (event) => {
+      event.preventDefault();
+      event.target.closest('.members-list').classList.add('visually-hidden');
+      document
+        .querySelector('.wrap-choice-assignee')
+        .classList.remove('visually-hidden');
+    });
+}
+
 let input_password = document.querySelectorAll('.form-control-password');
 input_password.forEach((box) => {
   box.addEventListener('input', (event) => {
