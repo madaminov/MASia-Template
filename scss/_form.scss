@@ -1083,7 +1083,8 @@ input[type='password'],
     margin-bottom: 14px;
   }
 }
-.form-create-an-account {
+.form-create-an-account,
+.form-log-in {
   .form-control-valid {
     transition: none;
   }
@@ -1233,5 +1234,28 @@ input[type='password'],
   .wrap-progress {
     position: absolute;
     top: 0px;
+  }
+}
+.forgot-password {
+  width: 100%;
+  margin-top: 12px;
+  a {
+    overflow: hidden;
+    color: $primary-default;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
+    /* Callout - 15 M */
+    font-family: $font-stack-popins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: 0.03px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -52,9 +52,13 @@ psh.forEach((box) => {
     }
   });
 });
-const collapseTip = new bootstrap.Collapse('#collapseTip', {
-  toggle: false,
-});
+let collapseTip = '';
+if (document.getElementById('collapseTip')) {
+  collapseTip = new bootstrap.Collapse('#collapseTip', {
+    toggle: false,
+  });
+}
+
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
 const dropdownList = [...dropdownElementList].map(
   (dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)

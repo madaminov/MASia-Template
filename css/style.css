@@ -13871,10 +13871,12 @@ input[type=password]:focus + .input-group-text,
   margin-bottom: 14px;
 }
 
-.form-create-an-account .form-control-valid {
+.form-create-an-account .form-control-valid,
+.form-log-in .form-control-valid {
   transition: none;
 }
-.form-create-an-account .form-control-valid:valid {
+.form-create-an-account .form-control-valid:valid,
+.form-log-in .form-control-valid:valid {
   background-image: url(../images/valid-icon.png);
   background-repeat: no-repeat;
   background-position: calc(100% - 18px) 14px;
@@ -14027,6 +14029,30 @@ input[type=password]:focus + .input-group-text,
 .invalid-custom .wrap-progress {
   position: absolute;
   top: 0px;
+}
+
+.forgot-password {
+  width: 100%;
+  margin-top: 12px;
+}
+.forgot-password a {
+  overflow: hidden;
+  color: #d3bff9;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  text-overflow: ellipsis;
+  /* Callout - 15 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
 }
 
 .nice-select {
