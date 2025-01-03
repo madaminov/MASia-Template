@@ -1,8 +1,8 @@
-let i = 0;
+let ns_length = 0;
 let NiceSelectAll = new Array();
 let formSelect = document.querySelectorAll('.form-select');
 formSelect.forEach((select) => {
-  NiceSelectAll[i] = NiceSelect.bind(select);
+  NiceSelectAll[ns_length] = NiceSelect.bind(select);
   select.addEventListener('change', function (event) {
     if (event.target.value) {
       if (event.target.closest('.input-group')) {
@@ -13,7 +13,7 @@ formSelect.forEach((select) => {
       }
     }
   });
-  i++;
+  ns_length++;
 });
 
 document.querySelectorAll('.reset-value').forEach((box) => {
@@ -59,33 +59,43 @@ if (document.getElementById('collapseTip')) {
   });
 }
 
-const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
-const dropdownList = [...dropdownElementList].map(
-  (dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)
-);
-
-dropdownList.forEach((box) => {
-  box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
-    event.preventDefault();
-
-    if (event && event.clickEvent && event.clickEvent.target) {
-      el_target = event.clickEvent.target;
-      if (el_target.classList.contains('dropdown-item')) {
-        box['_element'].value =
-          event.clickEvent.target.getAttribute('data-value');
-        collapseTip.show();
-      } else {
-        if (box['_menu'].querySelector('input').value) {
+if (document.querySelectorAll('.dropdown-toggle')) {
+  const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
+  const dropdownList = [...dropdownElementList].map(
+    (dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)
+  );
+  dropdownList.forEach((box) => {
+    box['_menu']
+      .querySelector('input')
+      .addEventListener('keypress', function (e) {
+        var key = e.which || e.keyCode;
+        if (key === 13) {
           box['_element'].value = box['_menu'].querySelector('input').value;
-          box['_menu'].querySelector('input').value = '';
+          box.hide();
         }
-        collapseTip.hide();
-      }
+      });
+    box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
+      event.preventDefault();
 
-      event.clickEvent.preventDefault();
-    }
+      if (event && event.clickEvent && event.clickEvent.target) {
+        el_target = event.clickEvent.target;
+        if (el_target.classList.contains('dropdown-item')) {
+          box['_element'].value =
+            event.clickEvent.target.getAttribute('data-value');
+          collapseTip.show();
+        } else {
+          if (box['_menu'].querySelector('input').value) {
+            box['_element'].value = box['_menu'].querySelector('input').value;
+            box['_menu'].querySelector('input').value = '';
+          }
+          collapseTip.hide();
+        }
+
+        event.clickEvent.preventDefault();
+      }
+    });
   });
-});
+}
 
 let input_password = document.querySelectorAll('.form-control-password');
 input_password.forEach((box) => {
