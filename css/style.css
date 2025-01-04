@@ -13113,6 +13113,17 @@ button.active, button:active, button:focus,
   fill: #a073f2;
 }
 
+.btn-flex {
+  flex: 1 0 0%;
+  width: 100%;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  border-radius: 40px;
+  height: 46px;
+  min-width: 46px;
+}
+
 .btn-list {
   display: flex;
   width: 40px;
@@ -14929,6 +14940,10 @@ h6,
   border: none;
   background-color: #fff;
   width: 100%;
+}
+
+.dropdown-reviewer {
+  width: calc(100vw - 32px);
 }
 
 .collapse {
@@ -17643,11 +17658,20 @@ footer.show-context-menu-user .btn-user {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+.members-list .item .name {
+  white-space: nowrap;
+}
+.members-list .item button {
+  margin-left: auto;
+}
 .members-list .item-full {
   width: calc(100% - 46px - 8px);
 }
 .members-list .item-full button {
   margin-left: auto;
+}
+.members-list .item-width-full {
+  flex: 1 0 0%;
 }
 
 .window-attach-body .form {

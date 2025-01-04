@@ -158,6 +158,7 @@
     border: 1px solid $gray-6;
     @include border-radius(40px);
     @include transition(0.3s);
+
     &:hover {
       border: 1px solid $white;
     }
@@ -175,12 +176,21 @@
         border-radius: 50%;
       }
     }
+    .name {
+      white-space: nowrap;
+    }
+    button {
+      margin-left: auto;
+    }
   }
   .item-full {
     width: calc(100% - 46px - 8px);
     button {
       margin-left: auto;
     }
+  }
+  .item-width-full {
+    flex: 1 0 0%;
   }
 }
 .window-attach-body {

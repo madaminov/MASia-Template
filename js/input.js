@@ -234,9 +234,85 @@ input_password.forEach((box) => {
       });
     }
   });
-  // box.addEventListener('focusout', (event) => {
-  //   id_el = event.target.getAttribute('id');
-  //   validation_element = document.getElementById('validation' + id_el);
-  //   validation_element.classList.remove('show');
-  // });
+});
+// if (document.querySelectorAll('.dropdown-reviewer')) {
+//   const dropdownElementListReviewer =
+//     document.querySelectorAll('.dropdown-reviewer');
+//   const dropdownListReviewer = [...dropdownElementListReviewer].map(
+//     (dropdownToggleElReviewer) =>
+//       new bootstrap.Dropdown(dropdownToggleElReviewer)
+//   );
+//   dropdownListReviewer.forEach((box) => {
+//     box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
+//       event.preventDefault();
+
+//       if (event && event.clickEvent && event.clickEvent.target) {
+//         el_target = event.clickEvent.target;
+//         if (el_target.classList.contains('dropdown-item')) {
+//           assignee_name = event.clickEvent.target.getAttribute('data-value');
+//           assignee_avatar = event.clickEvent.target.getAttribute('data-avatar');
+//           box['_element']
+//             .closest('.wrap-choice-assignee')
+//             .classList.add('visually-hidden');
+//           members_list = document.querySelector('.members-list');
+//           members_list.querySelector('input[name="person"]').value =
+//             'person[' + assignee_name + ']';
+//           members_list.querySelector('.name').textContent = assignee_name;
+//           if (assignee_avatar) {
+//             avatar = document.createElement('img');
+//             avatar.setAttribute('src', assignee_avatar);
+//             avatar.setAttribute('alt', assignee_name);
+//             avatar.classList.add('img-fluid');
+//             members_list.querySelector('.person').innerHTML = '';
+//             members_list.querySelector('.person').appendChild(avatar);
+//           } else {
+//             members_list.querySelector('.person').innerHTML = '';
+//           }
+//           members_list.classList.remove('visually-hidden');
+//           // console.log(box['_element']);
+//         }
+
+//         event.clickEvent.preventDefault();
+//       }
+//     });
+//   });
+// }
+document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
+  box.addEventListener('change', (event) => {
+    value = event.target.value;
+    avatar = event.target.getAttribute('data-avatar');
+    data_name = event.target.getAttribute('data-name');
+    reviewer_id = event.target.getAttribute('data-reviewer-id');
+    if (reviewer_id == 1) {
+      event.target.checked = true;
+      return false;
+    }
+    if (event.target.checked) {
+      template = `<div class="item item-width-full animated fadeIn" data-reviewer-id="${reviewer_id}">
+											<input type="hidden" name="reviewer[${value}]">
+											<div class="person">
+												<img src="${avatar}" alt="${data_name}" class="img-fluid">
+											</div>
+											<div class="name">${data_name}</div>
+                      <button class="btn-close btn-close-gray" onclick="this.closest('.item').remove()"></button>
+										</div>`;
+      if (
+        document.querySelectorAll('.members-list-reviewer .item').length > 0
+      ) {
+        item = document.querySelectorAll('.members-list-reviewer .item');
+        item[item.length - 1].insertAdjacentHTML('afterEnd', template);
+        console.log('отработал item');
+      } else {
+        document.querySelector('.members-list-reviewer').prepend(template);
+        console.log('отработал prepend');
+      }
+      //document.querySelector('.members-list-reviewer').innerHTML = template;
+    } else {
+      document
+        .querySelector(
+          '.members-list-reviewer .item[data-reviewer-id="' + reviewer_id + '"]'
+        )
+        .remove();
+    }
+  });
 });
