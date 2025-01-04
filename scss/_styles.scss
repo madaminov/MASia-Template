@@ -344,8 +344,9 @@ h6,
     width: 100%;
   }
 }
-.dropdown-reviewer {
+.dropdown-list-reviewer {
   width: calc(100vw - 32px);
+  max-width: calc(768px - 32px);
 }
 .collapse {
   width: 100%;
