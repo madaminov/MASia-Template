@@ -208,6 +208,12 @@
   .item-flex-9 {
     flex: 9 0 0%;
   }
+  @media (min-width: 640px) {
+    .item-width-full {
+      max-width: calc(100% - 46px - 8px);
+      flex: 14 0 0%;
+    }
+  }
   .dropdown {
     height: 46px;
     min-width: 46px;

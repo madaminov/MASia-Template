@@ -17689,6 +17689,12 @@ footer.show-context-menu-user .btn-user {
 .members-list-reviewer .item-flex-9 {
   flex: 9 0 0%;
 }
+@media (min-width: 640px) {
+  .members-list-reviewer .item-width-full {
+    max-width: calc(100% - 46px - 8px);
+    flex: 14 0 0%;
+  }
+}
 .members-list-reviewer .dropdown {
   height: 46px;
   min-width: 46px;
