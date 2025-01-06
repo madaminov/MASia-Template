@@ -235,48 +235,34 @@ input_password.forEach((box) => {
     }
   });
 });
-// if (document.querySelectorAll('.dropdown-reviewer')) {
-//   const dropdownElementListReviewer =
-//     document.querySelectorAll('.dropdown-reviewer');
-//   const dropdownListReviewer = [...dropdownElementListReviewer].map(
-//     (dropdownToggleElReviewer) =>
-//       new bootstrap.Dropdown(dropdownToggleElReviewer)
-//   );
-//   dropdownListReviewer.forEach((box) => {
-//     box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
-//       event.preventDefault();
-
-//       if (event && event.clickEvent && event.clickEvent.target) {
-//         el_target = event.clickEvent.target;
-//         if (el_target.classList.contains('dropdown-item')) {
-//           assignee_name = event.clickEvent.target.getAttribute('data-value');
-//           assignee_avatar = event.clickEvent.target.getAttribute('data-avatar');
-//           box['_element']
-//             .closest('.wrap-choice-assignee')
-//             .classList.add('visually-hidden');
-//           members_list = document.querySelector('.members-list');
-//           members_list.querySelector('input[name="person"]').value =
-//             'person[' + assignee_name + ']';
-//           members_list.querySelector('.name').textContent = assignee_name;
-//           if (assignee_avatar) {
-//             avatar = document.createElement('img');
-//             avatar.setAttribute('src', assignee_avatar);
-//             avatar.setAttribute('alt', assignee_name);
-//             avatar.classList.add('img-fluid');
-//             members_list.querySelector('.person').innerHTML = '';
-//             members_list.querySelector('.person').appendChild(avatar);
-//           } else {
-//             members_list.querySelector('.person').innerHTML = '';
-//           }
-//           members_list.classList.remove('visually-hidden');
-//           // console.log(box['_element']);
-//         }
-
-//         event.clickEvent.preventDefault();
-//       }
-//     });
-//   });
-// }
+if (document.querySelectorAll('.dropdown-reviewer')) {
+  const dropdownElementListReviewer =
+    document.querySelectorAll('.dropdown-reviewer');
+  const dropdownListReviewer = [...dropdownElementListReviewer].map(
+    (dropdownToggleElReviewer) =>
+      new bootstrap.Dropdown(dropdownToggleElReviewer)
+  );
+  dropdownListReviewer.forEach((box) => {
+    box['_element'].addEventListener('show.bs.dropdown', (event) => {
+      //event.preventDefault();
+      console.log(box['_menu']);
+      document
+        .querySelectorAll('.members-list-reviewer .item')
+        .forEach((mlr_item) => {
+          box['_menu']
+            .querySelectorAll('.form-check-input')
+            .forEach((form_check_input) => {
+              if (
+                form_check_input.getAttribute('data-reviewer-id') ==
+                mlr_item.getAttribute('data-reviewer-id')
+              ) {
+                form_check_input.checked = true;
+              }
+            });
+        });
+    });
+  });
+}
 document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
   box.addEventListener('change', (event) => {
     value = event.target.value;
@@ -294,17 +280,15 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
 												<img src="${avatar}" alt="${data_name}" class="img-fluid">
 											</div>
 											<div class="name">${data_name}</div>
-                      <button class="btn-close btn-close-gray" onclick="this.closest('.item').remove()"></button>
+                      <button class="btn-close btn-close-gray" onclick="updateDropdownListReviewer(this);return false"></button>
 										</div>`;
       if (
         document.querySelectorAll('.members-list-reviewer .item').length > 0
       ) {
         item = document.querySelectorAll('.members-list-reviewer .item');
         item[item.length - 1].insertAdjacentHTML('afterEnd', template);
-        console.log('отработал item');
       } else {
         document.querySelector('.members-list-reviewer').prepend(template);
-        console.log('отработал prepend');
       }
       //document.querySelector('.members-list-reviewer').innerHTML = template;
     } else {
@@ -316,3 +300,17 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
     }
   });
 });
+function updateDropdownListReviewer(event) {
+  // event.preventDefault();
+  console.log(event);
+  item = event.closest('.item');
+  id = item.getAttribute('data-reviewer-id');
+  document
+    .querySelectorAll('.dropdown-list-reviewer .form-check-input')
+    .forEach((form_check_input) => {
+      if (form_check_input.getAttribute('data-reviewer-id') == id) {
+        form_check_input.checked = false;
+      }
+      item.remove();
+    });
+}
