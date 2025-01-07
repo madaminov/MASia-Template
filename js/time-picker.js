@@ -1,9 +1,3 @@
-// const dropdownElementList = document.querySelectorAll(
-//   '.dropdown-toggle-time-picker'
-// );
-// const dropdownList = [...dropdownElementList].map(
-//   (dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)
-// );
 const tsp = document.querySelectorAll('.time-start-picker');
 tsp.forEach((box) => {
   let currentIndexHours = 0;
