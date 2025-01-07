@@ -14762,10 +14762,6 @@ h6,
 .wrap-tags-task-detail {
   transition: all 0.3s ease;
 }
-.wrap-tags-task-detail .dropdown {
-  position: relative;
-  z-index: 1058;
-}
 .wrap-tags-task-detail .tag {
   display: flex;
   height: 24px;
@@ -14806,6 +14802,10 @@ h6,
   opacity: 1;
   visibility: visible;
   transition: all 0.3s ease;
+}
+.wrap-tags-task-detail.open .dropdown {
+  position: relative;
+  z-index: 1058;
 }
 
 .context-menu {

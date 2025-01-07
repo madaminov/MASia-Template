@@ -303,7 +303,7 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
 function updateDropdownListReviewer(event) {
   // event.preventDefault();
   console.log(event);
-  item = event.closest('.tags');
+  item = event.closest('.item');
   id = item.getAttribute('data-reviewer-id');
   document
     .querySelectorAll('.dropdown-list-reviewer .form-check-input')
@@ -313,4 +313,36 @@ function updateDropdownListReviewer(event) {
       }
       item.remove();
     });
+}
+if (document.querySelectorAll('.dropdown-tag')) {
+  const dropdownElementListTag = document.querySelectorAll('.dropdown-tag');
+  const dropdownListTag = [...dropdownElementListTag].map(
+    (dropdownToggleElTag) => new bootstrap.Dropdown(dropdownToggleElTag)
+  );
+  dropdownListTag.forEach((box) => {
+    box['_element'].addEventListener('hide.bs.dropdown', (event) => {
+      //event.preventDefault();
+      if (event && event.clickEvent && event.clickEvent.target) {
+        el_target = event.clickEvent.target;
+        if (el_target.classList.contains('dropdown-item')) {
+          box['_element'].value =
+            event.clickEvent.target.getAttribute('data-value');
+          box['_element'].textContent =
+            event.clickEvent.target.getAttribute('data-value');
+        }
+      }
+      tags = box['_element'].closest('.tags');
+      tags.classList.remove('open');
+      document.querySelector('.fullModal').style.zIndex = '';
+    });
+    box['_element'].addEventListener('shown.bs.dropdown', (event) => {
+      console.log(box['_element']);
+      //event.preventDefault();
+      setTimeout(() => {
+        tags = box['_element'].closest('.tags');
+        tags.classList.add('open');
+        document.querySelector('.fullModal').style.zIndex = '1057';
+      }, 5);
+    });
+  });
 }
