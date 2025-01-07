@@ -14728,6 +14728,7 @@ h6,
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border: 0;
 }
 
 .tag-item {
@@ -14758,12 +14759,20 @@ h6,
   transition: all 0.3s ease;
 }
 
+.wrap-tags-task-detail {
+  transition: all 0.3s ease;
+}
+.wrap-tags-task-detail .dropdown {
+  position: relative;
+  z-index: 1058;
+}
 .wrap-tags-task-detail .tag {
   display: flex;
   height: 24px;
   padding: 4px 8px;
   align-items: center;
   gap: 4px;
+  position: relative;
 }
 .wrap-tags-task-detail .tag::after {
   content: "";
@@ -14773,6 +14782,30 @@ h6,
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
+}
+.wrap-tags-task-detail .toggleClose {
+  backdrop-filter: blur(10px);
+  background: rgba(30, 30, 30, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1057;
+  top: 58px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.wrap-tags-task-detail.open {
+  position: relative;
+  z-index: 1058;
+}
+.wrap-tags-task-detail.open .toggleClose {
+  z-index: 1057;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
 }
 
 .context-menu {
@@ -18293,6 +18326,7 @@ footer.show-context-menu-user .btn-user {
   background: rgba(30, 30, 30, 0.2);
   backdrop-filter: blur(10px);
   padding: 0;
+  z-index: 1057;
 }
 .slotModal .modal-dialog {
   height: auto;

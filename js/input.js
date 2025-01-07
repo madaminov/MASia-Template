@@ -303,7 +303,7 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
 function updateDropdownListReviewer(event) {
   // event.preventDefault();
   console.log(event);
-  item = event.closest('.item');
+  item = event.closest('.tags');
   id = item.getAttribute('data-reviewer-id');
   document
     .querySelectorAll('.dropdown-list-reviewer .form-check-input')

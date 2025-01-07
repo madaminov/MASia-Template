@@ -156,6 +156,7 @@ h6,
     cursor: pointer;
     @include border-radius(8px);
     @include transition(0.3s);
+    border: 0;
   }
 }
 .tag-item {
@@ -179,12 +180,18 @@ h6,
   @include transition(0.3s);
 }
 .wrap-tags-task-detail {
+  transition: all 0.3s ease;
+  .dropdown {
+    position: relative;
+    z-index: 1058;
+  }
   .tag {
     display: flex;
     height: 24px;
     padding: 4px 8px;
     align-items: center;
     gap: 4px;
+    position: relative;
     &::after {
       content: '';
       width: 10px;
@@ -193,6 +200,30 @@ h6,
       background-repeat: no-repeat;
       background-position: center;
       display: inline-block;
+    }
+  }
+  .toggleClose {
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 30, 0.2);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1057;
+    top: 58px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  &.open {
+    position: relative;
+    z-index: 1058;
+    .toggleClose {
+      z-index: 1057;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease;
     }
   }
 }

@@ -69,8 +69,39 @@
 
 							<div class="title-section w-100 flex-wrap">
 								<div class="wrap-tags-task-detail tags">
-									<div class="tag bg-new">New</div>
-									<div class="tag bg-medium">Medium</div>
+									<div class="toggleClose"></div>
+									<div class="dropdown">
+										<button class="tag bg-new dropdown-tag" name="state" type="button"
+											data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8"
+											value="New">
+											New
+										</button>
+										<ul class="dropdown-menu dropdown-tag-menu">
+											<li><span class="dropdown-item" data-value="New">New</span></li>
+											<li><span class="dropdown-item" data-value="In progress">In progress</span>
+											</li>
+											<li><span class="dropdown-item" data-value="Reviewed">Reviewed</span></li>
+											<li><span class="dropdown-item" data-value="Completed">Completed</span></li>
+											<li><span class="dropdown-item" data-value="Failed">Failed</span></li>
+										</ul>
+									</div>
+
+									<div class="dropdown">
+										<button class="tag bg-medium dropdown-tag" name="priority" type="button"
+											data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8"
+											value="Medium">
+											Medium
+										</button>
+										<ul class="dropdown-menu dropdown-tag-menu">
+											<li><span class="dropdown-item" data-value="Low">Low</span></li>
+											<li><span class="dropdown-item" data-value="Medium">Medium</span>
+											</li>
+											<li><span class="dropdown-item" data-value="Hight">Hight</span></li>
+										</ul>
+									</div>
+
+
+
 								</div>
 								<button class="btn-options">
 									<svg>
@@ -122,6 +153,7 @@
 						</div>
 					</div>
 					<div class="modal-context-menu">
+						<div class="toggleClose"></div>
 						<div class="context-menu grid bg-white">
 							<div class="row g-0 w-100">
 								<div class="col-12 border-end border-bottom border-color-balck-opacity">
@@ -162,7 +194,7 @@
 				</div>
 			</div>
 			<!--modal end-->
-
+			<div class="capbody"></div>
 		</div>
 	</div>
 
@@ -171,7 +203,9 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/air-datepicker/air-datepicker.js"></script>
 	<script src="js/date-picker.mixin.js"></script>
+	<script src="js/nice-select2.js"></script>
 	<script src="js/script.js"></script>
+
 	<script>
 		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
 		document.onreadystatechange = function () {
