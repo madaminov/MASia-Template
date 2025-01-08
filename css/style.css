@@ -14760,6 +14760,8 @@ h6,
 }
 
 .wrap-tags-task-detail {
+  position: relative;
+  z-index: 1;
   transition: all 0.3s ease;
 }
 .wrap-tags-task-detail .tag {
@@ -14779,33 +14781,45 @@ h6,
   background-position: center;
   display: inline-block;
 }
+.wrap-tags-task-detail .dropdown {
+  position: relative;
+  z-index: 1;
+}
 .wrap-tags-task-detail .toggleClose {
-  backdrop-filter: blur(10px);
-  background: rgba(30, 30, 30, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
+  background: transparent;
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: -1057;
+  z-index: 1057;
   top: 58px;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
-.wrap-tags-task-detail.open {
-  position: relative;
-  z-index: 1058;
-}
-.wrap-tags-task-detail.open .toggleClose {
+.wrap-tags-task-detail .toggleClose.show {
+  backdrop-filter: blur(10px);
+  background: rgba(30, 30, 30, 0.2);
+  width: 100vw;
+  height: 100vh;
   z-index: 1057;
   opacity: 1;
   visibility: visible;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
-.wrap-tags-task-detail.open .dropdown {
+.wrap-tags-task-detail.show {
   position: relative;
   z-index: 1058;
+  transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wrap-tags-task-detail.show .dropdown {
+  position: relative;
+  z-index: 1058;
+}
+.wrap-tags-task-detail.show .tag {
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4196078431);
 }
 
 .context-menu {

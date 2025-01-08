@@ -320,8 +320,36 @@ if (document.querySelectorAll('.dropdown-tag')) {
     (dropdownToggleElTag) => new bootstrap.Dropdown(dropdownToggleElTag)
   );
   dropdownListTag.forEach((box) => {
-    box['_element'].addEventListener('hide.bs.dropdown', (event) => {
+    box['_element'].addEventListener('shown.bs.dropdown', (event) => {
+      element_show = box['_element'];
       //event.preventDefault();
+      setTimeout(() => {
+        tags = box['_element'].closest('.tags');
+        tags.classList.add('show');
+        tags.querySelector('.toggleClose').classList.add('show');
+        document.querySelector('.fullModal').style.zIndex = '1057';
+      }, 50);
+    });
+    box['_element'].addEventListener('hide.bs.dropdown', (event) => {
+      console.log('hide.bs.dropdown');
+      dropdownListTag.forEach((otherBox) => {
+        if (
+          otherBox['_element'] != box['_element'] &&
+          !otherBox['_element'].classList.contains('show')
+        ) {
+          tags = box['_element'].closest('.tags');
+          tags.querySelector('.toggleClose').classList.remove('show');
+          setTimeout(() => {
+            tags.classList.remove('show');
+          }, 300);
+
+          document.querySelector('.fullModal').style.zIndex = '';
+        }
+      });
+    });
+    box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
+      //event.preventDefault();
+      console.log('hidden.bs.dropdown');
       if (event && event.clickEvent && event.clickEvent.target) {
         el_target = event.clickEvent.target;
         if (el_target.classList.contains('dropdown-item')) {
@@ -331,18 +359,6 @@ if (document.querySelectorAll('.dropdown-tag')) {
             event.clickEvent.target.getAttribute('data-value');
         }
       }
-      tags = box['_element'].closest('.tags');
-      tags.classList.remove('open');
-      document.querySelector('.fullModal').style.zIndex = '';
-    });
-    box['_element'].addEventListener('shown.bs.dropdown', (event) => {
-      console.log(box['_element']);
-      //event.preventDefault();
-      setTimeout(() => {
-        tags = box['_element'].closest('.tags');
-        tags.classList.add('open');
-        document.querySelector('.fullModal').style.zIndex = '1057';
-      }, 5);
     });
   });
 }
