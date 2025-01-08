@@ -341,7 +341,7 @@ if (document.querySelectorAll('.dropdown-tag')) {
           tags.querySelector('.toggleClose').classList.remove('show');
           setTimeout(() => {
             tags.classList.remove('show');
-          }, 300);
+          }, 400);
 
           document.querySelector('.fullModal').style.zIndex = '';
         }
