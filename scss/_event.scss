@@ -15,7 +15,7 @@
   gap: 15px;
   justify-content: space-between;
   cursor: pointer;
-  @include transition(0.3s);
+  @include transition(0.5s);
   .wrap-time {
     width: 67px;
     flex: 0 0 auto;
@@ -23,11 +23,13 @@
   }
   .event-day {
     width: calc(100% - 15px - 50px);
+    @include transition(0.3s);
   }
   .inner {
     gap: 8px;
     .icon + .text {
       width: calc(100% - 20px - 8px);
+      @include transition(0.4s);
     }
   }
 
@@ -41,6 +43,7 @@
     line-height: 22px; /* 146.667% */
     letter-spacing: 0.03px;
     margin-bottom: 4px;
+    @include transition(0.4s);
   }
   .hour {
     color: $black-color;
@@ -56,6 +59,7 @@
     white-space: nowrap;
     @include border-radius(8px);
     background: $gray-5;
+    @include transition(0.9s);
   }
   .event-day {
     padding: 8px;
@@ -63,6 +67,7 @@
     @include border-radius(12px);
     background: $gray-5;
     min-height: 66px;
+    @include transition(0.3s);
     .text {
       color: $black-color;
       font-feature-settings: 'liga' off, 'clig' off;
@@ -77,6 +82,7 @@
       min-height: 48px;
       align-items: center;
       @include border-radius(10px);
+      @include transition(0.3s);
     }
     .btn-action {
       height: 20px;
@@ -84,6 +90,7 @@
       align-items: center;
       margin-top: auto;
       margin-bottom: auto;
+      @include transition(0.3s);
     }
   }
   .icon {
@@ -92,9 +99,11 @@
     padding: 4px;
     @include border-radius(6px);
     color: $black-color;
+    @include transition(0.3s);
     svg {
       width: 12px;
       height: 12px;
+      @include transition(0.3s);
     }
   }
 }
@@ -106,6 +115,7 @@
   gap: 4px;
   flex: 0 0 auto;
   width: calc(75% - 8px);
+  @include transition(0.3s);
   .property {
     color: $black-color;
     font-feature-settings: 'liga' off, 'clig' off;
@@ -129,6 +139,7 @@
     gap: 4px;
     flex: 0 0 auto;
     width: calc(25% - 8px);
+    @include transition(0.3s);
   }
   .prize-progress-text .number {
     color: $black-color;
@@ -140,14 +151,17 @@
     font-weight: 500;
     line-height: 14px; /* 140% */
     letter-spacing: 0.04px;
+    @include transition(0.3s);
   }
   .prize {
     width: 16px;
     height: 16px;
     background-image: url(../images/icon-awards-small.svg);
+    @include transition(0.3s);
   }
   .prize-progress-text .prizes .prize:nth-child(n + 2) {
     margin-left: -9px;
+    @include transition(0.3s);
   }
 }
 .users {
@@ -155,10 +169,12 @@
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  @include transition(0.3s);
   .user {
     width: 20px;
     height: 20px;
     position: relative;
+    @include transition(0.3s);
     @include border-radius(50%);
     @include transition(0.3s);
     &:nth-child(n + 2) {
@@ -189,6 +205,7 @@
     line-height: 20px; /* 200% */
     letter-spacing: -0.23px;
     margin-left: 2px;
+    @include transition(0.3s);
   }
 }
 .event-time-line {
@@ -289,6 +306,100 @@
         left: -1px;
         top: -4px;
       }
+    }
+  }
+}
+.event-loading {
+  .wrap-time {
+    .time {
+      background: transparent !important;
+      color: transparent !important;
+      position: relative;
+
+      &:first-child {
+        &::before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 8px;
+          border-radius: 10px;
+          background: $gray-20 !important;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 38px;
+          height: 8px;
+          border-radius: 10px;
+          background: $gray-20 !important;
+          position: absolute;
+          left: 0;
+          top: 12px;
+        }
+      }
+    }
+    .hour {
+      background: transparent !important;
+      color: transparent !important;
+    }
+  }
+  .btn-action {
+    visibility: hidden;
+  }
+  .event-day {
+    background: $black-color-7 !important;
+    .inner {
+      .icon {
+        width: 20px;
+        height: 20px;
+        background: $gray-20 !important;
+        svg {
+          visibility: hidden;
+        }
+      }
+    }
+    .text {
+      position: relative;
+      color: transparent !important;
+      &::before {
+        content: '';
+        border-radius: 10px;
+        background: $gray-20;
+        height: 8px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .properties {
+      .property {
+        background: $gray-20 !important;
+        color: transparent !important;
+      }
+    }
+    .users {
+      .user {
+        background: $gray-20 !important;
+        img {
+          visibility: hidden;
+        }
+      }
+      .more-user {
+        color: transparent !important;
+      }
+    }
+  }
+  .prize-progress {
+    .number {
+      color: transparent !important;
+    }
+    .prize {
+      filter: brightness(0) saturate(100%) invert(24%) sepia(17%) saturate(9%)
+        hue-rotate(132deg) brightness(91%) contrast(79%);
     }
   }
 }
