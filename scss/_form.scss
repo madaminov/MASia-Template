@@ -742,6 +742,22 @@ button,
     letter-spacing: 0.03px;
   }
 }
+.form-switch .form-check-input[type='checkbox'] {
+  width: 36px;
+  height: 20px;
+  padding: 2px 2px 2px 18px;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 100px;
+  background-color: $gray-22;
+  transition: background-position 0.15s ease-in-out;
+}
+.form-switch .form-check-input:checked {
+  background-color: $blue-2;
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23A073F2'/%3e%3c/svg%3e");
+}
 .context-menu {
   button {
     color: $black;
@@ -1062,7 +1078,16 @@ input[type='password'],
     line-height: 18px; /* 150% */
     letter-spacing: 0.048px;
     margin-top: 8px;
-    display: block;
+    display: inline-block;
+    a {
+      color: $primary-default;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
   }
 }
 .form_login {
@@ -1155,6 +1180,15 @@ input[type='password'],
   }
 }
 .form-create-task {
+  .collapse.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+.form-create-event {
   .collapse.show {
     display: flex;
     flex-direction: column;
@@ -1278,8 +1312,7 @@ input[type='password'],
     }
   }
 }
-.dropdown-tag{
-  &.show{
-    
+.dropdown-tag {
+  &.show {
   }
 }

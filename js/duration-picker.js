@@ -38,9 +38,31 @@ durationPickerConfirm.forEach((box) => {
       dropdown_menu.previousElementSibling.value = dropdown_menu.querySelector(
         'input[type="checkbox"]:checked'
       ).value;
+      seconds = dropdown_menu
+        .querySelector('input[type="checkbox"]:checked')
+        .getAttribute('data-value-seconds');
+      dropdown_menu.previousElementSibling.setAttribute(
+        'data-value-seconds',
+        seconds
+      );
+      if ((start_time = document.getElementById('start_time'))) {
+        start_time_seconds = start_time.getAttribute('data-value-seconds');
+        if (start_time.value.length > 0 && Number(start_time_seconds) > 0) {
+          step_seconds = Number(seconds) + Number(start_time_seconds);
+          const step_date = new Date(step_seconds * 1000);
+          set_time = [step_date.getUTCHours(), step_date.getUTCMinutes()]
+            .map((val) => String(val).padStart(2, '0'))
+            .join(':');
+          start_time.value = `${hours}:${minutes} - ${set_time}`;
+        }
+      }
     } else if (dropdown_menu.querySelector('input[type="text"]').value) {
       dropdown_menu.previousElementSibling.value =
         dropdown_menu.querySelector('input[type="text"]').value;
+      dropdown_menu.previousElementSibling.setAttribute(
+        'data-value-seconds',
+        0
+      );
     }
     dropdown_menu.classList.remove('show');
   });

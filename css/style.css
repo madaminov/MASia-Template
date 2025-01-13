@@ -13496,6 +13496,24 @@ button.active, button:active, button:focus,
   letter-spacing: 0.03px;
 }
 
+.form-switch .form-check-input[type=checkbox] {
+  width: 36px;
+  height: 20px;
+  padding: 2px 2px 2px 18px;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 100px;
+  background-color: #b9bec5;
+  transition: background-position 0.15s ease-in-out;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #dcd8ff;
+  background-position: right center;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23A073F2'/%3e%3c/svg%3e");
+}
+
 .context-menu button {
   color: #000;
   font-feature-settings: "liga" off, "clig" off;
@@ -13853,7 +13871,16 @@ input[type=password]:focus + .input-group-text,
   line-height: 18px; /* 150% */
   letter-spacing: 0.048px;
   margin-top: 8px;
-  display: block;
+  display: inline-block;
+}
+.form-group .bottom-text a {
+  color: #d3bff9;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
 .form_login {
@@ -13955,6 +13982,13 @@ input[type=password]:focus + .input-group-text,
 }
 
 .form-create-task .collapse.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.form-create-event .collapse.show {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14181,6 +14215,10 @@ input[type=password]:focus + .input-group-text,
 .nice-select.small .option {
   line-height: 34px;
   min-height: 34px;
+}
+
+.nice-select .placehold {
+  color: #9f9f9f;
 }
 
 .nice-select .nice-select-dropdown {
@@ -14453,6 +14491,29 @@ input[type=password]:focus + .input-group-text,
   font-weight: 600;
   line-height: 10px; /* 35.714% */
   margin-bottom: 30px;
+}
+.time-start-picker .hr {
+  width: calc(100% + 32px);
+  height: 1px;
+  background: #d9d9d9;
+  margin-left: -16px;
+}
+.time-start-picker .wrap-all-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.time-start-picker .wrap-all-day label {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
 }
 
 .wrap-hours,
