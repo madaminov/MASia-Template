@@ -6,10 +6,16 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    position: relative;
     .user-img {
       width: 120px;
       height: 120px;
       background: $primary-default;
+    }
+    .qr-code {
+      position: absolute;
+      right: 16px;
+      top: 20px;
     }
   }
   .user_info_section {
@@ -96,6 +102,12 @@
       height: 40px;
     }
   }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 .account-blue {
   background-color: $blue-7;
@@ -124,6 +136,101 @@
       height: 40px;
     }
   }
+}
+.account-king {
+  .user_avatar_section {
+    .user-img {
+      background: $blue-10;
+    }
+  }
+  .user_info_section {
+    .user_role {
+      background: $blue-10;
+    }
+  }
+}
+.account-princess {
+  background: $blue-11;
+  .user_avatar_section {
+    .user-img {
+      background: $violet-12;
+    }
+  }
+  .user_info_section {
+    .user_role {
+      background: $violet-12;
+    }
+  }
+  .row-input {
+    color: $black-color;
+    border-bottom: 1px solid $gray-23;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      fill: $black-color;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.account-prince {
+  background: $blue-12;
+  .user_avatar_section {
+    .user-img {
+      background: $blue-9;
+    }
+  }
+  .user_info_section {
+    .user_role {
+      background: $blue-9;
+    }
+  }
+  .row-input {
+    color: $black-color;
+    border-bottom: 1px solid $gray-23;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      fill: $black-color;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.account-other {
+  background: $blue-12;
+  .user_avatar_section {
+    .user-img {
+      background: $green-2;
+    }
+  }
+  .user_info_section {
+    .user_role {
+      background: $green-2;
+    }
+  }
+  .row-input {
+    color: $black-color;
+    border-bottom: 1px solid $gray-23;
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      fill: $black-color;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.account-adult {
+  .user_avatar_section {
+    .user-img {
+      background: $violet-12;
+    }
+  }  
 }
 .family-list {
   display: flex;

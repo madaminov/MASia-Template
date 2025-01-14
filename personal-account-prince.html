@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
+					</div>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+					</div>
+				</div>
+			</header>
+
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+			<!--modal-->
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-liner-4">
+							<h2 class="modal-title" id="fullModalLabel">Account</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<div class="account account-prince">
+								<div class="user_avatar_section">
+									<div class="user-img">
+										<img src="images/prince.png" alt="" class="img-fluid">
+									</div>
+								</div>
+								<div class="user_info_section">
+									<h2 class="name">Tom</h2>
+									<div class="user_role">
+										Prince
+									</div>
+								</div>
+								<div class="section-inputs">
+									<div class="section">
+										<div class="row-input">
+											Rewards
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+										<div class="row-input">
+											Members
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+										<div class="row-input">
+											Integrations
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+
+									</div>
+
+
+									<div class="section">
+										<div class="row-input border-0 ">
+											<a href="" class="color-red">Log out</a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-picker.mixin.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+	</script>
+</body>
+
+</html>

@@ -85,6 +85,35 @@ select:focus {
     #74aef6 181.25%
   ) !important;
 }
+.bg-liner-2 {
+  background: linear-gradient(
+    180deg,
+    #b4c1e9 57.32%,
+    #7990d8 181.25%
+  ) !important;
+}
+.bg-liner-3 {
+  background: linear-gradient(
+    180deg,
+    #dcccfa 57.32%,
+    #a67cf3 181.25
+  ) !important;
+}
+.bg-liner-4 {
+  background: linear-gradient(
+    180deg,
+    #d4e6fc 57.32%,
+    #9bc4f8 181.25%
+  ) !important;
+}
+.bg-liner-5 {
+  background: linear-gradient(
+    180deg,
+    #c9e6dd 57.32%,
+    #88c8b4 181.25%
+  ) !important;
+}
+
 /* background. */
 .bg-black {
   background-color: $black-color !important;

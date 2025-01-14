@@ -11937,6 +11937,22 @@ select:focus {
   background: linear-gradient(180deg, #a4caf9 57.32%, #74aef6 181.25%) !important;
 }
 
+.bg-liner-2 {
+  background: linear-gradient(180deg, #b4c1e9 57.32%, #7990d8 181.25%) !important;
+}
+
+.bg-liner-3 {
+  background: linear-gradient(180deg, #dcccfa 57.32%, #a67cf3 181.25) !important;
+}
+
+.bg-liner-4 {
+  background: linear-gradient(180deg, #d4e6fc 57.32%, #9bc4f8 181.25%) !important;
+}
+
+.bg-liner-5 {
+  background: linear-gradient(180deg, #c9e6dd 57.32%, #88c8b4 181.25%) !important;
+}
+
 /* background. */
 .bg-black {
   background-color: #000000 !important;
@@ -18334,11 +18350,17 @@ footer.show-context-menu-user .btn-user {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
 .account .user_avatar_section .user-img {
   width: 120px;
   height: 120px;
   background: #d3bff9;
+}
+.account .user_avatar_section .qr-code {
+  position: absolute;
+  right: 16px;
+  top: 20px;
 }
 .account .user_info_section {
   display: flex;
@@ -18427,6 +18449,12 @@ footer.show-context-menu-user .btn-user {
   width: 40px;
   height: 40px;
 }
+.account a {
+  text-decoration: none;
+}
+.account a:hover {
+  text-decoration: underline;
+}
 
 .account-blue {
   background-color: #deecfd;
@@ -18451,6 +18479,83 @@ footer.show-context-menu-user .btn-user {
   fill: #000000;
   width: 40px;
   height: 40px;
+}
+
+.account-king .user_avatar_section .user-img {
+  background: #b4c1e9;
+}
+.account-king .user_info_section .user_role {
+  background: #b4c1e9;
+}
+
+.account-princess {
+  background: #f5f3f9;
+}
+.account-princess .user_avatar_section .user-img {
+  background: #ddd2f4;
+}
+.account-princess .user_info_section .user_role {
+  background: #ddd2f4;
+}
+.account-princess .row-input {
+  color: #000000;
+  border-bottom: 1px solid #c9c9c9;
+}
+.account-princess .row-input svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #000000;
+  width: 40px;
+  height: 40px;
+}
+
+.account-prince {
+  background: #f3f6f9;
+}
+.account-prince .user_avatar_section .user-img {
+  background: #d4e6fc;
+}
+.account-prince .user_info_section .user_role {
+  background: #d4e6fc;
+}
+.account-prince .row-input {
+  color: #000000;
+  border-bottom: 1px solid #c9c9c9;
+}
+.account-prince .row-input svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #000000;
+  width: 40px;
+  height: 40px;
+}
+
+.account-other {
+  background: #f3f6f9;
+}
+.account-other .user_avatar_section .user-img {
+  background: #c9e6dd;
+}
+.account-other .user_info_section .user_role {
+  background: #c9e6dd;
+}
+.account-other .row-input {
+  color: #000000;
+  border-bottom: 1px solid #c9c9c9;
+}
+.account-other .row-input svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #000000;
+  width: 40px;
+  height: 40px;
+}
+
+.account-adult .user_avatar_section .user-img {
+  background: #ddd2f4;
 }
 
 .family-list {
