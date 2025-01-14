@@ -939,6 +939,7 @@ input[type='password'],
     height: 100%;
     padding: 0;
     right: 12px;
+    transition: all 0.3s ease;
   }
   .input-icon-calendar {
     background-image: url(../images/icon-calendar-gray.svg);
@@ -1175,7 +1176,8 @@ input[type='password'],
       cursor: pointer;
     }
     .form-check-input:checked + .form-check-label {
-      background: $violet-9;
+      color: $white;
+      background: $violet-10;
     }
   }
 }

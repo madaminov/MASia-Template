@@ -162,7 +162,6 @@
 								</div>
 								<div class="form-group">
 									<label for="duration" class="form-label">Duration</label>
-
 									<input type="text"
 										class="form-control form-control-dropdown dropdown-toggle-confirm" id="duration"
 										data-bs-toggle="dropdown" data-value-seconds="3600" value="1 hour"
@@ -173,7 +172,7 @@
 										<div class="duration-picker">
 											<h3>Select a duration</h3>
 											<div class="group">
-												<p class="text">Select the task duration</p>
+												<p class="text">Select the event duration</p>
 												<div class="form-group-check">
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
@@ -241,10 +240,26 @@
 													</div>
 												</div>
 												<div class="form-group">
-													<label for="other" class="form-label">Other</label>
-													<input type="text" class="form-control form-control-gray"
-														name="duration-other" id="duration-other"
-														placeholder="Type your time">
+													<label for="">Other time</label>
+													<div class="duration-group-timer">
+														<div class="wrap-hours">
+															<button class="btn-next hours-next"></button>
+															<ul class="list">
+																<li class="active">00</li>
+															</ul>
+															<button class="btn-prev hours-prev"></button>
+															<div class="label">Hours</div>
+														</div>
+														<div class="separator">:</div>
+														<div class="wrap-minutes">
+															<button class="btn-next minutes-next"></button>
+															<ul class="list">
+																<li class="active">00</li>
+															</ul>
+															<button class="btn-prev minutes-prev"></button>
+															<div class="label">Minutes</div>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="row row-btn-group">
@@ -367,8 +382,6 @@
 												<option value="Every year">Every year</option>
 											</select>
 											<span class="input-group-text reset-value cursor-pointer"></span>
-											<span class="input-group-text input-icon"></span>
-
 										</div>
 
 									</div>
@@ -385,8 +398,6 @@
 												<option value="Per week">Per week</option>
 											</select>
 											<span class="input-group-text reset-value cursor-pointer"></span>
-											<span class="input-group-text input-icon"></span>
-
 										</div>
 
 									</div>

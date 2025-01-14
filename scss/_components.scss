@@ -56,6 +56,12 @@
   .row-btn-group {
     margin-top: 32px;
   }
+  .duration-group-timer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
 }
 .time-start-picker {
   display: flex;

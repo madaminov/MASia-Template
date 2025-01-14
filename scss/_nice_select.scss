@@ -16,6 +16,7 @@
   user-select: none;
   white-space: nowrap;
   width: 100%;
+  background-image: none !important;
 }
 .nice-select:hover {
   border-color: #dbdbdb;
@@ -26,26 +27,26 @@
   border-color: #999;
 }
 .nice-select:after {
-  border-bottom: 2px solid #999;
-  border-right: 2px solid #999;
   content: '';
-  display: none;
-  height: 5px;
-  margin-top: -4px;
+  height: 8px;
   pointer-events: none;
   position: absolute;
   right: 12px;
-  top: 50%;
-  transform-origin: 66% 66%;
-  transform: rotate(45deg);
+  top: calc(50% - 4px);
   transition: all 0.15s ease-in-out;
-  width: 5px;
+  width: 12px;
+  background-image: url(../images/icon-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .nice-select.open:after {
-  transform: rotate(-135deg);
+  transform: rotate(-180deg);
 }
 .nice-select.open {
-  box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+  box-shadow: 0px 0px 0px 1px $primary-default;
+}
+.nice-select.open + .input-group-text {
+  transform: rotate(180deg);
 }
 .nice-select.open .nice-select-dropdown {
   opacity: 1;

@@ -115,66 +115,90 @@
 												<div class="form-group-check">
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="10 min" id="duration-check_1">
+															type="checkbox" data-value-seconds="600" value="10 min"
+															id="duration-check_1">
 														<label class="form-check-label" for="duration-check_1">
 															10 min
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="15 min" id="duration-check_2">
+															type="checkbox" data-value-seconds="900" value="15 min"
+															id="duration-check_2">
 														<label class="form-check-label" for="duration-check_2">
 															15 min
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="30 min" id="duration-check_3">
+															type="checkbox" data-value-seconds="1800" value="30 min"
+															id="duration-check_3">
 														<label class="form-check-label" for="duration-check_3">
 															30 min
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="45 min" id="duration-check_4">
+															type="checkbox" data-value-seconds="2700" value="45 min"
+															id="duration-check_4">
 														<label class="form-check-label" for="duration-check_4">
 															45 min
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="1 hour" id="duration-check_5">
+															type="checkbox" data-value-seconds="3600" value="1 hour"
+															id="duration-check_5">
 														<label class="form-check-label" for="duration-check_5">
 															1 hour
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="1.5 hour" id="duration-check_6">
+															type="checkbox" data-value-seconds="5400" value="1.5 hour"
+															id="duration-check_6">
 														<label class="form-check-label" for="duration-check_6">
 															1.5 hour
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="2 hour" id="duration-check_7">
+															type="checkbox" data-value-seconds="7200" value="2 hour"
+															id="duration-check_7">
 														<label class="form-check-label" for="duration-check_7">
 															2 hour
 														</label>
 													</div>
 													<div class="form-check">
 														<input class="form-check-input" name="duration-check"
-															type="checkbox" value="3 hour" id="duration-check_8">
+															type="checkbox" data-value-seconds="10800" value="3 hour"
+															id="duration-check_8">
 														<label class="form-check-label" for="duration-check_8">
 															3 hour
 														</label>
 													</div>
 												</div>
 												<div class="form-group">
-													<label for="other" class="form-label">Other</label>
-													<input type="text" class="form-control form-control-gray"
-														name="duration-other" id="duration-other"
-														placeholder="Type your time">
+													<label for="">Other time</label>
+													<div class="duration-group-timer">
+														<div class="wrap-hours">
+															<button class="btn-next hours-next"></button>
+															<ul class="list">
+																<li class="active">00</li>
+															</ul>
+															<button class="btn-prev hours-prev"></button>
+															<div class="label">Hours</div>
+														</div>
+														<div class="separator">:</div>
+														<div class="wrap-minutes">
+															<button class="btn-next minutes-next"></button>
+															<ul class="list">
+																<li class="active">00</li>
+															</ul>
+															<button class="btn-prev minutes-prev"></button>
+															<div class="label">Minutes</div>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="row row-btn-group">
@@ -299,10 +323,8 @@
 												<option value="Every week">Every week</option>
 												<option value="Every month">Every month</option>
 												<option value="Every year">Every year</option>
-											</select>
+											</select>											
 											<span class="input-group-text reset-value cursor-pointer"></span>
-											<span class="input-group-text input-icon"></span>
-
 										</div>
 
 									</div>
@@ -317,10 +339,8 @@
 												<option value="Per day">Per day</option>
 												<option value="Per 2 days">Per 2 days</option>
 												<option value="Per week">Per week</option>
-											</select>
+											</select>											
 											<span class="input-group-text reset-value cursor-pointer"></span>
-											<span class="input-group-text input-icon"></span>
-
 										</div>
 
 									</div>

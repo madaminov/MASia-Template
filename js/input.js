@@ -148,6 +148,13 @@ if (document.querySelector('.members-list .btn-remove-assignee')) {
       document
         .querySelector('.wrap-choice-assignee')
         .classList.remove('visually-hidden');
+
+      setTimeout(() => {
+        document
+          .querySelector('.wrap-choice-assignee')
+          .querySelector('.btn-add-plus')
+          .dispatchEvent(new Event('click'));
+      }, 50);
     });
 }
 

@@ -13724,6 +13724,7 @@ input[type=password]:focus + .input-group-text,
   height: 100%;
   padding: 0;
   right: 12px;
+  transition: all 0.3s ease;
 }
 .input-icon-reset .input-icon-calendar {
   background-image: url(../images/icon-calendar-gray.svg);
@@ -13978,7 +13979,8 @@ input[type=password]:focus + .input-group-text,
   cursor: pointer;
 }
 .form-group-check .form-check .form-check-input:checked + .form-check-label {
-  background: #aca3ff;
+  color: #fff;
+  background: #a67cf3;
 }
 
 .form-create-task .collapse.show {
@@ -14130,6 +14132,7 @@ input[type=password]:focus + .input-group-text,
   user-select: none;
   white-space: nowrap;
   width: 100%;
+  background-image: none !important;
 }
 
 .nice-select:hover {
@@ -14143,28 +14146,29 @@ input[type=password]:focus + .input-group-text,
 }
 
 .nice-select:after {
-  border-bottom: 2px solid #999;
-  border-right: 2px solid #999;
   content: "";
-  display: none;
-  height: 5px;
-  margin-top: -4px;
+  height: 8px;
   pointer-events: none;
   position: absolute;
   right: 12px;
-  top: 50%;
-  transform-origin: 66% 66%;
-  transform: rotate(45deg);
+  top: calc(50% - 4px);
   transition: all 0.15s ease-in-out;
-  width: 5px;
+  width: 12px;
+  background-image: url(../images/icon-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nice-select.open:after {
-  transform: rotate(-135deg);
+  transform: rotate(-180deg);
 }
 
 .nice-select.open {
-  box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+  box-shadow: 0px 0px 0px 1px #d3bff9;
+}
+
+.nice-select.open + .input-group-text {
+  transform: rotate(180deg);
 }
 
 .nice-select.open .nice-select-dropdown {
@@ -14417,6 +14421,12 @@ input[type=password]:focus + .input-group-text,
 }
 .duration-picker .row-btn-group {
   margin-top: 32px;
+}
+.duration-picker .duration-group-timer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
 }
 
 .time-start-picker {
