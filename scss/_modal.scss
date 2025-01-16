@@ -22,6 +22,7 @@
 }
 .modal-header {
   justify-content: space-between;
+  gap: 16px;
   padding: 16px;
   border: none;
   border-radius: 0;
@@ -48,6 +49,9 @@
     padding: 0;
     background-size: cover;
     margin: 0;
+  }
+  .btn-close-arrow {
+    background-image: url(../images/icon-arrow-right-2.svg);
   }
 }
 .modal-body {

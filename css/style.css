@@ -11942,7 +11942,7 @@ select:focus {
 }
 
 .bg-liner-3 {
-  background: linear-gradient(180deg, #dcccfa 57.32%, #a67cf3 181.25) !important;
+  background: linear-gradient(180deg, #dcccfa 57.32%, #a67cf3 181.25%) !important;
 }
 
 .bg-liner-4 {
@@ -14626,6 +14626,148 @@ input[type=password]:focus + .input-group-text,
   opacity: 1;
   visibility: visible;
   transform: scaleY(1);
+}
+
+.form-group-select-vue {
+  width: 100%;
+  position: relative;
+}
+.form-group-select-vue .input-group {
+  position: relative;
+}
+.form-group-select-vue .input-group .form-control {
+  cursor: pointer;
+  position: relative;
+  -webkit-border-radius: 12px !important;
+  -moz-border-radius: 12px !important;
+  -ms-border-radius: 12px !important;
+  border-radius: 12px !important;
+}
+.form-group-select-vue .input-group .input-icon {
+  width: 12px;
+  height: 12px;
+  max-width: 12px;
+  max-height: 12px;
+  min-width: 12px;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 4px);
+  background-image: url(../images/icon-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.15s ease-in-out;
+  z-index: 5;
+}
+.form-group-select-vue .input-group .form-control:focus {
+  box-shadow: 0px 0px 0px 1px #d3bff9;
+}
+.form-group-select-vue .input-group .form-control:focus + .input-icon {
+  transform: rotate(-180deg);
+}
+.form-group-select-vue .dropdown-vue {
+  width: 100%;
+  padding: 0;
+  color: #000000;
+  background-color: #fff;
+  border: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 12;
+}
+.form-group-select-vue .dropdown-vue .item {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: #fff;
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 12px 4px 12px 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form-group-select-vue .dropdown-vue .item:last-child {
+  border-bottom: 1px solid transparent;
+}
+.form-group-select-vue .dropdown-vue .item.item-selected {
+  color: #9f9f9f;
+}
+
+.dropdown-menu-vue {
+  width: 100%;
+  padding: 0;
+  color: #000000;
+  background-color: #fff;
+  border: none;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.dropdown-menu-vue .item {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+  border-bottom: 1px solid #e6e6e6;
+  background: #e6e6e6;
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 12px 4px 12px 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.dropdown-menu-vue .item:last-child {
+  border-bottom: 1px solid transparent;
+}
+.dropdown-menu-vue .dropdown-item {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  padding: 12px 4px 12px 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .wrapper-main {
@@ -18031,6 +18173,7 @@ footer.show-context-menu-user .btn-user {
 
 .modal-header {
   justify-content: space-between;
+  gap: 16px;
   padding: 16px;
   border: none;
   border-radius: 0;
@@ -18058,6 +18201,9 @@ footer.show-context-menu-user .btn-user {
   padding: 0;
   background-size: cover;
   margin: 0;
+}
+.modal-header .btn-close-arrow {
+  background-image: url(../images/icon-arrow-right-2.svg);
 }
 
 .modal-body {
@@ -18433,6 +18579,7 @@ footer.show-context-menu-user .btn-user {
   line-height: 24px; /* 150% */
   letter-spacing: 0.032px;
   display: flex;
+  gap: 8px;
   width: 100%;
   height: 64px;
   padding: 12px 0px;
@@ -18440,6 +18587,18 @@ footer.show-context-menu-user .btn-user {
   align-items: center;
   border-radius: 12px 12px 0px 0px;
   border-bottom: 1px solid #303030;
+}
+.account .row-input span {
+  color: #808080;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
 }
 .account .row-input svg {
   -webkit-box-flex: 0;
@@ -18555,6 +18714,10 @@ footer.show-context-menu-user .btn-user {
 }
 
 .account-adult .user_avatar_section .user-img {
+  background: #ddd2f4;
+}
+
+.account-edit .user_avatar_section .user-img {
   background: #ddd2f4;
 }
 
