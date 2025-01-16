@@ -14713,6 +14713,9 @@ input[type=password]:focus + .input-group-text,
   color: #9f9f9f;
 }
 
+.members-list-vue {
+  position: relative;
+}
 .members-list-vue .item {
   width: 100%;
   position: relative;
