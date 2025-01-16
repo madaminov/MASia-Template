@@ -14713,24 +14713,38 @@ input[type=password]:focus + .input-group-text,
   color: #9f9f9f;
 }
 
-.dropdown-menu-vue {
+.members-list-vue .item {
+  width: 100%;
+  position: relative;
+}
+.members-list-vue .item input {
+  opacity: 0;
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 0;
+}
+.members-list-vue .dropdown-vue {
   width: 100%;
   padding: 0;
   color: #000000;
   background-color: #fff;
   border: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   border-radius: 12px;
   overflow: hidden;
+  z-index: 12;
 }
-.dropdown-menu-vue .item {
+.members-list-vue .dropdown-vue .item {
   display: flex;
   gap: 8px;
   align-self: stretch;
-  border-bottom: 1px solid #e6e6e6;
-  background: #e6e6e6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: #fff;
   color: #000000;
   font-feature-settings: "liga" off, "clig" off;
   /* Callout - 15 R */
@@ -14748,26 +14762,11 @@ input[type=password]:focus + .input-group-text,
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.dropdown-menu-vue .item:last-child {
+.members-list-vue .dropdown-vue .item:last-child {
   border-bottom: 1px solid transparent;
 }
-.dropdown-menu-vue .dropdown-item {
-  color: #000000;
-  font-feature-settings: "liga" off, "clig" off;
-  /* Callout - 15 R */
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 146.667% */
-  letter-spacing: 0.03px;
-  padding: 12px 4px 12px 12px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  cursor: pointer;
+.members-list-vue .dropdown-vue .item.item-selected {
+  color: #9f9f9f;
 }
 
 .wrapper-main {
