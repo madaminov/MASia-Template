@@ -567,6 +567,19 @@ button,
   height: 16px;
   background-image: url(../images/icon-close-gray.svg);
   background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-icon-down {
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/icon-down.svg);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
 }
 .btn-sort {
   padding: 0px;
@@ -826,10 +839,10 @@ button,
   line-height: 22px; /* 146.667% */
   letter-spacing: 0.03px;
   padding: 8px 12px 8px 16px;
-  border: none;
+  border: 0px solid transparent;
   @include border-radius(12px);
   @include transition(0.3s);
-  background-color: $black-color-5 !important;
+  background-color: $black-color-5;
   height: 48px;
   &::placeholder {
     color: $gray-7;
@@ -838,10 +851,28 @@ button,
   &:focus {
     color: $gray-7;
     background-color: $black-color-5;
-    border-color: inherit;
+    border-color: transparent;
     outline: 0;
-    box-shadow: none;
+    box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
   }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 0px solid $black-color-5;
+  -webkit-text-fill-color: $white;
+  -webkit-box-shadow: 0 0 0px 1000px $black-color-5 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 .form-control-gray {
   background-color: $gray-14 !important;
@@ -856,12 +887,13 @@ button,
 }
 .form-control-dropdown {
   padding: 8px 12px 8px 16px;
-  background-image: url(../images/icon-down.svg);
-  background-position: calc(100% - 12px) 20px;
-  background-repeat: no-repeat;
-  background-size: 12px 12px;
   &:focus {
     box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+  }
+  &.show {
+    & + .input-icon {
+      transform: rotate(180deg);
+    }
   }
 }
 textarea.form-control {
@@ -906,22 +938,7 @@ input[type='password'],
     z-index: 12;
   }
 }
-.input-group-text {
-  color: $gray-7;
-  font-feature-settings: 'liga' off, 'clig' off;
-  font-family: $font-stack-popins;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 146.667% */
-  letter-spacing: 0.03px;
-  min-width: 40px;
-  padding: 8px 12px 8px 8px;
-  border: none;
-  @include border-radius(12px);
-  @include transition(0.3s);
-  background-color: $black-color-5;
-}
+
 .input-icon-reset {
   position: relative;
   .input-group-text {
@@ -931,30 +948,7 @@ input[type='password'],
     min-width: auto;
     z-index: 10;
   }
-  .input-icon {
-    background-image: url(../images/icon-down.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 100%;
-    padding: 0;
-    right: 12px;
-    transition: all 0.3s ease;
-  }
-  .input-icon-calendar {
-    background-image: url(../images/icon-calendar-gray.svg);
-  }
-  .reset-value {
-    background-image: url(../images/icon-close-gray.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 8px;
-    width: 16px;
-    height: 100%;
-    right: 38px;
-    padding: 0;
-    display: none;
-  }
+
   .form-control,
   .form-select {
     border-radius: 12px !important;
@@ -986,9 +980,9 @@ input[type='password'],
 .form-control-date {
   & + .air-datepicker.-inline- {
     position: absolute;
-    top: 100%;
+    top: 56px;
     left: 0;
-    margin-top: 8px;
+    margin-top: 0px;
     border-radius: 20px !important;
     .wrap-week {
       display: none;
@@ -1048,6 +1042,10 @@ input[type='password'],
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
     margin-bottom: 8px;
   }
   .form-group-count {
@@ -1091,6 +1089,7 @@ input[type='password'],
     }
   }
 }
+
 .form_login {
   display: flex;
   height: calc(100dvh - 144px);
@@ -1128,18 +1127,28 @@ input[type='password'],
     margin-bottom: 14px;
   }
 }
-.form-create-an-account,
-.form-log-in {
-  .form-control-valid {
-    transition: none;
-  }
-  .form-control-valid:valid {
-    background-image: url(../images/valid-icon.png);
-    background-repeat: no-repeat;
-    background-position: calc(100% - 18px) 14px;
-    background-size: 18px 18px;
-  }
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 8px;
+  overflow: hidden;
+  color: $red-2;
+  font-feature-settings: 'liga' off, 'clig' off;
+  text-overflow: ellipsis;
+  /* Footnote - 14 R */
+  font-family: $font-stack-popins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.028px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23F75757' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 14px 14px;
+  padding-left: 22px;
 }
+
 .form-group-check {
   display: flex;
   align-items: flex-start;
@@ -1181,14 +1190,6 @@ input[type='password'],
     }
   }
 }
-.form-create-task {
-  .collapse.show {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-  }
-}
 
 .form-create-event {
   .collapse.show {
@@ -1206,7 +1207,6 @@ input[type='password'],
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 13px;
 
   .progress-validation {
     position: relative;
@@ -1287,7 +1287,7 @@ input[type='password'],
   position: relative;
   transition: all 0.3s ease;
   .wrap-progress {
-    position: absolute;
+    position: relative;
     top: 0px;
   }
 }

@@ -22,7 +22,7 @@
 							<div class="user_name text-end">Ann</div>
 							<div class="user_role">Queen</div>
 						</div>
-						<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
 					</div>
 				</div>
 			</header>
@@ -276,10 +276,11 @@
 	<script src="js/script.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
+			i = 2;
 			document.querySelectorAll('.event-list .event').forEach((box) => {
-				random_n = Math.floor(Math.random() * 1000);
-				setTimeout(() => { box.classList.remove('event-loading'); }, random_n + 250)
-
+				//random_n = Math.floor(Math.random() * 1000);
+				setTimeout(() => { box.classList.remove('event-loading'); }, i * 450)
+				i++;
 			})
 		})
 	</script>

@@ -660,6 +660,8 @@ select:focus {
   @include border-radius(40px);
   height: 10px;
   background-color: $white;
+  width: 100%;
+  flex: 0 0 auto;
 }
 .progress-bar {
   @include border-radius(40px);

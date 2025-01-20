@@ -177,6 +177,21 @@
         border-radius: 50%;
       }
     }
+    &.queen {
+      .person {
+        background-color: $primary-default;
+      }
+    }
+    &.king {
+      .person {
+        background-color: $blue-10;
+      }
+    }
+    &.other {
+      .person {
+        background-color: $green-2;
+      }
+    }
     .name {
       white-space: nowrap;
       color: $white;

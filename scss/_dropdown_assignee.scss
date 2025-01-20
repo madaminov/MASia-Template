@@ -1,0 +1,72 @@
+.members-list {
+  .dropdown-assignee {
+    position: relative;
+    input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-image: url(../images/icon-down.svg);
+      display: block;
+      position: absolute;
+      right: 12px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transition: all 0.3s ease;
+    }
+    &:hover,
+    &.item:hover {
+      border: 1px solid $violet-11;
+    }
+    &.show {
+      border: 1px solid $violet-11;
+      &::after {
+        transition: all 0.3s ease;
+        transform: rotate(180deg);
+        background-image: url(../images/icon-down-primary.svg);
+      }
+    }
+  }
+}
+.dropdown-list-assignee {
+  .dropdown-item {
+    display: flex;
+    height: 52px;
+    padding: 12px 4px 12px 12px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-bottom: 1px solid $gray-6;
+    transition: all 0.3s ease;
+    span {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background-color: $primary-default;
+      &.queen {
+        background: $primary-default;
+      }
+      &.king {
+        background: $blue-10;
+      }
+      &.princess {
+        background: $primary-default;
+      }
+      &.prince {
+        background: $blue-9;
+      }
+    }
+    &:hover,
+    &.selected {
+      border-bottom: 1px solid $gray-6;
+      background: $violet-13 !important;
+    }
+  }
+}

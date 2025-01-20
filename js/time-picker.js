@@ -147,7 +147,7 @@ tsp.forEach((box) => {
     box.closest('.dropdown-menu-time-picker').classList.remove('show');
     box
       .closest('.input-group')
-      .querySelector('.reset-value')
+      .querySelector('.input-reset-value')
       .classList.add('d-block');
     if (input_time_picker.getAttribute('data-set-duration')) {
       if ((input_duration = document.getElementById('duration'))) {
@@ -161,7 +161,7 @@ tsp.forEach((box) => {
 
         input_time_picker.value = `${hours}:${minutes} - ${set_time}`;
       }
-    }    
+    }
     if (box.querySelector('.form-check-input').checked) {
       input_time_picker.value = 'All day';
       input_time_picker.setAttribute('data-value-seconds', 0);

@@ -58,6 +58,7 @@
   }
   .wrap-progress {
     margin-top: 12px;
+    flex-wrap: wrap;
     .text {
       color: $black-color;
       text-align: right;
@@ -69,6 +70,7 @@
       font-weight: 500;
       line-height: 32px; /* 133.333% */
       margin-bottom: 8px;
+      margin-left: auto;
     }
   }
   .progress-badge + h2 {

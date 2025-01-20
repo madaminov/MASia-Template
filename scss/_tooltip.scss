@@ -1,0 +1,63 @@
+.tooltip {
+  &.show {
+    opacity: 1;
+  }
+  .tooltip-inner {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Footnote - 14 R */
+    font-family: $font-stack-popins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.028px;
+    text-align: left;
+    display: flex;
+    max-width: 361px;
+    padding: 8px 16px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 20px;
+    background: $violet-5;
+    h4 {
+      color: $black-color;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Footnote - 14 M */
+      font-family: $font-stack-popins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: 0.028px;
+      margin-bottom: 0;
+    }
+    p {
+      color: $black-color;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Footnote - 14 R */
+      font-family: $font-stack-popins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+      letter-spacing: 0.028px;
+      margin-bottom: 0;
+    }
+  }
+}
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^='right'] .tooltip-arrow::before {
+  border-right-color: $violet-5;
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^='left'] .tooltip-arrow::before {
+  border-left-color: $violet-5;
+}
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^='top'] .tooltip-arrow::before {
+  border-top-color: $violet-5;
+}

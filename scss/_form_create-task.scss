@@ -1,0 +1,17 @@
+.form-create-task,
+.modal form.form-create-task {
+  gap: 32px;
+  .section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+  }
+  .collapse.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

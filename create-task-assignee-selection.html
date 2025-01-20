@@ -22,7 +22,7 @@
 							<div class="user_name text-end">Ann</div>
 							<div class="user_role">Queen</div>
 						</div>
-						<button class="user-img" style="background-image: url(images/user_img.png) ;"></button>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
 					</div>
 				</div>
 			</header>
@@ -75,44 +75,49 @@
 							<form action="" class="form  form-create-task">
 								<div class="form-group">
 									<label for="assignee" class="form-label">Assignee*</label>
-									<input type="hidden" name="person[]">
 									<div class="wrap-choice-assignee">
-										<button class="btn-add-plus btn-add-plus-full wm-100 dropdown-assignee"
-											id="assignee" data-bs-toggle="dropdown" data-bs-auto-close="true"
-											data-bs-offset="0,8" aria-expanded="false">
-											<svg>
-												<use href="images/icons.svg#plus"></use>
-											</svg>
-										</button>
-										<ul class="dropdown-menu dropdown-list-assignee">
-											<li><span class="dropdown-item" data-avatar="images/user_avatar_1.png"
-													data-value="Queen Ann (You)">Queen Ann</span>
-											</li>
-											<li><span class="dropdown-item" data-avatar="images/user_avatar.png"
-													data-value="King Robby">King Robby</span>
-											</li>
-
-											<li><span class="dropdown-item" data-avatar="images/user_img_1.jpg"
-													data-value="Princess Sara">Princess
-													Sara</span>
-											</li>
-											<li><span class="dropdown-item" data-avatar=""
-													data-value="Prince Tom">Prince Tom</span>
-											</li>
-
-										</ul>
-									</div>
-
-									<div class="members-list visually-hidden">
-										<div class="item w-100">
-											<input type="hidden" name="person" value="person[Queen]">
-											<div class="person">
-												<img src="images/user_avatar_1.png" alt="" class="img-fluid">
+										<div class="members-list">
+											<div class="item w-100 dropdown-assignee" data-bs-toggle="dropdown"
+												data-bs-auto-close="true" data-bs-offset="0,8" aria-expanded="false">
+												<input type="text" name="assignee" value="1" readonly>
+												<div class="person">
+													<img src="images/queen.png" alt="Princess Sara" class="img-fluid">
+												</div>
+												<div class="name">Queen Ann</div>
 											</div>
-											<div class="name">Queen Ann (You)</div>
-											<button
-												class="btn-close btn-close-gray ms-auto btn-remove-assignee"></button>
+											<ul class="dropdown-menu dropdown-list-assignee">
+												<li><span class="dropdown-item" data-avatar="images/queen.png"
+														data-value="Queen Ann (You)" data-id="1">
+														<span class="queen"><img src="images/queen.png"
+																class="img-fluid" /></span>
+														Queen Ann
+													</span>
+												</li>
+												<li><span class="dropdown-item" data-avatar="images/king.png"
+														data-value="King Robby" data-id="2">
+														<span class="king"><img src="images/king.png"
+																class="img-fluid" /></span>
+														King Robby
+													</span>
+												</li>
+
+												<li><span class="dropdown-item" data-avatar="images/princess.png"
+														data-value="Princess Sara" data-id="3">
+														<span class="princess"><img src="images/princess.png"
+																class="img-fluid" /></span>
+														Princess
+														Sara</span>
+												</li>
+												<li><span class="dropdown-item" data-avatar="images/prince.png"
+														data-value="Prince Tom" data-id="4">
+														<span class="prince"><img src="images/prince.png"
+																class="img-fluid" /></span>
+														Prince Tom</span>
+												</li>
+
+											</ul>
 										</div>
+
 									</div>
 									<span class="bottom-text">Select the person responsible for completing this task; it
 										will appear
@@ -350,7 +355,7 @@
 												<option value="Every week">Every week</option>
 												<option value="Every month">Every month</option>
 												<option value="Every year">Every year</option>
-											</select>											
+											</select>
 											<span class="input-group-text reset-value cursor-pointer"></span>
 
 										</div>
@@ -367,7 +372,7 @@
 												<option value="Per day">Per day</option>
 												<option value="Per 2 days">Per 2 days</option>
 												<option value="Per week">Per week</option>
-											</select>											
+											</select>
 											<span class="input-group-text reset-value cursor-pointer"></span>
 
 										</div>

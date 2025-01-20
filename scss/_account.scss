@@ -1,4 +1,5 @@
 .account {
+  min-height: 100%;
   .user_avatar_section {
     display: flex;
     width: 100%;
@@ -36,7 +37,7 @@
       font-style: normal;
       font-weight: 500;
       line-height: 32px; /* 133.333% */
-      margin-bottom: 4px;
+      margin-bottom: 0px;
     }
     .user_role {
       color: $black-color-2;
@@ -64,7 +65,7 @@
     padding: 20px 16px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 20px;
   }
   .section {
     width: 100%;
@@ -170,8 +171,11 @@
     }
   }
   .user_info_section {
+    .name {
+      color: $black-color;
+    }
     .user_role {
-      background: $violet-12;
+      background: $primary-default;
     }
   }
   .row-input {
@@ -195,8 +199,11 @@
     }
   }
   .user_info_section {
+    .name {
+      color: $black-color;
+    }
     .user_role {
-      background: $blue-9;
+      background: $blue-13;
     }
   }
   .row-input {
@@ -223,6 +230,9 @@
   .user_info_section {
     .user_role {
       background: $green-2;
+    }
+    .name {
+      color: $black-color;
     }
   }
   .row-input {
@@ -278,6 +288,7 @@
         height: 84px;
         flex-shrink: 0;
         background: $black-color-9;
+        border-radius: 0;
         svg {
           -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;

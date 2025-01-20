@@ -62,7 +62,9 @@ document.querySelectorAll('.form-control-date').forEach((box) => {
         onSelect({ date, formattedDate, datepicker }) {
           datepickerCalendar.destroy();
           event.target.classList.remove('form-control-open-calendar');
+          console.log(event.target);
           event.target.nextElementSibling.classList.add('d-block');
+          event.target.classList.remove('is-invalid');
         },
       });
     }

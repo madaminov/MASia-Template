@@ -77,6 +77,7 @@
       font-weight: 500;
       line-height: 22px; /* 146.667% */
       letter-spacing: 0.03px;
+      @include transition(0.4s);
     }
     &.event-day-simple {
       min-height: 48px;
@@ -310,6 +311,7 @@
   }
 }
 .event-loading {
+  transition: all 0.3s ease;
   .wrap-time {
     .time {
       background: transparent !important;
@@ -352,6 +354,31 @@
   .event-day {
     background: $black-color-7 !important;
     .inner {
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 38px;
+        height: 16px;
+        border-radius: 8px;
+        background: $gray-20 !important;
+        position: absolute;
+        left: 0;
+        top: 32px;
+        transition: all 0.3s ease;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 57px;
+        height: 16px;
+        border-radius: 8px;
+        background: $gray-20 !important;
+        position: absolute;
+        left: 42px;
+        top: 32px;
+        transition: all 0.3s ease;
+      }
       .icon {
         width: 20px;
         height: 20px;
@@ -374,6 +401,16 @@
         left: 0;
         top: 0;
       }
+      &::after {
+        content: '';
+        border-radius: 10px;
+        background: $gray-20;
+        height: 8px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 16px;
+      }
     }
     .properties {
       .property {
@@ -383,7 +420,7 @@
     }
     .users {
       .user {
-        background: $gray-20 !important;
+        background: transparent !important;
         img {
           visibility: hidden;
         }
@@ -400,6 +437,7 @@
     .prize {
       filter: brightness(0) saturate(100%) invert(24%) sepia(17%) saturate(9%)
         hue-rotate(132deg) brightness(91%) contrast(79%);
+      opacity: 0;
     }
   }
 }

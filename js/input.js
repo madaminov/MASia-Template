@@ -8,7 +8,7 @@ formSelect.forEach((select) => {
       if (event.target.closest('.input-group')) {
         event.target
           .closest('.input-group')
-          .querySelector('.reset-value')
+          .querySelector('.input-reset-value')
           .classList.add('d-block');
       }
     }
@@ -16,13 +16,14 @@ formSelect.forEach((select) => {
   ns_length++;
 });
 
-document.querySelectorAll('.reset-value').forEach((box) => {
+document.querySelectorAll('.input-reset-value').forEach((box) => {
   box.addEventListener('click', function (event) {
-    form_control = event.target
+    console.log(event.target);
+    form_control_input = event.target
       .closest('.input-group')
       .querySelector('.form-control');
-    if (form_control) {
-      form_control.value = '';
+    if (form_control_input) {
+      form_control_input.value = '';
     }
     form_select = event.target
       .closest('.input-group')
@@ -82,13 +83,14 @@ if (document.querySelectorAll('.dropdown-toggle')) {
         if (el_target.classList.contains('dropdown-item')) {
           box['_element'].value =
             event.clickEvent.target.getAttribute('data-value');
-          collapseTip.show();
+          box['_element'].classList.remove('is-invalid');
+          //collapseTip.show();
         } else {
           if (box['_menu'].querySelector('input').value) {
             box['_element'].value = box['_menu'].querySelector('input').value;
             box['_menu'].querySelector('input').value = '';
           }
-          collapseTip.hide();
+          //collapseTip.hide();
         }
 
         event.clickEvent.preventDefault();
@@ -97,6 +99,7 @@ if (document.querySelectorAll('.dropdown-toggle')) {
   });
 }
 
+//dropdown-assignee
 if (document.querySelectorAll('.dropdown-assignee')) {
   const dropdownElementListAssignee =
     document.querySelectorAll('.dropdown-assignee');
@@ -105,58 +108,47 @@ if (document.querySelectorAll('.dropdown-assignee')) {
       new bootstrap.Dropdown(dropdownToggleElAssignee)
   );
   dropdownListAssignee.forEach((box) => {
+    box_input = box['_element'].querySelector('input');
+    box['_element'].addEventListener('show.bs.dropdown', (event) => {
+      id_assignee = box_input.value;
+      box['_menu'].querySelectorAll('.dropdown-item').forEach((item) => {
+        if (item.getAttribute('data-id') == id_assignee) {
+          item.classList.add('selected');
+        }
+      });
+    });
     box['_element'].addEventListener('hidden.bs.dropdown', (event) => {
       event.preventDefault();
-
       if (event && event.clickEvent && event.clickEvent.target) {
         el_target = event.clickEvent.target;
         if (el_target.classList.contains('dropdown-item')) {
+          assignee_id = event.clickEvent.target.getAttribute('data-id');
           assignee_name = event.clickEvent.target.getAttribute('data-value');
           assignee_avatar = event.clickEvent.target.getAttribute('data-avatar');
-          box['_element']
-            .closest('.wrap-choice-assignee')
-            .classList.add('visually-hidden');
-          members_list = document.querySelector('.members-list');
-          members_list.querySelector('input[name="person"]').value =
-            'person[' + assignee_name + ']';
-          members_list.querySelector('.name').textContent = assignee_name;
+          box_input.value = `${assignee_id}`;
+          box['_element'].querySelector('.name').textContent = assignee_name;
           if (assignee_avatar) {
             avatar = document.createElement('img');
             avatar.setAttribute('src', assignee_avatar);
             avatar.setAttribute('alt', assignee_name);
             avatar.classList.add('img-fluid');
-            members_list.querySelector('.person').innerHTML = '';
-            members_list.querySelector('.person').appendChild(avatar);
+            box['_element'].querySelector('.person').innerHTML = '';
+            box['_element'].querySelector('.person').appendChild(avatar);
           } else {
-            members_list.querySelector('.person').innerHTML = '';
+            box['_element'].querySelector('.person').innerHTML = '';
           }
-          members_list.classList.remove('visually-hidden');
-          // console.log(box['_element']);
-        }
 
+          box['_menu'].querySelectorAll('.dropdown-item').forEach((item) => {
+            item.classList.remove('selected');
+          });
+          el_target.classList.add('selected');
+        }
         event.clickEvent.preventDefault();
       }
     });
   });
 }
-if (document.querySelector('.members-list .btn-remove-assignee')) {
-  document
-    .querySelector('.members-list .btn-remove-assignee')
-    .addEventListener('click', (event) => {
-      event.preventDefault();
-      event.target.closest('.members-list').classList.add('visually-hidden');
-      document
-        .querySelector('.wrap-choice-assignee')
-        .classList.remove('visually-hidden');
-
-      setTimeout(() => {
-        document
-          .querySelector('.wrap-choice-assignee')
-          .querySelector('.btn-add-plus')
-          .dispatchEvent(new Event('click'));
-      }, 50);
-    });
-}
+// end dropdown-assignee
 
 let input_password = document.querySelectorAll('.form-control-password');
 input_password.forEach((box) => {
@@ -276,12 +268,13 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
     avatar = event.target.getAttribute('data-avatar');
     data_name = event.target.getAttribute('data-name');
     reviewer_id = event.target.getAttribute('data-reviewer-id');
+    reviewer_type = event.target.getAttribute('data-reviewer-type');
     if (reviewer_id == 1) {
       event.target.checked = true;
       return false;
     }
     if (event.target.checked) {
-      template = `<div class="item item-width-full animated fadeIn" data-reviewer-id="${reviewer_id}">
+      template = `<div class="item item-width-full animated fadeIn ${reviewer_type}" data-reviewer-id="${reviewer_id}">
 											<input type="hidden" name="reviewer[${value}]">
 											<div class="person">
 												<img src="${avatar}" alt="${data_name}" class="img-fluid">

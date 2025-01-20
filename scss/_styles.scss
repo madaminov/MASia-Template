@@ -116,6 +116,16 @@ h6,
 .gap-8 {
   gap: 8px;
 }
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-info-outline-rounded {
+  background-image: url(../images/icon-info-outline-rounded.svg);
+}
 .user-img {
   width: 48px;
   height: 48px;
@@ -398,18 +408,27 @@ h6,
   width: 100%;
 }
 .policy {
-  color: $white;
+  color: $gray-25;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Callout - 15 R */
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
   /* Callout - 15 M */
   font-family: $font-stack-popins;
   font-size: 15px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 22px; /* 146.667% */
   letter-spacing: 0.03px;
   width: 100%;
-  max-width: 236px;
+  max-width: 225px;
   margin: 0 auto;
   a {
     text-decoration-line: underline;

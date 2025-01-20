@@ -1,0 +1,32 @@
+.form-log-in {
+  gap: 24px;
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+  }
+  .form-footer-text {
+    overflow: hidden;
+    color: $gray-25;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
+    /* Callout - 15 R */
+    font-family: $font-stack-popins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: 0.03px;
+    margin-top: 16px;
+    a {
+      color: $primary-default;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.form-create-an-account,
+.modal form.form-create-an-account {
+  gap: 24px;
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    .section-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      width: 100%;
+    }
+  }
+  .form-footer-text {
+    overflow: hidden;
+    color: $gray-25;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
+    /* Callout - 15 R */
+    font-family: $font-stack-popins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: 0.03px;
+    margin-top: 16px;
+    a {
+      color: $primary-default;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.form-create-an-account,
+.form-log-in {
+  // .form-control-valid {
+  //   transition: none;
+  // }
+  // .form-control-valid:valid {
+  //   background-image: url(../images/valid-icon.png);
+  //   background-repeat: no-repeat;
+  //   background-position: calc(100% - 18px) 14px;
+  //   background-size: 18px 18px;
+  // }
+  .form-control {
+    border: 0px solid transparent;
+    transition: none;
+  }
+  &.was-validated .form-control:valid,
+  .form-control.is-valid {
+    border-color: transparent;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px 18px;
+    box-shadow: none;
+  }
+  &.was-validated .form-control-password:valid,
+  .form-control-password.is-valid {
+    background-position: right 40px center;
+  }
+  &.was-validated .form-control:invalid,
+  .form-control.is-invalid {
+    border-color: $red-2;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23F75757' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px 18px;
+    box-shadow: 0px 0px 0px 2px #dc3545;
+  }
+  &.was-validated .form-control-date:invalid,
+  .form-control-date.is-invalid {
+    background-position: right 40px center;
+  }
+  &.was-validated .form-control-dropdown:invalid,
+  .form-control-dropdown.is-invalid {
+    background-position: right 40px center;
+  }
+  &.was-validated .form-control-password:invalid,
+  .form-control-password.is-invalid {
+    background-position: right 40px center;
+  }
+}
