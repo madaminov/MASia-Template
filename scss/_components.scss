@@ -6,6 +6,9 @@
   color: $black-color;
   background-color: $white;
   @include border-radius(12px);
+  .header {
+    margin-bottom: 16px;
+  }
   h3 {
     color: $black-color;
     font-feature-settings: 'liga' off, 'clig' off;
@@ -48,19 +51,31 @@
       font-weight: 400;
       line-height: 18px; /* 150% */
       letter-spacing: 0.048px;
+      margin-bottom: 0;
     }
     .form-control {
       height: 44px;
     }
   }
   .row-btn-group {
-    margin-top: 32px;
+    margin-top: 12px;
   }
   .duration-group-timer {
+    padding-top: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
     justify-content: center;
+  }
+  .separator {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: $font-stack-popins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10px; /* 71.429% */
+    margin-bottom: 25px;
   }
 }
 .time-start-picker {
@@ -159,16 +174,17 @@
 .wrap-hours,
 .wrap-minutes {
   display: flex;
-  width: 38px;
+  width: 40px;
   flex-direction: column;
   align-items: center;
   gap: 4px;
 
   button {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     padding: 0;
     background-color: transparent;
+    background-size: 8px;
     border: none;
     transition: all 0.3s ease;
   }
@@ -193,11 +209,12 @@
     font-feature-settings: 'liga' off, 'clig' off;
     /* Footnote - 14 R */
     font-family: $font-stack-popins;
-    font-size: 14px;
+    font-family: Poppins;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.028px;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.048px;
   }
   .list {
     width: 38px;
@@ -226,7 +243,8 @@
       visibility: hidden;
       transform: scaleY(0.1);
       transition: all 0.3s ease;
-      &.current {
+      &.current,
+      &.active {
         opacity: 1;
         visibility: visible;
         transform: scaleY(1);

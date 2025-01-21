@@ -1,11 +1,11 @@
-const dropdownElementList = document.querySelectorAll(
-  '.dropdown-toggle-confirm'
+const dropdownElementListDp = document.querySelectorAll(
+  '.dropdown-duration-picker'
 );
-const dropdownList = [...dropdownElementList].map(
-  (dropdownToggleEl) => new bootstrap.Dropdown(dropdownToggleEl)
+const dropdownListDp = [...dropdownElementListDp].map(
+  (dropdownToggleElDp) => new bootstrap.Dropdown(dropdownToggleElDp)
 );
 
-dropdownList.forEach((box) => {
+dropdownListDp.forEach((box) => {
   box['_element'].addEventListener('show.bs.dropdown', (event) => {
     if (box['_element'].value) {
       box['_menu'].querySelectorAll('input[type="checkbox"]').forEach((el) => {
@@ -24,7 +24,7 @@ const durationPickerCancel = document.querySelectorAll(
 durationPickerCancel.forEach((box) => {
   box.addEventListener('click', (event) => {
     event.preventDefault();
-    event.target.closest('.dropdown-menu-confirm').classList.remove('show');
+    event.target.closest('.dropdown-duration-picker').classList.remove('show');
   });
 });
 const durationPickerConfirm = document.querySelectorAll(
@@ -33,7 +33,7 @@ const durationPickerConfirm = document.querySelectorAll(
 durationPickerConfirm.forEach((box) => {
   box.addEventListener('click', (event) => {
     event.preventDefault();
-    dropdown_menu = event.target.closest('.dropdown-menu-confirm');
+    dropdown_menu = event.target.closest('.dropdown-duration-picker');
     if (dropdown_menu.querySelector('input[type="checkbox"]:checked')) {
       dropdown_menu.previousElementSibling.value = dropdown_menu.querySelector(
         'input[type="checkbox"]:checked'
@@ -44,7 +44,7 @@ durationPickerConfirm.forEach((box) => {
       dropdown_menu.previousElementSibling.setAttribute(
         'data-value-seconds',
         seconds
-      );      
+      );
     } else {
       hours = dropdown_menu.querySelector('.wrap-hours .current').textContent;
       minutes = dropdown_menu.querySelector(

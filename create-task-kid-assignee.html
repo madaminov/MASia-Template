@@ -213,11 +213,12 @@
 												id="duration" data-bs-toggle="dropdown" value="30 min"
 												data-bs-auto-close="false" data-bs-offset="0,8" aria-expanded="false"
 												name="duration" readonly="readonly" placeholder="Set a time">
-											<div class="dropdown-menu dropdown-menu-confirm">
+											<div class="dropdown-menu dropdown-duration-picker">
 												<div class="duration-picker">
-													<h3>Select a duration</h3>
+													<div class="header">
+														<h3>Select a duration</h3>
+													</div>
 													<div class="group">
-														<p class="text">Select the task duration</p>
 														<div class="form-group-check">
 															<div class="form-check">
 																<input class="form-check-input" name="duration-check"
@@ -285,7 +286,8 @@
 															</div>
 														</div>
 														<div class="form-group">
-															<label for="">Other time</label>
+															<label for="" class="form-label d-block text-center">Other
+																time</label>
 															<div class="duration-group-timer">
 																<div class="wrap-hours">
 																	<button class="btn-next hours-next"></button>

@@ -98,12 +98,7 @@
     @include border-radius(12px);
     overflow: hidden;
     z-index: 12;
-    .item {
-      display: flex;
-      gap: 8px;
-      align-self: stretch;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-      background: $white;
+    .dropdown-item {
       color: $black-color;
       font-feature-settings: 'liga' off, 'clig' off;
       /* Callout - 15 R */
@@ -116,12 +111,6 @@
       padding: 12px 4px 12px 12px;
       @include transition(0.3s);
       cursor: pointer;
-      &:last-child {
-        border-bottom: 1px solid transparent;
-      }
-      &.item-selected {
-        color: $gray-7;
-      }
     }
   }
 }

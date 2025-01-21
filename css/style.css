@@ -13953,12 +13953,13 @@ input[type=password]:focus + .input-group-text,
 .form-group-check {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 12px 20px;
   flex-wrap: wrap;
 }
 .form-group-check .form-check {
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .form-group-check .form-check .form-check-input {
   display: none;
@@ -14655,6 +14656,9 @@ input[type=password]:focus + .input-group-text,
   -ms-border-radius: 12px;
   border-radius: 12px;
 }
+.duration-picker .header {
+  margin-bottom: 16px;
+}
 .duration-picker h3, .duration-picker .h3 {
   color: #000000;
   font-feature-settings: "liga" off, "clig" off;
@@ -14696,18 +14700,30 @@ input[type=password]:focus + .input-group-text,
   font-weight: 400;
   line-height: 18px; /* 150% */
   letter-spacing: 0.048px;
+  margin-bottom: 0;
 }
 .duration-picker .form-group .form-control {
   height: 44px;
 }
 .duration-picker .row-btn-group {
-  margin-top: 32px;
+  margin-top: 12px;
 }
 .duration-picker .duration-group-timer {
+  padding-top: 20px;
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
+}
+.duration-picker .separator {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 10px; /* 71.429% */
+  margin-bottom: 25px;
 }
 
 .time-start-picker {
@@ -14810,17 +14826,18 @@ input[type=password]:focus + .input-group-text,
 .wrap-hours,
 .wrap-minutes {
   display: flex;
-  width: 38px;
+  width: 40px;
   flex-direction: column;
   align-items: center;
   gap: 4px;
 }
 .wrap-hours button,
 .wrap-minutes button {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   padding: 0;
   background-color: transparent;
+  background-size: 8px;
   border: none;
   transition: all 0.3s ease;
 }
@@ -14849,11 +14866,12 @@ input[type=password]:focus + .input-group-text,
   font-feature-settings: "liga" off, "clig" off;
   /* Footnote - 14 R */
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-family: Poppins;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
-  letter-spacing: 0.028px;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.048px;
 }
 .wrap-hours .list,
 .wrap-minutes .list {
@@ -14886,8 +14904,9 @@ input[type=password]:focus + .input-group-text,
   transform: scaleY(0.1);
   transition: all 0.3s ease;
 }
-.wrap-hours .list li.current,
-.wrap-minutes .list li.current {
+.wrap-hours .list li.current, .wrap-hours .list li.active,
+.wrap-minutes .list li.current,
+.wrap-minutes .list li.active {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1);
@@ -15075,12 +15094,7 @@ input[type=password]:focus + .input-group-text,
   overflow: hidden;
   z-index: 12;
 }
-.members-list-vue .dropdown-vue .item {
-  display: flex;
-  gap: 8px;
-  align-self: stretch;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  background: #fff;
+.members-list-vue .dropdown-vue .dropdown-item {
   color: #000000;
   font-feature-settings: "liga" off, "clig" off;
   /* Callout - 15 R */
@@ -15097,12 +15111,6 @@ input[type=password]:focus + .input-group-text,
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-.members-list-vue .dropdown-vue .item:last-child {
-  border-bottom: 1px solid transparent;
-}
-.members-list-vue .dropdown-vue .item.item-selected {
-  color: #9f9f9f;
 }
 
 .wrapper-main {
