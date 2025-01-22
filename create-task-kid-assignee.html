@@ -136,7 +136,7 @@
 								</div>
 								<div class="section-inner">
 									<div class="form-group">
-										<label for="date" class="form-label">Birthday</label>
+										<label for="date" class="form-label">Date*</label>
 										<div class="input-group input-group-reset has-validation">
 											<input type="text" class="form-control form-control-date" name="date"
 												value="" placeholder="Select birthday" id="date" required readonly
@@ -155,7 +155,7 @@
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-time-picker"
 												id="start_time" data-bs-toggle="dropdown" value=""
-												data-bs-auto-close="false" data-bs-offset="0,8" aria-expanded="false"
+												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
 												name="start_time" readonly="readonly" placeholder="Set a start time">
 
 											<div class="dropdown-menu dropdown-menu-time-picker">
@@ -211,7 +211,7 @@
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-confirm"
 												id="duration" data-bs-toggle="dropdown" value="30 min"
-												data-bs-auto-close="false" data-bs-offset="0,8" aria-expanded="false"
+												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
 												name="duration" readonly="readonly" placeholder="Set a time">
 											<div class="dropdown-menu dropdown-duration-picker">
 												<div class="duration-picker">
@@ -363,18 +363,20 @@
 									<div class="form-group">
 										<label for="reviewer" class="form-label">Reviewer</label>
 										<div class="members-list members-list-reviewer">
-											<div class="item item-width-full item-flex-9 queen" data-reviewer-id="1">
+											<div class="item item-width-full queen" data-reviewer-id="1">
 												<input type="hidden" name="reviewer[1]">
 												<div class="person">
 													<img src="images/queen.png" alt="" class="img-fluid">
 												</div>
 												<div class="name">Queen Ann (You)</div>
+
 											</div>
 
 											<div class="dropdown">
 												<button class="btn-add-plus btn-flex dropdown-reviewer"
-													data-bs-toggle="dropdown" data-bs-auto-close="false"
-													data-bs-offset="0,8" aria-expanded="false">
+													data-bs-toggle="dropdown" data-bs-auto-close="outside"
+													data-bs-offset="0,8" aria-expanded="false" data-bs-display="dynamic"
+													data-bs-popperConfig="{placement: 'bottom-end'}">
 													<svg>
 														<use href="images/icons.svg#plus"></use>
 													</svg>
@@ -467,30 +469,28 @@
 											<div class="input-group input-group-reset">
 												<select name="Repeat" id="Repeat" class="form-select"
 													placeholder="Set a repeat">
-													<option disabled>Set a repeat</option>
-													<option value="Every day">Every day</option>
+													<option value="Every day" selected>Every day</option>
 													<option value="Every week">Every week</option>
 													<option value="Every month">Every month</option>
 													<option value="Every year">Every year</option>
 												</select>
-												<span class="input-group-text input-reset-value cursor-pointer"></span>
+												<span
+													class="input-group-text input-reset-value cursor-pointer d-block"></span>
 											</div>
 										</div>
-									</div>
-									<div class="section-inner">
 										<div class="form-group">
 											<label for="Reminder" class="form-label">Reminder</label>
 											<div class="input-group input-group-reset">
 												<select name="Reminder" id="Reminder" class="form-select"
 													placeholder="Set a reminder">
-													<option disabled>Set a reminder</option>
 													<option value="At the moment">At the moment</option>
 													<option value="Per 1 hour">Per 1 hour</option>
 													<option value="Per day">Per day</option>
 													<option value="Per 2 days">Per 2 days</option>
-													<option value="Per week">Per week</option>
+													<option value="Per week" selected>Per week</option>
 												</select>
-												<span class="input-group-text input-reset-value cursor-pointer"></span>
+												<span
+													class="input-group-text input-reset-value cursor-pointer d-block"></span>
 
 											</div>
 
@@ -506,7 +506,7 @@
 								</div>
 
 								<div class="form-group mb-0">
-									<button class="btn btn-light w-100" type="submit">Create</button>
+									<button class="btn btn-light w-100" type="submit" disabled>Create</button>
 								</div>
 							</form>
 						</div>
@@ -549,7 +549,16 @@
 
 		})
 
+		document.querySelector('form').addEventListener('change', (event) => {
+			if (event.target.required) {
+				if (event.target.value != '') {
+					document.querySelector('form button[type="submit"]').disabled = false;
+				} else {
+					document.querySelector('form button[type="submit"]').disabled = true;
+				}
 
+			}
+		})
 
 	</script>
 </body>

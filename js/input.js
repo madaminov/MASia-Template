@@ -244,7 +244,6 @@ if (document.querySelectorAll('.dropdown-reviewer')) {
   dropdownListReviewer.forEach((box) => {
     box['_element'].addEventListener('show.bs.dropdown', (event) => {
       //event.preventDefault();
-      console.log(box['_menu']);
       document
         .querySelectorAll('.members-list-reviewer .item')
         .forEach((mlr_item) => {
@@ -269,10 +268,10 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
     data_name = event.target.getAttribute('data-name');
     reviewer_id = event.target.getAttribute('data-reviewer-id');
     reviewer_type = event.target.getAttribute('data-reviewer-type');
-    if (reviewer_id == 1) {
-      event.target.checked = true;
-      return false;
-    }
+    // if (reviewer_id == 1) {
+    //   event.target.checked = true;
+    //   return false;
+    // }
     if (event.target.checked) {
       template = `<div class="item item-width-full animated fadeIn ${reviewer_type}" data-reviewer-id="${reviewer_id}">
 											<input type="hidden" name="reviewer[${value}]">
@@ -288,8 +287,21 @@ document.querySelectorAll('.dropdown-list-reviewer input').forEach((box) => {
         item = document.querySelectorAll('.members-list-reviewer .item');
         item[item.length - 1].insertAdjacentHTML('afterEnd', template);
       } else {
-        document.querySelector('.members-list-reviewer').prepend(template);
+        document
+          .querySelector('.members-list-reviewer')
+          .insertAdjacentHTML('afterBegin', template);
+        //document.querySelector('.members-list-reviewer').innerHTML = template;
       }
+      const dropdownElementListReviewer =
+        document.querySelectorAll('.dropdown-reviewer');
+      const dropdownListReviewer = [...dropdownElementListReviewer].map(
+        (dropdownToggleElReviewer) =>
+          new bootstrap.Dropdown(dropdownToggleElReviewer)
+      );
+      dropdownListReviewer.forEach((box) => {
+        box.hide();
+        box.show();
+      });
       //document.querySelector('.members-list-reviewer').innerHTML = template;
     } else {
       document

@@ -1,12 +1,12 @@
 .tip_card_container {
   position: fixed;
-  bottom: 80px;
+  bottom: 88px;
   width: calc(100% - 8px);
   max-width: calc(768px - 8px);
   margin: 0 auto;
   left: 0;
   right: 0;
-  z-index: 7;
+  z-index: 1058;
   .container {
     font-family: $font-stack-popins;
     padding: 20px 16px;

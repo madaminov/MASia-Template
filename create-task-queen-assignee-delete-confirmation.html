@@ -28,7 +28,25 @@
 			</header>
 
 
-
+			<!--tip_card_container-->
+			<div class="tip_card_container tip_card_container_button">
+				<div class="container">
+					<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
+					<h4 class="text-center">Are you sure you want to remove
+						Yourself as an Assignee?</h4>
+					<p class="text-center">You will be able to choose Another family member to assign
+						the task to</p>
+					<div class="row row-btn-group">
+						<div class="col-6">
+							<button class="btn btn-dark-2 btn-sm w-100 btn-cancel">Cancel</button>
+						</div>
+						<div class="col-6">
+							<button class="btn btn-primary btn-sm w-100 btn-confirm">Confirm</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--tip_card_container end-->
 
 			<footer>
 				<div class="container-fluid d-flex align-items-center justify-content-between">
@@ -72,155 +90,201 @@
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
 						<div class="modal-body overflow-auto scrollbar-hidden">
-							<form action="" class="form  form-create-task">
-								<div class="form-group">
-									<label for="assignee" class="form-label">Assignee*</label>
-									<input type="hidden" name="person[]">
-									<div class="members-list">
-										<div class="item w-100">
-											<input type="hidden" name="person[Queen]">
-											<div class="person">
-												<img src="images/user_avatar_1.png" alt="" class="img-fluid">
-											</div>
-											<div class="name">Queen Ann (You)</div>
-											<button class="btn-close btn-close-gray ms-auto"></button>
-										</div>
-
-									</div>
-									<span class="bottom-text">Select the person responsible for completing this task; it
-										will appear
-										in their task list</span>
-								</div>
-
-								<div class="form-group">
-									<label for="title" class="form-label">Title*</label>
-									<input type="text" class="form-control" name="title" placeholder="Add a task title"
-										required>
-								</div>
-
-								<div class="form-group">
-									<label for="duration" class="form-label">Duration</label>
-
-									<input type="text"
-										class="form-control form-control-dropdown dropdown-toggle-confirm" id="duration"
-										data-bs-toggle="dropdown" value="30 min" data-bs-auto-close="false"
-										data-bs-offset="0,8" aria-expanded="false" name="duration" readonly="readonly"
-										placeholder="Set a time">
-
-									<div class="dropdown-menu dropdown-menu-confirm">
-										<div class="duration-picker">
-											<h3>Select a duration</h3>
-											<div class="group">
-												<p class="text">Select the task duration</p>
-												<div class="form-group-check">
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="600" value="10 min"
-															id="duration-check_1">
-														<label class="form-check-label" for="duration-check_1">
-															10 min
-														</label>
+							<form action="" class="form form-create-task">
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="assignee" class="form-label">Assignee*</label>
+										<div class="wrap-choice-assignee">
+											<div class="members-list">
+												<div class="item w-100 dropdown-assignee" data-bs-toggle="dropdown"
+													data-bs-auto-close="true" data-bs-offset="0,8"
+													aria-expanded="false">
+													<input type="text" name="assignee" value="1" readonly>
+													<div class="person">
+														<img src="images/queen.png" alt="Princess Sara"
+															class="img-fluid">
 													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="900" value="15 min"
-															id="duration-check_2">
-														<label class="form-check-label" for="duration-check_2">
-															15 min
-														</label>
-													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="1800" value="30 min"
-															id="duration-check_3">
-														<label class="form-check-label" for="duration-check_3">
-															30 min
-														</label>
-													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="2700" value="45 min"
-															id="duration-check_4">
-														<label class="form-check-label" for="duration-check_4">
-															45 min
-														</label>
-													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="3600" value="1 hour"
-															id="duration-check_5">
-														<label class="form-check-label" for="duration-check_5">
-															1 hour
-														</label>
-													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="5400" value="1.5 hour"
-															id="duration-check_6">
-														<label class="form-check-label" for="duration-check_6">
-															1.5 hour
-														</label>
-													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="7200" value="2 hour"
-															id="duration-check_7">
-														<label class="form-check-label" for="duration-check_7">
-															2 hour
-														</label>
-													</div>
-													<div class="form-check">
-														<input class="form-check-input" name="duration-check"
-															type="checkbox" data-value-seconds="10800" value="3 hour"
-															id="duration-check_8">
-														<label class="form-check-label" for="duration-check_8">
-															3 hour
-														</label>
-													</div>
+													<div class="name">Queen Ann</div>
 												</div>
-												<div class="form-group">
-													<label for="">Other time</label>
-													<div class="duration-group-timer">
-														<div class="wrap-hours">
-															<button class="btn-next hours-next"></button>
-															<ul class="list">
-																<li class="active">00</li>
-															</ul>
-															<button class="btn-prev hours-prev"></button>
-															<div class="label">Hours</div>
-														</div>
-														<div class="separator">:</div>
-														<div class="wrap-minutes">
-															<button class="btn-next minutes-next"></button>
-															<ul class="list">
-																<li class="active">00</li>
-															</ul>
-															<button class="btn-prev minutes-prev"></button>
-															<div class="label">Minutes</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="row row-btn-group">
-												<div class="col-6">
-													<button class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
-												</div>
-												<div class="col-6">
-													<button class="btn btn-primary w-100 btn-confirm"
-														disabled>Confirm</button>
-												</div>
+												<ul class="dropdown-menu dropdown-list-assignee">
+													<li><span class="dropdown-item" data-avatar="images/queen.png"
+															data-value="Queen Ann (You)" data-id="1">
+															<span class="queen"><img src="images/queen.png"
+																	class="img-fluid" /></span>
+															Queen Ann
+														</span>
+													</li>
+													<li><span class="dropdown-item" data-avatar="images/king.png"
+															data-value="King Robby" data-id="2">
+															<span class="king"><img src="images/king.png"
+																	class="img-fluid" /></span>
+															King Robby
+														</span>
+													</li>
+
+													<li><span class="dropdown-item" data-avatar="images/princess.png"
+															data-value="Princess Sara" data-id="3">
+															<span class="princess"><img src="images/princess.png"
+																	class="img-fluid" /></span>
+															Princess
+															Sara</span>
+													</li>
+													<li><span class="dropdown-item" data-avatar="images/prince.png"
+															data-value="Prince Tom" data-id="4">
+															<span class="prince"><img src="images/prince.png"
+																	class="img-fluid" /></span>
+															Prince Tom</span>
+													</li>
+
+												</ul>
 											</div>
 										</div>
+										<span class="bottom-text">Select the person responsible for completing this
+											task; it
+											will appear
+											in their task list</span>
 									</div>
-
 								</div>
-								<div class="form-group">
-									<label for="priority" class="form-label">Priority</label>
-									<select name="priority" id="priority" class="form-select">
-										<option value="Low">Low</option>
-										<option value="Medium" selected>Medium</option>
-										<option value="Hight">Hight</option>
-									</select>
+
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="title" class="form-label">Title*</label>
+										<input type="text" class="form-control" name="title"
+											placeholder="Add a task title" required>
+									</div>
+								</div>
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="duration" class="form-label">Duration</label>
+										<div class="input-group">
+											<input type="text"
+												class="form-control form-control-dropdown dropdown-toggle-confirm"
+												id="duration" data-bs-toggle="dropdown" value="30 min"
+												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
+												name="duration" readonly="readonly" placeholder="Set a time">
+											<div class="dropdown-menu dropdown-duration-picker">
+												<div class="duration-picker">
+													<div class="header">
+														<h3>Select a duration</h3>
+													</div>
+													<div class="group">
+														<div class="form-group-check">
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="600"
+																	value="10 min" id="duration-check_1">
+																<label class="form-check-label" for="duration-check_1">
+																	10 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="900"
+																	value="15 min" id="duration-check_2">
+																<label class="form-check-label" for="duration-check_2">
+																	15 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="1800"
+																	value="30 min" id="duration-check_3">
+																<label class="form-check-label" for="duration-check_3">
+																	30 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="2700"
+																	value="45 min" id="duration-check_4">
+																<label class="form-check-label" for="duration-check_4">
+																	45 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="3600"
+																	value="1 hour" id="duration-check_5">
+																<label class="form-check-label" for="duration-check_5">
+																	1 hour
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="5400"
+																	value="1.5 hour" id="duration-check_6">
+																<label class="form-check-label" for="duration-check_6">
+																	1.5 hour
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="7200"
+																	value="2 hour" id="duration-check_7">
+																<label class="form-check-label" for="duration-check_7">
+																	2 hour
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="10800"
+																	value="3 hour" id="duration-check_8">
+																<label class="form-check-label" for="duration-check_8">
+																	3 hour
+																</label>
+															</div>
+														</div>
+														<div class="form-group">
+															<label for="" class="form-label d-block text-center">Other
+																time</label>
+															<div class="duration-group-timer">
+																<div class="wrap-hours">
+																	<button class="btn-next hours-next"></button>
+																	<ul class="list">
+																		<li class="active">00</li>
+																	</ul>
+																	<button class="btn-prev hours-prev"></button>
+																	<div class="label">Hours</div>
+																</div>
+																<div class="separator">:</div>
+																<div class="wrap-minutes">
+																	<button class="btn-next minutes-next"></button>
+																	<ul class="list">
+																		<li class="active">00</li>
+																	</ul>
+																	<button class="btn-prev minutes-prev"></button>
+																	<div class="label">Minutes</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row row-btn-group">
+														<div class="col-6">
+															<button
+																class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
+														</div>
+														<div class="col-6">
+															<button class="btn btn-primary w-100 btn-confirm"
+																disabled>Confirm</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="input-group-text input-icon-down"></span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="priority" class="form-label">Priority</label>
+										<select name="priority" id="priority" class="form-select">
+											<option value="Low">Low</option>
+											<option value="Medium" selected>Medium</option>
+											<option value="Hight">Hight</option>
+										</select>
+									</div>
 								</div>
 								<div class="form-group">
 									<button class="btn-collapse collapsed" type="button" data-bs-toggle="collapse"
@@ -244,110 +308,116 @@
 
 
 								<div class="collapse w-100" id="collapseAddSettings">
-									<div class="form-group">
-										<label for="date" class="form-label">Data</label>
-										<div class="input-group input-icon-reset">
-											<input type="text" class="form-control form-control-date" name="date"
-												value="" placeholder="Select a data" id="date" readonly>
-											<span class="input-group-text reset-value cursor-pointer"></span>
-											<span class="input-group-text input-icon input-icon-calendar"></span>
+									<div class="section-inner">
+										<div class="form-group">
+											<label for="date" class="form-label">Date</label>
+											<div class="input-group input-group-reset">
+												<input type="text" class="form-control form-control-date" name="date"
+													value="" placeholder="Select a data" id="date" readonly>
+												<span class="input-group-text input-reset-value cursor-pointer"></span>
+												<span class="input-group-text input-icon-calendar"></span>
+											</div>
 										</div>
-									</div>
+										<div class="form-group">
+											<label for="start_time" class="form-label">Start time</label>
+											<div class="input-group input-group-reset">
+												<input type="text"
+													class="form-control form-control-dropdown dropdown-toggle-time-picker"
+													id="start_time" data-bs-toggle="dropdown" value=""
+													data-bs-auto-close="outside" data-bs-offset="0,8"
+													aria-expanded="false" name="start_time" readonly="readonly"
+													placeholder="Set a start time">
 
-									<div class="form-group">
-										<label for="start_time" class="form-label">Start time</label>
-										<div class="input-group input-icon-reset">
-											<input type="text"
-												class="form-control form-control-dropdown dropdown-toggle-time-picker"
-												id="start_time" data-bs-toggle="dropdown" value=""
-												data-bs-auto-close="false" data-bs-offset="0,8" aria-expanded="false"
-												name="start_time" readonly="readonly" placeholder="Set a start time">
-
-											<div class="dropdown-menu dropdown-menu-time-picker">
-												<div class="time-start-picker">
-													<div class="header">
-														<h3>Set a time</h3>
-														<button class="reset">Reset</button>
-														<p class="text">Select the task start time</p>
-													</div>
-
-													<div class="group">
-														<div class="wrap-hours">
-															<button class="btn-next hours-next"></button>
-															<ul class="list">
-																<li class="active">00</li>
-															</ul>
-
-															<button class="btn-prev hours-prev"></button>
-															<div class="label">Hours</div>
+												<div class="dropdown-menu dropdown-menu-time-picker">
+													<div class="time-start-picker">
+														<div class="header">
+															<h3>Set a time</h3>
+															<button class="reset">Reset</button>
+															<p class="text">Select the task start time</p>
 														</div>
-														<div class="separator">:</div>
-														<div class="wrap-minutes">
-															<button class="btn-next minutes-next"></button>
-															<ul class="list">
-																<li class="active">00</li>
-															</ul>
 
-															<button class="btn-prev minutes-prev"></button>
-															<div class="label">Minutes</div>
+														<div class="group">
+															<div class="wrap-hours">
+																<button class="btn-next hours-next"></button>
+																<ul class="list">
+																	<li class="active">00</li>
+																</ul>
+
+																<button class="btn-prev hours-prev"></button>
+																<div class="label">Hours</div>
+															</div>
+															<div class="separator">:</div>
+															<div class="wrap-minutes">
+																<button class="btn-next minutes-next"></button>
+																<ul class="list">
+																	<li class="active">00</li>
+																</ul>
+
+																<button class="btn-prev minutes-prev"></button>
+																<div class="label">Minutes</div>
+															</div>
 														</div>
-													</div>
-													<div class="row row-btn-group">
-														<div class="col-6">
-															<button
-																class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
-														</div>
-														<div class="col-6">
-															<button
-																class="btn btn-primary w-100 btn-confirm">Confirm</button>
+														<div class="row row-btn-group">
+															<div class="col-6">
+																<button
+																	class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
+															</div>
+															<div class="col-6">
+																<button
+																	class="btn btn-primary w-100 btn-confirm">Confirm</button>
+															</div>
 														</div>
 													</div>
 												</div>
+												<span class="input-group-text input-reset-value cursor-pointer"></span>
+												<span class="input-group-text input-icon-down"></span>
 											</div>
-											<span class="input-group-text reset-value cursor-pointer"></span>
-											<span class="input-group-text input-icon"></span>
+										</div>
+									</div>
+
+
+									<div class="section-inner">
+										<div class="form-group">
+											<label for="Repeat" class="form-label">Repeat</label>
+											<div class="input-group input-icon-reset">
+												<select name="Repeat" id="Repeat" class="form-select"
+													placeholder="Set a repeat">
+													<option disabled>Set a repeat</option>
+													<option value="Every day">Every day</option>
+													<option value="Every week">Every week</option>
+													<option value="Every month">Every month</option>
+													<option value="Every year">Every year</option>
+												</select>
+												<span class="input-group-text reset-value cursor-pointer"></span>
+											</div>
 
 										</div>
+										<div class="form-group">
+											<label for="Reminder" class="form-label">Reminder</label>
+											<div class="input-group input-icon-reset">
+												<select name="Reminder" id="Reminder" class="form-select"
+													placeholder="Set a reminder">
+													<option disabled>Set a reminder</option>
+													<option value="At the moment">At the moment</option>
+													<option value="Per 1 hour">Per 1 hour</option>
+													<option value="Per day">Per day</option>
+													<option value="Per 2 days">Per 2 days</option>
+													<option value="Per week">Per week</option>
+												</select>
+												<span class="input-group-text reset-value cursor-pointer"></span>
+												<span class="input-group-text input-icon"></span>
 
+											</div>
 
-
-
-									</div>
-									<div class="form-group">
-										<label for="Repeat" class="form-label">Repeat</label>
-										<div class="input-group input-icon-reset">
-											<select name="Repeat" id="Repeat" class="form-select"
-												placeholder="Set a repeat">
-												<option disabled>Set a repeat</option>
-												<option value="Every day">Every day</option>
-												<option value="Every week">Every week</option>
-												<option value="Every month">Every month</option>
-												<option value="Every year">Every year</option>
-											</select>											
-											<span class="input-group-text reset-value cursor-pointer"></span>
 										</div>
-
 									</div>
-									<div class="form-group">
-										<label for="Reminder" class="form-label">Reminder</label>
-										<div class="input-group input-icon-reset">
-											<select name="Reminder" id="Reminder" class="form-select"
-												placeholder="Set a reminder">
-												<option disabled>Set a reminder</option>
-												<option value="At the moment">At the moment</option>
-												<option value="Per 1 hour">Per 1 hour</option>
-												<option value="Per day">Per day</option>
-												<option value="Per 2 days">Per 2 days</option>
-												<option value="Per week">Per week</option>
-											</select>											
-											<span class="input-group-text reset-value cursor-pointer"></span>
+
+									<div class="section-inner">
+										<div class="form-group">
+											<label for="Notes" class="form-label">Notes</label>
+											<textarea class="form-control" name="Notes"
+												placeholder="Add a notes or description" id="Notes"></textarea>
 										</div>
-
-									</div>
-									<div class="form-group">
-										<label for="Notes" class="form-label">Notes</label>
-										<textarea class="form-control" name="Notes"
-											placeholder="Add a notes or description" id="Notes"></textarea>
 									</div>
 
 								</div>
@@ -356,25 +426,6 @@
 									<button class="btn btn-light w-100" type="submit">Create</button>
 								</div>
 							</form>
-							<!--tip_card_container-->
-							<div class="tip_card_container tip_card_container_button">
-								<div class="container">
-									<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
-									<h4 class="text-center">Are you sure you want to remove
-										Yourself as an Assignee?</h4>
-									<p class="text-center">You will be able to choose Another family member to assign
-										the task to</p>
-									<div class="row row-btn-group">
-										<div class="col-6">
-											<button class="btn btn-dark-2 btn-sm w-100 btn-cancel">Cancel</button>
-										</div>
-										<div class="col-6">
-											<button class="btn btn-primary btn-sm w-100 btn-confirm">Confirm</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--tip_card_container end-->
 						</div>
 					</div>
 

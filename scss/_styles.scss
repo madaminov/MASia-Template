@@ -9,7 +9,7 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 83px;
   padding-top: 74px;
 }
 h1,
@@ -280,7 +280,7 @@ h6,
 }
 .context-menu-user {
   display: flex;
-  width: 121px;
+  width: 182px;
   flex-direction: column;
   align-items: flex-start;
   background-color: $white;
@@ -314,6 +314,31 @@ h6,
       border-radius: 50%;
       background-color: $primary-default;
     }
+    &.queen {
+      img {
+        background: $primary-default;
+      }
+    }
+    &.king {
+      img {
+        background: $blue-10;
+      }
+    }
+    &.princess {
+      img {
+        background: $primary-default;
+      }
+    }
+    &.prince {
+      img {
+        background: $blue-9;
+      }
+    }
+    &.other {
+      img {
+        background: $green-2;
+      }
+    }
     .name {
       color: $black-color;
       font-feature-settings: 'liga' off, 'clig' off;
@@ -328,7 +353,7 @@ h6,
   }
   .user-main {
     padding: 4px;
-    background: $gray-5;
+    background: $gray-26;
     img {
       width: 38px;
       height: 38px;

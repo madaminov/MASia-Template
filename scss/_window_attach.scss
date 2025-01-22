@@ -187,6 +187,16 @@
         background-color: $blue-10;
       }
     }
+    &.prince {
+      .person {
+        background: $blue-9;
+      }
+    }
+    &.princess {
+      .person {
+        background: $primary-default;
+      }
+    }
     &.other {
       .person {
         background-color: $green-2;

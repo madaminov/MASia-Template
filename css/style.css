@@ -13139,7 +13139,7 @@ button.active, button:active, button:focus,
   -ms-border-radius: 40px;
   border-radius: 40px;
   height: 46px;
-  min-width: 46px;
+  min-width: 48px;
 }
 
 .btn-list {
@@ -14393,7 +14393,27 @@ input[type=password]:focus + .input-group-text,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 32px;
+}
+
+.form-create-event,
+.modal form.form-create-event {
+  gap: 32px;
+}
+.form-create-event .section-inner,
+.modal form.form-create-event .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 24px;
+  width: 100%;
+}
+.form-create-event .collapse.show,
+.modal form.form-create-event .collapse.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
 }
 
 .nice-select {
@@ -15125,7 +15145,7 @@ input[type=password]:focus + .input-group-text,
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 83px;
   padding-top: 74px;
 }
 
@@ -15438,7 +15458,7 @@ h6,
 
 .context-menu-user {
   display: flex;
-  width: 121px;
+  width: 182px;
   flex-direction: column;
   align-items: flex-start;
   background-color: #fff;
@@ -15477,6 +15497,21 @@ h6,
   border-radius: 50%;
   background-color: #d3bff9;
 }
+.context-menu-user .user.queen img {
+  background: #d3bff9;
+}
+.context-menu-user .user.king img {
+  background: #b4c1e9;
+}
+.context-menu-user .user.princess img {
+  background: #d3bff9;
+}
+.context-menu-user .user.prince img {
+  background: #d4e6fc;
+}
+.context-menu-user .user.other img {
+  background: #c9e6dd;
+}
 .context-menu-user .user .name {
   color: #000000;
   font-feature-settings: "liga" off, "clig" off;
@@ -15490,7 +15525,7 @@ h6,
 }
 .context-menu-user .user-main {
   padding: 4px;
-  background: #ede3ff;
+  background: #f7f3ff;
 }
 .context-menu-user .user-main img {
   width: 38px;
@@ -15808,6 +15843,8 @@ footer.show-context-menu-user .btn-user {
   margin-bottom: 12px;
 }
 .wrap-task-progress-bar .progress-badge .icon {
+  width: 24px;
+  height: 24px;
   color: #000000;
 }
 .wrap-task-progress-bar .progress-badge .icon svg {
@@ -18082,11 +18119,10 @@ footer.show-context-menu-user .btn-user {
   color: #292d32;
   font-feature-settings: "liga" off, "clig" off;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.032px;
+  font-weight: 400;
+  line-height: 26px; /* 150% */
 }
 .prize-progress-text .prizes {
   display: flex;
@@ -18151,13 +18187,13 @@ footer.show-context-menu-user .btn-user {
 
 .tip_card_container {
   position: fixed;
-  bottom: 80px;
+  bottom: 88px;
   width: calc(100% - 8px);
   max-width: 760px;
   margin: 0 auto;
   left: 0;
   right: 0;
-  z-index: 7;
+  z-index: 1058;
 }
 .tip_card_container .container {
   font-family: "Poppins", sans-serif;
@@ -18519,6 +18555,12 @@ footer.show-context-menu-user .btn-user {
 .members-list .item.king .person {
   background-color: #b4c1e9;
 }
+.members-list .item.prince .person {
+  background: #d4e6fc;
+}
+.members-list .item.princess .person {
+  background: #d3bff9;
+}
 .members-list .item.other .person {
   background-color: #c9e6dd;
 }
@@ -18672,6 +18714,7 @@ footer.show-context-menu-user .btn-user {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  width: 100%;
 }
 .modal-body .section .row {
   display: flex;
@@ -18690,8 +18733,11 @@ footer.show-context-menu-user .btn-user {
 .modal-body .section .row .col:first-child {
   font-weight: 600;
 }
+.modal-body .section-members-list {
+  gap: 16px;
+}
 .modal-body .section-members-list .title {
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
 
 .modal .modal-context-menu {
