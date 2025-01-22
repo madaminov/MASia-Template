@@ -17630,6 +17630,7 @@ footer.show-context-menu-user .btn-user {
   width: 20px;
   height: 20px;
   padding: 4px;
+  display: flex;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;

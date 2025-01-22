@@ -98,6 +98,7 @@
     width: 20px;
     height: 20px;
     padding: 4px;
+    display: flex;
     @include border-radius(6px);
     color: $black-color;
     @include transition(0.3s);
