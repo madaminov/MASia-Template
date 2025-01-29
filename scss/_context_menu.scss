@@ -1,0 +1,50 @@
+.context-menu {
+  border-radius: 12px;
+  overflow: hidden;
+  button {
+    color: $black;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Callout - 15 R */
+    font-family: $font-stack-popins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: 0.03px;
+    display: flex;
+    height: 52px;
+    padding: 12px 4px 12px 12px;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    background-color: $white;
+    border: 0;
+    width: 100%;
+    @include border-radius(0);
+    @include transition(0.3s);
+    svg {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      fill: $black;
+      width: 16px;
+      height: 16px;
+    }
+    &:hover {
+      color: $black;
+      background-color: $gray-27;
+      svg {
+        fill: $black;
+      }
+    }
+    &.active,
+    &:active,
+    &:focus {
+      color: $black;
+      background-color: $violet-13;
+      svg {
+        fill: $black;
+      }
+    }
+  }
+}

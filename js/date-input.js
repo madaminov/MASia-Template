@@ -1,4 +1,4 @@
-﻿let localeEn = {
+﻿﻿let localeEn = {
   days: [
     'Sunday',
     'Monday',
@@ -40,7 +40,7 @@
   ],
   today: 'Today',
   clear: 'Clear',
-  dateFormat: 'dd MMMM, EEEE yyyy',
+  dateFormat: 'dd MMMM, EEEE',
   timeFormat: 'hh:mm aa',
   firstDay: 1,
 };

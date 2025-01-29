@@ -15,9 +15,13 @@
 }
 .input-group {
   position: relative;
+  background-color: $black-color-5;
+  border-radius: 12px !important;
   .form-control {
     border-radius: 12px !important;
     padding-right: 40px;
+    background-color: transparent;
+    z-index: 2;
   }
   .input-group-text {
     position: absolute;
@@ -27,6 +31,7 @@
     width: 40px;
     border-radius: 12px !important;
     padding: 8px 12px 8px 8px;
+    z-index: 1;
     &:last-child {
       border-radius: 0px 12px 12px 0px;
       padding: 8px 12px 8px 8px;
@@ -38,6 +43,7 @@
   .form-control {
     border-radius: 12px !important;
     padding-right: 80px;
+    cursor: pointer;
   }
   .form-select {
     border-radius: 12px !important;
@@ -47,6 +53,7 @@
     width: 10px;
     right: 40px;
     padding: 8px 0px 8px 8px;
+    z-index: 3;
   }
   .form-select + .input-reset-value {
     right: 20px;

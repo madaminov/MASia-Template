@@ -150,11 +150,11 @@
 									</div>
 
 									<div class="form-group">
-										<label for="start_time" class="form-label">Start time</label>
+										<label for="start_time" class="form-label">Start time*</label>
 										<div class="input-group input-group-reset">
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-time-picker"
-												id="start_time" data-bs-toggle="dropdown" value=""
+												id="start_time" data-bs-toggle="dropdown" value="11:00"
 												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
 												name="start_time" readonly="readonly" placeholder="Set a start time">
 
@@ -199,7 +199,8 @@
 													</div>
 												</div>
 											</div>
-											<span class="input-group-text input-reset-value cursor-pointer"></span>
+											<span
+												class="input-group-text input-reset-value cursor-pointer d-block"></span>
 											<span class="input-group-text input-icon-down"></span>
 										</div>
 									</div>
@@ -210,9 +211,9 @@
 										<div class="input-group">
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-confirm"
-												id="duration" data-bs-toggle="dropdown" value="30 min"
-												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
-												name="duration" readonly="readonly" placeholder="Set a time">
+												id="duration" name="duration" readonly="readonly"
+												placeholder="Set a time" data-bs-toggle="dropdown" value="30 min"
+												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false">
 											<div class="dropdown-menu dropdown-duration-picker">
 												<div class="duration-picker">
 													<div class="header">
@@ -321,7 +322,7 @@
 													</div>
 												</div>
 											</div>
-											<span class="input-group-text input-icon-down"></span>
+											<span class="input-group-text input-icon-down" for="duration"></span>
 										</div>
 									</div>
 								</div>

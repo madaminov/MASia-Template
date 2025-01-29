@@ -1,3 +1,8 @@
+.dropdown-duration-picker {
+  &.show + .input-icon-down {
+    transform: rotate(-180deg);
+  }
+}
 .duration-picker {
   display: flex;
   width: 100%;

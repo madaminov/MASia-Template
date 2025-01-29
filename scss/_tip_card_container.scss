@@ -1,12 +1,12 @@
 .tip_card_container {
   position: fixed;
-  bottom: 88px;
+  bottom: 93px;
   width: calc(100% - 8px);
-  max-width: calc(768px - 8px);
+  max-width: 760px;
   margin: 0 auto;
   left: 0;
   right: 0;
-  z-index: 1058;
+  z-index: 4;
   .container {
     font-family: $font-stack-popins;
     padding: 20px 16px;
@@ -70,6 +70,17 @@
     letter-spacing: 0.032px;
     margin-bottom: 8px;
   }
+  p {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Footnote - 14 R */
+    font-family: $font-stack-popins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.028px;
+  }
 }
 .tip_card_container_button {
   .container {
@@ -106,5 +117,43 @@
   }
   .row-btn-group {
     margin-top: 24px;
+  }
+}
+.tip_card_container-icon {
+  .container {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .icon {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      padding: 8px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 22px;
+      background: $white-3;
+      backdrop-filter: blur(2.5px);
+      margin: 0;
+    }
+  }
+}
+@media (max-height: 600px) {
+  .tip_card_container {
+    z-index: 4;
+  }
+  .wrap-calendar {
+    z-index: 5;
   }
 }

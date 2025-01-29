@@ -77,9 +77,9 @@ button,
     color: $gray-10;
   }
   &:hover {
-    color: $black !important;
-    background: $white-2 !important;
-    border: 1px solid $white-2 !important;
+    border: 1px solid $violet-7;
+    background: $violet-7;
+    color: $black-color;
   }
   &.active,
   &:active,
@@ -317,7 +317,8 @@ button,
     height: 20px;
   }
   &:hover {
-    background: $white-2;
+    background: $violet-14;
+    box-shadow: 0px 4px 4px 0px #dddcff inset;
   }
   &:active,
   &:focus {
@@ -771,52 +772,7 @@ button,
   background-position: right center;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23A073F2'/%3e%3c/svg%3e");
 }
-.context-menu {
-  button {
-    color: $black;
-    font-feature-settings: 'liga' off, 'clig' off;
-    /* Callout - 15 R */
-    font-family: $font-stack-popins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px; /* 146.667% */
-    letter-spacing: 0.03px;
-    display: flex;
-    height: 52px;
-    padding: 12px 4px 12px 12px;
-    align-items: center;
-    gap: 8px;
-    flex: 1 0 0;
-    background-color: $white;
-    border: 0;
-    width: 100%;
-    @include border-radius(12px);
-    @include transition(0.3s);
-    svg {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
-      fill: $black;
-      width: 16px;
-      height: 16px;
-    }
-    &:hover {
-      color: $blue-5;
-      svg {
-        fill: $blue-5;
-      }
-    }
-    &.active,
-    &:active,
-    &:focus {
-      color: $primary-default;
-      svg {
-        fill: $primary-default;
-      }
-    }
-  }
-}
+
 .form {
   .row-form {
     width: 100%;
@@ -849,7 +805,7 @@ button,
     opacity: 1;
   }
   &:focus {
-    color: $gray-7;
+    color: $white;
     background-color: $black-color-5;
     border-color: transparent;
     outline: 0;
@@ -887,6 +843,7 @@ select:-webkit-autofill:focus {
 }
 .form-control-dropdown {
   padding: 8px 12px 8px 16px;
+  cursor: pointer;
   &:focus {
     box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
   }
@@ -979,6 +936,10 @@ input[type='password'],
 
 .form-control-date {
   & + .air-datepicker.-inline- {
+    display: none;
+  }
+  &.form-control-open-calendar + .air-datepicker.-inline- {
+    display: block;
     position: absolute;
     top: 56px;
     left: 0;

@@ -1,11 +1,13 @@
 .members-list {
   .dropdown-assignee {
     position: relative;
+    cursor: pointer;
     input {
       position: absolute;
       width: 100%;
       height: 100%;
       opacity: 0;
+      cursor: pointer;
     }
     &::after {
       content: '';
