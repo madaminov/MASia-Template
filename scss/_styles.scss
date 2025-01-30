@@ -200,6 +200,7 @@ h6,
     align-items: center;
     gap: 4px;
     position: relative;
+    transition: all 0.5s ease;
     &::after {
       content: '';
       width: 10px;
@@ -221,11 +222,11 @@ h6,
     width: 100vw;
     height: 100vh;
     z-index: 1057;
-    top: 58px;
+    top: 72px;
     left: 0;
     opacity: 1;
     visibility: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
     &.show {
       backdrop-filter: blur(10px);
       background: rgba(30, 30, 30, 0.2);
@@ -234,7 +235,7 @@ h6,
       z-index: 1057;
       opacity: 1;
       visibility: visible;
-      transition: all 0.5s ease;
+      transition: all 0.1s ease;
     }
   }
 
@@ -249,6 +250,7 @@ h6,
     }
     .tag {
       box-shadow: 0px 0px 8px #ffffff6b;
+      transition: all 0.5s ease;
     }
   }
 }

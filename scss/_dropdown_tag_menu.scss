@@ -1,0 +1,23 @@
+.dropdown-tag-menu,
+.dropdown-menu,
+.dropdown-tag-menu,
+.dropdown-menu.dropdown-tag-menu {
+  .dropdown-item {
+    &:hover {
+      color: $black;
+      background-color: $gray-27;
+      svg {
+        fill: $black;
+      }
+    }
+    &.active,
+    &:active,
+    &:focus {
+      color: $black;
+      background-color: $violet-13;
+      svg {
+        fill: $black;
+      }
+    }
+  }
+}

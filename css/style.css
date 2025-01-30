@@ -14899,6 +14899,10 @@ input[type=password]:focus + .input-group-text,
   transform: scaleY(1);
 }
 
+.dropdown-menu-time-picker.show + .input-reset-value + .input-icon-down {
+  transform: rotate(-180deg);
+}
+
 .members-list .dropdown-assignee {
   position: relative;
   cursor: pointer;
@@ -14967,6 +14971,45 @@ input[type=password]:focus + .input-group-text,
 .dropdown-list-assignee .dropdown-item:hover, .dropdown-list-assignee .dropdown-item.selected {
   border-bottom: 1px solid #e6e6e6;
   background: #dbc7fe !important;
+}
+
+.dropdown-tag-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-tag-menu .dropdown-item:hover,
+.dropdown-menu.dropdown-tag-menu .dropdown-item:hover {
+  color: #000;
+  background-color: #e8dcff;
+}
+.dropdown-tag-menu .dropdown-item:hover svg,
+.dropdown-menu .dropdown-item:hover svg,
+.dropdown-tag-menu .dropdown-item:hover svg,
+.dropdown-menu.dropdown-tag-menu .dropdown-item:hover svg {
+  fill: #000;
+}
+.dropdown-tag-menu .dropdown-item.active, .dropdown-tag-menu .dropdown-item:active, .dropdown-tag-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-tag-menu .dropdown-item.active,
+.dropdown-tag-menu .dropdown-item:active,
+.dropdown-tag-menu .dropdown-item:focus,
+.dropdown-menu.dropdown-tag-menu .dropdown-item.active,
+.dropdown-menu.dropdown-tag-menu .dropdown-item:active,
+.dropdown-menu.dropdown-tag-menu .dropdown-item:focus {
+  color: #000;
+  background-color: #dbc7fe;
+}
+.dropdown-tag-menu .dropdown-item.active svg, .dropdown-tag-menu .dropdown-item:active svg, .dropdown-tag-menu .dropdown-item:focus svg,
+.dropdown-menu .dropdown-item.active svg,
+.dropdown-menu .dropdown-item:active svg,
+.dropdown-menu .dropdown-item:focus svg,
+.dropdown-tag-menu .dropdown-item.active svg,
+.dropdown-tag-menu .dropdown-item:active svg,
+.dropdown-tag-menu .dropdown-item:focus svg,
+.dropdown-menu.dropdown-tag-menu .dropdown-item.active svg,
+.dropdown-menu.dropdown-tag-menu .dropdown-item:active svg,
+.dropdown-menu.dropdown-tag-menu .dropdown-item:focus svg {
+  fill: #000;
 }
 
 .form-group-select-vue {
@@ -15349,6 +15392,7 @@ h6,
   align-items: center;
   gap: 4px;
   position: relative;
+  transition: all 0.5s ease;
 }
 .wrap-tags-task-detail .tag::after {
   content: "";
@@ -15370,11 +15414,11 @@ h6,
   width: 100vw;
   height: 100vh;
   z-index: 1057;
-  top: 58px;
+  top: 72px;
   left: 0;
   opacity: 1;
   visibility: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 .wrap-tags-task-detail .toggleClose.show {
   backdrop-filter: blur(10px);
@@ -15384,7 +15428,7 @@ h6,
   z-index: 1057;
   opacity: 1;
   visibility: visible;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 .wrap-tags-task-detail.show {
   position: relative;
@@ -15398,6 +15442,7 @@ h6,
 }
 .wrap-tags-task-detail.show .tag {
   box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4196078431);
+  transition: all 0.5s ease;
 }
 
 .context-menu {
@@ -15671,7 +15716,7 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
 }
 header .container-fluid, header .container-sm, header .container-md, header .container-lg, header .container-xl, header .container-xxl {
   padding: 12px 16px;
@@ -15936,7 +15981,7 @@ footer.show-context-menu-user .btn-user {
 }
 .wrap-calendar.open {
   transition: all 0.3s ease;
-  z-index: 5;
+  z-index: 3;
 }
 .wrap-calendar.open .wrap-week {
   display: none;
@@ -16953,6 +16998,7 @@ footer.show-context-menu-user .btn-user {
   margin-bottom: 0px;
   padding-bottom: 4px;
   position: relative;
+  z-index: 3;
 }
 .wrap-calendar .switch_view_calendar {
   width: 80px;
@@ -18169,7 +18215,7 @@ footer.show-context-menu-user .btn-user {
   margin: 0 auto;
   left: 0;
   right: 0;
-  z-index: 4;
+  z-index: 2;
 }
 .tip_card_container .container {
   font-family: "Poppins", sans-serif;

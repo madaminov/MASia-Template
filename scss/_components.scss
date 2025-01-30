@@ -257,3 +257,8 @@
     }
   }
 }
+.dropdown-menu-time-picker {
+  &.show + .input-reset-value + .input-icon-down {
+    transform: rotate(-180deg);
+  }
+}

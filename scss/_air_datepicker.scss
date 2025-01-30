@@ -53,7 +53,7 @@
   }
   &.open {
     transition: all 0.3s ease;
-    z-index: 5;
+    z-index: 3;
     .wrap-week {
       display: none;
     }
