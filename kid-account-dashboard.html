@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div class="wrapper-main">
+	<div class="wrapper-main wrap-princess">
 		<div id="root" class="wrapper">
 			<header>
 				<div class="container-fluid d-flex align-items-center justify-content-between">
@@ -19,65 +19,48 @@
 					</div>
 					<div class="user_badge d-flex align-items-center">
 						<div class="user-info">
-							<div class="user_name text-end">Ann</div>
-							<div class="user_role">Queen</div>
+							<div class="user_name text-end">Sara</div>
+							<div class="user_role">Princess</div>
 						</div>
-						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+						<button class="user-img" style="background-image: url(images/princess.png) ;"></button>
 					</div>
 				</div>
 			</header>
-			<div class="wrap-task-progress-bar">
-				<div class="wrap-progress-badge-score">
-					<div class="progress-badge">
-						<div class="icon">
-							<svg>
-								<use href="images/icons.svg#progress" />
-							</svg>
-						</div>
-						Your progress
-					</div>
-				</div>
-				<div class="wrap-text">
-					<h2>My Highness, <span>keep<br /> going! Shine on!</span></h2>
-				</div>
-				<div class="wrap-progress">
-					<div class="text">54%</div>
-					<div class="progress">
-						<div class="progress-bar bg-violet-3" role="progressbar" style="width: 54%" aria-valuenow="54"
-							aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</div>
-
-			</div>
 			<!--calendar-->
+			<div class="wrap-task-progress-bar hide">
+				<div class="wrap-text">
+					<h2>My Princess,<br> <span>A wonderful day begins!</span></h2>
+				</div>
+			</div>
 			<div class="wrap-calendar">
-				<div id="calendar" data-date="11/17/2024"></div>
+				<input type="hidden" value="" name="range-start" class="input" id="calendar">
 				<div class="switch_view_calendar"></div>
 			</div>
 			<!--calendar end-->
+			<!--Activity Info Container-->
+			<div class="activity_info_container d-flex align-items-center justify-content-between">
+				<div class="text">You have 8 activities</div>
+				<button class="btn btn-list-area"></button>
+			</div>
+			<!--Activity Info Container end-->
 			<!--Day Schedule-->
 			<div class="wrap-day-schedule">
 				<h2 class="title">01 October, Saturday</h2>
 				<div class="schedule">
-					<div class="alert text-center" role="alert">
+					<div class="alert alert-primary text-center" role="alert">
 						<img src="images/package.svg" alt="" class="img-fluid">
 						Pol`s Birthday
 					</div>
 					<div class="event-list w-100">
 						<!--event-->
-						<div class="event w-100 d-flex align-self-stretch">
+						<div class="event w-100 d-flex align-self-stretch fadeIn">
 							<div class="wrap-time d-flex flex-column">
-								<div class="time color-white">14:00</div>
-								<div class="time">15:00</div>
+								<div class="time">06:00</div>
+								<div class="hour bg-violet-8">1 h 30 min</div>
 							</div>
-							<div class="event-day w-100 d-flex justify-content-between bg-white">
-								<div class="inner w-100 d-flex flex-wrap ">
-									<div class="icon bg-blue-4">
-										<svg>
-											<use href="images/icons-event.svg#calendar" />
-										</svg>
-									</div>
-									<div class="text">Coffee Date with Alexa</div>
+							<div class="event-day event-day-simple w-100 d-flex justify-content-between bg-violet-8">
+								<div class="inner w-100 d-flex flex-wrap align-items-center">
+									<div class="text">Morning routine</div>
 								</div>
 								<button class="btn-action">
 									<svg>
@@ -88,10 +71,10 @@
 						</div>
 						<!--event end-->
 						<!--event-->
-						<div class="event w-100 d-flex align-self-stretch">
+						<div class="event w-100 d-flex align-self-stretch fadeIn">
 							<div class="wrap-time d-flex flex-column">
-								<div class="time">15:15</div>
-								<div class="hour bg-orange-light-2">30 min</div>
+								<div class="time color-black">08:00</div>
+								<div class="hour bg-orange-light-2">45 min</div>
 							</div>
 							<div class="event-day bg-orange-light-2 w-100 d-flex justify-content-between">
 								<div class="inner w-100 d-flex flex-wrap">
@@ -100,10 +83,16 @@
 											<use href="images/icons-event.svg#task" />
 										</svg>
 									</div>
-									<div class="text">Book hotel for conference</div>
+									<div class="text">Swimming lesson</div>
 									<div class="properties">
 										<div class="property">New</div>
 										<div class="property bg-medium">Medium</div>
+									</div>
+									<div class="prize-progress prize-progress-text ms-auto">
+										<div class="number">2</div>
+										<div class="prizes">
+											<div class="prize"></div>
+										</div>
 									</div>
 								</div>
 								<button class="btn-action">
@@ -115,10 +104,10 @@
 						</div>
 						<!--event end-->
 						<!--event-->
-						<div class="event w-100 d-flex align-self-stretch">
+						<div class="event w-100 d-flex align-self-stretch fadeIn">
 							<div class="wrap-time d-flex flex-column">
-								<div class="time color-gray-4">18:00</div>
-								<div class="time color-gray">19:00</div>
+								<div class="time">09:00</div>
+								<div class="time">10:30</div>
 							</div>
 							<div class="event-day bg-white w-100 d-flex justify-content-between">
 								<div class="inner w-100 d-flex flex-wrap">
@@ -127,7 +116,7 @@
 											<use href="images/icons-event.svg#calendar" />
 										</svg>
 									</div>
-									<div class="text">Yoga Session</div>
+									<div class="text">Family breakfast</div>
 									<div class="users">
 										<div class="user"><img src="images/user_img_1.jpg" alt="" class="img-fluid">
 										</div>
@@ -147,19 +136,29 @@
 						</div>
 						<!--event end-->
 						<!--event-->
-						<div class="event w-100 d-flex align-self-stretch">
+						<div class="event w-100 d-flex align-self-stretch fadeIn">
 							<div class="wrap-time d-flex flex-column">
-								<div class="time color-gray-4">20:30</div>
-								<div class="time color-gray">21:00</div>
+								<div class="time">13:30</div>
+								<div class="hour bg-orange-light-2">45 min</div>
 							</div>
 							<div class="event-day bg-white w-100 d-flex justify-content-between">
 								<div class="inner w-100 d-flex flex-wrap ">
-									<div class="icon bg-blue-4">
+									<div class="icon bg-primary-2">
 										<svg>
 											<use href="images/icons-event.svg#calendar" />
 										</svg>
 									</div>
-									<div class="text">Plan weekend family trip</div>
+									<div class="text">Reading</div>
+									<div class="properties">
+										<div class="property">New</div>
+										<div class="property bg-medium">Medium</div>
+									</div>
+									<div class="prize-progress prize-progress-text ms-auto">
+										<div class="number">3</div>
+										<div class="prizes">
+											<div class="prize"></div>
+										</div>
+									</div>
 								</div>
 								<button class="btn-action">
 									<svg>
@@ -169,13 +168,14 @@
 							</div>
 						</div>
 						<!--event end-->
+
 					</div>
 				</div>
 			</div>
 			<!--Day Schedule end-->
 			<footer>
 				<div class="container-fluid d-flex align-items-center justify-content-between">
-					<button title="home" class="btn-home active">
+					<button title="home" class="btn-home">
 						<svg>
 							<use href="images/icons.svg#home" />
 						</svg>
@@ -201,16 +201,17 @@
 						</svg>
 					</button>
 				</div>
+
 			</footer>
 		</div>
 	</div>
-
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/air-datepicker/air-datepicker.js"></script>
 	<script src="js/date-picker.mixin.js"></script>
 	<script src="js/script.js"></script>
+
 </body>
 
 </html>

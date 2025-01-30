@@ -1,0 +1,106 @@
+.wrap-task-history {
+  display: flex;
+  width: 361px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  .title {
+    color: $black-color;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Headline - 18 M */
+    font-family: $font-stack-popins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 144.444% */
+    margin-bottom: 0;
+  }
+  .duration-bagde {
+    color: $gray-7;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Caption1 - 12 R */
+    font-family: $font-stack-popins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.048px;
+    text-align: center;
+  }
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    .task-history {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      align-self: stretch;
+      .icon {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        &.import {
+          background-image: url(../images/icon-import.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: $pink-4;
+        }
+        &.export {
+          background-image: url(../images/icon-export.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: $green-3;
+        }
+      }
+      .text {
+        color: $black-color;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Footnote - 14 R */
+        font-family: $font-stack-popins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: 0.028px;
+      }
+      .user-score-container {
+        margin-left: auto;
+        .number {
+          color: $black-color;
+          font-feature-settings: 'liga' off, 'clig' off;
+          /* Body - 16 M */
+          font-family: $font-stack-popins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px; /* 150% */
+          letter-spacing: 0.032px;
+        }
+        .prizes {
+          .prize {
+            width: 14.652px;
+            height: 14.652px;
+            background-image: url(../images/icon-score.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}

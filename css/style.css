@@ -15835,6 +15835,11 @@ footer.show-context-menu-user .btn-user {
 }
 
 .wrap-task-progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
   padding: 16px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -15844,6 +15849,14 @@ footer.show-context-menu-user .btn-user {
   margin-right: 4px;
   margin-bottom: 4px;
   background: #d3bff9;
+}
+.wrap-task-progress-bar .wrap-progress-badge-score {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 .wrap-task-progress-bar .progress-badge {
   display: inline-flex;
@@ -15859,7 +15872,15 @@ footer.show-context-menu-user .btn-user {
   font-weight: 500;
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.028px;
-  margin-bottom: 12px;
+}
+.wrap-task-progress-bar .progress-badge.progress-badge-empty {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 9.36px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.2px;
 }
 .wrap-task-progress-bar .progress-badge .icon {
   width: 24px;
@@ -15870,6 +15891,14 @@ footer.show-context-menu-user .btn-user {
   width: 24px;
   height: 24px;
 }
+.wrap-task-progress-bar .wrap-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
 .wrap-task-progress-bar h2, .wrap-task-progress-bar .h2 {
   color: #000000;
   font-feature-settings: "liga" off, "clig" off;
@@ -15879,7 +15908,6 @@ footer.show-context-menu-user .btn-user {
   font-style: normal;
   font-weight: 600;
   line-height: 36px;
-  padding-top: 24px;
   margin: 0;
 }
 .wrap-task-progress-bar h2 span, .wrap-task-progress-bar .h2 span {
@@ -15896,10 +15924,11 @@ footer.show-context-menu-user .btn-user {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 144.444% */
-  margin-top: 10px;
+}
+.wrap-task-progress-bar p {
+  margin-bottom: 0;
 }
 .wrap-task-progress-bar .wrap-progress {
-  margin-top: 12px;
   flex-wrap: wrap;
 }
 .wrap-task-progress-bar .wrap-progress .text {
@@ -15918,8 +15947,48 @@ footer.show-context-menu-user .btn-user {
 .wrap-task-progress-bar .progress-badge + h2, .wrap-task-progress-bar .progress-badge + .h2 {
   padding-top: 0;
 }
-.wrap-task-progress-bar.detail .progress-badge {
-  margin-bottom: 60px;
+.wrap-task-progress-bar.detail {
+  gap: 60px;
+}
+.wrap-task-progress-bar.hide .wrap-text {
+  margin-top: 24px;
+}
+.wrap-task-progress-bar.width-score {
+  gap: 20px;
+  margin-bottom: 16px;
+}
+.wrap-task-progress-bar.width-score .wrap-text {
+  gap: 10px;
+}
+
+.user-score-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+.user-score-container .number {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* H1 - 32 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 125% */
+}
+.user-score-container .prizes .prize {
+  width: 28.012px;
+  height: 28.012px;
+  background-image: url(../images/icon-score.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .wrap-calendar.open .air-datepicker {
@@ -18058,6 +18127,111 @@ footer.show-context-menu-user .btn-user {
   opacity: 0;
 }
 
+.wrap-task-history {
+  display: flex;
+  width: 361px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.wrap-task-history .title {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  margin-bottom: 0;
+}
+.wrap-task-history .duration-bagde {
+  color: #9f9f9f;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Caption1 - 12 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.048px;
+  text-align: center;
+}
+.wrap-task-history .task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.wrap-task-history .task-list .task-history {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+.wrap-task-history .task-list .task-history .icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.wrap-task-history .task-list .task-history .icon.import {
+  background-image: url(../images/icon-import.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fad5f7;
+}
+.wrap-task-history .task-list .task-history .icon.export {
+  background-image: url(../images/icon-export.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #c9f8b1;
+}
+.wrap-task-history .task-list .task-history .text {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Footnote - 14 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.028px;
+}
+.wrap-task-history .task-list .task-history .user-score-container {
+  margin-left: auto;
+}
+.wrap-task-history .task-list .task-history .user-score-container .number {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
+.wrap-task-history .task-list .task-history .user-score-container .prizes .prize {
+  width: 14.652px;
+  height: 14.652px;
+  background-image: url(../images/icon-score.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .wrap-day-schedule-user {
   margin-left: 4px;
   margin-right: 4px;
@@ -19595,8 +19769,54 @@ footer.show-context-menu-user .btn-user {
   color: #7a7a7a;
 }
 
-.wrap-princess {
+.wrap-princess-2 {
   background: #ede7f7;
+  color: #000000;
+}
+.wrap-princess-2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+.wrap-princess-2 header {
+  background: #ede7f7;
+}
+.wrap-princess-2 header .wrap_logo a {
+  color: #000000;
+}
+.wrap-princess-2 header .user_badge .user_name {
+  color: #000000;
+}
+.wrap-princess-2 .datepicker-icon {
+  background-color: #d3bff9;
+}
+.wrap-princess-2 .wrap-calendar .switch_view_calendar {
+  background-color: #b38ff5;
+}
+.wrap-princess-2 .activity_info_container .text {
+  color: #000000;
+}
+.wrap-princess-2 .btn-list-area {
+  background-color: #d3bff9;
+}
+.wrap-princess-2 .btn-list-area:hover {
+  background-color: #d3bff9;
+}
+.wrap-princess-2 .btn-list-area.active, .wrap-princess-2 .btn-list-area:active, .wrap-princess-2 .btn-list-area:focus {
+  background: #d3bff9;
+  background-image: url(../images/list-icon-area.svg);
+}
+.wrap-princess-2 .wrap-day-schedule .title {
+  color: #000000;
+}
+.wrap-princess-2 .event .time {
+  color: #7a7a7a;
+}
+
+.wrap-princess {
+  background: #f5f3f9;
   color: #000000;
 }
 .wrap-princess::after {
@@ -19607,7 +19827,7 @@ footer.show-context-menu-user .btn-user {
   background-color: inherit;
 }
 .wrap-princess header {
-  background: #ede7f7;
+  background: #f5f3f9;
 }
 .wrap-princess header .wrap_logo a {
   color: #000000;
@@ -19615,8 +19835,17 @@ footer.show-context-menu-user .btn-user {
 .wrap-princess header .user_badge .user_name {
   color: #000000;
 }
+.wrap-princess .user-img {
+  background-color: #d9d9d9;
+}
+.wrap-princess .wrap-task-progress-bar {
+  background-color: #d3bff9;
+}
 .wrap-princess .datepicker-icon {
   background-color: #d3bff9;
+}
+.wrap-princess .wrap-calendar.open .air-datepicker {
+  background: #fff;
 }
 .wrap-princess .wrap-calendar .switch_view_calendar {
   background-color: #b38ff5;
