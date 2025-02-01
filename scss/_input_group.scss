@@ -15,8 +15,17 @@
 }
 .input-group {
   position: relative;
-  background-color: $black-color-5;
   border-radius: 12px !important;
+  &::before {
+    content: '';
+    background-color: $black-color-5;
+    height: 48px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px !important;
+  }
   .form-control {
     border-radius: 12px !important;
     padding-right: 40px;
@@ -37,6 +46,19 @@
       padding: 8px 12px 8px 8px;
       width: 40px;
     }
+  }
+}
+.input-group.input-group-password {
+  background-color: transparent;
+  .form-control {
+    background-color: $black-color-5;
+    z-index: 1;
+    &:focus {
+      z-index: 1;
+    }
+  }
+  .input-group-text {
+    z-index: 5;
   }
 }
 .input-group-reset {

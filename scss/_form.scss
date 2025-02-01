@@ -126,6 +126,31 @@ button,
     border: 1px solid $gray-15 !important;
   }
 }
+.btn-light-4 {
+  color: $white;
+  padding: 12px 16px;
+  @include border-radius(12px);
+  border: 1px solid $violet-10;
+  background: $violet-10;
+  &:hover {
+    color: $white;
+    border: 1px solid $violet-10;
+    background: $violet-10;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $white;
+    border: 1px solid $violet-10;
+    background: $violet-10;
+  }
+  &:disabled,
+  &.disabled {
+    color: $violet-15;
+    border: 1px solid $violet-16;
+    background: $violet-10;
+  }
+}
 .btn-outline-light {
   color: $gray-5;
   border-radius: 12px;
@@ -177,6 +202,25 @@ button,
     color: $white !important;
     background: $black-color-8 !important;
     border: 1px solid $black-color-8 !important;
+  }
+}
+.btn-black {
+  padding: 12px 16px;
+  @include border-radius(12px);
+  border: 1px solid $black-color;
+  background-color: $black-color;
+  color: $white;
+  &:hover {
+    color: $white;
+    background: $black-color;
+    border: 1px solid $black-color;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $white;
+    background-color: $black-color !important;
+    border: 1px solid $black-color !important;
   }
 }
 .btn-icon {
@@ -812,6 +856,20 @@ button,
     box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
   }
 }
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  background-position: right 12px center;
+}
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: $red-2;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+  box-shadow: 0px 0px 0px 4px #dc354580;
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -875,12 +933,14 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 input[type='password'],
-.form-control-password {
+.form-control-password,
+.form-control.form-control-password {
   & + .input-group-text {
     background-image: url(../images/icon-eye.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 12px) 15px;
     background-size: 20px 20px;
+    z-index: 5;
   }
   &:focus + .input-group-text {
     background-image: url(../images/icon-eye-white.svg);

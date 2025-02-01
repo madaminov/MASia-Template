@@ -46,6 +46,18 @@
         flex-direction: column;
         gap: 4px;
       }
+      .user-img-queen {
+        background-color: $primary-default;
+      }
+      .user-img-king {
+        background-color: $blue-10;
+      }
+      .user-img-princess {
+        background-color: $violet-12;
+      }
+      .user-img-prince {
+        background-color: $blue-9;
+      }
     }
     & + .schedule-user {
       margin-top: 4px;
@@ -120,4 +132,16 @@
   background: $primary-default;
   @include border-radius(8px);
   @include transition(0.3s);
+  &.queen {
+    background-color: $primary-default;
+  }
+  &.king {
+    background-color: $blue-10;
+  }
+  &.princess {
+    background-color: $violet-12;
+  }
+  &.prince {
+    background-color: $blue-13;
+  }
 }

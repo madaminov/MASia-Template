@@ -1,5 +1,5 @@
 .wrap-prince {
-  background: $blue-7;
+  background: $blue-12;
   color: $black-color;
   &::after {
     content: '';
@@ -9,7 +9,7 @@
     background-color: inherit;
   }
   header {
-    background: $blue-7;
+    background: $blue-12;
   }
   header .wrap_logo a {
     color: $black-color;
@@ -43,6 +43,15 @@
   }
   .event .time {
     color: $gray-13;
+  }
+  .user-img {
+    background-color: $blue-9;
+  }
+  .wrap-task-progress-bar {
+    background-color: $blue-13;
+  }
+  .wrap-task-history .task-list .task-history .icon.import {
+    background-color: $blue-14;
   }
 }
 

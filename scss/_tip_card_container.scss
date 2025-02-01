@@ -9,12 +9,17 @@
   z-index: 2;
   .container {
     font-family: $font-stack-popins;
-    padding: 20px 16px;
     width: 100%;
     min-height: 148px;
     @include border-radius(20px);
     background: $violet-5;
     position: relative;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 24px;
     &::after {
       content: '';
       width: 0;
@@ -45,16 +50,26 @@
     @include border-radius(22px);
     background: $white-3;
     backdrop-filter: blur(2.5px);
-    & + * {
-      margin-top: 24px;
-    }
   }
   h3 {
     color: $black-color;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
   }
   p {
     color: $black-color;
+    margin-bottom: 0px;
+  }
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+}
+.tip_card_container-light {
+  .container {
+    background-color: $white-4;
   }
 }
 .tip_card_container-static {
@@ -124,7 +139,6 @@
     padding: 20px 16px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-start;
     gap: 24px;
   }
@@ -151,9 +165,12 @@
 }
 @media (max-height: 600px) {
   .tip_card_container {
-    z-index: 4;
+    z-index: 3;
   }
   .wrap-calendar {
-    z-index: 5;
+    z-index: 4;
+  }
+  .wrap-calendar.open {
+    z-index: 4;
   }
 }

@@ -12827,6 +12827,32 @@ button.active, button:active, button:focus,
   border: 1px solid #d4d4d4 !important;
 }
 
+.btn-light-4 {
+  color: #fff;
+  padding: 12px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #a67cf3;
+  background: #a67cf3;
+}
+.btn-light-4:hover {
+  color: #fff;
+  border: 1px solid #a67cf3;
+  background: #a67cf3;
+}
+.btn-light-4.active, .btn-light-4:active, .btn-light-4:focus {
+  color: #fff;
+  border: 1px solid #a67cf3;
+  background: #a67cf3;
+}
+.btn-light-4:disabled, .btn-light-4.disabled {
+  color: #b694f5;
+  border: 1px solid #c6abf7;
+  background: #a67cf3;
+}
+
 .btn-outline-light {
   color: #ede3ff;
   border-radius: 12px;
@@ -12881,6 +12907,27 @@ button.active, button:active, button:focus,
   color: #fff !important;
   background: #3e3e3e !important;
   border: 1px solid #3e3e3e !important;
+}
+
+.btn-black {
+  padding: 12px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #fff;
+}
+.btn-black:hover {
+  color: #fff;
+  background: #000000;
+  border: 1px solid #000000;
+}
+.btn-black.active, .btn-black:active, .btn-black:focus {
+  color: #fff;
+  background-color: #000000 !important;
+  border: 1px solid #000000 !important;
 }
 
 .btn-icon {
@@ -13594,6 +13641,22 @@ button.active, button:active, button:focus,
   box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
 }
 
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  background-position: right 12px center;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+  box-shadow: 0px 0px 0px 4px rgba(220, 53, 69, 0.5019607843);
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -13662,14 +13725,17 @@ input[type=number] {
 }
 
 input[type=password] + .input-group-text,
-.form-control-password + .input-group-text {
+.form-control-password + .input-group-text,
+.form-control.form-control-password + .input-group-text {
   background-image: url(../images/icon-eye.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 12px) 15px;
   background-size: 20px 20px;
+  z-index: 5;
 }
 input[type=password]:focus + .input-group-text,
-.form-control-password:focus + .input-group-text {
+.form-control-password:focus + .input-group-text,
+.form-control.form-control-password:focus + .input-group-text {
   background-image: url(../images/icon-eye-white.svg);
 }
 
@@ -14104,7 +14170,16 @@ input[type=password]:focus + .input-group-text,
 
 .input-group {
   position: relative;
+  border-radius: 12px !important;
+}
+.input-group::before {
+  content: "";
   background-color: #363636;
+  height: 48px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 12px !important;
 }
 .input-group .form-control {
@@ -14127,6 +14202,20 @@ input[type=password]:focus + .input-group-text,
   border-radius: 0px 12px 12px 0px;
   padding: 8px 12px 8px 8px;
   width: 40px;
+}
+
+.input-group.input-group-password {
+  background-color: transparent;
+}
+.input-group.input-group-password .form-control {
+  background-color: #363636;
+  z-index: 1;
+}
+.input-group.input-group-password .form-control:focus {
+  z-index: 1;
+}
+.input-group.input-group-password .input-group-text {
+  z-index: 5;
 }
 
 .input-group-reset .form-control {
@@ -14263,7 +14352,7 @@ input[type=password]:focus + .input-group-text,
 .form-log-in .form-control.is-valid {
   border-color: transparent;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-image: url(../images/icon-valid.svg);
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 18px 18px;
@@ -14281,11 +14370,11 @@ input[type=password]:focus + .input-group-text,
 .form-log-in .form-control.is-invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23F75757' stroke='none'/%3e%3c/svg%3e");
+  background-image: url(../images/icon-error.svg);
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 18px 18px;
-  box-shadow: 0px 0px 0px 2px #dc3545;
+  box-shadow: 0px 0px 0px 4px rgba(220, 53, 69, 0.5019607843);
 }
 .form-create-an-account.was-validated .form-control-date:invalid,
 .form-create-an-account .form-control-date.is-invalid,
@@ -15858,6 +15947,43 @@ footer.show-context-menu-user .btn-user {
   align-items: center;
   align-self: stretch;
 }
+.wrap-task-progress-bar .wrap-progress-badge-score .title {
+  color: #292d32;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 24px */
+}
+.wrap-task-progress-bar .wrap-progress-badge-score .title span {
+  font-weight: 500;
+}
+.wrap-task-progress-bar .amount {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.wrap-task-progress-bar .amount .form-control {
+  color: #000000;
+  border-radius: 12px;
+  background-color: #f5f3f9;
+  border: 1px solid transparent;
+}
+.wrap-task-progress-bar .amount .form-control::placeholder {
+  color: #9f9f9f;
+  opacity: 1;
+}
+.wrap-task-progress-bar .amount .form-control:focus {
+  color: #000000;
+  background-color: #f5f3f9;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
+}
+.wrap-task-progress-bar .amount .form-control.is-invalid {
+  box-shadow: 0px 0px 0px 4px rgba(220, 53, 69, 0.5019607843);
+}
 .wrap-task-progress-bar .progress-badge {
   display: inline-flex;
   padding: 8px 12px;
@@ -15899,6 +16025,15 @@ footer.show-context-menu-user .btn-user {
   gap: 8px;
   align-self: stretch;
 }
+.wrap-task-progress-bar .wrap-text p {
+  color: #292d32;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 16px */
+  margin-bottom: 0;
+}
 .wrap-task-progress-bar h2, .wrap-task-progress-bar .h2 {
   color: #000000;
   font-feature-settings: "liga" off, "clig" off;
@@ -15913,7 +16048,7 @@ footer.show-context-menu-user .btn-user {
 .wrap-task-progress-bar h2 span, .wrap-task-progress-bar .h2 span {
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 36px;
 }
 .wrap-task-progress-bar .description {
@@ -18294,6 +18429,18 @@ footer.show-context-menu-user .btn-user {
   flex-direction: column;
   gap: 4px;
 }
+.wrap-day-schedule-user .schedule-user .user .user-img-queen {
+  background-color: #d3bff9;
+}
+.wrap-day-schedule-user .schedule-user .user .user-img-king {
+  background-color: #b4c1e9;
+}
+.wrap-day-schedule-user .schedule-user .user .user-img-princess {
+  background-color: #ddd2f4;
+}
+.wrap-day-schedule-user .schedule-user .user .user-img-prince {
+  background-color: #d4e6fc;
+}
 .wrap-day-schedule-user .schedule-user + .schedule-user {
   margin-top: 4px;
 }
@@ -18380,6 +18527,154 @@ footer.show-context-menu-user .btn-user {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.role.queen {
+  background-color: #d3bff9;
+}
+.role.king {
+  background-color: #b4c1e9;
+}
+.role.princess {
+  background-color: #ddd2f4;
+}
+.role.prince {
+  background-color: #c1dbfb;
+}
+
+.accounts-lists {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+.family-members-section {
+  display: flex;
+  width: 385px;
+  padding: 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  background: #fff;
+  width: 100%;
+}
+.family-members-section .user-daily-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+.family-members-section .user-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.family-members-section .user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #d3bff9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.family-members-section .user-avatar.user-avatar-queen {
+  background-color: #d3bff9;
+}
+.family-members-section .user-avatar.user-avatar-king {
+  background-color: #b4c1e9;
+}
+.family-members-section .user-avatar.user-avatar-princess {
+  background-color: #ddd2f4;
+}
+.family-members-section .user-avatar.user-avatar-prince {
+  background-color: #d4e6fc;
+}
+.family-members-section .personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.family-members-section .personal-info .name {
+  align-self: stretch;
+  color: #292d32;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+}
+.family-members-section .personal-info .user-role {
+  color: #212529;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Caption1 - 12 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.048px;
+  display: flex;
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #d3bff9;
+}
+.family-members-section .personal-info .user-role.user-role-queen {
+  background-color: #d3bff9;
+}
+.family-members-section .personal-info .user-role.user-role-king {
+  background-color: #b4c1e9;
+}
+.family-members-section .personal-info .user-role.user-role-princess {
+  background-color: #d3bff9;
+}
+.family-members-section .personal-info .user-role.user-role-prince {
+  background-color: #d4e6fc;
+}
+.family-members-section .user-score-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+.family-members-section .user-score-container .score {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+}
+.family-members-section .user-score-container .income-container {
+  width: 20.645px;
+  height: 20.645px;
+  background-image: url(../images/icon-score.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.family-members-section .btn-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
+  background-image: url(../images/icon-arrow-right.svg);
+  border: none;
+}
 
 .tip_card_container {
   position: fixed;
@@ -18393,7 +18688,6 @@ footer.show-context-menu-user .btn-user {
 }
 .tip_card_container .container {
   font-family: "Poppins", sans-serif;
-  padding: 20px 16px;
   width: 100%;
   min-height: 148px;
   -webkit-border-radius: 20px;
@@ -18402,6 +18696,12 @@ footer.show-context-menu-user .btn-user {
   border-radius: 20px;
   background: #e4c8e6;
   position: relative;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 24px;
 }
 .tip_card_container .container::after {
   content: "";
@@ -18436,15 +18736,24 @@ footer.show-context-menu-user .btn-user {
   background: #fbfafd;
   backdrop-filter: blur(2.5px);
 }
-.tip_card_container .tip_card_badge + * {
-  margin-top: 24px;
-}
 .tip_card_container h3, .tip_card_container .h3 {
   color: #000000;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 .tip_card_container p {
   color: #000000;
+  margin-bottom: 0px;
+}
+.tip_card_container .text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.tip_card_container-light .container {
+  background-color: #f2ecfd;
 }
 
 .tip_card_container-static {
@@ -18513,7 +18822,6 @@ footer.show-context-menu-user .btn-user {
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: flex-start;
   gap: 24px;
 }
@@ -18539,10 +18847,13 @@ footer.show-context-menu-user .btn-user {
 
 @media (max-height: 600px) {
   .tip_card_container {
-    z-index: 4;
+    z-index: 3;
   }
   .wrap-calendar {
-    z-index: 5;
+    z-index: 4;
+  }
+  .wrap-calendar.open {
+    z-index: 4;
   }
 }
 .activity_info_container {
@@ -19724,7 +20035,7 @@ footer.show-context-menu-user .btn-user {
 }
 
 .wrap-prince {
-  background: #deecfd;
+  background: #f3f6f9;
   color: #000000;
 }
 .wrap-prince::after {
@@ -19735,7 +20046,7 @@ footer.show-context-menu-user .btn-user {
   background-color: inherit;
 }
 .wrap-prince header {
-  background: #deecfd;
+  background: #f3f6f9;
 }
 .wrap-prince header .wrap_logo a {
   color: #000000;
@@ -19767,6 +20078,15 @@ footer.show-context-menu-user .btn-user {
 }
 .wrap-prince .event .time {
   color: #7a7a7a;
+}
+.wrap-prince .user-img {
+  background-color: #d4e6fc;
+}
+.wrap-prince .wrap-task-progress-bar {
+  background-color: #c1dbfb;
+}
+.wrap-prince .wrap-task-history .task-list .task-history .icon.import {
+  background-color: #d4e8ff;
 }
 
 .wrap-princess-2 {

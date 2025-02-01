@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+
+
+
+			<!--modal-->
+			<div class="modal fullModal pb-16 fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header justify-content-start bg-liner-3">
+							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+							<h2 class="modal-title" id="fullModalLabel">Kid`s Rewards</h2>
+						</div>
+						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
+							<div class="accounts-lists">
+								<!--tip_card_container-->
+								<div
+									class="tip_card_container tip_card_container-light tip_card_container-static tip_card_container-icon">
+									<div class="container">
+										<div class="header">
+											<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
+											<div class="icon">
+												<svg>
+													<use href="images/icon-question.svg#question" />
+												</svg>
+											</div>
+										</div>
+										<div class="text-block">
+											<h3>Inspire with Emeralds</h3>
+											<p>Manage rewards by assigning tasks and deducting emeralds for their
+												achievements. </p>
+										</div>
+
+									</div>
+								</div>
+								<!--tip_card_container end-->
+								<!--family-members-section-->
+								<div class="family-members-section">
+									<div class="user-daily-info">
+										<div class="user-badge">
+											<div class="user-avatar user-avatar-princess"
+												style="background-image: url(images/princess.png) ;"></div>
+											<div class="personal-info">
+												<div class="name">Sara</div>
+												<div class="user-role user-role-princess">Princess</div>
+											</div>
+										</div>
+										<div class="user-score-container">
+											<div class="score">6</div>
+											<div class="income-container"></div>
+										</div>
+									</div>
+									<button class="btn-icon"></button>
+								</div>
+								<!--family-members-section end-->
+								<!--family-members-section-->
+								<div class="family-members-section">
+									<div class="user-daily-info">
+										<div class="user-badge">
+											<div class="user-avatar user-avatar-prince"
+												style="background-image: url(images/prince.png) ;"></div>
+											<div class="personal-info">
+												<div class="name">Tom</div>
+												<div class="user-role user-role-prince">Prince</div>
+											</div>
+										</div>
+										<div class="user-score-container">
+											<div class="score">3</div>
+											<div class="income-container"></div>
+										</div>
+									</div>
+									<button class="btn-icon"></button>
+								</div>
+								<!--family-members-section end-->
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-picker.mixin.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/input.js"></script>
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+	</script>
+</body>
+
+</html>

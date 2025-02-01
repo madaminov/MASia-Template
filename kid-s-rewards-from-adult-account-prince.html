@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div class="wrapper-main wrap-princess">
+	<div class="wrapper-main wrap-prince">
 		<div id="root" class="wrapper">
 			<header>
 				<div class="container-fluid d-flex align-items-center justify-content-between">
@@ -19,23 +19,17 @@
 					</div>
 					<div class="user_badge d-flex align-items-center">
 						<div class="user-info">
-							<div class="user_name text-end">Sara</div>
-							<div class="user_role">Princess</div>
+							<div class="user_name text-end">Tom</div>
+							<div class="user_role">Prince</div>
 						</div>
-						<button class="user-img" style="background-image: url(images/princess.png) ;"></button>
+						<button class="user-img" style="background-image: url(images/prince.png) ;"></button>
 					</div>
 				</div>
 			</header>
 			<!--calendar-->
 			<div class="wrap-task-progress-bar width-score">
 				<div class="wrap-progress-badge-score">
-					<div class="progress-badge progress-badge-empty">
-						<div class="icon">
-							<svg>
-								<use href="images/icons.svg#progress" />
-							</svg>
-						</div>
-					</div>
+					<div class="title">Total <span>income</span></div>
 					<div class="user-score-container">
 						<div class="number">6</div>
 						<div class="prizes">
@@ -43,9 +37,14 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="wrap-text">
-					<p>Your income</p>
-					<h2>My Princess,<br /> <span>your well-earned Emeralds!</span></h2>
+					<div class="amount">
+						<input type="text" class="form-control" placeholder="Type amount">
+						<button class="btn btn-black">Deduct</button>
+					</div>
+					<p>Please enter the exact amount of crystals you wish to subtract from the child’s earned balance.
+					</p>
 				</div>
 
 			</div>
