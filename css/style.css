@@ -16048,8 +16048,11 @@ footer.show-context-menu-user .btn-user {
 .wrap-task-progress-bar h2 span, .wrap-task-progress-bar .h2 span {
   font-size: 28px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 36px;
+}
+.wrap-task-progress-bar h2 .span-2, .wrap-task-progress-bar .h2 .span-2 {
+  font-weight: 500;
 }
 .wrap-task-progress-bar .description {
   color: #000000;
@@ -18739,10 +18742,12 @@ footer.show-context-menu-user .btn-user {
 .tip_card_container h3, .tip_card_container .h3 {
   color: #000000;
   margin-bottom: 0px;
+  width: 100%;
 }
 .tip_card_container p {
   color: #000000;
   margin-bottom: 0px;
+  width: 100%;
 }
 .tip_card_container .text-block {
   display: flex;
@@ -18750,6 +18755,9 @@ footer.show-context-menu-user .btn-user {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
+}
+.tip_card_container .interface-elements {
+  width: 100%;
 }
 
 .tip_card_container-light .container {
@@ -18843,6 +18851,68 @@ footer.show-context-menu-user .btn-user {
   background: #fbfafd;
   backdrop-filter: blur(2.5px);
   margin: 0;
+}
+
+.tip_card_container-pointer {
+  z-index: 4;
+}
+.tip_card_container-pointer::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 83px);
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.tip_card_container-pointer .container {
+  position: relative;
+  z-index: 6;
+  background-color: #fff;
+}
+.tip_card_container-pointer .container::after {
+  content: "";
+  border-top: 11px solid #fff;
+}
+.tip_card_container-pointer .emeralds {
+  width: 136.277px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.tip_card_container-pointer .emeralds .emerald {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon-score.svg);
+  background-size: contain;
+  position: relative;
+}
+.tip_card_container-pointer .emeralds .emerald:first-child {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-15.068deg);
+  z-index: 2;
+  left: 25px;
+  top: 0px;
+}
+.tip_card_container-pointer .emeralds .emerald:nth-child(2) {
+  width: 71px;
+  height: 71px;
+  z-index: 1;
+}
+.tip_card_container-pointer .emeralds .emerald:last-child {
+  width: 50px;
+  height: 50px;
+  transform: rotate(15.068deg);
+  z-index: 2;
+  right: 25px;
+  top: 0px;
+}
+.tip_card_container-pointer h3, .tip_card_container-pointer .h3 {
+  font-weight: 500;
 }
 
 @media (max-height: 600px) {
