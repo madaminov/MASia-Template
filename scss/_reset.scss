@@ -1,3 +1,9 @@
+* {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Стандартный синтаксис */
+}
 html {
   min-height: 100dvh;
   background-color: $body-color;
@@ -111,6 +117,14 @@ select:focus {
     180deg,
     #c9e6dd 57.32%,
     #88c8b4 181.25%
+  ) !important;
+}
+
+.bg-liner-6 {
+  background: linear-gradient(
+    180deg,
+    #ede3ff 44.8%,
+    #cbb3f7 141.67%
   ) !important;
 }
 

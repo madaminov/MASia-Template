@@ -227,7 +227,7 @@
   .item-width-full {
     flex: 1 0 0%;
     max-width: 320px;
-    min-width: 160px;
+    /*min-width: 160px;*/
   }
 }
 .members-list-reviewer {
@@ -241,6 +241,11 @@
     }
   }
   .dropdown {
+    height: 46px;
+    min-width: 46px;
+    flex: 1 0 0%;
+  }
+  .dropdown-custom {
     height: 46px;
     min-width: 46px;
     flex: 1 0 0%;

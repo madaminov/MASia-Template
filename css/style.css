@@ -11850,6 +11850,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Стандартный синтаксис */
+}
+
 html {
   min-height: 100dvh;
   background-color: #1e1e1e;
@@ -11951,6 +11958,10 @@ select:focus {
 
 .bg-liner-5 {
   background: linear-gradient(180deg, #c9e6dd 57.32%, #88c8b4 181.25%) !important;
+}
+
+.bg-liner-6 {
+  background: linear-gradient(180deg, #ede3ff 44.8%, #cbb3f7 141.67%) !important;
 }
 
 /* background. */
@@ -12797,13 +12808,18 @@ button.active, button:active, button:focus,
 }
 .btn-light-2:hover {
   color: #000 !important;
-  background: #f6f6f6 !important;
-  border: 1px solid #f6f6f6 !important;
+  background: #b38ff5 !important;
+  border: 1px solid #b38ff5 !important;
 }
 .btn-light-2.active, .btn-light-2:active, .btn-light-2:focus {
   color: #000 !important;
-  background: #f6f6f6 !important;
-  border: 1px solid #f6f6f6 !important;
+  background: #a073f2 !important;
+  border: 1px solid #a073f2 !important;
+}
+.btn-light-2:disabled, .btn-light-2.disabled {
+  color: #757575 !important;
+  background: #3e3e3e !important;
+  border: 1px solid #3e3e3e !important;
 }
 
 .btn-light-3 {
@@ -12962,6 +12978,92 @@ button.active, button:active, button:focus,
   fill: #fff;
 }
 
+.btn-share {
+  color: #fff;
+  display: flex;
+  height: 40px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: #a67cf3;
+  border-radius: 8px;
+}
+.btn-share svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: none;
+  width: 16px;
+  height: 16px;
+}
+.btn-share:hover {
+  color: #fff;
+  background: #b38ff5;
+}
+.btn-share:hover svg {
+  fill: none;
+}
+.btn-share.active, .btn-share:active, .btn-share:focus {
+  color: #fff;
+  background: #a073f2;
+}
+.btn-share.active svg, .btn-share:active svg, .btn-share:focus svg {
+  fill: none;
+}
+.btn-share:disabled {
+  color: #fff;
+  background: #3e3e3e;
+}
+.btn-share:disabled svg {
+  fill: none;
+}
+
+.btn-copy {
+  color: #fff;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: #a67cf3;
+  border-radius: 12px;
+}
+.btn-copy svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: none;
+  width: 16px;
+  height: 16px;
+}
+.btn-copy:hover {
+  color: #fff;
+  background: #b38ff5;
+}
+.btn-copy:hover svg {
+  fill: none;
+}
+.btn-copy.active, .btn-copy:active, .btn-copy:focus {
+  color: #fff;
+  background: #a073f2;
+}
+.btn-copy.active svg, .btn-copy:active svg, .btn-copy:focus svg {
+  fill: none;
+}
+.btn-copy:disabled {
+  color: #fff;
+  background: #3e3e3e;
+}
+.btn-copy:disabled svg {
+  fill: none;
+}
+
 .btn-svg {
   display: flex;
   align-items: center;
@@ -13090,8 +13192,9 @@ button.active, button:active, button:focus,
   background: #bc9df6;
   box-shadow: 0px 4px 4px 0px #dddcff inset;
 }
-.btn-add:active, .btn-add:focus {
-  background: #f6f6f6;
+.btn-add:active {
+  background: #a073f2;
+  box-shadow: 0px 4px 4px 0px #c0a2f6 inset;
 }
 
 .btn-add-plus {
@@ -15502,10 +15605,10 @@ h6,
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 1057;
+  z-index: -1057;
   top: 72px;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   visibility: hidden;
   transition: all 0.1s ease;
 }
@@ -15518,6 +15621,13 @@ h6,
   opacity: 1;
   visibility: visible;
   transition: all 0.1s ease;
+}
+.wrap-tags-task-detail .toggleClose::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -72px;
 }
 .wrap-tags-task-detail.show {
   position: relative;
@@ -15719,6 +15829,16 @@ h6,
 .dropdown-list-reviewer {
   width: calc(100vw - 32px);
   max-width: 736px;
+  transform: translate3d(0px, 53.6px, 0px) !important;
+  inset: 0px 0px auto auto !important;
+}
+
+.dropdown-tag-menu {
+  width: auto;
+  min-width: 177px;
+}
+.dropdown-tag-menu .dropdown-item {
+  padding: 12px 12px 12px 12px;
 }
 
 .collapse {
@@ -15844,6 +15964,14 @@ header .user_badge .user_name {
   font-weight: 500;
   line-height: 26px; /* 144.444% */
   margin-bottom: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 480px) {
+  header .user_badge .user_name {
+    max-width: 170px;
+  }
 }
 header .user_badge .user_role {
   color: #212529;
@@ -18692,7 +18820,7 @@ footer.show-context-menu-user .btn-user {
 .tip_card_container .container {
   font-family: "Poppins", sans-serif;
   width: 100%;
-  min-height: 148px;
+  min-height: 100px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -18832,6 +18960,7 @@ footer.show-context-menu-user .btn-user {
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  justify-content: flex-start;
 }
 .tip_card_container-icon .header {
   display: flex;
@@ -19212,7 +19341,7 @@ footer.show-context-menu-user .btn-user {
 .members-list .item-width-full {
   flex: 1 0 0%;
   max-width: 320px;
-  min-width: 160px;
+  /*min-width: 160px;*/
 }
 
 .members-list-reviewer .item-flex-9 {
@@ -19225,6 +19354,11 @@ footer.show-context-menu-user .btn-user {
   }
 }
 .members-list-reviewer .dropdown {
+  height: 46px;
+  min-width: 46px;
+  flex: 1 0 0%;
+}
+.members-list-reviewer .dropdown-custom {
   height: 46px;
   min-width: 46px;
   flex: 1 0 0%;
@@ -19945,6 +20079,36 @@ footer.show-context-menu-user .btn-user {
 .family-list .user .user-role.queen {
   background-color: #fff;
 }
+.family-list .item-user-queen .user img {
+  background-color: #d3bff9;
+}
+.family-list .item-user-queen .user .user-role {
+  background-color: #d3bff9;
+}
+.family-list .item-user-king .user img {
+  background-color: #b4c1e9;
+}
+.family-list .item-user-king .user .user-role {
+  background-color: #b4c1e9;
+}
+.family-list .item-user-princess .user img {
+  background-color: #ddd2f4;
+}
+.family-list .item-user-princess .user .user-role {
+  background-color: #d3bff9;
+}
+.family-list .item-user-prince .user img {
+  background-color: #d4e6fc;
+}
+.family-list .item-user-prince .user .user-role {
+  background-color: #c1dbfb;
+}
+.family-list .item-user-other .user img {
+  background-color: #c9e6dd;
+}
+.family-list .item-user-other .user .user-role {
+  background-color: #c9e6dd;
+}
 
 .tooltip.show {
   opacity: 1;
@@ -20102,6 +20266,170 @@ footer.show-context-menu-user .btn-user {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.add-members {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 16px 16px 32px 16px;
+  background-color: #dccdfa;
+  position: relative;
+}
+.add-members::before {
+  content: "";
+  background: linear-gradient(135deg, rgb(225, 208, 254) 0%, rgba(193, 188, 255, 0.99) 4%, rgba(255, 217, 221, 0.96) 23%, rgba(193, 188, 255, 0.92) 45%, rgba(255, 217, 221, 0.88) 67%, rgba(222, 181, 255, 0.85) 89%, rgba(193, 115, 255, 0.83) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.add-members .nav-add-members {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.add-members .nav-add-members .nav-link {
+  color: #fff;
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  display: flex;
+  height: 50px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  width: 100%;
+  border-radius: 12px;
+}
+.add-members .nav-add-members .btn-qr-code {
+  color: #fff;
+  background: #a67cf3;
+  width: 100%;
+  height: 50px;
+  padding: 12px 16px;
+}
+.add-members .nav-add-members .btn-qr-code:hover {
+  color: #fff;
+  background: #a073f2;
+}
+.add-members .nav-add-members .btn-qr-manually {
+  color: #fff;
+  background: #1e1e1e;
+  width: 100%;
+  height: 50px;
+  padding: 12px 16px;
+}
+.add-members .nav-add-members .btn-qr-manually:hover {
+  color: #fff;
+  background: #111011;
+}
+.add-members .nav-add-members .btn-qr-manually:active {
+  color: #fff;
+  background: #181618;
+}
+.add-members .tab-add-members {
+  width: 100%;
+  padding: 40px 0px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+}
+.add-members .tab-add-members h3, .add-members .tab-add-members .h3 {
+  color: #000000;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* H3 - 24 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 133.333% */
+  padding: 0px 20px;
+}
+.add-members .tab-add-members .wrap-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.add-members .tab-add-members .wrap-content .hr {
+  overflow: hidden;
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  text-overflow: ellipsis;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  width: 100%;
+}
+.add-members .tab-add-members .wrap-content .hr::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+.add-members .tab-add-members .wrap-content .hr::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+.add-members .tab-add-members .wrap-content .wrap-input-link {
+  display: flex;
+  height: 48px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  width: 100%;
+}
+.add-members .tab-add-members .wrap-content .wrap-input-link .form-control {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  background: #fff;
+}
+.add-members .tab-add-members .content {
+  display: flex;
+  height: 245px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .wrap-prince {

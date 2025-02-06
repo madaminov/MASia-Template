@@ -362,5 +362,54 @@
       }
     }
   }
+  .item-user-queen {
+    .user {
+      img {
+        background-color: $primary-default;
+      }
+      .user-role {
+        background-color: $primary-default;
+      }
+    }
+  }
+  .item-user-king {
+    .user {
+      img {
+        background-color: $blue-10;
+      }
+      .user-role {
+        background-color: $blue-10;
+      }
+    }
+  }
+  .item-user-princess {
+    .user {
+      img {
+        background-color: $violet-12;
+      }
+      .user-role {
+        background-color: $primary-default;
+      }
+    }
+  }
+  .item-user-prince {
+    .user {
+      img {
+        background-color: $blue-9;
+      }
+      .user-role {
+        background-color: $blue-13;
+      }
+    }
+  }
+  .item-user-other {
+    .user {
+      img {
+        background-color: $green-2;
+      }
+      .user-role {
+        background-color: $green-2;
+      }
+    }
+  }
 }
-
