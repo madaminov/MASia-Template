@@ -57,48 +57,43 @@
 				</div>
 			</footer>
 			<!--modal-->
-			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+			<div class="modal fullScreenModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
 				aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<div class="modal-header justify-content-start bg-liner-6">
+						<div class="modal-header justify-content-start bg-liner-3">
 							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
 								aria-label="Close"></button>
-							<h2 class="modal-title" id="fullModalLabel">Add Members</h2>
+							<h2 class="modal-title" id="fullModalLabel">Integrations</h2>
 						</div>
 						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
-
-							<div class="add-members add-members-qr-code">
-								<div class="nav-add-members">
-									<button class="btn btn-qr-code">QR-Code</button>
-									<button class="btn btn-qr-manually">Manually</button>
-								</div>
-								<div class="tab-add-members">
-									<div class="wrap-content">
-										<h3>Scan the QR code to join your Mas.Ai Family!</h3>
-										<div class="content">
-											<img src="images/qr-code.svg" class="img-fluid" />
-											<button class="btn btn-share">
-												<svg>
-													<use href="images/icon-share.svg#share" />
-												</svg>
-												Share
-											</button>
-										</div>
-										<div class="hr">or</div>
-										<div class="wrap-input-link">
-											<input type="text" value="https://t.me/mas_ai_channel_12345"
-												class="form-control" readonly>
-											<button class="btn btn-copy">
-												<svg>
-													<use href="images/icon-copy-white.svg#copy" />
-												</svg>
-											</button>
-										</div>
+							<div class="integrations">
+								<div class="section-inner">
+									<div class="form-check form-switch form-check-reverse">
+										<input class="form-check-input" type="checkbox" role="switch"
+											id="flexSwitchGoogleCalendar">
+										<label class="form-check-label" for="flexSwitchGoogleCalendar">
+											<img src="images/icon-google-calendar.png" class="img-fluid" />Google
+											Calendar</label>
 									</div>
-
+									<div class="form-check form-switch form-check-reverse">
+										<input class="form-check-input" type="checkbox" role="switch"
+											id="flexSwitchAppleCalendar">
+										<label class="form-check-label" for="flexSwitchAppleCalendar">
+											<img src="images/icon-apple-calendar.png" class="img-fluid" />Apple
+											Calendar</label>
+									</div>
+									<div class="form-check form-switch form-check-reverse">
+										<input class="form-check-input" type="checkbox" role="switch"
+											id="flexSwitchOutlookCalendar">
+										<label class="form-check-label" for="flexSwitchOutlookCalendar">
+											<img src="images/icon-outlook-calendar.png" class="img-fluid" />Outlook
+											Calendar</label>
+									</div>
 								</div>
+
 							</div>
+
 						</div>
 					</div>
 
@@ -112,7 +107,7 @@
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/air-datepicker/air-datepicker.js"></script>
-	<script src="js/date-picker.mixin.js"></script>
+	<script src="js/date-input.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/input.js"></script>
 	<script>
@@ -120,6 +115,11 @@
 		document.onreadystatechange = function () {
 			fullModal.show();
 		};
+		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+
 
 	</script>
 </body>

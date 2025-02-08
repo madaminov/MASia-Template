@@ -181,3 +181,9 @@
     z-index: 1;
   }
 }
+.fullScreenModal {
+  height: 100dvb;
+  padding-bottom: 0;
+  background-color: $body-color;
+  z-index: 1058;
+}

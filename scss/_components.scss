@@ -8,11 +8,12 @@
   width: 100%;
   padding: 16px;
   flex-direction: column;
+  gap: 16px;
   color: $black-color;
   background-color: $white;
   @include border-radius(12px);
   .header {
-    margin-bottom: 16px;
+    margin-bottom: 0px;
   }
   h3 {
     color: $black-color;
@@ -40,13 +41,13 @@
   .group {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 12px;
     flex-direction: column;
     width: 100%;
   }
   .form-group {
     .form-label {
-      color: $black-color;
+      color: $gray-28;
       font-feature-settings: 'liga' off, 'clig' off;
       text-overflow: ellipsis;
       /* Caption1 - 12 R */
@@ -63,7 +64,17 @@
     }
   }
   .row-btn-group {
-    margin-top: 12px;
+    margin-top: -4px;
+  }
+  .form-group-check {
+    .form-check {
+      min-width: auto;
+      min-height: auto;
+      margin: 0;
+      label {
+        min-width: auto;
+      }
+    }
   }
   .duration-group-timer {
     padding-top: 20px;
@@ -247,12 +258,33 @@
       opacity: 0;
       visibility: hidden;
       transform: scaleY(0.1);
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       &.current,
       &.active {
         opacity: 1;
         visibility: visible;
         transform: scaleY(1);
+      }
+      &.empty {
+        color: $gray-17;
+        text-align: center;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Footnote - 14 M */
+        font-family: $font-stack-popins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+        letter-spacing: 0.028px;
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+        transition: none;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
       }
     }
   }

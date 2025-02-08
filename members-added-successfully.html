@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
+					</div>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+					</div>
+				</div>
+			</header>
+			<!--tip_card_container-->
+			<div class="tip_card_container tip_card_container-successfully">
+				<div class="container">
+					<div class="family-list">
+						<div class="item-user item-user-prince">
+							<div class="user">
+								<img src="images/prince.png" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="text-block text-center">
+						<h3>New account created
+							for Prince Tom!</h3>
+						<p>You’ve added a new family member!
+							To share their login details for MAS.AI,
+							press Share.</p>
+					</div>
+					<div class="interface-elements">
+						<button class="btn btn-close">Close</button>
+						<button class="btn btn-share">Share</button>
+					</div>
+				</div>
+			</div>
+			<!--tip_card_container end-->
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+			</footer>
+			<!--modal-->
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-liner">
+							<h2 class="modal-title" id="fullModalLabel">Members</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<div class="title-section w-100">
+								<div class="title-2">You have 5 Family members</div>
+								<button class="btn-add-plus btn-add-plus-2">
+									<svg>
+										<use href="images/icons.svg#plus"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="family-list">
+								<div class="item-user item-user-queen">
+									<div class="user">
+										<img src="images/queen.png" alt="" class="img-fluid">
+										<div>
+											<div class="name">Ann</div>
+											<div class="user-role">Queen</div>
+										</div>
+									</div>
+									<div class="tools">
+										<button class="btn-edit">
+											<svg>
+												<use href="images/icon-pencil-20-20.svg#pencil" />
+											</svg>
+										</button>
+										<button class="btn-delete">
+											<svg>
+												<use href="images/icon-delete-20-20.svg#delete"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="item-user item-user-king">
+									<div class="user">
+										<img src="images/king.png" alt="" class="img-fluid">
+										<div>
+											<div class="name">Robby</div>
+											<div class="user-role">King</div>
+										</div>
+									</div>
+									<div class="tools">
+										<button class="btn-edit">
+											<svg>
+												<use href="images/icon-pencil-20-20.svg#pencil" />
+											</svg>
+										</button>
+										<button class="btn-delete">
+											<svg>
+												<use href="images/icon-delete-20-20.svg#delete"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="item-user item-user-princess">
+									<div class="user">
+										<img src="images/princess.png" alt="" class="img-fluid">
+										<div>
+											<div class="name">Sara</div>
+											<div class="user-role">Princess</div>
+										</div>
+									</div>
+									<div class="tools">
+										<button class="btn-edit">
+											<svg>
+												<use href="images/icon-pencil-20-20.svg#pencil" />
+											</svg>
+										</button>
+										<button class="btn-delete">
+											<svg>
+												<use href="images/icon-delete-20-20.svg#delete"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="item-user item-user-prince">
+									<div class="user">
+										<img src="images/prince.png" alt="" class="img-fluid">
+										<div>
+											<div class="name">Tom</div>
+											<div class="user-role">Prince</div>
+										</div>
+									</div>
+									<div class="tools">
+										<button class="btn-edit">
+											<svg>
+												<use href="images/icon-pencil-20-20.svg#pencil" />
+											</svg>
+										</button>
+										<button class="btn-delete">
+											<svg>
+												<use href="images/icon-delete-20-20.svg#delete"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<div class="item-user item-user-other">
+									<div class="user">
+										<img src="images/other.png" alt="" class="img-fluid">
+										<div>
+											<div class="name">Mira</div>
+											<div class="user-role">Granny</div>
+										</div>
+									</div>
+									<div class="tools">
+										<button class="btn-edit">
+											<svg>
+												<use href="images/icon-pencil-20-20.svg#pencil" />
+											</svg>
+										</button>
+										<button class="btn-delete">
+											<svg>
+												<use href="images/icon-delete-20-20.svg#delete"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-picker.mixin.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+		document.querySelectorAll('.family-list .user').forEach(box => {
+			box.addEventListener('click', function (event) {
+				if (box.parentElement.classList.contains("show-tools")) {
+					box.parentElement.classList.remove("show-tools")
+				} else {
+					box.parentElement.classList.add("show-tools")
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>

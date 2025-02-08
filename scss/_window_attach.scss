@@ -225,8 +225,9 @@
     }
   }
   .item-width-full {
-    flex: 1 0 0%;
-    max-width: 320px;
+    /*flex: 1 0 0%;*/
+    flex: 1 0 auto;
+    /*max-width: 320px;*/
     /*min-width: 160px;*/
   }
 }

@@ -230,9 +230,239 @@
     font-weight: 500;
   }
 }
+.tip_card_container-successfully {
+  z-index: 1060 !important;
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 83px);
+    top: 0;
+    left: 0;
+    z-index: 1059;
+  }
+  .container {
+    position: relative;
+    z-index: 1060;
+    background-color: $white;
+    &::after {
+      content: '';
+      border-top: 11px solid $white;
+    }
+    h3 {
+      font-weight: 500;
+    }
+  }
+  .family-list {
+    .user {
+      align-items: flex-start;
+      justify-content: center;
+      img {
+        width: 78.333px;
+        height: 78.333px;
+      }
+    }
+  }
+  .interface-elements {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+    .btn-close {
+      color: $white;
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $body-color;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $black-color;
+        background: $violet-7;
+        opacity: 1;
+      }
+      &:active {
+        color: $black-color;
+        background: $violet-11;
+        opacity: 1;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+    .btn-share {
+      color: $white;
+      display: flex;
+      height: 50px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $violet-10;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $black-color;
+        background: $violet-7;
+      }
+      &:active {
+        color: $black-color;
+        background: $violet-11;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+  }
+}
+.tip_card_container-welcome {
+  z-index: 4;
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 83px);
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .tip_card_badge {
+    border-radius: 22px;
+    background: $gray-29;
+  }
+  .container {
+    position: relative;
+    z-index: 6;
+    background-color: $white;
+    &::after {
+      content: '';
+      border-top: 11px solid $white;
+    }
+  }
+  .emeralds {
+    width: 136.277px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    .emerald {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../images/icon-score.svg);
+      background-size: contain;
+      position: relative;
+      &:first-child {
+        width: 50px;
+        height: 50px;
+        transform: rotate(-15.068deg);
+        z-index: 2;
+        left: 25px;
+        top: 0px;
+      }
+      &:nth-child(2) {
+        width: 71px;
+        height: 71px;
+        z-index: 1;
+      }
+      &:last-child {
+        width: 50px;
+        height: 50px;
+        transform: rotate(15.068deg);
+        z-index: 2;
+        right: 25px;
+        top: 0px;
+      }
+    }
+  }
+  h3 {
+    font-weight: 400;
+    b {
+      font-weight: 500;
+    }
+  }
+  p {
+    b {
+      font-weight: 500;
+    }
+  }
+  .interface-elements {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+    .btn-close {
+      color: $white;
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $body-color;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $black-color;
+        background: $violet-7;
+        opacity: 1;
+      }
+      &:active {
+        color: $black-color;
+        background: $violet-11;
+        opacity: 1;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+    .btn-explore {
+      color: $white;
+      display: flex;
+      height: 50px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $violet-10;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $black-color;
+        background: $violet-7;
+      }
+      &:active {
+        color: $black-color;
+        background: $violet-11;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+  }
+}
 @media (max-height: 600px) {
   .tip_card_container {
     z-index: 3;
+  }
+  .tip_card_container-pointer,
+  .tip_card_container-welcome {
+    z-index: 4;
   }
   .wrap-calendar {
     z-index: 4;
