@@ -25,7 +25,8 @@ button,
   color: $white;
   background: $violet-10;
   border: 1px solid $violet-10;
-  &:disabled {
+  &:disabled,
+  &.disabled {
     color: $gray-16;
     padding: 12px 16px;
     @include border-radius(12px);

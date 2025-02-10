@@ -12730,7 +12730,7 @@ button.active, button:active, button:focus,
   background: #a67cf3;
   border: 1px solid #a67cf3;
 }
-.btn-primary:disabled {
+.btn-primary:disabled, .btn-primary.disabled {
   color: #a8a8a8;
   padding: 12px 16px;
   -webkit-border-radius: 12px;
