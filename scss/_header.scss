@@ -47,6 +47,7 @@ header {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      max-width: 200px;
       @media (max-width: 480px) {
         max-width: 170px;
       }

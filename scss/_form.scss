@@ -1007,7 +1007,7 @@ select:-webkit-autofill:focus {
   }
 }
 textarea.form-control {
-  height: 90px;
+  min-height: 90px;
   resize: vertical;
   position: relative;
   background-image: url(../images/icon-resizer.svg);
