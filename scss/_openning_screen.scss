@@ -1,0 +1,166 @@
+.wrapper-openning-screen {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.openning-screen {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  display: inline-flex;
+  padding: 92px 16px 40px 20.045px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 95.5px;
+  background: $primary-default;
+  .wrap-images {
+    width: 320.623px;
+    height: 343.5px;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+    }
+    .female_sitting {
+      width: 207.667px;
+      height: 240.319px;
+      bottom: -2px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+    .vase_with_tulips {
+      width: 47.019px;
+      height: 67.916px;
+      bottom: 0;
+      left: 15.67px;
+    }
+    .blue_stopwatch {
+      width: 52.243px;
+      height: 65.304px;
+      top: 0;
+      left: 48.32px;
+    }
+    .multicolored {
+      width: 80.977px;
+      height: 54.856px;
+      right: 7.16px;
+      bottom: 84.86px;
+    }
+    .pie_chart {
+      width: 33.958px;
+      height: 33.958px;
+      top: 144.98px;
+      left: 22.2px;
+    }
+    .pink_coffee_cup {
+      width: 23.51px;
+      height: 28.734px;
+      left: 0px;
+      bottom: 0px;
+    }
+    .blue_desk_calendar {
+      top: 81.57px;
+      right: 0;
+      width: 40.944px;
+      height: 34.74px;
+      transform: rotate(12.86deg);
+    }
+  }
+  .content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .text {
+    h2 {
+      color: $black-color;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* H2 - 28 M */
+      font-family: $font-stack-popins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 128.571% */
+      margin-bottom: 8px;
+    }
+    p {
+      color: $gray-30;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0px;
+    }
+  }
+  .wrap-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    align-self: stretch;
+    width: 100%;
+    .form-group {
+      width: 100%;
+    }
+    .btn-login {
+      color: $white;
+      display: flex;
+      height: 50px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $violet-10;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $black-color;
+        background: $violet-7;
+      }
+      &:active {
+        color: $black-color;
+        background: $violet-11;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+    .btn-create-an-account {
+      color: $white;
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $body-color;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $white;
+        background: $black-color-14;
+        opacity: 1;
+      }
+      &:active {
+        color: $white;
+        background: $black-color-13;
+        opacity: 1;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+  }
+}
