@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
+					</div>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+					</div>
+				</div>
+
+			</header>
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+			<!--modal-->
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header justify-content-start bg-liner-3">
+							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+							<h2 class="modal-title" id="fullModalLabel">Integrations</h2>
+						</div>
+						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
+							<div class="integrations">
+								<div class="section-inner">
+									<div class="form-check form-switch form-check-reverse">
+										<input class="form-check-input" type="checkbox" role="switch"
+											id="flexSwitchGoogleCalendar">
+										<label class="form-check-label" for="flexSwitchGoogleCalendar">
+											<img src="images/icon-google-calendar.png" class="img-fluid" />Google
+											Calendar</label>
+									</div>
+									<div class="form-check form-switch form-check-reverse">
+										<input class="form-check-input" type="checkbox" role="switch"
+											id="flexSwitchAppleCalendar">
+										<label class="form-check-label" for="flexSwitchAppleCalendar">
+											<img src="images/icon-apple-calendar.png" class="img-fluid" />Apple
+											Calendar</label>
+									</div>
+									<div class="form-check form-switch form-check-reverse">
+										<input class="form-check-input" type="checkbox" role="switch"
+											id="flexSwitchOutlookCalendar">
+										<label class="form-check-label" for="flexSwitchOutlookCalendar">
+											<img src="images/icon-outlook-calendar.png" class="img-fluid" />Outlook
+											Calendar</label>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-input.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/input.js"></script>
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+
+
+	</script>
+</body>
+
+</html>

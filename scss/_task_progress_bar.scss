@@ -170,6 +170,58 @@
     margin-bottom: 16px;
     .wrap-text {
       gap: 10px;
+      h2,
+      .h2 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px; /* 133.333% */
+        .span-2 {
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+      p {
+        color: $black-color;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Caption1 - 12 R */
+        font-family: $font-stack-popins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+        letter-spacing: 0.048px;
+        margin-bottom: 0;
+      }
+    }
+    .btn {
+      color: $white;
+      background: $violet-10;
+      height: 48px;
+      &:hover {
+        background: $violet-10;
+        color: $white;
+      }
+      &:disabled,
+      &.disabled {
+        color: $violet-15;
+        background: $violet-16;
+        border-color: transparent;
+      }
+    }
+    .btn.btn-black {
+      background: $black-color;
+      &:active {
+        background: $black-color-13;
+      }
+      &:hover {
+        background: $black-color-14;
+      }
+      &:disabled,
+      &.disabled {
+        border-radius: 12px;
+        background: $black-color-8;
+      }
     }
   }
 }

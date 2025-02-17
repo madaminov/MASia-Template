@@ -25,8 +25,8 @@
 						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
 					</div>
 				</div>
-
 			</header>
+
 			<footer>
 				<div class="container-fluid d-flex align-items-center justify-content-between">
 					<button title="home" class="btn-home">
@@ -57,46 +57,84 @@
 				</div>
 			</footer>
 			<!--modal-->
-			<div class="modal fullScreenModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
 				aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header justify-content-start bg-liner-3">
 							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
 								aria-label="Close"></button>
-							<h2 class="modal-title" id="fullModalLabel">Integrations</h2>
+							<h2 class="modal-title" id="fullModalLabel">Princess profile</h2>
 						</div>
-						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
-							<div class="integrations">
-								<div class="section-inner">
-									<div class="form-check form-switch form-check-reverse">
-										<input class="form-check-input" type="checkbox" role="switch"
-											id="flexSwitchGoogleCalendar">
-										<label class="form-check-label" for="flexSwitchGoogleCalendar">
-											<img src="images/icon-google-calendar.png" class="img-fluid" />Google
-											Calendar</label>
-									</div>
-									<div class="form-check form-switch form-check-reverse">
-										<input class="form-check-input" type="checkbox" role="switch"
-											id="flexSwitchAppleCalendar">
-										<label class="form-check-label" for="flexSwitchAppleCalendar">
-											<img src="images/icon-apple-calendar.png" class="img-fluid" />Apple
-											Calendar</label>
-									</div>
-									<div class="form-check form-switch form-check-reverse">
-										<input class="form-check-input" type="checkbox" role="switch"
-											id="flexSwitchOutlookCalendar">
-										<label class="form-check-label" for="flexSwitchOutlookCalendar">
-											<img src="images/icon-outlook-calendar.png" class="img-fluid" />Outlook
-											Calendar</label>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<div class="account account-edit account-princess">
+								<div class="user_avatar_section">
+									<div class="user-img">
+										<img src="images/princess.png" alt="" class="img-fluid">
 									</div>
 								</div>
+								<div class="section-inputs">
+									<div class="section">
+										<div class="row-input">
+											<label>Name</label>
+											<span class="ms-auto">Sarah</span>
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+										<div class="row-input">
+											<label>Nickname</label>
+											<span class="ms-auto">@prrincessS</span>
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+										<div class="row-input">
+											<label>Role</label>
+											<span class="ms-auto">Princess</span>
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+										<div class="row-input">
+											<label>Birthday</label>
+											<span class="ms-auto">11.10.2014</span>
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
 
+									</div>
+									<div class="section">
+										<div class="row-input">
+											<label>Email</label>
+											<span class="ms-auto">example@email.com</span>
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+										<div class="row-input">
+											<label>Password</label>
+											<span class="ms-auto">*************</span>
+											<svg>
+												<use href="images/icon-arrow-right.svg#arrow-right" />
+											</svg>
+										</div>
+									</div>
+
+									<div class="section">
+										<div class="row-input border-0 ">
+											<a href="" class="color-red">Deactivate Account</a>
+										</div>
+									</div>
+
+								</div>
 							</div>
+
+
 
 						</div>
 					</div>
-
 				</div>
 			</div>
 			<!--modal end-->
@@ -105,22 +143,16 @@
 	</div>
 
 
+
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/air-datepicker/air-datepicker.js"></script>
-	<script src="js/date-input.js"></script>
+	<script src="js/date-picker.mixin.js"></script>
 	<script src="js/script.js"></script>
-	<script src="js/input.js"></script>
 	<script>
 		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
 		document.onreadystatechange = function () {
 			fullModal.show();
 		};
-		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-			return new bootstrap.Tooltip(tooltipTriggerEl)
-		})
-
-
 	</script>
 </body>
 

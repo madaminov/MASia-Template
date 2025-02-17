@@ -141,8 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
       .addEventListener('click', (e) => {
         wrap_calendar = document.querySelector('.wrap-calendar');
         if (wrap_calendar.classList.contains('open')) {
-          wrap_calendar.classList.remove('open');
-          weekPicker();
+          datepickerCalendar.setCurrentView('days');
+          seconds = new Date().getTime();
+          datepickerCalendar.setViewDate(seconds);
+          setTimeout(() => {
+            wrap_calendar.classList.remove('open');
+            weekPicker();
+          }, 500);
         } else {
           wrap_calendar.classList.add('open');
           document.querySelectorAll('.-days- .-day-').forEach((box) => {
