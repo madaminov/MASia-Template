@@ -513,3 +513,54 @@ h6,
     @include transition(0.3s);
   }
 }
+.validation-summary-valid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+}
+.page-ResetPasswordConfirmation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  gap: 24px 0px;
+  h1 {
+    width: 100%;
+    color: $white-2;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: $font-stack-popins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 144.444% */
+    margin-bottom: 0;
+  }
+  p {
+    overflow: hidden;
+    color: $gray-25;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    text-overflow: ellipsis;
+    /* Callout - 15 R */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 146.667% */
+    letter-spacing: 0.03px;
+    a {
+      color: $primary-default;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

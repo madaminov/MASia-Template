@@ -124,3 +124,15 @@
     }
   }
 }
+.dropdown-for-role,
+.dropdown-for-role.dropdown-menu {
+  .dropdown-item {
+    cursor: pointer;
+    &:hover {
+      background: $gray-27;
+    }
+    &.active {
+      background: $violet-13;
+    }
+  }
+}

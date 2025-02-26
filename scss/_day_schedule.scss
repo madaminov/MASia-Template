@@ -24,7 +24,7 @@
   }
   .schedule + .title {
     padding-top: 16px;
-  } 
+  }
   .unscheduled {
     .title {
       color: $white-2;
@@ -39,6 +39,9 @@
     }
   }
 }
+.wrap-day-schedule + .wrap-day-schedule {
+  margin-top: 8px;
+}
 .wrap-day-schedule + .wrap-day-schedule .title {
-  padding-top: 14px;
+  padding-top: 16px;
 }

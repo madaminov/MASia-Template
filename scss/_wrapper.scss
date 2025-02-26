@@ -1,5 +1,5 @@
 .wrap-prince {
-  background: $blue-12;
+  background: $blue-7;
   color: $black-color;
   &::after {
     content: '';
@@ -9,7 +9,7 @@
     background-color: inherit;
   }
   header {
-    background: $blue-12;
+    background: $blue-7;
   }
   header .wrap_logo a {
     color: $black-color;
@@ -20,11 +20,28 @@
   .datepicker-icon {
     background-color: $blue-9;
   }
-  .wrap-calendar .switch_view_calendar {
-    background-color: $blue-8;
+  .wrap-calendar {
+    .air-datepicker {
+      background-color: $white;
+    }
+    &.open {
+      .air-datepicker {
+        background-color: $white;
+      }
+    }
+    .switch_view_calendar {
+      background-color: $blue-8;
+    }
   }
+
   .activity_info_container .text {
     color: $black-color;
+    p {
+      color: $black-color;
+    }
+    h6 {
+      color: $black-color;
+    }
   }
   .btn-list-area {
     background-color: $white;
@@ -43,6 +60,15 @@
   }
   .event .time {
     color: $gray-13;
+    &.time-dailyActivities {
+      color: $black-color;
+    }
+    &.time-from {
+      color: $gray-13;
+    }
+    &.time-to {
+      color: $gray-13;
+    }
   }
   .user-img {
     background-color: $blue-9;
@@ -52,6 +78,9 @@
   }
   .wrap-task-history .task-list .task-history .icon.import {
     background-color: $blue-14;
+  }
+  .alert {
+    background-color: $blue-8;
   }
 }
 
@@ -77,11 +106,27 @@
   .datepicker-icon {
     background-color: $primary-default;
   }
-  .wrap-calendar .switch_view_calendar {
-    background-color: $violet-7;
+  .wrap-calendar {
+    .air-datepicker {
+      background-color: $white;
+    }
+    &.open {
+      .air-datepicker {
+        background-color: $white;
+      }
+    }
+    .switch_view_calendar {
+      background-color: $violet-7;
+    }
   }
   .activity_info_container .text {
     color: $black-color;
+    p {
+      color: $black-color;
+    }
+    h6 {
+      color: $black-color;
+    }
   }
   .btn-list-area {
     background-color: $primary-default;
@@ -100,10 +145,19 @@
   }
   .event .time {
     color: $gray-13;
+    &.time-dailyActivities {
+      color: $black-color;
+    }
+    &.time-from {
+      color: $gray-13;
+    }
+    &.time-to {
+      color: $gray-13;
+    }
   }
 }
 .wrap-princess {
-  background: $blue-11;
+  background: $violet-6;
   color: $black-color;
   &::after {
     content: '';
@@ -113,7 +167,7 @@
     background-color: inherit;
   }
   header {
-    background: $blue-11;
+    background: $violet-6;
   }
   header .wrap_logo a {
     color: $black-color;
@@ -130,14 +184,28 @@
   .datepicker-icon {
     background-color: $primary-default;
   }
-  .wrap-calendar.open .air-datepicker {
-    background: $white;
+  .wrap-calendar {
+    .air-datepicker {
+      background-color: $white;
+    }
+    &.open {
+      .air-datepicker {
+        background-color: $white;
+      }
+    }
+    .switch_view_calendar {
+      background-color: $violet-7;
+    }
   }
-  .wrap-calendar .switch_view_calendar {
-    background-color: $violet-7;
-  }
+
   .activity_info_container .text {
     color: $black-color;
+    p {
+      color: $black-color;
+    }
+    h6 {
+      color: $black-color;
+    }
   }
   .btn-list-area {
     background-color: $primary-default;
@@ -156,5 +224,22 @@
   }
   .event .time {
     color: $gray-13;
+    &.time-dailyActivities {
+      color: $black-color;
+    }
+    &.time-from {
+      color: $gray-13;
+    }
+    &.time-to {
+      color: $gray-13;
+    }
+  }
+  .alert {
+    background-color: $primary-default;
+  }
+}
+.wrap-king {
+  .user-img {
+    background-color: $blue-10;
   }
 }

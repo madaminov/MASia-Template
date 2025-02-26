@@ -44,6 +44,15 @@
     letter-spacing: 0.03px;
     margin-bottom: 4px;
     @include transition(0.4s);
+    &.time-dailyActivities {
+      color: $white;
+    }
+    &.time-from {
+      color: $gray-4;
+    }
+    &.time-to {
+      color: $gray;
+    }
   }
   .hour {
     color: $black-color;

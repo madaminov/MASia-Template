@@ -28,6 +28,41 @@
   border: none;
   border-radius: 0;
   background: linear-gradient(180deg, #ede3ff 57.32%, #8e8899 181.25%);
+  &.modal-header-queen {
+    background: linear-gradient(
+      180deg,
+      #dcccfa 57.32%,
+      #a67cf3 181.25%
+    ) !important;
+  }
+  &.modal-header-king {
+    background: linear-gradient(
+      180deg,
+      #b4c1e9 57.32%,
+      #7990d8 181.25%
+    ) !important;
+  }
+  &.modal-header-prince {
+    background: linear-gradient(
+      180deg,
+      #d4e6fc 57.32%,
+      #9bc4f8 181.25%
+    ) !important;
+  }
+  &.modal-header-princess {
+    background: linear-gradient(
+      180deg,
+      #dcccfa 57.32%,
+      #a67cf3 181.25%
+    ) !important;
+  }
+  &.modal-header-other {
+    background: linear-gradient(
+      180deg,
+      #ede3ff 44.8%,
+      #cbb3f7 141.67%
+    ) !important;
+  }
   .modal-title {
     color: $black-color;
     text-align: right;
