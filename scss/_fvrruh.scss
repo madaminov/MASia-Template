@@ -76,6 +76,24 @@
     position: relative;
     z-index: 2;
   }
+  .btn-create-an-account {
+    color: $white;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    background: $body-color;
+    background-image: none;
+    width: 100%;
+    flex-shrink: unset;
+    &:hover {
+      color: $white;
+      background: $black-color-14;
+      opacity: 1;
+    }
+  }
   .btn-404 {
     color: $white;
     text-align: right;
@@ -100,4 +118,86 @@
       background: $violet-18;
     }
   }
+}
+.btn-google-login {
+  color: $white;
+  text-align: right;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Body - 16 R */
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  display: flex;
+  height: 50px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  @include border-radius(12px);
+  background: $violet-17;
+  &:hover {
+    background: $violet-18;
+    color: $white;
+  }
+}
+.btn-continue-with-google {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.17);
+  &:hover {
+    background: #f8f9fa;
+    color: #555260;
+  }color: rgba(0, 0, 0, 0.54);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+}
+.google-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  margin: 0 10px;
+  background: $white;
+}
+
+.or-divider span {
+  color: #555260;
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* Footnote - 14 R */
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.028px;
 }
