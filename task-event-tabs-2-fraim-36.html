@@ -70,77 +70,39 @@
 						<div class="modal-header justify-content-start bg-liner">
 							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
 								aria-label="Close"></button>
-							<h2 class="modal-title" id="fullModalLabel">Create Task</h2>
+							<h2 class="modal-title" id="fullModalLabel">Create Event</h2>
 							<button class="btn btn-light-5 btn-save ms-auto">Save</button>
 						</div>
 						<div class="modal-body overflow-auto scrollbar-hidden">
 							<ul class="nav nav-tab">
 								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="#">Task</a>
+									<a class="nav-link" aria-current="page" href="#">Task</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">Event</a>
+									<a class="nav-link active" href="#">Event</a>
 								</li>
 							</ul>
 							<form action="" class="form form-create-task-event">
 								<div class="section-inner">
 									<div class="form-group">
-										<label for="assignee" class="form-label">Assignee*</label>
-										<div class="wrap-choice-assignee">
-											<div class="members-list">
-												<div class="item w-100 dropdown-assignee" data-bs-toggle="dropdown"
-													data-bs-auto-close="true" data-bs-offset="0,8"
-													aria-expanded="false">
-													<input type="text" name="assignee" value="3" readonly>
-													<div class="person">
-														<img src="images/princess.png" alt="Princess Sara"
-															class="img-fluid">
-													</div>
-													<div class="name">Princess Sara</div>
-												</div>
-												<ul class="dropdown-menu dropdown-list-assignee">
-													<li><span class="dropdown-item" data-avatar="images/queen.png"
-															data-value="Queen Ann (You)" data-id="1">
-															<span class="queen"><img src="images/queen.png"
-																	class="img-fluid" /></span>
-															Queen Ann
-														</span>
-													</li>
-													<li><span class="dropdown-item" data-avatar="images/king.png"
-															data-value="King Robby" data-id="2">
-															<span class="king"><img src="images/king.png"
-																	class="img-fluid" /></span>
-															King Robby
-														</span>
-													</li>
-													<li><span class="dropdown-item" data-avatar="images/princess.png"
-															data-value="Princess Sara" data-id="3">
-															<span class="princess"><img src="images/princess.png"
-																	class="img-fluid" /></span>
-															Princess
-															Sara</span>
-													</li>
-													<li><span class="dropdown-item" data-avatar="images/prince.png"
-															data-value="Prince Tom" data-id="4">
-															<span class="prince"><img src="images/prince.png"
-																	class="img-fluid" /></span>
-															Prince Tom</span>
-													</li>
+										<label for="category" class="form-label">Category*</label>
+										<select name="category" id="category" class="form-select"
+											placeholder="Select an event category">
+											<option value="Meeting">Meeting</option>
+											<option value="Celebration Event">Celebration Event</option>
+											<option value="Birthday">Birthday</option>
+										</select>
+										<span class="bottom-text">If you can't find the category you need, try creating
+											a <a href="">Task</a> instead.
+										</span>
 
-												</ul>
-											</div>
-										</div>
-										<span class="bottom-text">Select the person responsible for completing this
-											task;
-											it will appear in their task list</span>
 									</div>
 								</div>
-
 								<div class="section-inner">
 									<div class="form-group">
 										<label for="title" class="form-label">Title*</label>
 										<input type="text" class="form-control" name="title"
-											placeholder="Add a task title" required>
+											placeholder="Add an event title" required>
 									</div>
 								</div>
 								<div class="section-inner">
@@ -155,7 +117,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label for="start_time" class="form-label">Start time*</label>
+										<label for="start_time" class="form-label">Start time</label>
 										<div class="input-group input-group-reset">
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-time-picker"
@@ -179,6 +141,7 @@
 															<ul class="list">
 																<li class="active">00</li>
 															</ul>
+
 															<button class="btn-prev hours-prev" disabled></button>
 															<div class="label">Hours</div>
 														</div>
@@ -188,6 +151,7 @@
 															<ul class="list">
 																<li class="active">00</li>
 															</ul>
+
 															<button class="btn-prev minutes-prev" disabled></button>
 															<div class="label">Minutes</div>
 														</div>
@@ -198,8 +162,8 @@
 																class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
 														</div>
 														<div class="col-6">
-															<button class="btn btn-primary w-100 btn-confirm"
-																disabled>Confirm</button>
+															<button
+																class="btn btn-primary w-100 btn-confirm">Confirm</button>
 														</div>
 													</div>
 												</div>
@@ -208,15 +172,12 @@
 											<span class="input-group-text input-icon-down"></span>
 										</div>
 									</div>
-
-								</div>
-								<div class="section-inner">
 									<div class="form-group">
 										<label for="duration" class="form-label">Duration</label>
 										<div class="input-group">
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-confirm"
-												id="duration" data-bs-toggle="dropdown" value="30 min"
+												id="duration" data-bs-toggle="dropdown" value="1 hour"
 												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
 												name="duration" readonly="readonly" placeholder="Set a time">
 											<div class="dropdown-menu dropdown-duration-picker">
@@ -331,22 +292,10 @@
 										</div>
 									</div>
 								</div>
-
-
-								<div class="section-inner">
-									<div class="form-group">
-										<label for="priority" class="form-label">Priority</label>
-										<select name="priority" id="priority" class="form-select">
-											<option value="Low">Low</option>
-											<option value="Medium" selected>Medium</option>
-											<option value="Hight">Hight</option>
-										</select>
-									</div>
-								</div>
 								<div class="section-inner">
 									<!--Reviewer-->
 									<div class="form-group">
-										<label for="reviewer" class="form-label">Reviewer</label>
+										<label for="reviewer" class="form-label">Attached Family members</label>
 										<div class="members-list members-list-reviewer">
 											<div class="item item-width-full queen" data-reviewer-id="1">
 												<input type="hidden" name="reviewer[1]">
@@ -396,6 +345,7 @@
 															</div>
 														</div>
 													</li>
+
 													<li>
 														<div class="dropdown-item">
 															<div class="form-check w-100">
@@ -417,66 +367,61 @@
 
 										</div>
 
-										<span class="bottom-text">Select the person who will monitor task progress and
-											approve its completion</span>
+										<span class="bottom-text">Choose the person you want to share this event
+											with;
+											it will appear in their event list</span>
 									</div>
 									<!--Reviewer end-->
 								</div>
-								<div class="section-inner">
-									<div class="form-group">
-										<button class="btn-collapse collapsed" type="button" data-bs-toggle="collapse"
-											data-bs-target="#collapseAddSettings" aria-expanded="false"
-											aria-controls="#collapseAddSettings">
-											<span class="yes-collapsed animated fadeIn">
-												Show additional settings
-												<svg>
-													<use href="images/icon-plus-add.svg#plus" />
-												</svg>
-											</span>
-											<span class="no-collapsed animated fadeIn">
-												Hide additional settings
-												<svg>
-													<use href="images/icon-minus-add.svg#minus" />
-												</svg>
 
-											</span>
-										</button>
-									</div>
+								<div class="form-group">
+									<button class="btn-collapse collapsed" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseAddSettings" aria-expanded="false"
+										aria-controls="#collapseAddSettings">
+										<span class="yes-collapsed animated fadeIn">
+											Show additional settings
+											<svg>
+												<use href="images/icon-plus-add.svg#plus" />
+											</svg>
+										</span>
+										<span class="no-collapsed animated fadeIn">
+											Hide additional settings
+											<svg>
+												<use href="images/icon-minus-add.svg#minus" />
+											</svg>
+
+										</span>
+									</button>
 								</div>
-
-
-
+								<!--collapse-->
 								<div class="collapse w-100" id="collapseAddSettings">
+
 									<div class="section-inner">
 										<div class="form-group">
 											<label for="Repeat" class="form-label">Repeat</label>
-											<div class="input-group input-icon-reset">
+											<div class="input-group input-group-reset">
 												<select name="Repeat" id="Repeat" class="form-select"
 													placeholder="Set a repeat">
-													<option disabled>Set a repeat</option>
 													<option value="Every day">Every day</option>
 													<option value="Every week">Every week</option>
 													<option value="Every month">Every month</option>
 													<option value="Every year">Every year</option>
 												</select>
-												<span class="input-group-text reset-value cursor-pointer"></span>
+												<span class="input-group-text input-reset-value cursor-pointer"></span>
 											</div>
-
 										</div>
 										<div class="form-group">
 											<label for="Reminder" class="form-label">Reminder</label>
-											<div class="input-group input-icon-reset">
+											<div class="input-group input-group-reset">
 												<select name="Reminder" id="Reminder" class="form-select"
 													placeholder="Set a reminder">
-													<option disabled>Set a reminder</option>
 													<option value="At the moment">At the moment</option>
 													<option value="Per 1 hour">Per 1 hour</option>
 													<option value="Per day">Per day</option>
 													<option value="Per 2 days">Per 2 days</option>
 													<option value="Per week">Per week</option>
 												</select>
-												<span class="input-group-text reset-value cursor-pointer"></span>
-												<span class="input-group-text input-icon"></span>
+												<span class="input-group-text input-reset-value cursor-pointer"></span>
 
 											</div>
 
@@ -486,13 +431,13 @@
 									<div class="section-inner">
 										<div class="form-group">
 											<label for="Notes" class="form-label">Notes</label>
-											<textarea class="form-control" name="Notes" oninput="autoResize(this)"
+											<textarea class="form-control" name="Notes"
 												placeholder="Add a notes or description" id="Notes"></textarea>
 										</div>
 									</div>
 
 								</div>
-
+								<!--collapse end-->
 							</form>
 						</div>
 					</div>

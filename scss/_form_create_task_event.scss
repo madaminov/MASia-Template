@@ -1,0 +1,67 @@
+#createTaskEventModal {
+  .modal-body {
+    display: flex;
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+.nav-tab {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  border-bottom: 1px solid $gray-31;
+  .nav-item {
+    width: 50%;
+    text-align: center;
+    .nav-link {
+      color: $white;
+      text-align: right;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+      display: flex;
+      height: 50px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex: 1 0 0;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      &:hover,
+      &.active {
+        border-bottom: 3px solid $violet-10;
+      }
+    }
+  }
+}
+.form-create-task-event,
+.modal .form-create-task-event {
+  display: flex;
+  padding: 20px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0;
+  width: 100%;
+  .section-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+  .collapse.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
