@@ -453,6 +453,9 @@
 }
 .event {
   &.event-princess {
+    .hour {
+      background: $violet-8;
+    }
     .event-day {
       display: flex;
       padding: 8px;
@@ -462,9 +465,6 @@
       background: $blue-11;
       .inner {
         gap: 4px;
-      }
-      .hour {
-        background: $violet-8;
       }
       .icon {
         background: $violet-8;
