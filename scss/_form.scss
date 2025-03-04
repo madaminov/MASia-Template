@@ -992,6 +992,12 @@ button,
     outline: 0;
     box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
   }
+  &:disabled,
+  &.disabled {
+    color: $gray-32;
+    border-color: transparent;
+    background-color: $black-color-5;
+  }
 }
 .was-validated .form-control:valid,
 .form-control.is-valid {

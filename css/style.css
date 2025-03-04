@@ -13782,6 +13782,11 @@ button.active, button:active, button:focus,
   outline: 0;
   box-shadow: 0px 0px 0px 4px rgba(211, 191, 249, 0.4);
 }
+.form-control:disabled, .form-control.disabled {
+  color: #525252;
+  border-color: transparent;
+  background-color: #363636;
+}
 
 .was-validated .form-control:valid,
 .form-control.is-valid {
@@ -14607,6 +14612,31 @@ input[type=password]:focus + .input-group-text,
   background-position: right 40px center;
 }
 
+.form-create-an-account-page {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.form-create-an-account-page .form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+.form-create-an-account-page .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.form-create-an-account-page .form-group {
+  width: 100%;
+}
+
 .form-log-in {
   gap: 24px;
 }
@@ -14803,12 +14833,12 @@ input[type=password]:focus + .input-group-text,
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 95.5px;
+  gap: 47px;
   background: #d3bff9;
 }
 .openning-screen .wrap-images {
-  width: 320.623px;
-  height: 343.5px;
+  width: 287.489px;
+  height: 308px;
   position: relative;
   overflow: hidden;
 }
@@ -14816,36 +14846,36 @@ input[type=password]:focus + .input-group-text,
   position: absolute;
 }
 .openning-screen .wrap-images .female_sitting {
-  width: 207.667px;
-  height: 240.319px;
-  bottom: -2px;
-  margin: 0 auto;
-  left: 0;
+  width: 186.205px;
+  height: 215.483px;
+  bottom: 1px;
+  left: 74px;
   right: 0;
 }
 .openning-screen .wrap-images .vase_with_tulips {
   width: 47.019px;
   height: 67.916px;
   bottom: 0;
-  left: 15.67px;
+  left: 14.05px;
 }
 .openning-screen .wrap-images .blue_stopwatch {
   width: 52.243px;
   height: 65.304px;
   top: 0;
-  left: 48.32px;
+  left: 43px;
 }
 .openning-screen .wrap-images .multicolored {
-  width: 80.977px;
-  height: 54.856px;
-  right: 7.16px;
-  bottom: 84.86px;
+  width: 72.608px;
+  height: 49.186px;
+  right: 6.42px;
+  bottom: 76px;
+  z-index: 2;
 }
 .openning-screen .wrap-images .pie_chart {
   width: 33.958px;
   height: 33.958px;
   top: 144.98px;
-  left: 22.2px;
+  left: 19px;
 }
 .openning-screen .wrap-images .pink_coffee_cup {
   width: 23.51px;
@@ -14854,10 +14884,10 @@ input[type=password]:focus + .input-group-text,
   bottom: 0px;
 }
 .openning-screen .wrap-images .blue_desk_calendar {
-  top: 81.57px;
+  top: 78px;
   right: 0;
-  width: 40.944px;
-  height: 34.74px;
+  width: 36.712px;
+  height: 31.15px;
   transform: rotate(12.86deg);
 }
 .openning-screen .content {
@@ -14903,25 +14933,36 @@ input[type=password]:focus + .input-group-text,
 }
 .openning-screen .wrap-button .btn-login {
   color: #fff;
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
   display: flex;
   height: 50px;
   padding: 12px 16px;
   justify-content: center;
   align-items: center;
   gap: 12px;
+  align-self: stretch;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
   border-radius: 12px;
-  background: #a67cf3;
-  background-image: none;
-  width: 100%;
-  flex-shrink: unset;
+  background: #8044ee;
 }
 .openning-screen .wrap-button .btn-login:hover {
-  color: #000000;
-  background: #b38ff5;
+  background: #702deb;
+  color: #fff;
 }
 .openning-screen .wrap-button .btn-login:active {
-  color: #000000;
-  background: #a073f2;
+  color: #fff;
+  background: #181618;
+  opacity: 1;
 }
 .openning-screen .wrap-button .btn-login:disabled {
   color: #757575;
@@ -14929,6 +14970,15 @@ input[type=password]:focus + .input-group-text,
 }
 .openning-screen .wrap-button .btn-create-an-account {
   color: #fff;
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
   display: flex;
   height: 50px;
   justify-content: center;
@@ -14953,6 +15003,61 @@ input[type=password]:focus + .input-group-text,
 .openning-screen .wrap-button .btn-create-an-account:disabled {
   color: #757575;
   background: #3e3e3e;
+}
+.openning-screen .wrap-button .btn-continue-with-google {
+  color: rgba(0, 0, 0, 0.54);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.17);
+}
+.openning-screen .wrap-button .btn-continue-with-google:hover {
+  background: #fff;
+  color: #555260;
+}
+.openning-screen .google-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.openning-screen .or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0;
+}
+.openning-screen .or-divider::before,
+.openning-screen .or-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  margin: 0 10px;
+  background: #fff;
+}
+.openning-screen .or-divider span {
+  color: #555260;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Footnote - 14 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.028px;
 }
 
 .nice-select {
@@ -18966,6 +19071,70 @@ footer.show-context-menu-user .btn-user {
   opacity: 0;
 }
 
+.event.event-princess .hour {
+  background: #deccff;
+}
+.event.event-princess .event-day {
+  display: flex;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  background: #f5f3f9;
+}
+.event.event-princess .event-day .inner {
+  gap: 4px;
+}
+.event.event-princess .event-day .icon {
+  background: #deccff;
+}
+.event.event-princess .event-day .assignee {
+  color: #9f9ca6;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 140% */
+  letter-spacing: 0.04px;
+  width: 100%;
+}
+.event.event-princess .event-day .properties {
+  margin-top: 4px;
+}
+
+.event.event-prince .hour {
+  background: #c1dbfb;
+}
+.event.event-prince .event-day {
+  display: flex;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  background: #f3f6f9;
+}
+.event.event-prince .event-day .inner {
+  gap: 4px;
+}
+.event.event-prince .event-day .icon {
+  background: #c1dbfb;
+}
+.event.event-prince .event-day .assignee {
+  color: #9f9ca6;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 140% */
+  letter-spacing: 0.04px;
+  width: 100%;
+}
+.event.event-prince .event-day .properties {
+  margin-top: 4px;
+}
+
 .wrap-task-history {
   display: flex;
   width: 361px;
@@ -21711,6 +21880,123 @@ footer.show-context-menu-user .btn-user {
 
 .wrap-king .user-img {
   background-color: #b4c1e9;
+}
+
+.wrapper-page-404 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.wrapper-page-404 .openning-page-404 {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  padding: 40px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: #e1d0fe;
+  z-index: 2;
+}
+.wrapper-page-404 .openning-page-404::before {
+  content: "";
+  z-index: 1;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(155deg, rgba(193, 188, 255, 0) 0%, rgba(193, 188, 255, 0) 28%, rgba(226, 203, 237, 0) 36%, rgba(255, 217, 221, 0) 43%, rgb(255, 217, 221) 62%, rgb(193, 115, 255) 100%);
+}
+.wrapper-page-404 .wrap-images {
+  margin-bottom: 42px;
+  position: relative;
+  z-index: 2;
+}
+.wrapper-page-404 .content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+.wrapper-page-404 .content .text {
+  width: 100%;
+}
+.wrapper-page-404 .content .text h2, .wrapper-page-404 .content .text .h2 {
+  color: #000000;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 128.571% */
+  margin-bottom: 20px;
+}
+.wrapper-page-404 .content .text p {
+  color: #555260;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0px;
+}
+.wrapper-page-404 .wrap-button {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.wrapper-page-404 .btn-create-an-account {
+  color: #fff;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  background: #1e1e1e;
+  background-image: none;
+  width: 100%;
+  flex-shrink: unset;
+}
+.wrapper-page-404 .btn-create-an-account:hover {
+  color: #fff;
+  background: #242324;
+  opacity: 1;
+}
+.wrapper-page-404 .btn-404 {
+  color: #fff;
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  display: flex;
+  height: 50px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  background: #8044ee;
+}
+.wrapper-page-404 .btn-404:hover {
+  background: #702deb;
 }
 
 .tip_card_container-event-save {

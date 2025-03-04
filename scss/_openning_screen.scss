@@ -11,47 +11,47 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 95.5px;
+  gap: 47px;
   background: $primary-default;
   .wrap-images {
-    width: 320.623px;
-    height: 343.5px;
+    width: 287.489px;
+    height: 308px;
     position: relative;
     overflow: hidden;
     img {
       position: absolute;
     }
     .female_sitting {
-      width: 207.667px;
-      height: 240.319px;
-      bottom: -2px;
-      margin: 0 auto;
-      left: 0;
+      width: 186.205px;
+      height: 215.483px;
+      bottom: 1px;
+      left: 74px;
       right: 0;
     }
     .vase_with_tulips {
       width: 47.019px;
       height: 67.916px;
       bottom: 0;
-      left: 15.67px;
+      left: 14.05px;
     }
     .blue_stopwatch {
       width: 52.243px;
       height: 65.304px;
       top: 0;
-      left: 48.32px;
+      left: 43px;
     }
     .multicolored {
-      width: 80.977px;
-      height: 54.856px;
-      right: 7.16px;
-      bottom: 84.86px;
+      width: 72.608px;
+      height: 49.186px;
+      right: 6.42px;
+      bottom: 76px;
+      z-index: 2;
     }
     .pie_chart {
       width: 33.958px;
       height: 33.958px;
       top: 144.98px;
-      left: 22.2px;
+      left: 19px;
     }
     .pink_coffee_cup {
       width: 23.51px;
@@ -60,10 +60,10 @@
       bottom: 0px;
     }
     .blue_desk_calendar {
-      top: 81.57px;
+      top: 78px;
       right: 0;
-      width: 40.944px;
-      height: 34.74px;
+      width: 36.712px;
+      height: 31.15px;
       transform: rotate(12.86deg);
     }
   }
@@ -109,26 +109,35 @@
     .form-group {
       width: 100%;
     }
+
     .btn-login {
       color: $white;
+      text-align: right;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
       display: flex;
       height: 50px;
       padding: 12px 16px;
       justify-content: center;
       align-items: center;
       gap: 12px;
-      border-radius: 12px;
-      background: $violet-10;
-      background-image: none;
-      width: 100%;
-      flex-shrink: unset;
+      align-self: stretch;
+      @include border-radius(12px);
+      background: $violet-17;
       &:hover {
-        color: $black-color;
-        background: $violet-7;
+        background: $violet-18;
+        color: $white;
       }
       &:active {
-        color: $black-color;
-        background: $violet-11;
+        color: $white;
+        background: $black-color-13;
+        opacity: 1;
       }
       &:disabled {
         color: $gray-10;
@@ -137,6 +146,15 @@
     }
     .btn-create-an-account {
       color: $white;
+      text-align: right;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
       display: flex;
       height: 50px;
       justify-content: center;
@@ -162,5 +180,63 @@
         background: $black-color-8;
       }
     }
+
+    .btn-continue-with-google {
+      color: rgba(0, 0, 0, 0.54);
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.032px;
+      width: 100%;
+      display: flex;
+      height: 50px;
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: $white;
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08),
+        0px 2px 3px 0px rgba(0, 0, 0, 0.17);
+      &:hover {
+        background: $white;
+        color: $gray-30;
+      }
+    }
+  }
+  .google-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 12px 0;
+  }
+  .or-divider::before,
+  .or-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    margin: 0 10px;
+    background: $white;
+  }
+
+  .or-divider span {
+    color: $gray-30;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Footnote - 14 R */
+    font-family: $font-stack-popins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.028px;
   }
 }

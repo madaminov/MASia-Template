@@ -451,3 +451,74 @@
     }
   }
 }
+.event {
+  &.event-princess {
+    .hour {
+      background: $violet-8;
+    }
+    .event-day {
+      display: flex;
+      padding: 8px;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 1 0 0;
+      background: $blue-11;
+      .inner {
+        gap: 4px;
+      }
+      .icon {
+        background: $violet-8;
+      }
+      .assignee {
+        color: $gray-33;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: $font-stack-popins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px; /* 140% */
+        letter-spacing: 0.04px;
+        width: 100%;
+      }
+      .properties {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+.event {
+  &.event-prince {
+    .hour {
+      background: $blue-13;
+    }
+    .event-day {
+      display: flex;
+      padding: 8px;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 1 0 0;
+      background: $blue-12;
+      .inner {
+        gap: 4px;
+      }
+
+      .icon {
+        background: $blue-13;
+      }
+      .assignee {
+        color: $gray-33;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: $font-stack-popins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px; /* 140% */
+        letter-spacing: 0.04px;
+        width: 100%;
+      }
+      .properties {
+        margin-top: 4px;
+      }
+    }
+  }
+}

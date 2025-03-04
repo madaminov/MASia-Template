@@ -89,3 +89,27 @@
     background-position: right 40px center;
   }
 }
+.form-create-an-account-page {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+  }
+  .section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+  }
+}
