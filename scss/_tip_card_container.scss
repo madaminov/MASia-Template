@@ -414,12 +414,12 @@
       width: 100%;
       flex-shrink: unset;
       &:hover {
-        color: $black-color;
+        color: $white;
         background: $violet-7;
         opacity: 1;
       }
       &:active {
-        color: $black-color;
+        color: $white;
         background: $violet-11;
         opacity: 1;
       }
@@ -429,6 +429,166 @@
       }
     }
     .btn-explore {
+      color: $white;
+      display: flex;
+      height: 50px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 12px;
+      background: $violet-10;
+      background-image: none;
+      width: 100%;
+      flex-shrink: unset;
+      &:hover {
+        color: $black-color;
+        background: $violet-7;
+      }
+      &:active {
+        color: $black-color;
+        background: $violet-11;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+  }
+}
+.tip_card_container-event-save {
+  z-index: 1058 !important;
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 74px - 83px);
+    top: 74px;
+    left: 0;
+    z-index: 1057 !important;
+  }
+  .container {
+    background-color: $white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1058 !important;
+    &::after {
+      content: '';
+      border-top: 11px solid $white;
+    }
+  }
+  .tools {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    .close-btn {
+      display: flex;
+      width: 33px;
+      height: 33px;
+      padding: 7.439px 11.158px;
+      justify-content: center;
+      align-items: center;
+      gap: 7.439px;
+      flex-shrink: 0;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: $gray-35;
+      backdrop-filter: blur(2.3246560096740723px);
+      transition: all 0.3s ease;
+      svg {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        fill: $gray-7;
+        width: 8px;
+        height: 8px;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        svg {
+          fill: $black-color !important;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  .text-block {
+    h3 {
+      color: $black-color;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Headline - 18 M */
+      font-family: $font-stack-popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 144.444% */
+      margin-bottom: 0;
+    }
+    p {
+      color: $black-color;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+      margin-bottom: 0;
+    }
+  }
+  .interface-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    .btn-save {
+      color: $white;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+      display: flex;
+      height: 50px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      align-self: stretch;
+      border-radius: 12px;
+      background: $body-color;
+      &:hover {
+        color: $white;
+        background: $violet-7;
+        opacity: 1;
+      }
+      &:active {
+        color: $white;
+        background: $violet-11;
+        opacity: 1;
+      }
+      &:disabled {
+        color: $gray-10;
+        background: $black-color-8;
+      }
+    }
+    .btn-save-for-future {
       color: $white;
       display: flex;
       height: 50px;
