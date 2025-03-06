@@ -1,0 +1,109 @@
+.toast-container {
+  padding: 12px 16px;
+  height: calc(100dvh - 69px);
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+  z-index: -1000;
+  opacity: 0;
+  visibility: hidden;
+  &.show {
+    z-index: 1060;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+  }
+  .toast {
+    max-width: calc(768px - 32px);
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 12px 8px 8px;
+    border-radius: 12px;
+    background: $gray-34;
+    transition: all 0.3s ease;
+    .wrap-toast {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1 0 0;
+      .task-icon-area {
+        display: flex;
+        width: 49px;
+        height: 49px;
+        padding: 12.5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background-color: $white;
+        background-image: url(../images/icon-info.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px;
+      }
+      .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .toast-header {
+        color: $black-color;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Callout - 15 M */
+        font-family: $font-stack-popins;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 146.667% */
+        letter-spacing: 0.03px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+      }
+      .toast-body {
+        color: $gray-11;
+        text-align: right;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Caption1 - 12 R */
+        font-family: $font-stack-popins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+        letter-spacing: 0.048px;
+        padding: 0;
+      }
+    }
+    .btn-close {
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/icon-close-gray-2.svg);
+    }
+    &.toast-successful {
+      background: $green-4;
+      .task-icon-area {
+        background-image: url(../images/icon-successful.svg);
+        background-size: 49px;
+      }
+    }
+    &.toast-warning {
+      background: $orange-light-5;
+      .task-icon-area {
+        background-image: url(../images/icon-warning.svg);
+        background-size: 24px;
+      }
+    }
+    &.toast-error {
+      background: $red-3;
+      .task-icon-area {
+        background-image: url(../images/icon-remove.svg);
+        background-size: 24px;
+      }
+    }
+  }
+}
