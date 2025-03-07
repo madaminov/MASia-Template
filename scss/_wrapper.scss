@@ -82,6 +82,11 @@
   .alert {
     background-color: $blue-8;
   }
+  .modal {
+    &.modal-body-prince {
+      background: $blue-12;
+    }
+  }
 }
 
 .wrap-princess-2 {
@@ -153,6 +158,11 @@
     }
     &.time-to {
       color: $gray-13;
+    }
+  }
+  .modal {
+    &.modal-body-princess-2 {
+      background: $violet-6;
     }
   }
 }
@@ -236,6 +246,11 @@
   }
   .alert {
     background-color: $primary-default;
+  }
+  .modal {
+    &.modal-body-princess-2 {
+      background: $blue-11;
+    }
   }
 }
 .wrap-king {
