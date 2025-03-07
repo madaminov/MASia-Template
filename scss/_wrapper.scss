@@ -1,5 +1,5 @@
 .wrap-prince {
-  background: $blue-7;
+  background: $blue-12;
   color: $black-color;
   &::after {
     content: '';
@@ -9,7 +9,7 @@
     background-color: inherit;
   }
   header {
-    background: $blue-7;
+    background: $blue-12;
   }
   header .wrap_logo a {
     color: $black-color;
@@ -157,7 +157,7 @@
   }
 }
 .wrap-princess {
-  background: $violet-6;
+  background: $blue-11;
   color: $black-color;
   &::after {
     content: '';
@@ -167,7 +167,7 @@
     background-color: inherit;
   }
   header {
-    background: $violet-6;
+    background: $blue-11;
   }
   header .wrap_logo a {
     color: $black-color;
