@@ -92,6 +92,15 @@
 }
 .modal-body {
   padding: 0;
+  &.modal-body-prince {
+    background: $blue-12;
+  }
+  &.modal-body-princess-2 {
+    background: $violet-6;
+  }
+  &.modal-body-princess-2 {
+    background: $blue-11;
+  }
   .title-section {
     display: inline-flex;
     padding: 24px 16px;
