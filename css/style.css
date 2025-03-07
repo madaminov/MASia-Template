@@ -21896,7 +21896,7 @@ footer.show-context-menu-user .btn-user {
 .wrap-prince .alert {
   background-color: #a4caf9;
 }
-.wrap-prince .modal.modal-body-prince {
+.wrap-prince .modal .modal-body-prince {
   background: #f3f6f9;
 }
 
@@ -21966,7 +21966,7 @@ footer.show-context-menu-user .btn-user {
 .wrap-princess-2 .event .time.time-to {
   color: #7a7a7a;
 }
-.wrap-princess-2 .modal.modal-body-princess-2 {
+.wrap-princess-2 .modal .modal-body-princess-2 {
   background: #ede7f7;
 }
 
@@ -22045,7 +22045,7 @@ footer.show-context-menu-user .btn-user {
 .wrap-princess .alert {
   background-color: #d3bff9;
 }
-.wrap-princess .modal.modal-body-princess-2 {
+.wrap-princess .modal .modal-body-princess-2 {
   background: #f5f3f9;
 }
 

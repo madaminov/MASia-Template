@@ -83,7 +83,7 @@
     background-color: $blue-8;
   }
   .modal {
-    &.modal-body-prince {
+    .modal-body-prince {
       background: $blue-12;
     }
   }
@@ -161,7 +161,7 @@
     }
   }
   .modal {
-    &.modal-body-princess-2 {
+    .modal-body-princess-2 {
       background: $violet-6;
     }
   }
@@ -248,7 +248,7 @@
     background-color: $primary-default;
   }
   .modal {
-    &.modal-body-princess-2 {
+    .modal-body-princess-2 {
       background: $blue-11;
     }
   }
