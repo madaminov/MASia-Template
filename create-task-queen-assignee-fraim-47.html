@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
+					</div>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+					</div>
+				</div>
+			</header>
+
+
+
+
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+
+
+
+			<!--modal-->
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-liner">
+							<h2 class="modal-title" id="fullModalLabel">Create Task</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<form action="" class="form form-create-task">
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="assignee" class="form-label">Assignee*</label>
+										<div class="wrap-choice-assignee">
+											<div class="members-list">
+												<div class="item w-100 dropdown-assignee" data-bs-toggle="dropdown"
+													data-bs-auto-close="true" data-bs-offset="0,8"
+													aria-expanded="false">
+													<input type="text" name="assignee" value="1" readonly>
+													<div class="person">
+														<img src="images/queen.png" alt="Princess Sara"
+															class="img-fluid">
+													</div>
+													<div class="name">Queen Ann</div>
+												</div>
+												<ul class="dropdown-menu dropdown-list-assignee">
+													<li><span class="dropdown-item" data-avatar="images/queen.png"
+															data-value="Queen Ann (You)" data-id="1">
+															<span class="queen"><img src="images/queen.png"
+																	class="img-fluid" /></span>
+															Queen Ann
+														</span>
+													</li>
+													<li><span class="dropdown-item" data-avatar="images/king.png"
+															data-value="King Robby" data-id="2">
+															<span class="king"><img src="images/king.png"
+																	class="img-fluid" /></span>
+															King Robby
+														</span>
+													</li>
+
+													<li><span class="dropdown-item" data-avatar="images/princess.png"
+															data-value="Princess Sara" data-id="3">
+															<span class="princess"><img src="images/princess.png"
+																	class="img-fluid" /></span>
+															Princess
+															Sara</span>
+													</li>
+													<li><span class="dropdown-item" data-avatar="images/prince.png"
+															data-value="Prince Tom" data-id="4">
+															<span class="prince"><img src="images/prince.png"
+																	class="img-fluid" /></span>
+															Prince Tom</span>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+										<span class="bottom-text">Select the person responsible for completing this
+											task; it
+											will appear
+											in their task list</span>
+									</div>
+								</div>
+
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="title" class="form-label">Title*</label>
+										<input type="text" class="form-control" name="title"
+											placeholder="Add a task title" required>
+									</div>
+								</div>
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="duration" class="form-label">Duration</label>
+										<div class="input-group">
+											<input type="text"
+												class="form-control form-control-dropdown dropdown-toggle-confirm"
+												id="duration" data-bs-toggle="dropdown" value="30 min"
+												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
+												name="duration" readonly="readonly" placeholder="Set a time">
+											<div class="dropdown-menu dropdown-duration-picker">
+												<div class="duration-picker">
+													<div class="header">
+														<h3>Select a duration</h3>
+													</div>
+													<div class="group">
+														<div class="form-group-check">
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="600"
+																	value="10 min" id="duration-check_1">
+																<label class="form-check-label" for="duration-check_1">
+																	10 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="900"
+																	value="15 min" id="duration-check_2">
+																<label class="form-check-label" for="duration-check_2">
+																	15 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="1800"
+																	value="30 min" id="duration-check_3">
+																<label class="form-check-label" for="duration-check_3">
+																	30 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="2700"
+																	value="45 min" id="duration-check_4">
+																<label class="form-check-label" for="duration-check_4">
+																	45 min
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="3600"
+																	value="1 hour" id="duration-check_5">
+																<label class="form-check-label" for="duration-check_5">
+																	1 hour
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="5400"
+																	value="1.5 hour" id="duration-check_6">
+																<label class="form-check-label" for="duration-check_6">
+																	1.5 hour
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="7200"
+																	value="2 hour" id="duration-check_7">
+																<label class="form-check-label" for="duration-check_7">
+																	2 hour
+																</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" name="duration-check"
+																	type="checkbox" data-value-seconds="10800"
+																	value="3 hour" id="duration-check_8">
+																<label class="form-check-label" for="duration-check_8">
+																	3 hour
+																</label>
+															</div>
+														</div>
+														<div class="form-group">
+															<label for="" class="form-label d-block text-center">Other
+																time</label>
+															<div class="duration-group-timer">
+																<div class="wrap-hours">
+																	<button class="btn-next hours-next"></button>
+																	<ul class="list">
+																		<li class="active">00</li>
+																	</ul>
+																	<button class="btn-prev hours-prev"></button>
+																	<div class="label">Hours</div>
+																</div>
+																<div class="separator">:</div>
+																<div class="wrap-minutes">
+																	<button class="btn-next minutes-next"></button>
+																	<ul class="list">
+																		<li class="active">00</li>
+																	</ul>
+																	<button class="btn-prev minutes-prev"></button>
+																	<div class="label">Minutes</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row row-btn-group">
+														<div class="col-6">
+															<button
+																class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
+														</div>
+														<div class="col-6">
+															<button class="btn btn-primary w-100 btn-confirm"
+																disabled>Confirm</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<span class="input-group-text input-icon-down"></span>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="priority" class="form-label">Priority</label>
+										<select name="priority" id="priority" class="form-select">
+											<option value="Low">Low</option>
+											<option value="Medium" selected>Medium</option>
+											<option value="Hight">Hight</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<button class="btn-collapse collapsed" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseAddSettings" aria-expanded="false"
+										aria-controls="#collapseAddSettings">
+										<span class="yes-collapsed animated fadeIn">
+											Show additional settings
+											<svg>
+												<use href="images/icon-plus-add.svg#plus" />
+											</svg>
+										</span>
+										<span class="no-collapsed animated fadeIn">
+											Hide additional settings
+											<svg>
+												<use href="images/icon-minus-add.svg#minus" />
+											</svg>
+
+										</span>
+									</button>
+								</div>
+
+
+								<div class="collapse w-100" id="collapseAddSettings">
+									<div class="section-inner">
+										<div class="form-group">
+											<label for="date" class="form-label">Date</label>
+											<div class="input-group input-group-reset">
+												<input type="text" class="form-control form-control-date" name="date"
+													value="" placeholder="Select a data" id="date" readonly>
+												<span class="input-group-text input-reset-value cursor-pointer"></span>
+												<span class="input-group-text input-icon-calendar"></span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="start_time" class="form-label">Start time</label>
+											<div class="input-group input-group-reset">
+												<input type="text"
+													class="form-control form-control-dropdown dropdown-toggle-time-picker"
+													id="start_time" data-bs-toggle="dropdown" value=""
+													data-bs-auto-close="outside" data-bs-offset="0,8"
+													aria-expanded="false" name="start_time" readonly="readonly"
+													placeholder="Set a start time">
+
+												<div class="dropdown-menu dropdown-menu-time-picker">
+													<div class="time-start-picker">
+														<div class="header">
+															<h3>Set a time</h3>
+														</div>
+
+														<div class="group">
+															<div class="wrap-hours">
+																<button class="btn-next hours-next"></button>
+																<ul class="list">
+																	<li class="active">00</li>
+																</ul>
+																<button class="btn-prev hours-prev"></button>
+																<div class="label">Hours</div>
+															</div>
+															<div class="separator">:</div>
+															<div class="wrap-minutes">
+																<button class="btn-next minutes-next"></button>
+																<ul class="list">
+																	<li class="active">00</li>
+																</ul>
+
+																<button class="btn-prev minutes-prev"></button>
+																<div class="label">Minutes</div>
+															</div>
+														</div>
+														<div class="interface-elements-fraim-47">
+																<button
+																	class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
+																<button class="btn btn-47 w-100">Confirm</button>
+														</div>
+													</div>
+												</div>
+												<span class="input-group-text input-reset-value cursor-pointer"></span>
+												<span class="input-group-text input-icon-down"></span>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="section-inner">
+										<div class="form-group">
+											<label for="Repeat" class="form-label">Repeat</label>
+											<div class="input-group input-icon-reset">
+												<select name="Repeat" id="Repeat" class="form-select"
+													placeholder="Set a repeat">
+													<option disabled>Set a repeat</option>
+													<option value="Every day">Every day</option>
+													<option value="Every week">Every week</option>
+													<option value="Every month">Every month</option>
+													<option value="Every year">Every year</option>
+												</select>
+												<span class="input-group-text reset-value cursor-pointer"></span>
+											</div>
+
+										</div>
+										<div class="form-group">
+											<label for="Reminder" class="form-label">Reminder</label>
+											<div class="input-group input-icon-reset">
+												<select name="Reminder" id="Reminder" class="form-select"
+													placeholder="Set a reminder">
+													<option disabled>Set a reminder</option>
+													<option value="At the moment">At the moment</option>
+													<option value="Per 1 hour">Per 1 hour</option>
+													<option value="Per day">Per day</option>
+													<option value="Per 2 days">Per 2 days</option>
+													<option value="Per week">Per week</option>
+												</select>
+												<span class="input-group-text reset-value cursor-pointer"></span>
+												<span class="input-group-text input-icon"></span>
+
+											</div>
+
+										</div>
+									</div>
+
+									<div class="section-inner">
+										<div class="form-group">
+											<label for="Notes" class="form-label">Notes</label>
+											<textarea class="form-control" name="Notes" oninput="autoResize(this)"
+												placeholder="Add a notes or description" id="Notes"></textarea>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="interface-elements-fraim-47">
+									<button class="btn btn-47 w-100">Create</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+
+	<script src="js/duration-picker.js"></script>
+	<script src="js/nice-select2.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/date-input.js"></script>
+	<script src="js/time-picker.js"></script>
+	<script src="js/input.js"></script>
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+		document.querySelectorAll('.form-group-count .counter').forEach(box => {
+			box.addEventListener("click", (e) => {
+				val_number = parseInt(document.querySelector('.form-number').value)
+				if (box.classList.contains("plus")) {
+					document.querySelector('.form-number').value = val_number + 1
+				}
+				if (box.classList.contains("minus")) {
+					if (val_number > 0) {
+						document.querySelector('.form-number').value = val_number - 1
+					}
+				}
+			});
+
+		})
+
+		document.querySelector('form').addEventListener('change', (event) => {
+			if (event.target.required) {
+				if (event.target.value != '') {
+					document.querySelector('form button[type="submit"]').disabled = false;
+				} else {
+					document.querySelector('form button[type="submit"]').disabled = true;
+				}
+
+			}
+		})
+
+	</script>
+</body>
+
+</html>

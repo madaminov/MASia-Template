@@ -1,0 +1,58 @@
+.interface-elements-fraim-47 {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 8px;
+.btn-47 {
+  padding: 12px 16px;
+  color: $black;
+  background: #EDE3FF;
+  border: 1px solid #EDE3FF;
+  &:disabled,
+  &.disabled {
+    color: $gray-16;
+    padding: 12px 16px;
+    @include border-radius(12px);
+    border: 1px solid $gray-15;
+    background: $gray-15;
+  }
+  &:hover {
+    color: $black;
+    background: $violet-13;
+    border: 1px solid $violet-13;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $black;
+    background: $violet-13;
+    border: 1px solid $violet-13;
+  }
+}
+}
+.title-small{
+  overflow: hidden;
+color: $white;
+font-feature-settings: 'liga' off, 'clig' off;
+text-overflow: ellipsis;
+
+/* Callout - 15 M */
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 146.667% */
+letter-spacing: 0.03px;
+}
+.section-members-list  .bottom-text{
+  color: rgba(255, 255, 255, 0.50);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* Caption1 - 12 R */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 150% */
+letter-spacing: 0.048px;
+}
