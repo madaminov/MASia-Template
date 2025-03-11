@@ -307,6 +307,83 @@
     }
   }
 }
+.modal-reviewer-tasks {
+  .title-section {
+    align-items: start;
+  }
+  .wrap-tags-assignee {
+    width: calc(100% - 32px - 5px);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .assignee {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    .user-avatar {
+      width: 38px;
+      height: 38px;
+      background-color: $gray-21;
+      border-radius: 50%;
+    }
+    .name {
+      color: $white-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 144.444% */
+    }
+  }
+  .info-group {
+    .title {
+      color: $white-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* H3 - 24 M */
+      font-family: $font-stack-popins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px; /* 133.333% */
+      margin-bottom: 0;
+    }
+  }
+  .section-members-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    .title {
+      overflow: hidden;
+      color: $white;
+      font-feature-settings: 'liga' off, 'clig' off;
+      text-overflow: ellipsis;
+      /* Callout - 15 M */
+      font-family: Poppins;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px; /* 146.667% */
+      letter-spacing: 0.03px;
+      margin-bottom: 0;
+    }
+    .bottom-text {
+      color: rgba(255, 255, 255, 0.5);
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Caption1 - 12 R */
+      font-family: $font-stack-popins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px; /* 150% */
+      letter-spacing: 0.048px;
+    }
+  }
+}
 .fullScreenModal {
   height: 100dvb;
   padding-bottom: 0;

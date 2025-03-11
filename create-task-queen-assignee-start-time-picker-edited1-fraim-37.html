@@ -131,7 +131,7 @@
 								<div class="section-inner">
 									<div class="form-group">
 										<label for="title" class="form-label">Title*</label>
-										<input type="text" class="form-control" name="title"
+										<input type="text" class="form-control" name="title" value="Order a flowers"
 											placeholder="Add a task title" required>
 									</div>
 								</div>
@@ -141,7 +141,7 @@
 										<div class="input-group">
 											<input type="text"
 												class="form-control form-control-dropdown dropdown-toggle-confirm"
-												id="duration" data-bs-toggle="dropdown" value="30 min"
+												id="duration" data-bs-toggle="dropdown" value="15 min"
 												data-bs-auto-close="outside" data-bs-offset="0,8" aria-expanded="false"
 												name="duration" readonly="readonly" placeholder="Set a time">
 											<div class="dropdown-menu dropdown-duration-picker">
@@ -295,8 +295,10 @@
 											<label for="date" class="form-label">Date</label>
 											<div class="input-group input-group-reset">
 												<input type="text" class="form-control form-control-date" name="date"
-													value="" placeholder="Select a data" id="date" readonly>
-												<span class="input-group-text input-reset-value cursor-pointer"></span>
+													value="03 October, Monday" placeholder="Select a data" id="date"
+													readonly>
+												<span
+													class="input-group-text input-reset-value cursor-pointer d-block"></span>
 												<span class="input-group-text input-icon-calendar"></span>
 											</div>
 										</div>
@@ -336,10 +338,15 @@
 																<div class="label">Minutes</div>
 															</div>
 														</div>
-														<div class="interface-elements-fraim-47">
+														<div class="row row-btn-group">
+															<div class="col-6">
 																<button
 																	class="btn btn-dark-2 w-100 btn-cancel">Cancel</button>
-																<button class="btn btn-47 w-100">Confirm</button>
+															</div>
+															<div class="col-6">
+																<button class="btn btn-primary w-100 btn-confirm"
+																	disabled>Confirm</button>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -396,8 +403,8 @@
 
 								</div>
 
-								<div class="interface-elements-fraim-47">
-									<button class="btn btn-47 w-100">Create</button>
+								<div class="form-group mb-0">
+									<button class="btn btn-light w-100" type="submit">Create</button>
 								</div>
 							</form>
 						</div>

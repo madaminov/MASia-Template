@@ -65,52 +65,63 @@
 							<h2 class="modal-title" id="fullModalLabel">Task details</h2>
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<div class="modal-body overflow-auto scrollbar-hidden">
+						<div class="modal-body overflow-auto scrollbar-hidden modal-reviewer-tasks">
 
-							<div class="title-section w-100 flex-wrap">
-								<div class="wrap-tags-task-detail tags">
-									<div class="toggleClose"></div>
-									<div class="dropdown">
-										<button class="tag bg-new dropdown-tag" name="state" type="button"
-											data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8"
-											value="New">
-											New
-										</button>
-										<ul class="dropdown-menu dropdown-tag-menu">
-											<li><span class="dropdown-item" data-value="New">New</span></li>
-											<li><span class="dropdown-item" data-value="In progress">In progress</span>
-											</li>
-											<li><span class="dropdown-item" data-value="Reviewed">Reviewed</span></li>
-											<li><span class="dropdown-item" data-value="Completed">Completed</span></li>
-											<li><span class="dropdown-item" data-value="Failed">Failed</span></li>
-										</ul>
+							<div class="title-section w-100">
+								<div class="wrap-tags-assignee">
+									<div class="wrap-tags-task-detail tags">
+										<div class="toggleClose"></div>
+										<div class="dropdown">
+											<button class="tag bg-new dropdown-tag" name="state" type="button"
+												data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8"
+												value="New">
+												New
+											</button>
+											<ul class="dropdown-menu dropdown-tag-menu">
+												<li><span class="dropdown-item" data-value="New">New</span></li>
+												<li><span class="dropdown-item" data-value="In progress">In
+														progress</span>
+												</li>
+												<li><span class="dropdown-item" data-value="Reviewed">Reviewed</span>
+												</li>
+												<li><span class="dropdown-item" data-value="Completed">Completed</span>
+												</li>
+												<li><span class="dropdown-item" data-value="Failed">Failed</span></li>
+											</ul>
+										</div>
+
+										<div class="dropdown">
+											<button class="tag bg-medium dropdown-tag" name="priority" type="button"
+												data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8"
+												value="Medium">
+												Medium
+											</button>
+											<ul class="dropdown-menu dropdown-tag-menu">
+												<li><span class="dropdown-item" data-value="Low">Low</span></li>
+												<li><span class="dropdown-item" data-value="Medium">Medium</span>
+												</li>
+												<li><span class="dropdown-item" data-value="Hight">Hight</span></li>
+											</ul>
+										</div>
 									</div>
-
-									<div class="dropdown">
-										<button class="tag bg-medium dropdown-tag" name="priority" type="button"
-											data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8"
-											value="Medium">
-											Medium
-										</button>
-										<ul class="dropdown-menu dropdown-tag-menu">
-											<li><span class="dropdown-item" data-value="Low">Low</span></li>
-											<li><span class="dropdown-item" data-value="Medium">Medium</span>
-											</li>
-											<li><span class="dropdown-item" data-value="Hight">Hight</span></li>
-										</ul>
+									<div class="assignee">
+										<div class="user-avatar">
+											<img src="images/adult.png" alt="" class="img-fluid">
+										</div>
+										<div class="name">Assignee Princess Sara</div>
 									</div>
-
-
-
 								</div>
+
 								<button class="btn-options">
 									<svg>
 										<use href="images/button-options.svg#button-options" />
 									</svg>
 								</button>
-                                <div class="title w-100 mt-20">Read the book</div>
+
+
 							</div>
 							<div class="info-group">
+								<div class="title w-100">Read the book</div>
 								<div class="section">
 									<div class="row g-0">
 										<div class="col col-auto">Date:</div>
@@ -148,8 +159,6 @@
 												<div class="number">10</div>
 												<div class="prizes">
 													<div class="prize"></div>
-													<div class="prize"></div>
-													<div class="prize"></div>
 												</div>
 											</div>
 										</div>
@@ -162,14 +171,15 @@
 										</div>
 									</div>
 								</div>
+								
 								<div class="section section-members-list">
-									<h5 class="title-small color-white-2">Reviewer</h5>
+									<h5 class="title">Reviewer</h5>
 									<div class="members-list">
 										<div class="item queen">
 											<div class="person">
 												<img src="images/queen.png" alt="" class="img-fluid">
 											</div>
-											<div class="name">Queen Ann</div>										
+											<div class="name">Queen Ann</div>
 										</div>
 										<div class="item other">
 											<div class="person">
@@ -184,8 +194,9 @@
 											</svg>
 										</button>
 									</div>
-                                    
-										<span class="bottom-text">Select the person who will monitor task progress and approve its completion</span>
+
+									<span class="bottom-text">Select the person who will monitor task progress and
+										approve its completion</span>
 								</div>
 							</div>
 
@@ -242,8 +253,6 @@
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/air-datepicker/air-datepicker.js"></script>
-	<script src="js/date-picker.mixin.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/input.js"></script>
 	<script>

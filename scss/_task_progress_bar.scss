@@ -219,7 +219,7 @@
       }
       &:disabled,
       &.disabled {
-        border-radius: 12px;
+        color: $gray-10;
         background: $black-color-8;
       }
     }
