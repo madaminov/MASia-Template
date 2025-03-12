@@ -50,3 +50,16 @@
     border: 1px solid $white-2 !important;
   }
 }
+.add-a-new-member-fraim-46a .form-label[for="nickname"] {
+  margin-top: 24px;
+  display: block;
+}
+.section-inner:last-of-type {
+  margin-top: -20px; 
+}
+body[data-page="log-in-empty-fraim-50a"] .modal .form {
+  gap: 24px !important;
+}
+body[data-page="log-in-empty-fraim-50a"] .form-log-in .form-section {
+  gap: 20px !important;
+}

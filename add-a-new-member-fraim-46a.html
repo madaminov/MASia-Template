@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="add-a-new-member-fraim-46a">
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
+					</div>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+					</div>
+				</div>
+
+			</header>
+			<footer>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<button title="home" class="btn-home">
+						<svg>
+							<use href="images/icons.svg#home" />
+						</svg>
+					</button>
+					<button title="calendar" class="btn-calendar">
+						<svg>
+							<use href="images/icons.svg#calendar" />
+						</svg>
+					</button>
+					<button title="add" class="btn-add">
+						<svg>
+							<use href="images/icons.svg#plus" />
+						</svg>
+					</button>
+					<button title="list" class="btn-list">
+						<svg>
+							<use href="images/icons.svg#list" />
+						</svg>
+					</button>
+					<button class="btn-user">
+						<svg>
+							<use href="images/icon-user.svg#user" />
+						</svg>
+					</button>
+				</div>
+			</footer>
+			<!--modal-->
+			<div class="modal fullScreenModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header modal-header-queen  justify-content-start bg-liner-6">
+							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+							<h2 class="modal-title" id="fullModalLabel">Add a new Member</h2>
+						</div>
+						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
+
+							<div class="add-members add-members-manually">
+								<div class="tab-add-members">
+									<form class="form form-add-members-manually">
+										<div class="section-inner">
+											<div class="form-group">
+												<label for="nickname" class="form-label">Nickname <i
+														class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+														data-bs-placement="top" data-bs-html="true"
+														data-bs-title="Type a unique Nickname"></i></label>
+												<input type="text" class="form-control form-control-valid" name="name"
+													id="nickname" placeholder="Type a unique Nickname" required
+													autocomplete="false">
+												<div class="invalid-feedback">
+													Error
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="name" class="form-label">Name</label>
+												<input type="text" class="form-control form-control-valid" name="name"
+													id="name" placeholder="Type Name" required autocomplete="false">
+												<div class="invalid-feedback">
+													Error
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="priority" class="form-label">Family Role <i
+														class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+														data-bs-placement="top" data-bs-html="true"
+														data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
+
+												<div class="input-group input-group-select">
+													<input type="text"
+														class="form-control form-control-dropdown dropdown-toggle"
+														data-bs-toggle="dropdown" data-bs-auto-close="true"
+														data-bs-offset="0,8" aria-expanded="false" name="role" value=""
+														readonly="readonly" placeholder="Select Family Role" required
+														autocomplete="false">
+													<span class="input-group-text input-icon-down"></span>
+													<div class="invalid-feedback">
+														Error
+													</div>
+													<ul class="dropdown-menu dropdown-for-input">
+                                                        <li><span class="dropdown-item" data-value="Queen">Queen</span></li>
+                                                        <li><span class="dropdown-item" data-value="King">King</span></li>
+                                                        <li><span class="dropdown-item" data-value="Princess">Princess</span></li>
+                                                        <li><span class="dropdown-item" data-value="Prince">Prince</span></li>
+                                                        <li><input type="text" value="" class="dropdown-item-input" placeholder="Type other Role"></li>
+                                                    </ul>
+                                                    
+												</div>
+												<div class="invalid-feedback">
+													Error
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="date" class="form-label">Birthday</label>
+												<div class="input-group input-group-reset has-validation">
+													<input type="text" class="form-control form-control-date"
+														name="date" value="" placeholder="Select birthday" id="date"
+														required readonly autocomplete="false">
+													<span
+														class="input-group-text input-reset-value cursor-pointer"></span>
+													<span class="input-group-text input-icon-calendar"></span>
+													<div class="invalid-feedback">
+														Error
+													</div>
+												</div>
+
+											</div>
+										</div>
+										<div class="w-100">
+											<div class="form-group">
+												<button class="btn btn-light w-100" type="submit">Create an
+													Account</button>
+											</div>
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-input.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/input.js"></script>
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+
+
+	</script>
+</body>
+
+</html>

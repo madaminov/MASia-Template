@@ -22498,6 +22498,23 @@ footer.show-context-menu-user .btn-user {
   border: 1px solid #f6f6f6 !important;
 }
 
+.add-a-new-member-fraim-46a .form-label[for=nickname] {
+  margin-top: 24px;
+  display: block;
+}
+
+.section-inner:last-of-type {
+  margin-top: -20px;
+}
+
+body[data-page=log-in-empty-fraim-50a] .modal .form {
+  gap: 24px !important;
+}
+
+body[data-page=log-in-empty-fraim-50a] .form-log-in .form-section {
+  gap: 20px !important;
+}
+
 @-webkit-keyframes bounce {
   from, 20%, 53%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
