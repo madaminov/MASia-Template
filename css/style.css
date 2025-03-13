@@ -16724,10 +16724,6 @@ footer.show-context-menu-user .btn-user {
   z-index: 5;
 }
 
-.modal-open footer {
-  z-index: 1057;
-}
-
 .wrap-task-progress-bar {
   display: flex;
   flex-direction: column;
@@ -20572,7 +20568,7 @@ footer.show-context-menu-user .btn-user {
 }
 
 .modal {
-  padding-bottom: 83px;
+  padding-bottom: 0px;
 }
 
 .modal-dialog {
@@ -20898,6 +20894,18 @@ footer.show-context-menu-user .btn-user {
   height: 38px;
   background-color: #d9d9d9;
   border-radius: 50%;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-queen {
+  background-color: #d3bff9;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-king {
+  background-color: #b4c1e9;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-princess {
+  background-color: #ddd2f4;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-prince {
+  background-color: #d4e6fc;
 }
 .modal-reviewer-tasks .assignee .name {
   color: #f6f6f6;
