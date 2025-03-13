@@ -22449,6 +22449,78 @@ footer.show-context-menu-user .btn-user {
   background: #702deb;
 }
 
+.create-an-account-empty-45a .bottom-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-feature-settings: "liga" off, "clig" off;
+  /* Caption1 - 12 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.048px;
+  margin-top: 8px;
+  display: inline-block;
+}
+.create-an-account-empty-45a .bottom-text a {
+  color: #d3bff9;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.create-an-account-empty-45a .form-label[for=name] {
+  margin-top: 20px;
+  display: block;
+}
+
+.create-an-account-button {
+  color: #000;
+  margin-top: -16px;
+  padding: 12px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #ede3ff;
+  background: #ede3ff;
+}
+.create-an-account-button:disabled, .create-an-account-button.disabled {
+  border: 1px solid #3e3e3e;
+  background: #3e3e3e;
+  color: #757575;
+}
+.create-an-account-button:hover {
+  border: 1px solid #b38ff5;
+  background: #b38ff5;
+  color: #000000;
+}
+.create-an-account-button.active, .create-an-account-button:active, .create-an-account-button:focus {
+  color: #000 !important;
+  background: #f6f6f6 !important;
+  border: 1px solid #f6f6f6 !important;
+}
+
+.add-a-new-member-fraim-46a .form-label[for=nickname] {
+  margin-top: 24px;
+  display: block;
+}
+
+.section-inner:last-of-type {
+  margin-top: -20px;
+}
+
+body[data-page=log-in-empty-fraim-50a] .modal .form {
+  gap: 24px !important;
+}
+
+body[data-page=log-in-empty-fraim-50a] .form-log-in .form-section {
+  gap: 20px !important;
+}
+
 @-webkit-keyframes bounce {
   from, 20%, 53%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
