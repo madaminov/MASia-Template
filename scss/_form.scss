@@ -840,6 +840,41 @@ button,
     }
   }
 }
+.btn-microphone {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid $gray-11;
+  background-color: $black-color-15;
+  padding: 0;
+  @include border-radius(50%);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $white;
+    width: 17.455px;
+    height: 17.455px;
+  }
+}
+.btn-send-message {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  flex-shrink: 0;
+  border: none;
+  background-color: $black-color-15;
+  @include border-radius(0);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $white;
+    width: 16px;
+  }
+}
 .btn-collapse {
   width: 100%;
   display: flex;

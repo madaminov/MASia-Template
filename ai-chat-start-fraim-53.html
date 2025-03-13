@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+
+			<!--modal-->
+			<div class="modal fullScreenModal ai-chat-modal fade" id="fullModal" tabindex="-1"
+				aria-labelledby="fullModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+							<h2 class="modal-title ms-auto me-auto" id="fullModalLabel">MAS.AI Assistant</h2>
+						</div>
+						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
+							<div class="group-help">
+								<h2 class="title">How may I help<br />you today?</h2>
+								<div class="group-help-ai-button">
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/diamond.png" alt="">
+										</div>
+										<div class="name">Today's<br />schedule</div>
+									</div>
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/cup.png" alt="">
+										</div>
+										<div class="name">Tomorrow's<br />schedule</div>
+									</div>
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/start.png" alt="">
+										</div>
+										<div class="name">Create new</div>
+									</div>
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/cup.png" alt="">
+										</div>
+										<div class="name">Daily report</div>
+									</div>
+								</div>
+							</div>
+							<div class="bottom-menu">
+								<div class="prompt-box">
+									<textarea name="text" class="prompt-box-input"
+										placeholder="Ask a question..."></textarea>
+									<button class="btn-send-message">
+										<svg>
+											<use href="images/icon-send.svg#send" />
+										</svg>
+									</button>
+								</div>
+								<button class="btn-microphone">
+									<svg>
+										<use href="images/icon-mic.svg#mic" />
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+	<script src="js/date-input.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/input.js"></script>
+	<script>
+		let fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+
+	</script>
+</body>
+
+</html>

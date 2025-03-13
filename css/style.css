@@ -13616,6 +13616,57 @@ button.active, button:active, button:focus,
   fill: #000;
 }
 
+.btn-microphone {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid #666;
+  background-color: #141414;
+  padding: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-microphone svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #fff;
+  width: 17.455px;
+  height: 17.455px;
+}
+
+.btn-send-message {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  flex-shrink: 0;
+  border: none;
+  background-color: #141414;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-send-message svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #fff;
+  width: 16px;
+}
+
 .btn-collapse {
   width: 100%;
   display: flex;
@@ -14554,6 +14605,7 @@ input[type=password]:focus + .input-group-text,
 .form-create-an-account .form-footer-text a,
 .modal form.form-create-an-account .form-footer-text a {
   color: #d3bff9;
+  text-decoration: none;
 }
 .form-create-an-account .form-footer-text a:hover,
 .modal form.form-create-an-account .form-footer-text a:hover {
@@ -16665,10 +16717,6 @@ footer.show-context-menu-user .context-menu-user {
 footer.show-context-menu-user .btn-user {
   position: relative;
   z-index: 5;
-}
-
-.modal-open footer {
-  z-index: 1057;
 }
 
 .wrap-task-progress-bar {
@@ -20515,7 +20563,7 @@ footer.show-context-menu-user .btn-user {
 }
 
 .modal {
-  padding-bottom: 83px;
+  padding-bottom: 0px;
 }
 
 .modal-dialog {
@@ -20841,6 +20889,18 @@ footer.show-context-menu-user .btn-user {
   height: 38px;
   background-color: #d9d9d9;
   border-radius: 50%;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-queen {
+  background-color: #d3bff9;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-king {
+  background-color: #b4c1e9;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-princess {
+  background-color: #ddd2f4;
+}
+.modal-reviewer-tasks .assignee .user-avatar.user-avatar-prince {
+  background-color: #d4e6fc;
 }
 .modal-reviewer-tasks .assignee .name {
   color: #f6f6f6;
@@ -22326,6 +22386,141 @@ footer.show-context-menu-user .btn-user {
   background-size: 24px;
 }
 
+.ai-chat-modal {
+  background: #1e1e1e;
+}
+.ai-chat-modal .modal-content {
+  padding: 0px;
+  height: 100%;
+}
+.ai-chat-modal .modal-header {
+  padding: 40px 16px 16px 16px;
+  height: auto;
+  background: #1e1e1e;
+}
+.ai-chat-modal .modal-header .modal-title {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+}
+.ai-chat-modal .modal-header .btn-close-arrow {
+  background-image: url(../images/icon-arrow-right-gray.svg);
+  background-size: 12px 12px;
+}
+.ai-chat-modal .modal-body {
+  padding: 16px 16px 40px 16px;
+  gap: 15px;
+  position: relative;
+}
+.ai-chat-modal .group-help .title {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* H3 - 24 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  margin-bottom: 24px;
+}
+.ai-chat-modal .group-help-ai-button {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ai-chat-modal .group-help-ai-button .item {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 102, 102, 0.4);
+  background: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  width: calc(50% - 16px);
+  max-width: calc(50% - 16px);
+  min-height: 132px;
+}
+.ai-chat-modal .group-help-ai-button .item .wrap-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #ede3ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai-chat-modal .group-help-ai-button .item .name {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
+.ai-chat-modal .bottom-menu {
+  display: flex;
+  width: calc(100% - 32px);
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 40px;
+  left: auto;
+  right: auto;
+}
+.ai-chat-modal .bottom-menu .prompt-box {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 20px;
+  border: 1px solid #666;
+  background: #141414;
+  gap: 10px;
+}
+.ai-chat-modal .bottom-menu .prompt-box .prompt-box-input {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  height: 24px;
+  width: 100%;
+  box-shadow: none;
+  outline: none;
+}
+.ai-chat-modal .bottom-menu .prompt-box .prompt-box-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.ai-chat-modal .bottom-menu .prompt-box .prompt-box-input:focus, .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input:focus-visible {
+  box-shadow: none;
+  outline: none;
+}
+
 .wrapper-page-404 {
   padding-top: 0;
   padding-bottom: 0;
@@ -22513,16 +22708,6 @@ body[data-page=log-in-empty-fraim-50a] .modal .form {
 
 body[data-page=log-in-empty-fraim-50a] .form-log-in .form-section {
   gap: 20px !important;
-}
-
-body[data-page=account-edit-nickname-51a] #createTaskEventModal .modal-body,
-body[data-page=account-edit-nickname-51a] #activity-creation-modal .modal-body {
-  padding: 40px 16px;
-}
-
-body[data-page=account-edit-nickname-51a] .modal-header {
-  margin-bottom: 20px;
-  align-self: stretch;
 }
 
 @-webkit-keyframes bounce {

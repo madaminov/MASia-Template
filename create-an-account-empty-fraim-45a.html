@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="create-an-account-empty-45a">
+<body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
 			<form action="" class="form form_login">
@@ -43,11 +43,12 @@
 									<div class="section-inner">
 										<div class="form-group">
 											<label for="Nickname" class="form-label">Nickname<i
-														class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-														data-bs-placement="top" data-bs-html="true"
-														data-bs-title="Type a unique Nickname"></i></label>
+													class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+													data-bs-placement="top" data-bs-html="true"
+													data-bs-title="<h4></h4> <p></p>"></i></label>
 											<input type="text" class="form-control form-control-valid" name="Nickname"
-												id="Nickname" placeholder="Type a unique Nickname" required autocomplete="false">
+												id="Nickname" placeholder="Type a unique Nickname" required
+												autocomplete="false">
 											<div class="invalid-feedback">
 												Error
 											</div>
@@ -61,22 +62,6 @@
 												Error
 											</div>
 										</div>
-										<!--tip_card_container-->
-										<!--
-										<div class="collapse" id="collapseTip">
-											<div class="tip_card_container tip_card_container-static">
-												<div class="container">
-													<div class="tip_card_badge">💡 MAS.AI’s Tip</div>
-													<h4>Queen Role</h4>
-													<p>Her Majesty sets the rules, assigns tasks to family members, and
-														oversees
-														their completion. </p>
-												</div>
-											</div>
-										</div>
-										-->
-										<!--tip_card_container end-->
-
 										<div class="form-group ">
 											<label for="password" class="form-label">Password</label>
 											<div class="input-group input-group-password">
@@ -106,67 +91,73 @@
 													symbol
 													minimum</div>
 											</div>
-                                            <span class="bottom-text">This will be a universal password for all family members.</span>
+											<span class="bottom-text">This will be a universal password for all family
+												members.</span>
 										</div>
-                                        <div class="section-inner">
-                                            <div class="form-group">
-                                                <label for="name" class="form-label">Name</label>
-                                                <input type="text" class="form-control form-control-valid" name="name"
-                                                    id="name" placeholder="Type your Name" required autocomplete="false">
-                                                <div class="invalid-feedback">
-                                                    Error
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="priority" class="form-label">Family Role <i
-                                                        class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" data-bs-html="true"
-                                                        data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
-    
-                                                <div class="input-group input-group-select">
-                                                    <input type="text"
-                                                        class="form-control form-control-dropdown dropdown-toggle"
-                                                        data-bs-toggle="dropdown" data-bs-auto-close="true"
-                                                        data-bs-offset="0,8" aria-expanded="false" name="role" value=""
-                                                        readonly="readonly" placeholder="Select Family Role" required
-                                                        autocomplete="false">
-                                                    <span class="input-group-text input-icon-down"></span>
-                                                    <div class="invalid-feedback">
-                                                        Error
-                                                    </div>
-													<ul class="dropdown-menu dropdown-for-input">
-														<li><span class="dropdown-item" data-value="Queen">Queen</span></li>
-														<li><span class="dropdown-item" data-value="King">King</span></li>
-														<li><span class="dropdown-item" data-value="Princess">Princess</span></li>
-														<li><span class="dropdown-item" data-value="Prince">Prince</span></li>
-														<li><input type="text" value="" class="dropdown-item-input" placeholder="Type other Role"></li>
-													</ul>
-													
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Error
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="date" class="form-label">Birthday</label>
-                                                <div class="input-group input-group-reset has-validation">
-                                                    <input type="text" class="form-control form-control-date" name="date"
-                                                        value="" placeholder="Select birthday" id="date" required readonly
-                                                        autocomplete="false">
-                                                    <span class="input-group-text input-reset-value cursor-pointer"></span>
-                                                    <span class="input-group-text input-icon-calendar"></span>
-                                                    <div class="invalid-feedback">
-                                                        Error
-                                                    </div>
-                                                </div>
-    
-                                            </div>
+									</div>
+									<div class="section-inner">
+										<div class="section-inner">
+											<div class="form-group">
+												<label for="name" class="form-label">Name</label>
+												<input type="text" class="form-control form-control-valid" name="name"
+													id="name" placeholder="Type your Name" required
+													autocomplete="false">
+												<div class="invalid-feedback">
+													Error
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="priority" class="form-label">Family Role <i
+														class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+														data-bs-placement="top" data-bs-html="true"
+														data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
 
+												<div class="input-group input-group-select">
+													<input type="text"
+														class="form-control form-control-dropdown dropdown-toggle"
+														data-bs-toggle="dropdown" data-bs-auto-close="true"
+														data-bs-offset="0,8" aria-expanded="false" name="role" value=""
+														readonly="readonly" placeholder="Select Family Role" required
+														autocomplete="false">
+													<span class="input-group-text input-icon-down"></span>
+													<div class="invalid-feedback">
+														Error
+													</div>
+													<ul class="dropdown-menu dropdown-for-input">
+														<li><span class="dropdown-item" data-value="Queen">Queen</span>
+														</li>
+														<li><span class="dropdown-item" data-value="King">King</span>
+														</li>
+
+														<li><input type="text" value="" class="dropdown-item-input"
+																placeholder="Type other Role"></li>
+													</ul>
+												</div>
+												<div class="invalid-feedback">
+													Error
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="date" class="form-label">Birthday</label>
+												<div class="input-group input-group-reset has-validation">
+													<input type="text" class="form-control form-control-date"
+														name="date" value="" placeholder="Select birthday" id="date"
+														required readonly autocomplete="false">
+													<span
+														class="input-group-text input-reset-value cursor-pointer"></span>
+													<span class="input-group-text input-icon-calendar"></span>
+													<div class="invalid-feedback">
+														Error
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="w-100">
 									<div class="form-group">
-										<button class="btn create-an-account-button w-100" type="submit">Create an Account</button>
+										<button class="btn btn btn-light w-100" type="submit">Create an
+											Account</button>
 									</div>
 									<div class="form-footer-text">
 										Already have an account? <a href="">Log In</a>
@@ -174,15 +165,12 @@
 								</div>
 
 							</form>
-							<!--<div class="policy mt-auto">
-								By continuing, you agree to our <a href="">Terms</a> and <a href="">Privacy
-									Policy</a>
-							</div>
+
 						</div>
 					</div>
 
 				</div>
-			</div>-->
+			</div>
 			<!--modal end-->
 
 		</div>

@@ -2,7 +2,7 @@
   opacity: 0;
 }
 .modal {
-  padding-bottom: 83px;
+  padding-bottom: 0px;
 }
 .modal-dialog {
   max-width: 768px;
@@ -328,6 +328,18 @@
       height: 38px;
       background-color: $gray-21;
       border-radius: 50%;
+      &.user-avatar-queen {
+        background-color: $primary-default;
+      }
+      &.user-avatar-king {
+        background-color: $blue-10;
+      }
+      &.user-avatar-princess {
+        background-color: $violet-12;
+      }
+      &.user-avatar-prince {
+        background-color: $blue-9;
+      }
     }
     .name {
       color: $white-2;
