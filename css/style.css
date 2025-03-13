@@ -22467,7 +22467,7 @@ footer.show-context-menu-user .btn-user {
 }
 
 .create-an-account-empty-45a .form-label[for=name] {
-  margin-top: 20px;
+  margin-top: 40px;
   display: block;
 }
 
@@ -22513,6 +22513,16 @@ body[data-page=log-in-empty-fraim-50a] .modal .form {
 
 body[data-page=log-in-empty-fraim-50a] .form-log-in .form-section {
   gap: 20px !important;
+}
+
+body[data-page=account-edit-nickname-51a] #createTaskEventModal .modal-body,
+body[data-page=account-edit-nickname-51a] #activity-creation-modal .modal-body {
+  padding: 40px 16px;
+}
+
+body[data-page=account-edit-nickname-51a] .modal-header {
+  margin-bottom: 20px;
+  align-self: stretch;
 }
 
 @-webkit-keyframes bounce {
