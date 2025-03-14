@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-page="log-in-empty-fraim-50a">
+<body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
 			<form action="" class="form form_login">
@@ -41,13 +41,14 @@
 							<form action="" class="form form-log-in needs-validation" novalidate>
 								<div class="form-section">
 									<div class="form-group">
-										<label for="email" class="form-label">Nickname<i
-                                            class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" data-bs-html="true"
-                                            data-bs-title="Type a unique Nickname"></i></label>
-										<input type="email" class="form-control form-control-valid" name="email"
-											id="email" placeholder="Type a unique Nickname" required
-											autocomplete="off">
+										<label for="Nickname" class="form-label">Nickname<i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="Type a unique Nickname"></i></label>
+										<input type="text" class="form-control form-control-nickname form-control-valid"
+											name="Nickname" id="Nickname" placeholder="Type a unique Nickname" required
+											autocomplete="false">
+										<span class="for-form-control-nickname">@</span>
 										<div class="invalid-feedback">
 											Error
 										</div>
@@ -58,6 +59,7 @@
 											<input type="password" class="form-control form-control-password"
 												name="password" id="password" placeholder="Type a Password" required>
 											<span class="input-group-text password-show-view cursor-pointer"></span>
+
 											<div class="invalid-feedback">
 												Error
 											</div>
@@ -115,7 +117,10 @@
 			fullModal.show();
 		};
 
-
+		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
 		const forms = document.querySelectorAll('.needs-validation')
 
 		// Loop over them and prevent submission

@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="add-a-new-member-fraim-46a">
+<body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
 			<header>
@@ -68,86 +68,81 @@
 						</div>
 						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
 
-							<div class="add-members add-members-manually">
-								<div class="tab-add-members">
-									<form class="form form-add-members-manually">
-										<div class="section-inner">
-											<div class="form-group">
-												<label for="nickname" class="form-label">Nickname <i
-														class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-														data-bs-placement="top" data-bs-html="true"
-														data-bs-title="Type a unique Nickname"></i></label>
-												<input type="text" class="form-control form-control-valid" name="name"
-													id="nickname" placeholder="Type a unique Nickname" required
-													autocomplete="false">
-												<div class="invalid-feedback">
-													Error
-												</div>
-											</div>
-											<div class="form-group">
-												<label for="name" class="form-label">Name</label>
-												<input type="text" class="form-control form-control-valid" name="name"
-													id="name" placeholder="Type Name" required autocomplete="false">
-												<div class="invalid-feedback">
-													Error
-												</div>
-											</div>
-											<div class="form-group">
-												<label for="priority" class="form-label">Family Role <i
-														class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-														data-bs-placement="top" data-bs-html="true"
-														data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
+							<form class="form form-add-new-members">
+								<div class="section-inner">
+									<div class="form-group">
+										<label for="nickname" class="form-label">Nickname <i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="Type a unique Nickname"></i></label>
+										<input type="text" class="form-control form-control-valid" name="name"
+											id="nickname" placeholder="Type a unique Nickname" required
+											autocomplete="false">
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="name" class="form-label">Name</label>
+										<input type="text" class="form-control form-control-valid" name="name" id="name"
+											placeholder="Type Name" required autocomplete="false">
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="priority" class="form-label">Family Role <i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
 
-												<div class="input-group input-group-select">
-													<input type="text"
-														class="form-control form-control-dropdown dropdown-toggle"
-														data-bs-toggle="dropdown" data-bs-auto-close="true"
-														data-bs-offset="0,8" aria-expanded="false" name="role" value=""
-														readonly="readonly" placeholder="Select Family Role" required
-														autocomplete="false">
-													<span class="input-group-text input-icon-down"></span>
-													<div class="invalid-feedback">
-														Error
-													</div>
-													<ul class="dropdown-menu dropdown-for-input">
-                                                        <li><span class="dropdown-item" data-value="Queen">Queen</span></li>
-                                                        <li><span class="dropdown-item" data-value="King">King</span></li>
-                                                        <li><span class="dropdown-item" data-value="Princess">Princess</span></li>
-                                                        <li><span class="dropdown-item" data-value="Prince">Prince</span></li>
-                                                        <li><input type="text" value="" class="dropdown-item-input" placeholder="Type other Role"></li>
-                                                    </ul>
-                                                    
-												</div>
-												<div class="invalid-feedback">
-													Error
-												</div>
+										<div class="input-group input-group-select">
+											<input type="text"
+												class="form-control form-control-dropdown dropdown-toggle"
+												data-bs-toggle="dropdown" data-bs-auto-close="true" data-bs-offset="0,8"
+												aria-expanded="false" name="role" value="" readonly="readonly"
+												placeholder="Select Family Role" required autocomplete="false">
+											<span class="input-group-text input-icon-down"></span>
+											<div class="invalid-feedback">
+												Error
 											</div>
-											<div class="form-group">
-												<label for="date" class="form-label">Birthday</label>
-												<div class="input-group input-group-reset has-validation">
-													<input type="text" class="form-control form-control-date"
-														name="date" value="" placeholder="Select birthday" id="date"
-														required readonly autocomplete="false">
-													<span
-														class="input-group-text input-reset-value cursor-pointer"></span>
-													<span class="input-group-text input-icon-calendar"></span>
-													<div class="invalid-feedback">
-														Error
-													</div>
-												</div>
+											<ul class="dropdown-menu dropdown-for-input">
+												<li><span class="dropdown-item" data-value="Queen">Queen</span></li>
+												<li><span class="dropdown-item" data-value="King">King</span></li>
+												<li><span class="dropdown-item" data-value="Princess">Princess</span>
+												</li>
+												<li><span class="dropdown-item" data-value="Prince">Prince</span></li>
+												<li><input type="text" value="" class="dropdown-item-input"
+														placeholder="Type other Role"></li>
+											</ul>
 
+										</div>
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="date" class="form-label">Birthday</label>
+										<div class="input-group input-group-reset has-validation">
+											<input type="text" class="form-control form-control-date" name="date"
+												value="" placeholder="Select birthday" id="date" required readonly
+												autocomplete="false">
+											<span class="input-group-text input-reset-value cursor-pointer"></span>
+											<span class="input-group-text input-icon-calendar"></span>
+											<div class="invalid-feedback">
+												Error
 											</div>
 										</div>
-										<div class="w-100">
-											<div class="form-group">
-												<button class="btn btn-light w-100" type="submit">Create an
-													Account</button>
-											</div>
-										</div>
-									</form>
 
+									</div>
 								</div>
-							</div>
+								<div class="w-100">
+									<div class="form-group">
+										<button class="btn btn-light w-100" type="submit">Create an
+											Account</button>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 

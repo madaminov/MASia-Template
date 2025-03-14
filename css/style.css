@@ -14374,6 +14374,35 @@ input[type=password]:focus + .input-group-text,
   gap: 32px;
 }
 
+.form-control-nickname {
+  transition: padding 0.3s ease;
+}
+.form-control-nickname + .for-form-control-nickname {
+  color: #9f9f9f;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Callout - 15 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+  position: absolute;
+  top: 42px;
+  left: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.form-control-nickname:focus, .form-control-nickname:valid, .form-control-nickname.is-valid, .form-control-nickname.is-invalid {
+  transition: padding 0.3s ease;
+  padding-left: 32px;
+}
+.form-control-nickname:focus + .for-form-control-nickname, .form-control-nickname:valid + .for-form-control-nickname, .form-control-nickname.is-valid + .for-form-control-nickname, .form-control-nickname.is-invalid + .for-form-control-nickname {
+  opacity: 1;
+  visibility: visible;
+}
+
 .input-group-text {
   color: #9f9f9f;
   font-feature-settings: "liga" off, "clig" off;
@@ -14628,10 +14657,10 @@ input[type=password]:focus + .input-group-text,
 .form-log-in .form-control.is-valid {
   border-color: transparent;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url(../images/icon-valid.svg);
+  /*background-image: url(../images/icon-valid.svg);*/
   background-repeat: no-repeat;
   background-position: right 12px center;
-  background-size: 18px 18px;
+  background-size: 16px 16px;
   box-shadow: none;
 }
 .form-create-an-account.was-validated .form-control-password:valid,
@@ -19610,7 +19639,8 @@ footer.show-context-menu-user .btn-user {
 
 .tip_card_container {
   position: fixed;
-  bottom: 93px;
+  /*bottom: 93px;*/
+  bottom: 12px;
   width: calc(100% - 8px);
   max-width: 760px;
   margin: 0 auto;
@@ -19853,8 +19883,8 @@ footer.show-context-menu-user .btn-user {
   background: rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100vw;
-  height: calc(100vh - 83px);
-  top: 0;
+  height: 100vh;
+  top: 72px;
   left: 0;
   z-index: 1059;
 }
@@ -20224,6 +20254,139 @@ footer.show-context-menu-user .btn-user {
 .tip_card_container-event-save .interface-elements .btn-save-for-future:disabled {
   color: #757575;
   background: #3e3e3e;
+}
+
+.tip_card_container-new-account {
+  z-index: 1058 !important;
+}
+.tip_card_container-new-account::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 72px;
+  left: 0;
+  z-index: 1059;
+}
+.tip_card_container-new-account .container {
+  position: relative;
+  z-index: 1060;
+  background: #fff;
+}
+.tip_card_container-new-account .container::after {
+  border-top: 11px solid #fff;
+}
+.tip_card_container-new-account .wrap-tools-family-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+.tip_card_container-new-account .tools {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.tip_card_container-new-account .tools .close-btn {
+  display: flex;
+  width: 33px;
+  height: 33px;
+  padding: 7.439px 11.158px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.439px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  backdrop-filter: blur(2.3246560097px);
+  transition: all 0.3s ease;
+}
+.tip_card_container-new-account .tools .close-btn svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #9f9f9f;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+.tip_card_container-new-account .tools .close-btn:hover svg {
+  fill: #000000 !important;
+  transition: all 0.3s ease;
+}
+.tip_card_container-new-account .family-list {
+  display: flex;
+  width: calc(100% - 40px - 20px);
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+.tip_card_container-new-account .family-list .item-user {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.tip_card_container-new-account .family-list .user {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  padding: 0;
+}
+.tip_card_container-new-account .family-list .text {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+}
+.tip_card_container-new-account .text-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+.tip_card_container-new-account .text-block .item {
+  color: #000000;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+}
+.tip_card_container-new-account .text-block .item b {
+  font-weight: 500;
+}
+.tip_card_container-new-account .interface-elements {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.tip_card_container-new-account .btn-copy {
+  background: #1e1e1e;
+  width: calc(50% - 8px);
+  height: 50px;
+}
+.tip_card_container-new-account .btn-copy:hover {
+  background: #b38ff5;
+}
+.tip_card_container-new-account .btn-share {
+  width: calc(50% - 8px);
+  height: 50px;
 }
 
 @media (max-height: 600px) {
@@ -21953,6 +22116,22 @@ footer.show-context-menu-user .btn-user {
   padding: 0;
 }
 .add-members-manually .form .section-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.modal .form-add-new-members {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  padding: 40px 16px;
+}
+.modal .form-add-new-members .section-inner {
   width: 100%;
   display: flex;
   flex-direction: column;

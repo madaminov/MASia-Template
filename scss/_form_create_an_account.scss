@@ -57,10 +57,10 @@
   .form-control.is-valid {
     border-color: transparent;
     padding-right: calc(1.5em + 0.75rem);
-    background-image: url(../images/icon-valid.svg);
+    /*background-image: url(../images/icon-valid.svg);*/
     background-repeat: no-repeat;
     background-position: right 12px center;
-    background-size: 18px 18px;
+    background-size: 16px 16px;
     box-shadow: none;
   }
   &.was-validated .form-control-password:valid,

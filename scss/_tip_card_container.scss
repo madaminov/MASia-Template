@@ -1,6 +1,7 @@
 .tip_card_container {
   position: fixed;
-  bottom: 93px;
+  /*bottom: 93px;*/
+  bottom: 12px;
   width: calc(100% - 8px);
   max-width: 760px;
   margin: 0 auto;
@@ -237,8 +238,8 @@
     background: rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 83px);
-    top: 0;
+    height: 100vh;
+    top: 72px;
     left: 0;
     z-index: 1059;
   }
@@ -614,6 +615,140 @@
         background: $black-color-8;
       }
     }
+  }
+}
+.tip_card_container-new-account {
+  z-index: 1058 !important;
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 72px;
+    left: 0;
+    z-index: 1059;
+  }
+  .container {
+    position: relative;
+    z-index: 1060;
+    background: $white;
+    &::after {
+      border-top: 11px solid $white;
+    }
+  }
+  .wrap-tools-family-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+  }
+  .tools {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    .close-btn {
+      display: flex;
+      width: 33px;
+      height: 33px;
+      padding: 7.439px 11.158px;
+      justify-content: center;
+      align-items: center;
+      gap: 7.439px;
+      flex-shrink: 0;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      background-color: $gray-35;
+      backdrop-filter: blur(2.3246560096740723px);
+      transition: all 0.3s ease;
+      svg {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        fill: $gray-7;
+        width: 8px;
+        height: 8px;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        svg {
+          fill: $black-color !important;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  .family-list {
+    display: flex;
+    width: calc(100% - 40px - 20px);
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 auto;
+    .item-user {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .user {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 auto;
+      padding: 0;
+    }
+    .text {
+      color: $black-color;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Headline - 18 M */
+      font-family: $font-stack-popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 144.444% */
+    }
+  }
+  .text-block {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    .item {
+      color: $black-color;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.032px;
+      b {
+        font-weight: 500;
+      }
+    }
+  }
+  .interface-elements {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .btn-copy {
+    background: $body-color;
+    width: calc(50% - 8px);
+    height: 50px;
+    &:hover {
+      background: $violet-7;
+    }
+  }
+  .btn-share {
+    width: calc(50% - 8px);
+    height: 50px;
   }
 }
 @media (max-height: 600px) {
