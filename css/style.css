@@ -13643,6 +13643,9 @@ button.active, button:active, button:focus,
 }
 
 .btn-send-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 16px;
   padding: 0;
@@ -13665,6 +13668,7 @@ button.active, button:active, button:focus,
   flex: 0 0 auto;
   fill: #fff;
   width: 16px;
+  height: 16px;
 }
 
 .btn-collapse {
@@ -22623,7 +22627,7 @@ footer.show-context-menu-user .btn-user {
   background: #141414;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 12px;
   align-self: stretch;
@@ -22655,9 +22659,9 @@ footer.show-context-menu-user .btn-user {
 .ai-chat-modal .bottom-menu {
   display: flex;
   width: calc(100% - 32px);
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
-  position: absolute;
+  position: fixed;
   bottom: 40px;
   left: auto;
   right: auto;
@@ -22666,12 +22670,13 @@ footer.show-context-menu-user .btn-user {
   display: flex;
   padding: 12px 16px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex: 1 0 0;
   border-radius: 20px;
   border: 1px solid #666;
   background: #141414;
   gap: 10px;
+  position: relative;
 }
 .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input {
   color: #fff;
@@ -22687,9 +22692,12 @@ footer.show-context-menu-user .btn-user {
   border: none;
   background: transparent;
   height: 24px;
+  min-height: 24px;
+  max-height: 120px;
   width: 100%;
   box-shadow: none;
   outline: none;
+  transition: all 0.3s ease;
 }
 .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -22698,6 +22706,25 @@ footer.show-context-menu-user .btn-user {
 .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input:focus, .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input:focus-visible {
   box-shadow: none;
   outline: none;
+}
+.ai-chat-modal .bottom-menu .prompt-box #text_area_div {
+  width: calc(100% - 64px);
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  visibility: hidden;
+  position: absolute;
+}
+.ai-chat-modal .bottom-menu .prompt-box .btn-send-message {
+  margin-bottom: 4px;
 }
 
 .wrapper-page-404 {

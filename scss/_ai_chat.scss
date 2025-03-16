@@ -56,7 +56,7 @@
       background: $black-color-15;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       gap: 12px;
       align-self: stretch;
@@ -89,9 +89,9 @@
   .bottom-menu {
     display: flex;
     width: calc(100% - 32px);
-    align-items: center;
+    align-items: flex-end;
     gap: 10px;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     left: auto;
     right: auto;
@@ -99,12 +99,13 @@
       display: flex;
       padding: 12px 16px;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
       flex: 1 0 0;
       border-radius: 20px;
       border: 1px solid $gray-11;
       background: $black-color-15;
       gap: 10px;
+      position: relative;
       .prompt-box-input {
         color: $white;
         font-feature-settings: 'liga' off, 'clig' off;
@@ -119,9 +120,12 @@
         border: none;
         background: transparent;
         height: 24px;
+        min-height: 24px;
+        max-height: 120px;
         width: 100%;
         box-shadow: none;
         outline: none;
+        transition: all 0.3s ease;
         &::placeholder {
           color: #ffffff99;
           opacity: 1;
@@ -131,6 +135,25 @@
           box-shadow: none;
           outline: none;
         }
+      }
+      #text_area_div {
+        width: calc(100% - 64px);
+        color: $white;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Body - 16 R */
+        font-family: $font-stack-popins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: 0.032px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        visibility: hidden;
+        position: absolute;
+      }
+      .btn-send-message {
+        margin-bottom: 4px;
       }
     }
   }

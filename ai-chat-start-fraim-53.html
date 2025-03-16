@@ -55,14 +55,17 @@
 							</div>
 							<div class="bottom-menu">
 								<div class="prompt-box">
-									<textarea name="text" class="prompt-box-input"
+									<textarea name="text" onkeyup="textarea_resize(event, 15, 1);"
+										class="prompt-box-input" maxlength="2000"
 										placeholder="Ask a question..."></textarea>
 									<button class="btn-send-message">
 										<svg>
 											<use href="images/icon-send.svg#send" />
 										</svg>
 									</button>
+									<div id="text_area_div"></div>
 								</div>
+
 								<button class="btn-microphone">
 									<svg>
 										<use href="images/icon-mic.svg#mic" />
@@ -90,7 +93,19 @@
 		document.onreadystatechange = function () {
 			fullModal.show();
 		};
-
+		function textarea_resize(event, line_height, min_line_count) {
+			let min_line_height = min_line_count * line_height;
+			let obj = event.target;
+			let div = document.getElementById('text_area_div');
+			div.innerHTML = obj.value;
+			console.log(div.offsetHeight);
+			let obj_height = div.offsetHeight;
+			if (event.keyCode == 13)
+				obj_height += line_height;
+			else if (obj_height < min_line_height)
+				obj_height = min_line_height;
+			obj.style.height = obj_height + 'px';
+		}
 	</script>
 </body>
 
