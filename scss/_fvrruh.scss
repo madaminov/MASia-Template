@@ -54,12 +54,122 @@
   margin-top: 24px;
   display: block;
 }
-.section-inner:last-of-type {
-  margin-top: -20px; 
-}
 body[data-page="log-in-empty-fraim-50a"] .modal .form {
   gap: 24px !important;
 }
 body[data-page="log-in-empty-fraim-50a"] .form-log-in .form-section {
   gap: 20px !important;
 }
+.form-edit-nickname,
+.modal .form-edit-nickname {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  .section-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+  .form-group{
+    width: 100%;
+  }
+}
+.form-create-an-account-google .form-section, .modal form.form-create-an-account-google .form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  .section-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+  }
+  .form-group{
+    width: 100%;
+  }
+}
+.modal form.form-create-an-account-google {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px; 
+}
+.form-edit-email,
+.modal .email {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  .section-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+  .form-group{
+    width: 100%;
+  }
+}
+.form-edit-password,
+.modal .password {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-edit-password .section-inner,
+.modal .password .section-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.form-edit-password .form-group,
+.modal .password .form-group {
+  width: 100%;
+}
+.form-edit-family-role,
+.modal .family-role {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.form-edit-family-role .section-inner,
+.modal .family-role .section-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.form-edit-family-role .form-group,
+.modal .family-role .form-group {
+  width: 100%;
+}
+

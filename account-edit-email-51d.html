@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-page="account-edit-nickname-51a">
+<body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
 			<header>
@@ -63,7 +63,7 @@
 
 
 			<!--modal-->
-			<div class="modal fullModal fade" id="createTaskEventModal" tabindex="-1" aria-labelledby="fullModalLabel"
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
 				aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -74,7 +74,7 @@
 							<button class="btn btn-light-5 btn-save ms-auto">Confirm</button>
 						</div>
 						<div class="modal-body overflow-auto scrollbar-hidden">						
-							<form action="" class="form form-create-task-event">								
+							<form action="" class="form form-edit-email">								
 								<div class="section-inner">
 									<div class="form-group">
 										<label for="Email" class="form-label">Email</label>
@@ -108,7 +108,7 @@
 	<script src="js/time-picker.js"></script>
 	<script src="js/input.js"></script>
 	<script>
-		var fullModal = new bootstrap.Modal(document.getElementById("createTaskEventModal"), {});
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
 		document.onreadystatechange = function () {
 			fullModal.show();
 		};

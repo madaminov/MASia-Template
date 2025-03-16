@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-page="account-edit-nickname-51a">
+<body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
 			<header>
@@ -63,7 +63,7 @@
 
 
 			<!--modal-->
-			<div class="modal fullModal fade" id="createTaskEventModal" tabindex="-1" aria-labelledby="fullModalLabel"
+			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
 				aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -74,18 +74,21 @@
 							<button class="btn btn-light-5 btn-save ms-auto">Save</button>
 						</div>
 						<div class="modal-body overflow-auto scrollbar-hidden">						
-							<form action="" class="form form-create-task-event">								
+							<form action="" class="form form-edit-nickname">								
 								<div class="section-inner">
 									<div class="form-group">
 										<label for="Nickname" class="form-label">Nickname<i
-                                            class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" data-bs-html="true"
-                                            data-bs-title="Type a unique Nickname"></i></label>
-                                <input type="text" class="form-control form-control-valid" name="Nickname"
-                                    id="Nickname" value="User_nick" required autocomplete="false">
-                                <div class="invalid-feedback">
-                                    Error
-                                </div>
+											class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+											data-bs-placement="top" data-bs-html="true"
+											data-bs-title="Type a unique Nickname"></i></label>
+											<input type="text" class="form-control form-control-nickname form-control-valid"
+											name="Nickname" id="Nickname" placeholder="Type a unique Nickname" required
+											autocomplete="false">
+										<span class="for-form-control-nickname">@</span>
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
 									</div>
 								</div>
 							</form>
@@ -102,43 +105,69 @@
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/air-datepicker/air-datepicker.js"></script>
-
-	<script src="js/duration-picker.js"></script>
-	<script src="js/nice-select2.js"></script>
-	<script src="js/script.js"></script>
 	<script src="js/date-input.js"></script>
-	<script src="js/time-picker.js"></script>
+	<script src="js/script.js"></script>
 	<script src="js/input.js"></script>
 	<script>
-		var fullModal = new bootstrap.Modal(document.getElementById("createTaskEventModal"), {});
+		let fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
 		document.onreadystatechange = function () {
 			fullModal.show();
 		};
-		document.querySelectorAll('.form-group-count .counter').forEach(box => {
-			box.addEventListener("click", (e) => {
-				val_number = parseInt(document.querySelector('.form-number').value)
-				if (box.classList.contains("plus")) {
-					document.querySelector('.form-number').value = val_number + 1
+		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+
+
+		const forms = document.querySelectorAll('.needs-validation')
+
+		// Loop over them and prevent submission
+		Array.from(forms).forEach(form => {
+			form.addEventListener('submit', event => {
+				if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
 				}
-				if (box.classList.contains("minus")) {
-					if (val_number > 0) {
-						document.querySelector('.form-number').value = val_number - 1
+				form.querySelectorAll('.form-control').forEach((input) => {
+					if (input.value.length < 1) {
+						input.classList.add('is-invalid')
+						event.stopPropagation()
+						event.preventDefault()
+					} else {
+						input.classList.remove('is-invalid')
 					}
-				}
-			});
+					//console.log(input.value)
+				})
+				form.classList.add('was-validated')
+			})
+			form.addEventListener('change', event => {
+				form.querySelectorAll('.form-control').forEach((input) => {
+					if (input.value.length < 1) {
+						input.classList.add('is-invalid')
+						event.stopPropagation()
+						event.preventDefault()
+					} else {
+						input.classList.remove('is-invalid')
+					}
+					console.log(input.value)
+				})
+				form.classList.add('was-validated')
+			})
 
 		})
-
-		document.querySelector('form').addEventListener('change', (event) => {
-			if (event.target.required) {
-				if (event.target.value != '') {
-					document.querySelector('form button[type="submit"]').disabled = false;
-				} else {
-					document.querySelector('form button[type="submit"]').disabled = true;
+		const form_control = document.querySelectorAll('.form-control')
+		form_control.forEach((box) => {
+			box.addEventListener('input', (event) => {
+				console.log(event.target.value)
+				if (event.value) {
+					console.log(event.value)
+					input.classList.remove('is-invalid')
+					event.stopPropagation()
+					event.preventDefault()
 				}
+			})
+		});
 
-			}
-		})
 
 	</script>
 </body>
