@@ -859,6 +859,9 @@ button,
   }
 }
 .btn-send-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 16px;
   padding: 0;
@@ -873,6 +876,7 @@ button,
     flex: 0 0 auto;
     fill: $white;
     width: 16px;
+    height: 16px;
   }
 }
 .btn-collapse {
@@ -1562,7 +1566,7 @@ input[type='password'],
   }
   &:focus,
   &:valid,
-  &.is-valid, 
+  &.is-valid,
   &.is-invalid {
     transition: padding 0.3s ease;
     padding-left: 32px;
