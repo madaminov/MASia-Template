@@ -1,0 +1,12 @@
+.form-edit-family-role,
+.modal .form-edit-family-role {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  .form-group {
+    width: 100%;
+  }
+}

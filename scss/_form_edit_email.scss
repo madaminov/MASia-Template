@@ -1,0 +1,12 @@
+.form-edit-email,
+.modal .form-edit-email {
+  display: flex;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  .form-group {
+    width: 100%;
+  }
+}

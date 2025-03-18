@@ -28,50 +28,46 @@
                 </div>
             </header>
 
-            <div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel" aria-hidden="true">
+            <div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        
+
                         <div class="modal-header justify-content-start bg-liner">
-                            <button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close btn-close-arrow" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                             <h2 class="modal-title" id="fullModalLabel">Family Role</h2>
                             <button class="btn btn-light-5 btn-save ms-auto">Confirm</button>
                         </div>
 
                         <div class="modal-body overflow-auto scrollbar-hidden">
                             <form action="" class="form-edit-family-role">
-                                <div class="section-inner">	
-                                    <div class="form-group">
-                                        <label for="priority" class="form-label">Family Role <i
-                                                class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" data-bs-html="true"
-                                                data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
+                                <div class="form-group">
+                                    <label for="priority" class="form-label">Family Role <i
+                                            class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-html="true"
+                                            data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
 
-                                        <div class="input-group input-group-select">
-                                            <input type="text"
-                                                class="form-control form-control-dropdown dropdown-toggle"
-                                                data-bs-toggle="dropdown" data-bs-auto-close="true"
-                                                data-bs-offset="0,8" aria-expanded="false" name="role" value=""
-                                                readonly="readonly" placeholder="Select Family Role" required
-                                                autocomplete="false">
-                                            <span class="input-group-text input-icon-down"></span>
-                                            <div class="invalid-feedback">
-                                                Error
-                                            </div>
-                                            <ul class="dropdown-menu dropdown-for-input">
-                                                <li><span class="dropdown-item" data-value="Queen">Queen</span></li>
-                                                <li><span class="dropdown-item" data-value="King">King</span></li>
-                                                <li><span class="dropdown-item"
-                                                        data-value="Princess">Princess</span></li>
-                                                <li><span class="dropdown-item" data-value="Prince">Prince</span>
-                                                </li>                                           
-                                            </ul>
-
-                                        </div>
+                                    <div class="input-group input-group-select">
+                                        <input type="text" class="form-control form-control-dropdown dropdown-toggle"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" data-bs-offset="0,8"
+                                            aria-expanded="false" name="role" value="Queen" readonly="readonly"
+                                            placeholder="Select Family Role" required autocomplete="false">
+                                        <span class="input-group-text input-icon-down"></span>
                                         <div class="invalid-feedback">
                                             Error
                                         </div>
+                                        <ul class="dropdown-menu dropdown-for-input">
+                                            <li><span class="dropdown-item active " data-value="Queen">Queen</span></li>
+                                            <li><span class="dropdown-item" data-value="King">King</span></li>
+                                            <li><span class="dropdown-item" data-value="Princess">Princess</span></li>
+                                            <li><span class="dropdown-item" data-value="Prince">Prince</span>
+                                            </li>
+                                        </ul>
+
                                     </div>
+                                    <div class="invalid-feedback">
+                                        Error
                                     </div>
                                 </div>
                             </form>
@@ -117,4 +113,5 @@
         });
     </script>
 </body>
+
 </html>

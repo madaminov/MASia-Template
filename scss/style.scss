@@ -10,6 +10,10 @@
 @import '_form_log_in';
 @import '_form_create-task';
 @import '_form_create_event';
+@import '_form_edit_nickname';
+@import '_form_edit_password';
+@import '_form_edit_email';
+@import '_form_edit_family_role';
 @import '_openning_screen';
 @import '_nice_select';
 @import '_components';
@@ -25,6 +29,7 @@
 @import '_day_schedule';
 @import '_event';
 @import '_task_history';
+@import '_kids_rewards_history';
 @import '_schedule_user';
 @import '_family_members';
 @import '_tip_card_container';

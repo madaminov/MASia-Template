@@ -60,8 +60,8 @@
       align-items: flex-start;
       gap: 12px;
       align-self: stretch;
-      width: calc(50% - 16px);
-      max-width: calc(50% - 16px);
+      width: calc(50% - 8px);
+      max-width: calc(50% - 8px);
       min-height: 132px;
       .wrap-icon {
         width: 32px;
@@ -89,6 +89,7 @@
   .bottom-menu {
     display: flex;
     width: calc(100% - 32px);
+    max-width: calc(768px - 32px);
     align-items: flex-end;
     gap: 10px;
     position: fixed;

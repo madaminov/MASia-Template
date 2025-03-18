@@ -12,55 +12,6 @@
 <body>
 	<div class="wrapper-main">
 		<div id="root" class="wrapper">
-			<header>
-				<div class="container-fluid d-flex align-items-center justify-content-between">
-					<div class="wrap_logo">
-						<a href="/">MAS.AI</a>
-					</div>
-					<div class="user_badge d-flex align-items-center">
-						<div class="user-info">
-							<div class="user_name text-end">Ann</div>
-							<div class="user_role">Queen</div>
-						</div>
-						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
-					</div>
-				</div>
-			</header>
-
-
-
-
-			<!--<footer>
-				<div class="container-fluid d-flex align-items-center justify-content-between">
-					<button title="home" class="btn-home">
-						<svg>
-							<use href="images/icons.svg#home" />
-						</svg>
-					</button>
-					<button title="calendar" class="btn-calendar">
-						<svg>
-							<use href="images/icons.svg#calendar" />
-						</svg>
-					</button>
-					<button title="add" class="btn-add">
-						<svg>
-							<use href="images/icons.svg#plus" />
-						</svg>
-					</button>
-					<button title="list" class="btn-list">
-						<svg>
-							<use href="images/icons.svg#list" />
-						</svg>
-					</button>
-					<button class="btn-user">
-						<svg>
-							<use href="images/icon-user.svg#user" />
-						</svg>
-					</button>
-				</div>
-			</footer>-->
-
-
 
 			<!--modal-->
 			<div class="modal fullModal fade" id="fullModal" tabindex="-1" aria-labelledby="fullModalLabel"
@@ -73,22 +24,19 @@
 							<h2 class="modal-title" id="fullModalLabel">Nickname</h2>
 							<button class="btn btn-light-5 btn-save ms-auto">Save</button>
 						</div>
-						<div class="modal-body overflow-auto scrollbar-hidden">						
-							<form action="" class="form form-edit-nickname">								
-								<div class="section-inner">
-									<div class="form-group">
-										<label for="Nickname" class="form-label">Nickname<i
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<form action="" class="form form-edit-nickname">
+								<div class="form-group">
+									<label for="Nickname" class="form-label">Nickname<i
 											class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
 											data-bs-placement="top" data-bs-html="true"
 											data-bs-title="Type a unique Nickname"></i></label>
-											<input type="text" class="form-control form-control-nickname form-control-valid"
-											name="Nickname" id="Nickname" placeholder="Type a unique Nickname" required
-											autocomplete="false">
-										<span class="for-form-control-nickname">@</span>
-										<div class="invalid-feedback">
-											Error
-										</div>
-									</div>
+									<input type="text" class="form-control form-control-nickname form-control-valid"
+										name="Nickname" id="Nickname" placeholder="Type a unique Nickname" required
+										value="User_nick" autocomplete="false">
+									<span class="for-form-control-nickname">@</span>
+									<div class="invalid-feedback">
+										Error
 									</div>
 								</div>
 							</form>

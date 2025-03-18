@@ -1,0 +1,46 @@
+.kids-rewards-history-modal {
+  background: $blue-11;
+  .modal-body {
+    padding-top: 16px;
+  }
+  .modal-content {
+    background: $blue-11;
+  }
+  .wrap-task-progress-bar {
+    .progress-badge {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      .icon {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .description {
+      color: $black-color-3;
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 16px */
+    }
+    h2 {
+      color: $black-color;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* H3 - 24 SB */
+      font-family: $font-stack-popins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px; /* 133.333% */
+      span {
+        font-size: 24px;
+        font-weight: 500;
+        font-style: normal;
+      }
+    }
+  }
+}

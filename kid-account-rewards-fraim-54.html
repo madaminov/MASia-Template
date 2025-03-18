@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<form action="" class="form form_login">
+				<div class="form_header">
+					<h2 class="title">Explore the MAS.AI</h2>
+					<p class="text">Plans for you. Reminds you. Supports you.</p>
+				</div>
+
+
+				<div class="form-group">
+					<button class="btn btn-light w-100" type="submit">Log In</button>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-outline-light w-100" type="submit">Create an Account</button>
+				</div>
+			</form>
+
+
+			<!--modal-->
+			<div class="modal fullModal pb-16 fade kids-rewards-history-modal" id="kids-rewards-history-modal"
+				tabindex="-1" aria-labelledby="fullModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header bg-liner-6">
+							<h2 class="modal-title" id="fullModalLabel">Rewards</h2>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body overflow-auto d-flex flex-column scrollbar-hidden">
+							<div class="wrap-task-progress-bar width-score">
+								<div class="wrap-progress-badge-score">
+									<div class="progress-badge">
+										<div class="icon">
+											<svg>
+												<use href="images/icons.svg#progress" />
+											</svg>
+										</div>
+									</div>
+									<div class="user-score-container">
+										<div class="number">6</div>
+										<div class="prizes">
+											<div class="prize"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wrap-text">
+									<div class="description">Your income</div>
+									<h2>My Princess,<br /> <span>your well-earned Emeralds!</span></h2>
+								</div>
+							</div>
+							<!--history-->
+							<div class="wrap-task-history">
+								<h2 class="title">Task history</h2>
+								<div class="duration-bagde">25 September 2025</div>
+								<!--task-list-->
+								<div class="task-list">
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon import">
+										</div>
+										<div class="text">Swimming lesson</div>
+										<div class="user-score-container">
+											<div class="number">2</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon import">
+										</div>
+										<div class="text">Reading</div>
+										<div class="user-score-container">
+											<div class="number">2</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+								</div>
+								<!--task-list-->
+								<div class="duration-bagde">24 September 2025</div>
+								<!--task-list-->
+								<div class="task-list">
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon export">
+										</div>
+										<div class="text">2 emeralds have been deducted by Queen Anna!</div>
+										<div class="user-score-container">
+											<div class="number">-2</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+								</div>
+								<!--task-list-->
+								<div class="duration-bagde">23 September 2025</div>
+								<!--task-list-->
+								<div class="task-list">
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon import">
+										</div>
+										<div class="text">Make the bed</div>
+										<div class="user-score-container">
+											<div class="number">3</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon import">
+										</div>
+										<div class="text">Clean the kitchen</div>
+										<div class="user-score-container">
+											<div class="number">4</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+								</div>
+								<!--task-list-->
+								<div class="duration-bagde">22 September 2025</div>
+								<!--task-list-->
+								<div class="task-list">
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon import">
+										</div>
+										<div class="text">Clean the kitchen</div>
+										<div class="user-score-container">
+											<div class="number">2</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+									<!--task-history-->
+									<div class="task-history">
+										<div class="icon import">
+										</div>
+										<div class="text">Make the bed</div>
+										<div class="user-score-container">
+											<div class="number">4</div>
+											<div class="prizes">
+												<div class="prize"></div>
+											</div>
+										</div>
+									</div>
+									<!--task-history-->
+								</div>
+								<!--task-list-->
+							</div>
+							<!--end history-->
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		let fullModal = new bootstrap.Modal(document.getElementById("kids-rewards-history-modal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+
+
+	</script>
+</body>
+
+</html>
