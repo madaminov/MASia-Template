@@ -28,6 +28,9 @@ header {
   }
   .user_badge {
     gap: 12px 12px;
+    &.user_badge_notification {
+      gap: 16px 16px;
+    }
     .user-info {
       display: flex;
       flex-direction: column;
@@ -67,6 +70,22 @@ header {
       background-color: $white;
       @include border-radius(8px);
       @include transition(0.3s);
+    }
+    .notification {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      padding: 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      svg {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }

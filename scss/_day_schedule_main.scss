@@ -1,0 +1,94 @@
+.wrap-day-schedule-main {
+  display: flex;
+  width: 100%;
+  padding-top: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  .date_info_container {
+    width: 100%;
+    display: inline-flex;
+    padding: 0px 16px;
+    justify-content: space-between;
+    align-items: center;
+    .text {
+      color: $white-2;
+      text-align: right;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Headline - 18 M */
+      font-family: $font-stack-popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 144.444% */
+    }
+    .btn-add-plus {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  .wrap-day-schedule {
+    width: 100%;
+  }
+}
+.tabs-task-events {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  .task-wrapper {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  input[type='radio'] {
+    display: none;
+  }
+  .task-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 12px 16px;
+    gap: 12px;
+    flex: 1 0 0;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: $black-color-4;
+    color: $white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      border: 1px solid $violet-11;
+    }
+  }
+  .checkmark {
+    display: flex;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: url('../images/icon-for-check-cheked.svg') center/contain
+      no-repeat;
+    transition: all 0.3s ease;
+  }
+  .radio-task:checked + .task-tab {
+    transition: all 0.3s ease;
+    border: 1px solid $violet-11;
+    background: $black-color-4;
+  }
+  .radio-task:checked + .task-tab .checkmark {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+  }
+}

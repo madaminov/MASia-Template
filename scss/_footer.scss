@@ -6,6 +6,9 @@ footer {
   bottom: 0px;
   width: 100%;
   z-index: 3;
+  &.new-footer {
+    background-color: $black-color-16;
+  }
   .container-fluid {
     padding: 7px 16px;
     gap: 10px 10px;
