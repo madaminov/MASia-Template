@@ -76,19 +76,26 @@
     visibility: hidden;
     background: url('../images/icon-for-check-cheked.svg') center/contain
       no-repeat;
+    margin-left: -16px;
+    transition: all 0.3s ease;
+  }
+  .tab-text {
     transition: all 0.3s ease;
   }
   .radio-task:checked + .task-tab {
     transition: all 0.3s ease;
     border: 1px solid $violet-11;
     background: $black-color-4;
+    transition: all 0.3s ease;
   }
   .radio-task:checked + .task-tab .checkmark {
     width: 16px;
     height: 16px;
     display: flex;
     opacity: 1;
+    position: static;
     visibility: visible;
+    margin-left: 0px;
     transition: all 0.3s ease;
   }
 }
