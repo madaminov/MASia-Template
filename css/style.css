@@ -23171,13 +23171,18 @@ footer.show-context-menu-user .btn-user {
   background: #702deb;
 }
 
-.wrap-onboarding {
-  background: #fff;
-  color: #000000;
+.modal-content-white {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 100%;
 }
 
-.wrap-onboarding header {
-  background: #fff;
+.family-members-section {
+  box-shadow: 0px 3px 5px 0px rgba(128, 68, 238, 0.1);
+}
+
+.modal-header-white {
   display: flex;
   height: 72px;
   padding: 16px;
@@ -23186,141 +23191,13 @@ footer.show-context-menu-user .btn-user {
   align-self: stretch;
 }
 
-.wrap-onboarding header .wrap_logo a {
-  color: #000000;
-}
-
-.kids-account-section {
-  display: flex;
-  width: 385px;
-  padding: 16px;
-  align-items: center;
-  gap: 8px;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 3px 5px 0px rgba(128, 68, 238, 0.1);
-  width: 100%;
-}
-.kids-account-section .user-daily-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1 0 0;
-}
-.kids-account-section .user-badge {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.kids-account-section .user-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #d3bff9;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.kids-account-section .user-avatar.user-avatar-queen {
-  background-color: #d3bff9;
-}
-.kids-account-section .user-avatar.user-avatar-king {
-  background-color: #b4c1e9;
-}
-.kids-account-section .user-avatar.user-avatar-princess {
-  background-color: #ddd2f4;
-}
-.kids-account-section .user-avatar.user-avatar-prince {
-  background-color: #d4e6fc;
-}
-.kids-account-section .personal-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-}
-.kids-account-section .personal-info .name {
-  align-self: stretch;
-  color: #292d32;
-  font-feature-settings: "liga" off, "clig" off;
-  /* Headline - 18 M */
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
+.modal-header-white .modal-title {
+  color: #000;
+  font-family: Quicksand;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 26px; /* 144.444% */
-}
-.kids-account-section .personal-info .user-role {
-  color: #212529;
-  font-feature-settings: "liga" off, "clig" off;
-  /* Caption1 - 12 R */
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px; /* 150% */
-  letter-spacing: 0.048px;
-  display: flex;
-  padding: 2px 8px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 8px;
-  background: #d3bff9;
-}
-.kids-account-section .personal-info .user-role.user-role-queen {
-  background-color: #d3bff9;
-}
-.kids-account-section .personal-info .user-role.user-role-king {
-  background-color: #b4c1e9;
-}
-.kids-account-section .personal-info .user-role.user-role-princess {
-  background-color: #d3bff9;
-}
-.kids-account-section .personal-info .user-role.user-role-prince {
-  background-color: #d4e6fc;
-}
-.kids-account-section .user-score-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 4px;
-}
-.kids-account-section .user-score-container .score {
-  color: #000000;
-  font-feature-settings: "liga" off, "clig" off;
-  /* Headline - 18 R */
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; /* 144.444% */
-}
-.kids-account-section .user-score-container .income-container {
-  width: 20.645px;
-  height: 20.645px;
-  background-image: url(../images/icon-score.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.kids-account-section .btn-icon {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  padding: 4px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  background-color: transparent;
-  background-image: url(../images/icon-arrow-right.svg);
-  border: none;
-}
-
-.wrap-emerald {
-  background: #F5F3F9;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
 }
 
 @-webkit-keyframes bounce {
