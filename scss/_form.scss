@@ -160,7 +160,6 @@ button,
 }
 .btn-light-5 {
   color: $white;
-  text-align: right;
   font-feature-settings: 'liga' off, 'clig' off;
   /* Body - 16 R */
   font-family: $font-stack-popins;
@@ -679,6 +678,37 @@ button,
   }
   &:active,
   &:focus {
+    background: transparent;
+  }
+}
+.btn-link {
+  color: $violet-11;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Caption1 - 12 M */
+  font-family: $font-stack-popins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.048px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  &:hover {
+    color: $violet-17;
+    border: 0;
+    background: transparent;
+  }
+  &:active {
+    color: $violet-20;
+    border: 0;
+    background: transparent;
+  }
+  &:disabled,
+  &.disabled {
+    color: $black-color-8;
+    border: 0;
     background: transparent;
   }
 }

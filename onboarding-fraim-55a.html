@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<header>
+				<div class="container-fluid d-flex align-items-center justify-content-between">
+					<div class="wrap_logo">
+						<a href="/">MAS.AI</a>
+					</div>
+					<div class="user_badge d-flex align-items-center">
+						<div class="user-info">
+							<div class="user_name text-end">Ann</div>
+							<div class="user_role">Queen</div>
+						</div>
+						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+					</div>
+				</div>
+			</header>
+
+			<!--modal-->
+			<div class="modal modal-onboarding fullModal fade" id="fullModal" tabindex="-1"
+				aria-labelledby="fullModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header justify-content-between">
+							<h2 class="modal-title" id="fullModalLabel">MAS.AI</h2>
+							<button class="btn-link">Skip</button>
+						</div>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<div class="wrapper-onboarding">
+								<div class="wrap-title">
+									<h2>💛 Hi! I’m Mas.Ai </h2>
+								</div>
+								<div class="wrap-swiper-onboarding">
+									<div class="swiper swiper-onboarding onboardingSwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="item item-1">
+													<div class="text-block">
+														<div class="text-bold">Lack motivation to complete tasks</div>
+														<div class="text">
+															I help kids <span>see clear goals</span> and understand
+															<span>what</span> and <span>when</span> needs to be done.
+														</div>
+													</div>
+													<div class="wrap-img">
+														<img src="images/3d-rendering-afro-girl-classroom.png"
+															class="img-fluid" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="item item-2">
+													<div class="text-block">
+														<div class="text-bold">Repeated reminders frustrate</div>
+														<div class="text">I <span>handle</span> reminders, letting
+															parents avoid unnecessary arguments and maintain a positive
+															atmosphere at home.
+														</div>
+													</div>
+													<div class="wrap-img">
+														<img src="images/uniform-police-cap-whistle-recruitment-announcement-policeman-accessories.png"
+															class="img-fluid" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="item item-3">
+													<div class="text-block">
+														<div class="text-bold">Kids feel unmotivated and upset</div>
+														<div class="text">I introduce <span>motivating rewards</span>,
+															where children see their progress and get incentives.
+														</div>
+													</div>
+													<div class="wrap-img">
+														<img src="images/3d-icon-with-traditional-colombian-representation.png"
+															class="img-fluid" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+								<div class="wrap-button">
+									<button class="btn btn-next btn-light-5" onclick="slideNext()">Next</button>
+									<button class="btn btn-start btn-light-5 d-none">Start</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+
+
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+
+	</script>
+	<script>
+		let onboardingSwiper = new Swiper(".onboardingSwiper", {
+			slidesPerView: "auto",
+			spaceBetween: 8,
+			centeredSlides: true,
+			loop: false,
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+		onboardingSwiper.on('slideChangeTransitionEnd', function () {
+			onboardingSwiper.slides.length
+			console.log(onboardingSwiper.activeIndex);
+
+			if ((onboardingSwiper.activeIndex + 1) == onboardingSwiper.slides.length) {
+				document.querySelector('.btn-next').classList.add('d-none');
+				document.querySelector('.btn-start').classList.remove('d-none');
+			} else {
+				document.querySelector('.btn-next').classList.remove('d-none');
+				document.querySelector('.btn-start').classList.add('d-none');
+			}
+
+		});
+		function slideNext() {
+			onboardingSwiper.slideNext();
+		}
+
+	</script>
+</body>
+
+</html>
