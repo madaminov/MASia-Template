@@ -1,0 +1,98 @@
+.form-group-white {
+  .form-label {
+    color: $black-color;
+  }
+  .form-control {
+    color: $black-color;
+    background-color: $white;
+    border: 1px solid $gray-37;
+    &:focus {
+      border: 1px solid $gray-40;
+      box-shadow: none;
+    }
+    &:hover {
+      border: 1px solid $gray-40;
+      box-shadow: none;
+    }
+  }
+  .input-group::before {
+    background-color: $white;
+  }
+  .form-select {
+    color: $black-color;
+    background-color: $white;
+    border: 1px solid $gray-37;
+    &:focus {
+      border: 1px solid $gray-40;
+      box-shadow: none;
+    }
+    &:hover {
+      border: 1px solid $gray-40;
+      box-shadow: none;
+    }
+  }
+  .nice-select:after {
+    background-image: url(../images/icon-down-black.svg);
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-radius: 12px;
+    border: 1px solid $gray-40;
+    -webkit-text-fill-color: $black-color;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+.form-group-input-group-white {
+  .form-label {
+    color: $black-color;
+  }
+  .input-group::before {
+    content: '';
+    background-color: $white;
+    border: 1px solid $gray-37;
+    height: 48px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px !important;
+  }
+  .form-control {
+    color: $black-color;
+  }
+  .dropdown-menu {
+    box-shadow: 0px 0px 16px 0px rgba(128, 68, 238, 0.15);
+  }
+  .form-control-date + .air-datepicker.-inline- {
+    box-shadow: 0px 0px 16px 0px rgba(128, 68, 238, 0.15);
+  }
+  .form-control-dropdown:focus {
+    box-shadow: none;
+    border: 1px solid $gray-40;
+  }
+  .input-group-select {
+    .input-icon-down {
+      &:before {
+        background-image: url(../images/icon-down-black.svg);
+      }
+    }
+  }
+  .input-group {
+    .input-icon-down {
+      &:before {
+        background-image: url(../images/icon-down-black.svg);
+      }
+    }
+  }
+}

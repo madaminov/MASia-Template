@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+			<!--modal-->
+			<div class="modal modal-onboarding fullModal fade" id="fullModal" tabindex="-1"
+				aria-labelledby="fullModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header justify-content-between">
+							<h2 class="modal-title" id="fullModalLabel">MAS.AI</h2>
+							<button class="btn-link">Skip</button>
+						</div>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<div class="wrapper-onboarding-add-kid">
+								<div class="wrap-title">
+									<h2>💛 Add your kid</h2>
+								</div>
+								<!--add kid-->
+								<div class="wrap-add-kid">
+									<div class="wrap-title-remove">
+										<div class="title">
+											<span class="count-block">1</span> Kid’s Account information
+										</div>
+										<button class="btn-close btn-close-gray-20-20"
+											onclick="deleteKid(this);"></button>
+									</div>
+
+									<div class="form-group form-group-white">
+										<label for="Nickname" class="form-label"><span>Nickname<span
+													class="color-red-4">*</span></span><i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="Type a unique Nickname"></i></label>
+										<input type="text" class="form-control form-control-nickname form-control-valid"
+											name="Nickname" id="Nickname" placeholder="Type a unique Nickname" required
+											value="" autocomplete="false">
+										<span class="for-form-control-nickname">@</span>
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
+									<div class="form-group form-group-white">
+										<label for="name" class="form-label"><span>Kid’s name<span
+													class="color-red-4">*</span></span> <i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="Type kid`s name"></i></label>
+										<input type="text" class="form-control form-control-valid" name="name"
+											placeholder="Type kid`s name" required value="" autocomplete="false">
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
+									<div class="form-group form-group-input-group-white">
+										<label for="priority" class="form-label"><span>Family Role<span
+													class="color-red-4">*</span></span> <i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="<h4>Queen Role</h4> <p>Her Majesty sets the rules, assigns tasks to family members, and oversees their completion.</p>"></i></label>
+
+										<div class="input-group input-group-select">
+											<input type="text"
+												class="form-control form-control-dropdown dropdown-toggle"
+												data-bs-toggle="dropdown" data-bs-auto-close="true" data-bs-offset="0,8"
+												aria-expanded="false" name="role" value="" readonly="readonly"
+												placeholder="Select Family Role" required autocomplete="false">
+											<span class="input-group-text input-icon-down"></span>
+											<div class="invalid-feedback">
+												Error
+											</div>
+											<ul class="dropdown-menu dropdown-for-input">
+												<li><span class="dropdown-item" data-value="Queen">Queen</span></li>
+												<li><span class="dropdown-item" data-value="King">King</span></li>
+												<li><span class="dropdown-item" data-value="Princess">Princess</span>
+												</li>
+												<li><span class="dropdown-item" data-value="Prince">Prince</span>
+												</li>
+												<li><input type="text" value="" class="dropdown-item-input"
+														placeholder="Type other Role"></li>
+											</ul>
+										</div>
+										<div class="invalid-feedback">
+											Error
+										</div>
+									</div>
+									<div class="form-group form-group-input-group-white">
+										<label for="date" class="form-label"><span>Birthday<span
+													class="color-red-4">*</span></span><i
+												class="icon icon-info-outline-rounded" data-bs-toggle="tooltip"
+												data-bs-placement="top" data-bs-html="true"
+												data-bs-title="Select birthday"></i></label>
+										<div class="input-group input-group-reset has-validation">
+											<input type="text" class="form-control form-control-date" name="date"
+												value="" placeholder="Select birthday" id="date" required readonly
+												autocomplete="false">
+											<span class="input-group-text input-reset-value cursor-pointer"></span>
+											<span class="input-group-text input-icon-calendar"></span>
+											<div class="invalid-feedback">
+												Error
+											</div>
+										</div>
+									</div>
+									<div class="collapse w-100" id="collapseSchool_1">
+										<div class="title_collapse">School</div>
+										<ul class="nav nav-tabs" id="SchoolTab-1" role="tablist">
+											<li class="nav-item" role="presentation">
+												<button class="nav-link active" id="mon-tab-1" data-bs-toggle="tab"
+													data-bs-target="#mon-tab-pane-1" type="button" role="tab"
+													aria-controls="mon-tab-pane-1" aria-selected="true">Mon</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="tue-tab-1" data-bs-toggle="tab"
+													data-bs-target="#tue-tab-pane-1" type="button" role="tab"
+													aria-controls="tue-tab-pane-1" aria-selected="false">Tue</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="wed-tab-1" data-bs-toggle="tab"
+													data-bs-target="#wed-tab-pane-1" type="button" role="tab"
+													aria-controls="wed-tab-pane-1" aria-selected="false">Wed</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="thu-tab-1" data-bs-toggle="tab"
+													data-bs-target="#thu-tab-pane-1" type="button" role="tab"
+													aria-controls="thu-tab-pane-1" aria-selected="false">Thu</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="fri-tab-1" data-bs-toggle="tab"
+													data-bs-target="#fri-tab-pane-1" type="button" role="tab"
+													aria-controls="fri-tab-pane-1" aria-selected="false">Fri</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="sat-tab-1" data-bs-toggle="tab"
+													data-bs-target="#sat-tab-pane-1" type="button" role="tab"
+													aria-controls="sat-tab-pane-1" aria-selected="false">Sat</button>
+											</li>
+											<li class="nav-item" role="presentation">
+												<button class="nav-link" id="sun-tab-1" data-bs-toggle="tab"
+													data-bs-target="#sun-tab-pane-1" type="button" role="tab"
+													aria-controls="sun-tab-pane-1" aria-selected="false">Sun</button>
+											</li>
+										</ul>
+										<div class="tab-content" id="SchoolTabContent-1">
+											<div class="tab-pane fade show active" id="mon-tab-pane-1" role="tabpanel"
+												aria-labelledby="mon-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="tue-tab-pane-1" role="tabpanel"
+												aria-labelledby="tue-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="wed-tab-pane-1" role="tabpanel"
+												aria-labelledby="wed-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="thu-tab-pane-1" role="tabpanel"
+												aria-labelledby="fri-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="fri-tab-pane-1" role="tabpanel"
+												aria-labelledby="fri-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="sat-tab-pane-1" role="tabpanel"
+												aria-labelledby="sat-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="sun-tab-pane-1" role="tabpanel"
+												aria-labelledby="sun-tab-1" tabindex="0">
+												<div class="form-group form-group-white">
+													<label for="school_address" class="form-label">School
+														address</label>
+													<input type="text" class="form-control form-control-valid"
+														name="school_address" placeholder="Type school address"
+														value="">
+												</div>
+												<div class="form-group form-group-white">
+													<label for="first_lesson_begins" class="form-label">First lesson
+														begins</label>
+													<div class="input-group input-icon-reset">
+														<select name="first_lesson_begins" id="first_lesson_begins"
+															class="form-select" placeholder="First lesson begins">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Last lesson
+														ends</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Last lesson ends">
+
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+												<div class="form-group form-group-white">
+													<label for="last_lesson_ends" class="form-label">Travel time</label>
+													<div class="input-group input-icon-reset">
+														<select name="last_lesson_ends" id="first_lesson_begins"
+															class="form-select" placeholder="Select a duration">
+														</select>
+														<span
+															class="input-group-text reset-value cursor-pointer"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value=""
+													id="save_for_all_days">
+												<label class="form-check-label" for="save_for_all_days">
+													Save for all days
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<button class="btn-collapse btn-collapse-type-2 collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseSchool_1"
+											aria-expanded="false" aria-controls="#collapseSchool_1">
+											<span class="yes-collapsed animated fadeIn">
+												Show more
+												<svg>
+													<use href="images/icon-down-new.svg#icon" />
+												</svg>
+											</span>
+											<span class="no-collapsed animated fadeIn">
+												Hide
+												<svg>
+													<use href="images/icon-down-new.svg#icon" />
+												</svg>
+											</span>
+										</button>
+									</div>
+								</div>
+								<!--end add kid-->
+								<div class="form-group">
+									<button class="btn-text-svg" onclick="addblock()">
+										Add another kid
+										<svg>
+											<use href="images/icon-plus-2.svg#icon" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="wrap-button">
+								<button class="btn btn-next btn-light-5">Create an Account</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/air-datepicker/air-datepicker.js"></script>
+
+	<script src="js/duration-picker.js"></script>
+	<script src="js/nice-select2.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/date-input.js"></script>
+	<script src="js/time-picker.js"></script>
+	<script src="js/input.js"></script>
+
+	<script>
+		var fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+		let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+		count_block = 1;
+
+		wrap_kid = document.querySelector('.wrap-add-kid');
+		wrap_kid.classList.add('hide-button-close')
+		function addblock() {
+			//count_block++;
+			clone_kid = wrap_kid.cloneNode(true);
+			wrap_add_all = document.querySelectorAll('.wrap-add-kid');
+			wrap_add_all_lebgth = wrap_add_all.length;
+			wrap_add_all[wrap_add_all_lebgth - 1].insertAdjacentElement('afterend', clone_kid);
+			clone_kid.classList.remove('hide-button-close')
+			document.querySelectorAll('.count-block').forEach(box => {
+				box.textContent = count_block;
+				count_block++;
+			})
+			count_block = 1;
+		}
+		function deleteKid(event) {
+			event.closest('.wrap-add-kid').remove();
+			// document.querySelectorAll('.count-block').forEach(box => {
+			// 	box.textContent = count_block;
+			// 	count_block++;
+			// })
+			// count_block = 1;
+		}
+	</script>
+
+</body>
+
+</html>
