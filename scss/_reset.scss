@@ -126,6 +126,14 @@ select:focus {
     #cbb3f7 141.67%
   ) !important;
 }
+.bg-liner-7 {
+  background: linear-gradient(
+    180deg,
+    #ede3ff 57.32%,
+    #cbb3f7 181.25%
+  ) !important;
+}
+
 /* background. */
 .bg-black {
   background-color: $black-color !important;

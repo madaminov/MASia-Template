@@ -1,0 +1,294 @@
+.modal-content-emerald {
+  background: $blue-11;
+}
+.modal-header-emerald {
+  display: flex;
+  height: 72px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  align-self: stretch;
+  background: linear-gradient(180deg, #ede3ff 57.32%, #cbb3f7 181.25%);
+}
+.emerald-family-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  gap: 16px;
+  .personal-info {
+    .user-role {
+      color: $black-color-2;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.048px;
+      display: flex;
+      padding: 2px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      background: $primary-default;
+    }
+    .name {
+      color: $black-color;
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: $font-stack-popins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+    }
+  }
+  .icon-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.crown-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 16px 16px;
+}
+.crown-image {
+  width: 183.292px;
+  height: 183.292px;
+  flex-shrink: 0;
+  display: block;
+}
+.emerald-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px;
+}
+.income-box {
+  display: flex;
+  height: 64px;
+  padding: 12px 0px 12px 16px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: $gray-29;
+  box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
+}
+.income-text {
+  color: $black-color;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px 0;
+}
+.bottom-section .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.income-box .user-score-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+.income-box .user-score-container .score {
+  color: $gray-24;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+}
+.income-box .user-score-container .income-container {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-image: url(../images/icon-score.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.income-box .btn-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
+  background-image: url(../images/icon-arrow-right.svg);
+  border: none;
+}
+.task-box {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: $gray-29;
+  box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: $green-5;
+}
+
+.task-icon img {
+  display: flex;
+  width: 20.645px;
+  height: 20.645px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+.task-title {
+  color: $black-color;
+  text-align: center;
+  margin-bottom: 0;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+}
+
+.task-description {
+  color: $black-color;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: $font-stack-popins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.048px;
+  display: block;
+  margin-bottom: 0;
+}
+.calendar-box {
+  display: flex;
+  padding: 24px 32px 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  background: $gray-29;
+  box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
+}
+.tasks-box {
+  display: flex;
+  padding: 24px 32px 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  background: $gray-29;
+  box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
+}
+.calendar-box .task-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: $violet-10;
+}
+.calendar-box .task-icon img {
+  filter: brightness(0) invert(1);
+}
+.tasks-box .task-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: $violet-10;
+}
+.tasks-box .task-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.task-icon-gift {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: $primary-default;
+}
+.task-box + .task-box {
+  margin-top: 8px;
+}

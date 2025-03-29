@@ -11964,6 +11964,10 @@ select:focus {
   background: linear-gradient(180deg, #ede3ff 44.8%, #cbb3f7 141.67%) !important;
 }
 
+.bg-liner-7 {
+  background: linear-gradient(180deg, #ede3ff 57.32%, #cbb3f7 181.25%) !important;
+}
+
 /* background. */
 .bg-black {
   background-color: #000000 !important;
@@ -12905,6 +12909,84 @@ button.active, button:active, button:focus,
   color: #757575;
   border: 1px solid #c6abf7;
   background: #3e3e3e;
+}
+
+.button-purple-1 {
+  color: #fff;
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 0;
+  background: #8044ee;
+}
+.button-purple-1:hover {
+  color: #fff;
+  background: #702deb;
+}
+.button-purple-1:active {
+  color: #fff;
+  background: #5614d2;
+}
+.button-purple-1:disabled, .button-purple-1.disabled {
+  color: #757575;
+  background: #3e3e3e;
+}
+
+.button-purple-2 {
+  color: #fff;
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  background: #8044ee;
+  border: 0;
+}
+.button-purple-2:hover {
+  color: #fff;
+  background: #702deb;
+}
+.button-purple-2:active {
+  color: #fff;
+  background: #5614d2;
+}
+.button-purple-2:disabled, .button-purple-2.disabled {
+  color: #a8a8a8;
+  background: #f2f2f2;
 }
 
 .btn-save {
@@ -20177,6 +20259,10 @@ footer.show-context-menu-user .btn-user {
   border: none;
 }
 
+.family-members-section-shadow {
+  box-shadow: 0px 3px 5px 0px rgba(128, 68, 238, 0.1);
+}
+
 .tip_card_container {
   position: fixed;
   /*bottom: 93px;*/
@@ -21664,6 +21750,31 @@ footer.show-context-menu-user .btn-user {
   font-weight: 400;
   line-height: 18px; /* 150% */
   letter-spacing: 0.048px;
+}
+
+.modal-content-white {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 100%;
+}
+
+.modal-header-white {
+  display: flex;
+  height: 72px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.modal-header-white .modal-title {
+  color: #000000;
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 .fullScreenModal {
@@ -23679,47 +23790,8 @@ footer.show-context-menu-user .btn-user {
   background: #702deb;
 }
 
-.modal-content-white {
-  border: none;
-  border-radius: 0;
-  background-color: #fff;
-  height: 100%;
-}
-
-.modal-content-gift {
-  border: none;
-  border-radius: 0;
-  background-color: #F5F3F9;
-  height: 100%;
-}
-
-.family-members-section {
-  box-shadow: 0px 3px 5px 0px rgba(128, 68, 238, 0.1);
-}
-
-.modal-header-white {
-  display: flex;
-  height: 72px;
-  padding: 16px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-}
-
-.modal-header-white .modal-title {
-  color: #000;
-  font-family: Quicksand;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-}
-
 .modal-content-emerald {
-  border: none;
-  border-radius: 0;
-  background: #F5F3F9;
-  height: 100%;
+  background: #f5f3f9;
 }
 
 .modal-header-emerald {
@@ -23730,22 +23802,7 @@ footer.show-context-menu-user .btn-user {
   align-items: center;
   gap: 22px;
   align-self: stretch;
-  background: linear-gradient(180deg, #EDE3FF 57.32%, #CBB3F7 181.25%);
-}
-
-.modal-header-emerald .modal-title {
-  color: #000;
-  text-align: right;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 26px;
-}
-
-.modal-header-emerald .btn-close-arrow {
-  background-image: url(../images/icon-arrow-right-2.svg);
+  background: linear-gradient(180deg, #ede3ff 57.32%, #cbb3f7 181.25%);
 }
 
 .emerald-family-section {
@@ -23756,18 +23813,6 @@ footer.show-context-menu-user .btn-user {
   padding: 16px;
   gap: 16px;
 }
-
-.emerald-family-section .personal-info .name {
-  color: #000;
-  text-align: center;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 26px;
-}
-
 .emerald-family-section .personal-info .user-role {
   color: #212529;
   font-feature-settings: "liga" off, "clig" off;
@@ -23785,8 +23830,17 @@ footer.show-context-menu-user .btn-user {
   border-radius: 8px;
   background: #d3bff9;
 }
-
-.icon-btn {
+.emerald-family-section .personal-info .name {
+  color: #000000;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+.emerald-family-section .icon-btn {
   background: none;
   border: none;
   padding: 8px;
@@ -23824,15 +23878,15 @@ footer.show-context-menu-user .btn-user {
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  background: #F9F8FC;
+  background: #f9f8fc;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
 .income-text {
-  color: #000;
+  color: #000000;
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -23873,7 +23927,7 @@ footer.show-context-menu-user .btn-user {
   color: #808080;
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -23918,7 +23972,7 @@ footer.show-context-menu-user .btn-user {
   gap: 8px;
   align-self: stretch;
   border-radius: 8px;
-  background: #F9F8FC;
+  background: #f9f8fc;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -23936,7 +23990,7 @@ footer.show-context-menu-user .btn-user {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  background: #9AE1AE;
+  background: #9ae1ae;
 }
 
 .task-icon img {
@@ -23957,11 +24011,11 @@ footer.show-context-menu-user .btn-user {
 }
 
 .task-title {
-  color: #000;
+  color: #000000;
   text-align: center;
   margin-bottom: 0;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -23970,9 +24024,9 @@ footer.show-context-menu-user .btn-user {
 }
 
 .task-description {
-  color: #000;
+  color: #000000;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -23982,44 +24036,13 @@ footer.show-context-menu-user .btn-user {
   margin-bottom: 0;
 }
 
-.start-btn {
-  display: flex;
-  height: 50px;
-  padding: 12px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  align-self: stretch;
-  border-radius: 12px;
-  background: #8044EE;
-  border: none;
-  cursor: pointer;
-}
-
-.start-btn:hover {
-  filter: brightness(1.2);
-  color: #fff;
-}
-
-.start-text {
-  color: #fff;
-  text-align: right;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.032px;
-}
-
 .calendar-box {
   display: flex;
   padding: 24px 32px 24px 16px;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 8px;
-  background: #F9F8FC;
+  background: #f9f8fc;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -24029,7 +24052,7 @@ footer.show-context-menu-user .btn-user {
   flex-direction: column;
   align-items: flex-start;
   border-radius: 8px;
-  background: #F9F8FC;
+  background: #f9f8fc;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -24042,7 +24065,7 @@ footer.show-context-menu-user .btn-user {
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  background: #A67CF3;
+  background: #a67cf3;
 }
 
 .calendar-box .task-icon img {
@@ -24058,42 +24081,11 @@ footer.show-context-menu-user .btn-user {
   align-items: center;
   gap: 8px;
   border-radius: 8px;
-  background: #A67CF3;
+  background: #a67cf3;
 }
 
 .tasks-box .task-icon img {
   filter: brightness(0) invert(1);
-}
-
-.start-btn-grey {
-  display: flex;
-  height: 50px;
-  padding: 12px 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  align-self: stretch;
-  border-radius: 12px;
-  background: #F2F2F2;
-  border: none;
-  cursor: pointer;
-}
-
-.start-btn-grey:hover {
-  filter: brightness(0.9);
-  color: #A8A8A8;
-}
-
-.start-text-grey {
-  color: #A8A8A8;
-  text-align: right;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.032px;
 }
 
 .task-icon-gift {
@@ -24104,33 +24096,18 @@ footer.show-context-menu-user .btn-user {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  background: #D3BFF9;
+  background: #d3bff9;
 }
 
 .task-box + .task-box {
   margin-top: 8px;
 }
 
-.modal-header-gift {
-  display: flex;
-  height: 72px;
-  padding: 16px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  background: linear-gradient(180deg, #EDE3FF 57.32%, #CBB3F7 181.25%);
-}
-
-.modal-title-gift {
-  color: #000;
-  text-align: right;
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 26px;
-  margin-bottom: 0;
+.modal-content-gift {
+  border: none;
+  border-radius: 0;
+  background-color: #f5f3f9;
+  height: 100%;
 }
 
 .account-gift {
@@ -24149,7 +24126,7 @@ footer.show-context-menu-user .btn-user {
   align-items: flex-start;
   gap: 16px;
   border-radius: 20px;
-  background: #D5D6FB;
+  background: #d5d6fb;
 }
 
 .tip_card_container-gift h3, .tip_card_container-gift .h3 {
@@ -24158,7 +24135,7 @@ footer.show-context-menu-user .btn-user {
   width: 100%;
   color: #000;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -24169,7 +24146,7 @@ footer.show-context-menu-user .btn-user {
 .tip_card_container-gift p {
   color: #000;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -24206,9 +24183,9 @@ footer.show-context-menu-user .btn-user {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  color: #8C4DFF;
+  color: #8c4dff;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -24237,7 +24214,7 @@ footer.show-context-menu-user .btn-user {
 }
 
 .plus-icon svg {
-  color: #8C4DFF;
+  color: #8c4dff;
 }
 
 .gift-cards {
@@ -24257,8 +24234,8 @@ footer.show-context-menu-user .btn-user {
   gap: 16px;
   align-self: stretch;
   border-radius: 20px;
-  border-left: 6px solid #C5B1E9;
-  background: #FFF;
+  border-left: 6px solid #c5b1e9;
+  background: #fff;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -24270,9 +24247,9 @@ footer.show-context-menu-user .btn-user {
 }
 
 .gift-title {
-  color: #6B6B6B;
+  color: #6b6b6b;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -24282,9 +24259,9 @@ footer.show-context-menu-user .btn-user {
 }
 
 .gift-description {
-  color: #AFAFAF;
+  color: #afafaf;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -24310,8 +24287,8 @@ footer.show-context-menu-user .btn-user {
   gap: 16px;
   align-self: stretch;
   border-radius: 20px;
-  border-left: 6px solid #CBE69F;
-  background: #FFF;
+  border-left: 6px solid #cbe69f;
+  background: #fff;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -24323,8 +24300,8 @@ footer.show-context-menu-user .btn-user {
   gap: 16px;
   align-self: stretch;
   border-radius: 20px;
-  border-left: 6px solid #E6BA9F;
-  background: #FFF;
+  border-left: 6px solid #e6ba9f;
+  background: #fff;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -24336,8 +24313,8 @@ footer.show-context-menu-user .btn-user {
   gap: 16px;
   align-self: stretch;
   border-radius: 20px;
-  border-left: 6px solid #E4A8C9;
-  background: #FFF;
+  border-left: 6px solid #e4a8c9;
+  background: #fff;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
@@ -24349,15 +24326,15 @@ footer.show-context-menu-user .btn-user {
   gap: 16px;
   align-self: stretch;
   border-radius: 20px;
-  border-left: 6px solid #EAE598;
-  background: #FFF;
+  border-left: 6px solid #eae598;
+  background: #fff;
   box-shadow: 0px 4px 12px 0px rgba(128, 68, 238, 0.1);
 }
 
 .gift-title-black {
   color: #000;
   font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
