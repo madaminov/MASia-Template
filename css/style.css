@@ -19809,6 +19809,10 @@ footer.show-context-menu-user .btn-user {
   margin-top: 4px;
 }
 
+.event.event-queeen .hour, .event.event-king .hour {
+  background: #fef5da;
+}
+
 .wrap-task-history {
   display: flex;
   width: 361px;

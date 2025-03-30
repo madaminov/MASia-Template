@@ -522,3 +522,11 @@
     }
   }
 }
+.event {
+  &.event-queeen,
+  &.event-king {
+    .hour {
+      background: $orange-light-2;
+    }
+  }
+}
