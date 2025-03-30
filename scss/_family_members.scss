@@ -135,3 +135,22 @@
 .family-members-section-shadow {
   box-shadow: 0px 3px 5px 0px rgba(128, 68, 238, 0.1);
 }
+.family-members-section-dashboard {
+  display: flex;
+  width: 100%;
+  padding: 20px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  .title {
+    color: $black;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* H3 - 24 M */
+    font-family: $font-stack-popins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+  }
+}

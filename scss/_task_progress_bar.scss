@@ -225,6 +225,14 @@
     }
   }
 }
+.wrap-task-progress-bar-transaprent {
+  background-color: transparent;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  h2 {
+    color: $white;
+  }
+}
 .user-score-container {
   display: flex;
   justify-content: flex-end;
