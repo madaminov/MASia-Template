@@ -17,7 +17,7 @@
 }
 .wrapper-onboarding {
   .wrap-title {
-    padding: 20px 16px 20px 16px;
+    padding: 20px 16px 0px 16px;
     h2 {
       color: $black-color;
       font-feature-settings: 'liga' off, 'clig' off;
@@ -49,7 +49,7 @@
     }
   }
   .swiper-onboarding {
-    padding-bottom: 36px;
+    padding-bottom: 0px;
     .swiper-slide {
       max-width: calc(100% - 36px);
       transform: scaleY(0.9);
@@ -57,6 +57,18 @@
     }
     .swiper-slide-active {
       transform: scale(1);
+    }
+    .swiper-pagination {
+      position: static;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      justify-content: center;
+      margin-top: 24px;
+      .swiper-pagination-bullet {
+        margin: 0 !important;
+      }
     }
   }
   .item {

@@ -105,6 +105,17 @@
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.028px;
   }
+  .p1 {
+    color: $black;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body - 16 R */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.032px;
+  }
 }
 .tip_card_container_button {
   .container {

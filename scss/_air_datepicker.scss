@@ -329,12 +329,14 @@
   border-color: $orange-light-3;
   background: $orange-light-3;
 }
+/*
 .air-datepicker-cell.-selected-.-current- {
   span {
     color: #fff;
     background: #000;
   }
 }
+  */
 .air-datepicker-cell.-selected-.-focus- span {
   color: #fff;
   border-color: var(--adp-cell-background-color-selected);
