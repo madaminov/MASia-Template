@@ -71,23 +71,48 @@ button,
   @include border-radius(12px);
   border: 1px solid $gray-5;
   background: $gray-5;
+  &:hover {
+    border: 1px solid $violet-7;
+    background: $violet-7;
+    color: $white;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $white !important;
+    background: $violet-11 !important;
+    border: 1px solid $violet-11 !important;
+  }
   &:disabled,
   &.disabled {
     border: 1px solid $black-color-8;
     background: $black-color-8;
     color: $gray-10;
   }
+}
+.btn-light-disabled-white {
+  color: $black;
+  padding: 12px 16px;
+  @include border-radius(12px);
+  border: 1px solid $gray-5;
+  background: $gray-5;
   &:hover {
     border: 1px solid $violet-7;
     background: $violet-7;
-    color: $black-color;
+    color: $white;
   }
   &.active,
   &:active,
   &:focus {
-    color: $black !important;
-    background: $white-2 !important;
-    border: 1px solid $white-2 !important;
+    color: $white !important;
+    background: $violet-11 !important;
+    border: 1px solid $violet-11 !important;
+  }
+  &:disabled,
+  &.disabled {
+    border: 1px solid $gray-15;
+    background: $gray-15;
+    color: $gray-16;
   }
 }
 .btn-light-2 {
@@ -186,9 +211,9 @@ button,
   }
   &:disabled,
   &.disabled {
-    color: $gray-10;
-    border: 1px solid $violet-16;
-    background: $black-color-8;
+    color: $gray-43;
+    border: 1px solid $gray-44;
+    background: $gray-44;
   }
 }
 .button-purple-1 {

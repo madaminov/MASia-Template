@@ -13476,20 +13476,46 @@ button.active, button:active, button:focus,
   border: 1px solid #ede3ff;
   background: #ede3ff;
 }
+.btn-light:hover {
+  border: 1px solid #b38ff5;
+  background: #b38ff5;
+  color: #fff;
+}
+.btn-light.active, .btn-light:active, .btn-light:focus {
+  color: #fff !important;
+  background: #a073f2 !important;
+  border: 1px solid #a073f2 !important;
+}
 .btn-light:disabled, .btn-light.disabled {
   border: 1px solid #3e3e3e;
   background: #3e3e3e;
   color: #757575;
 }
-.btn-light:hover {
+
+.btn-light-disabled-white {
+  color: #000;
+  padding: 12px 16px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #ede3ff;
+  background: #ede3ff;
+}
+.btn-light-disabled-white:hover {
   border: 1px solid #b38ff5;
   background: #b38ff5;
-  color: #000000;
+  color: #fff;
 }
-.btn-light.active, .btn-light:active, .btn-light:focus {
-  color: #000 !important;
-  background: #f6f6f6 !important;
-  border: 1px solid #f6f6f6 !important;
+.btn-light-disabled-white.active, .btn-light-disabled-white:active, .btn-light-disabled-white:focus {
+  color: #fff !important;
+  background: #a073f2 !important;
+  border: 1px solid #a073f2 !important;
+}
+.btn-light-disabled-white:disabled, .btn-light-disabled-white.disabled {
+  border: 1px solid #d4d4d4;
+  background: #d4d4d4;
+  color: #a8a8a8;
 }
 
 .btn-light-2 {
@@ -13593,9 +13619,9 @@ button.active, button:active, button:focus,
   background: #5614d2;
 }
 .btn-light-5:disabled, .btn-light-5.disabled {
-  color: #757575;
-  border: 1px solid #c6abf7;
-  background: #3e3e3e;
+  color: #e2d5fb;
+  border: 1px solid #c9b0f7;
+  background: #c9b0f7;
 }
 
 .button-purple-1 {
@@ -17723,6 +17749,11 @@ footer.show-context-menu-user .btn-user {
 .-disabled-.-focus-.air-datepicker-cell.-year-.-other-decade- span,
 .-disabled-.-focus-.air-datepicker-cell.-day-.-other-month- span {
   color: var(--adp-color-other-month);
+}
+
+.air-datepicker-cell.-year-.-other-decade-.-disabled-,
+.air-datepicker-cell.-year-.-disabled- {
+  color: var(--adp-color-disabled);
 }
 
 .-selected-.air-datepicker-cell.-year-.-other-decade- span,
