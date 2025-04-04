@@ -3617,3 +3617,9 @@
     animation-iteration-count: 1 !important;
   }
 }
+@keyframes backgroundgray {
+  50% {
+    background: $gray-24;
+    background-position: 150px 0;
+  }
+}

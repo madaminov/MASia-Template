@@ -12163,6 +12163,10 @@ select:focus {
   background-color: #a4caf9 !important;
 }
 
+.bg-blue-11 {
+  background-color: #f5f3f9 !important;
+}
+
 .bg-orange-light,
 .bg-hight {
   background-color: #f9c486 !important;
@@ -17816,7 +17820,7 @@ footer.show-context-menu-user .btn-user {
   color: var(--adp-color);
 }
 
-.air-datepicker-cell.-current-.-in-range- {
+.air-datepicker-cell:not(.-year-, .-month-).-current-.-in-range- {
   color: var(--adp-color-current-date);
 }
 
@@ -17839,7 +17843,7 @@ footer.show-context-menu-user .btn-user {
   color: var(--adp-color-disabled);
 }
 
-.air-datepicker-cell.-in-range- {
+.air-datepicker-cell:not(.-year-, .-month-).-in-range- {
   background: var(--adp-cell-background-color-in-range);
   border-radius: 0;
 }
@@ -17854,10 +17858,10 @@ footer.show-context-menu-user .btn-user {
   background: var(--adp-cell-background-color-selected);
 }
 
-.air-datepicker-cell.-range-from-::before {
+.air-datepicker-cell:not(.-year-, .-month-).-range-from-::before {
   background-color: transparent;
 }
-.air-datepicker-cell.-range-from-::after {
+.air-datepicker-cell:not(.-year-, .-month-).-range-from-::after {
   background-color: var(--adp-cell-background-color-in-range);
 }
 
@@ -17865,10 +17869,10 @@ footer.show-context-menu-user .btn-user {
   background: linear-gradient(90deg, rgba(241, 211, 119, 0.32) 16.1%, rgba(242, 223, 166, 0.32) 99.95%);
 }
 
-.air-datepicker-cell.-selected-.-range-to-::before {
+.air-datepicker-cell:not(.-year-, .-month-).-selected-.-range-to-::before {
   background: linear-gradient(90deg, rgba(211, 191, 249, 0.32) 16.1%, rgba(142, 114, 195, 0.32) 99.95%);
 }
-.air-datepicker-cell.-selected-.-range-to-::after {
+.air-datepicker-cell:not(.-year-, .-month-).-selected-.-range-to-::after {
   background-color: transparent;
 }
 
@@ -17994,7 +17998,8 @@ footer.show-context-menu-user .btn-user {
 }
 
 .air-datepicker-cell.-month-.-current- {
-  background-color: #d3bff9;
+  /*background-color: #d3bff9;*/
+  background-color: transparent;
 }
 
 .air-datepicker-nav {
@@ -19722,10 +19727,11 @@ footer.show-context-menu-user .btn-user {
   width: 50px;
   height: 8px;
   border-radius: 10px;
-  background: #494949 !important;
+  background: #494949;
   position: absolute;
   left: 0;
   top: 0;
+  animation: backgroundgray 3s infinite alternate;
 }
 .event-loading .wrap-time .time:first-child::after {
   content: "";
@@ -19733,10 +19739,11 @@ footer.show-context-menu-user .btn-user {
   width: 38px;
   height: 8px;
   border-radius: 10px;
-  background: #494949 !important;
+  background: #494949;
   position: absolute;
   left: 0;
   top: 12px;
+  animation: backgroundgray 3s infinite alternate;
 }
 .event-loading .wrap-time .hour {
   background: transparent !important;
@@ -19757,10 +19764,11 @@ footer.show-context-menu-user .btn-user {
   width: 38px;
   height: 16px;
   border-radius: 8px;
-  background: #494949 !important;
+  background: #494949;
   position: absolute;
   left: 0;
   top: 32px;
+  animation: backgroundgray 3s infinite alternate;
   transition: all 0.3s ease;
 }
 .event-loading .event-day .inner::after {
@@ -19769,16 +19777,18 @@ footer.show-context-menu-user .btn-user {
   width: 57px;
   height: 16px;
   border-radius: 8px;
-  background: #494949 !important;
+  background: #494949;
   position: absolute;
   left: 42px;
   top: 32px;
+  animation: backgroundgray 3s infinite alternate;
   transition: all 0.3s ease;
 }
 .event-loading .event-day .inner .icon {
   width: 20px;
   height: 20px;
   background: #494949 !important;
+  animation: backgroundgray 3s infinite alternate;
 }
 .event-loading .event-day .inner .icon svg {
   visibility: hidden;
@@ -19796,6 +19806,7 @@ footer.show-context-menu-user .btn-user {
   position: absolute;
   left: 0;
   top: 0;
+  animation: backgroundgray 4s infinite alternate;
 }
 .event-loading .event-day .text::after {
   content: "";
@@ -19806,6 +19817,7 @@ footer.show-context-menu-user .btn-user {
   position: absolute;
   left: 0;
   top: 16px;
+  animation: backgroundgray 3s infinite alternate;
 }
 .event-loading .event-day .properties .property {
   background: #494949 !important;
@@ -25556,6 +25568,132 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.wrap-loading {
+  width: 100%;
+  min-height: 100dvh;
+  position: absolute;
+  z-index: 4;
+  background: #1e1e1e;
+  top: 0px;
+  left: 0;
+}
+.wrap-loading.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+}
+.wrap-loading .text {
+  overflow: hidden;
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  text-overflow: ellipsis;
+  /* Callout - 15 M */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 146.667% */
+  letter-spacing: 0.03px;
+}
+.wrap-loading .loading-dots {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.wrap-loading.wrap-loading-white {
+  background: #f5f3f9;
+}
+.wrap-loading.wrap-loading-white .text {
+  color: #000000;
+}
+
+.dot-typing-white {
+  position: relative;
+  left: -9999px;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #fff;
+  box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  animation-name: dot-typing-white;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.dot-typing-black {
+  position: relative;
+  left: -9999px;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #141414;
+  color: #141414;
+  box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  animation-name: dot-typing-black;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot-typing-white {
+  0% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+  10% {
+    box-shadow: 9984px -10px 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+  20% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+  30% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px -10px 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+  40% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px -10px 0 0 #fff;
+  }
+  60% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+  }
+}
+@keyframes dot-typing-black {
+  0% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+  10% {
+    box-shadow: 9984px -10px 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+  20% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+  30% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px -10px 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+  40% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px -10px 0 0 #141414;
+  }
+  60% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #141414, 9999px 0 0 0 #141414, 10014px 0 0 0 #141414;
+  }
+}
 @-webkit-keyframes bounce {
   from, 20%, 53%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -28587,6 +28725,12 @@ button.swiper-pagination-bullet {
     transition-duration: 1ms !important;
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
+  }
+}
+@keyframes backgroundgray {
+  50% {
+    background: #808080;
+    background-position: 150px 0;
   }
 }
 
