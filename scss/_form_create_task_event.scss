@@ -51,6 +51,17 @@
   gap: 20px;
   padding: 0;
   width: 100%;
+  position: relative;
+  height: 100%;
+  .wrap-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
   .section-inner {
     width: 100%;
     display: flex;

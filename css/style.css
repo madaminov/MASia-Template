@@ -13618,14 +13618,48 @@ button.active, button:active, button:focus,
   background: #702deb;
 }
 .btn-light-5.active, .btn-light-5:active, .btn-light-5:focus {
-  color: #fff;
-  border: 1px solid #5614d2;
-  background: #5614d2;
+  color: #fff !important;
+  border: 1px solid #5614d2 !important;
+  background: #5614d2 !important;
 }
 .btn-light-5:disabled, .btn-light-5.disabled {
   color: #e2d5fb;
   border: 1px solid #c9b0f7;
   background: #c9b0f7;
+}
+
+.btn-save-task-event {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  padding: 0px 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #8044ee;
+  background: #8044ee;
+}
+.btn-save-task-event:hover {
+  color: #fff;
+  border: 1px solid #702deb;
+  background: #702deb;
+}
+.btn-save-task-event.active, .btn-save-task-event:active, .btn-save-task-event:focus {
+  color: #fff !important;
+  border: 1px solid #5614d2 !important;
+  background: #5614d2 !important;
+}
+.btn-save-task-event:disabled, .btn-save-task-event.disabled {
+  color: #a185d5;
+  border: 1px solid #b79ce9;
+  background: #b79ce9;
 }
 
 .button-purple-1 {
@@ -13953,6 +13987,11 @@ button.active, button:active, button:focus,
   fill: #939393;
   width: 24px;
   height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-home:hover {
   background: #fff;
@@ -13995,6 +14034,11 @@ button.active, button:active, button:focus,
   fill: #939393;
   width: 24px;
   height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-calendar:hover {
   background: #fff;
@@ -14025,6 +14069,11 @@ button.active, button:active, button:focus,
   border: none;
   background: #d3bff9;
   box-shadow: 0px 4px 4px 0px #dddcff inset;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-add svg {
   -webkit-box-flex: 0;
@@ -14059,6 +14108,11 @@ button.active, button:active, button:focus,
   border: none;
   background: #d3bff9;
   box-shadow: 0px 4px 4px 0px #dddcff inset;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-audio svg {
   -webkit-box-flex: 0;
@@ -14092,6 +14146,11 @@ button.active, button:active, button:focus,
   -ms-border-radius: 50%;
   border-radius: 50%;
   background: transparent;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-add-plus svg {
   -webkit-box-flex: 0;
@@ -14100,14 +14159,32 @@ button.active, button:active, button:focus,
   fill: #e6e6e6;
   width: 20px;
   height: 20px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-add-plus:hover {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #d3bff9;
+}
+.btn-add-plus:hover svg {
+  fill: #d3bff9;
 }
 .btn-add-plus:active, .btn-add-plus:focus {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #a073f2;
+}
+.btn-add-plus:active svg, .btn-add-plus:focus svg {
+  fill: #a073f2;
+}
+.btn-add-plus.disabled, .btn-add-plus:disabled {
+  background: transparent;
+  border: 1px solid #2e2e2e;
+}
+.btn-add-plus.disabled svg, .btn-add-plus:disabled svg {
+  fill: #2e2e2e;
 }
 .btn-add-plus.show {
   border: 1px solid #a073f2;
@@ -14212,6 +14289,53 @@ button.active, button:active, button:focus,
   background: #fff;
 }
 .btn-list.active svg, .btn-list:active svg, .btn-list:focus svg {
+  fill: #000;
+}
+
+.btn-events {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-events svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #939393;
+  width: 24px;
+  height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-events:hover {
+  background: #fff;
+}
+.btn-events:hover svg {
+  fill: #000;
+}
+.btn-events.active, .btn-events:active, .btn-events:focus {
+  background: #fff;
+}
+.btn-events.active svg, .btn-events:active svg, .btn-events:focus svg {
   fill: #000;
 }
 
@@ -15347,6 +15471,16 @@ button.active, button:active, button:focus,
 .modal form.form-create-task {
   gap: 32px;
 }
+.form-create-task .wrap-section-inner,
+.modal form.form-create-task .wrap-section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
 .form-create-task .section-inner,
 .modal form.form-create-task .section-inner {
   display: flex;
@@ -15366,6 +15500,16 @@ button.active, button:active, button:focus,
 .form-create-event,
 .modal form.form-create-event {
   gap: 32px;
+}
+.form-create-event .wrap-section-inner,
+.modal form.form-create-event .wrap-section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  position: relative;
+  height: 100%;
 }
 .form-create-event .section-inner,
 .modal form.form-create-event .section-inner {
@@ -17691,6 +17835,7 @@ footer.show-context-menu-user .btn-user {
   font-weight: 500;
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.028px;
+  pointer-events: none;
 }
 
 .air-datepicker-cell {
@@ -17760,6 +17905,10 @@ footer.show-context-menu-user .btn-user {
   color: var(--adp-color-disabled);
 }
 
+.air-datepicker-cell.-month-.-disabled- {
+  color: var(--adp-color-disabled);
+}
+
 .-selected-.air-datepicker-cell.-year-.-other-decade- span,
 .-selected-.air-datepicker-cell.-day-.-other-month- span {
   color: #fff;
@@ -17775,7 +17924,7 @@ footer.show-context-menu-user .btn-user {
 
 .-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-,
 .-in-range-.-focus-.air-datepicker-cell.-day-.-other-month- {
-  background-color: var(--adp-background-color-in-range-focused);
+  background-color: var(--adp-cell-background-color-in-range);
 }
 
 .air-datepicker-cell.-year-.-other-decade-:empty,
@@ -17998,8 +18147,13 @@ footer.show-context-menu-user .btn-user {
 }
 
 .air-datepicker-cell.-month-.-current- {
-  /*background-color: #d3bff9;*/
-  background-color: transparent;
+  background-color: #d3bff9;
+  border-radius: 0;
+}
+
+.air-datepicker-cell.-month-:not(.-current-).-selected- {
+  background-color: #a073f2;
+  border-radius: 0;
 }
 
 .air-datepicker-nav {
@@ -21373,6 +21527,10 @@ footer.show-context-menu-user .btn-user {
   letter-spacing: 0.032px;
   margin-bottom: 0;
 }
+.activity_info_container .btn-add-plus {
+  width: 36px;
+  height: 36px;
+}
 
 .window-attach {
   width: 100%;
@@ -22430,6 +22588,18 @@ footer.show-context-menu-user .btn-user {
   gap: 20px;
   padding: 0;
   width: 100%;
+  position: relative;
+  height: 100%;
+}
+.form-create-task-event .wrap-section-inner,
+.modal .form-create-task-event .wrap-section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  height: 100%;
 }
 .form-create-task-event .section-inner,
 .modal .form-create-task-event .section-inner {
@@ -25576,6 +25746,9 @@ button.swiper-pagination-bullet {
   background: #1e1e1e;
   top: 0px;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
 .wrap-loading.show {
   display: flex;
@@ -25583,6 +25756,9 @@ button.swiper-pagination-bullet {
   align-items: center;
   flex-direction: column;
   gap: 0px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
 }
 .wrap-loading .text {
   overflow: hidden;
@@ -25612,6 +25788,13 @@ button.swiper-pagination-bullet {
 }
 .wrap-loading.wrap-loading-white .text {
   color: #000000;
+}
+.wrap-loading.wrap-loading-on-modal {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  min-height: auto;
 }
 
 .dot-typing-white {

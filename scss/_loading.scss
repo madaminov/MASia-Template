@@ -6,12 +6,18 @@
   background: $body-color;
   top: 0px;
   left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
   &.show {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
   }
   .text {
     overflow: hidden;
@@ -41,6 +47,13 @@
     .text {
       color: $black-color;
     }
+  }
+  &.wrap-loading-on-modal {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    min-height: auto;
   }
 }
 

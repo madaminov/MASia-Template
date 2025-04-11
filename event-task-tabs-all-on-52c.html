@@ -2,79 +2,79 @@
 <html lang="en">
 
 <head>
-	<title>MAS.AI</title>
-	<meta name="description" content="MAS.AI" />
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/style.css">
+    <title>MAS.AI</title>
+    <meta name="description" content="MAS.AI" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<div class="wrapper-main">
-		<div id="root" class="wrapper">
-			<header>
-				<div class="container-fluid d-flex align-items-center justify-content-between">
-					<div class="wrap_logo">
-						<a href="/">MAS.AI</a>
-					</div>
-					<div class="user_task d-flex align-items-center">
-						<div class="user-info">
+    <div class="wrapper-main">
+        <div id="root" class="wrapper">
+            <header>
+                <div class="container-fluid d-flex align-items-center justify-content-between">
+                    <div class="wrap_logo">
+                        <a href="/">MAS.AI</a>
+                    </div>
+                    <div class="user_task d-flex align-items-center">
+                        <div class="user-info">
                             <div class="user_name text-end user-icon-wrapper">
                                 <img src="images/icon-notification.svg" alt="User Icon">
                             </div>
                         </div>
-                        
-						<button class="user-img" style="background-image: url(images/queen.png) ;"></button>
-					</div>
-				</div>
 
-			</header>
-			<!--calendar-->
-			<div class="wrap-calendar open">
-				<input type="hidden" name="range-start" class="input" id="calendar">
-				<div class="switch_view_calendar"></div>
-			</div>
-			<!--calendar end-->
+                        <button class="user-img" style="background-image: url(images/queen.png) ;"></button>
+                    </div>
+                </div>
+
+            </header>
+            <!--calendar-->
+            <div class="wrap-calendar open">
+                <input type="hidden" name="range-start" class="input" id="calendar">
+                <div class="switch_view_calendar"></div>
+            </div>
+            <!--calendar end-->
             <div class="task-container">
                 <div class="task-wrapper">
-                  <input type="radio" id="all" name="task-filter" class="radio-task" checked>
-                  <label for="all" class="task-tab">
-                    <span class="checkmark"></span>
-                    <span class="tab-text">All</span>
-                  </label>
-              
-                  <input type="radio" id="events" name="task-filter" class="radio-task">
-                  <label for="events" class="task-tab">
-                    <span class="checkmark"></span>
-                    <span class="tab-text">Events</span>
-                  </label>
-              
-                  <input type="radio" id="task" name="task-filter" class="radio-task">
-                  <label for="task" class="task-tab">
-                    <span class="checkmark"></span>
-                    <span class="tab-text">Task</span>
-                  </label>
+                    <input type="radio" id="all" name="task-filter" class="radio-task" checked>
+                    <label for="all" class="task-tab">
+                        <span class="checkmark"></span>
+                        <span class="tab-text">All</span>
+                    </label>
+
+                    <input type="radio" id="events" name="task-filter" class="radio-task">
+                    <label for="events" class="task-tab">
+                        <span class="checkmark"></span>
+                        <span class="tab-text">Events</span>
+                    </label>
+
+                    <input type="radio" id="task" name="task-filter" class="radio-task">
+                    <label for="task" class="task-tab">
+                        <span class="checkmark"></span>
+                        <span class="tab-text">Task</span>
+                    </label>
                 </div>
-              </div>
-              
-			<!--Activity Info Container-->
-			<div class="date_info_container d-flex align-items-center justify-content-between">
-				<div class="text">01 October, Saturday</div>
-				<button class="btn-add-plus">
+            </div>
+
+            <!--Activity Info Container-->
+            <div class="date_info_container d-flex align-items-center justify-content-between">
+                <div class="text">01 October, Saturday</div>
+                <button class="btn-add-plus">
                     <svg>
                         <use href="images/icons.svg#plus"></use>
                     </svg>
                 </button>
-			</div>
-			<!--Activity Info Container end-->
-			<!--Day Schedule-->
-			<div class="wrap-day-schedule">
-				<div class="schedule">
-					<div class="alert text-center" role="alert">
-						<img src="images/package.svg" alt="" class="img-fluid">
-						Pol`s Birthday
-					</div>
-					<div class="event-list w-100">
+            </div>
+            <!--Activity Info Container end-->
+            <!--Day Schedule-->
+            <div class="wrap-day-schedule">
+                <div class="schedule">
+                    <div class="alert text-center" role="alert">
+                        <img src="images/package.svg" alt="" class="img-fluid">
+                        Pol`s Birthday
+                    </div>
+                    <div class="event-list w-100">
                         <!--event-->
                         <div class="event w-100 d-flex align-self-stretch">
                             <div class="wrap-time d-flex flex-column">
@@ -222,44 +222,44 @@
                     </div>
                 </div>
             </div>
-    
-			<!--Day Schedule end-->
-			<footer>
-				<div class="container-fluid d-flex align-items-center justify-content-between">
-					<button title="home" class="btn-home">
-						<svg>
-							<use href="images/icons.svg#home" />
-						</svg>
-					</button>
-					<button title="calendar" class="btn-calendar active">
-						<svg>
-							<use href="images/icons.svg#calendar" />
-						</svg>
-					</button>
-					<button title="add" class="btn-add">		
-							<img src="images/icon-audio.svg" alt="Audio Icon">						
-					</button>
-					<button title="list" class="btn-list">
-						<svg>
-							<use href="images/icons.svg#list" />
-						</svg>
-					</button>
-					<button class="btn-user">
-						<svg>
-							<use href="images/icon-user.svg#user" />
-						</svg>
-					</button>
-				</div>
-			</footer>
-		</div>
-	</div>
+
+            <!--Day Schedule end-->
+            <footer>
+                <div class="container-fluid d-flex align-items-center justify-content-between">
+                    <button title="home" class="btn-home">
+                        <svg>
+                            <use href="images/icons.svg#home" />
+                        </svg>
+                    </button>
+                    <button title="calendar" class="btn-calendar active">
+                        <svg>
+                            <use href="images/icons.svg#calendar" />
+                        </svg>
+                    </button>
+                    <button title="add" class="btn-add">
+                        <img src="images/icon-audio.svg" alt="Audio Icon">
+                    </button>
+                    <button title="list" class="btn-events">
+                        <svg>
+                            <use href="images/icon-footer-events.svg#icon" />
+                        </svg>
+                    </button>
+                    <button class="btn-user">
+                        <svg>
+                            <use href="images/icon-user.svg#user" />
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
 
 
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/air-datepicker/air-datepicker.js"></script>
-	<script src="js/date-picker.mixin.js"></script>
-	<script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/air-datepicker/air-datepicker.js"></script>
+    <script src="js/date-picker.mixin.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

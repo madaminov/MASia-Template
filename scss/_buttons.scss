@@ -205,15 +205,48 @@ button,
   &.active,
   &:active,
   &:focus {
-    color: $white;
-    border: 1px solid $violet-19;
-    background: $violet-19;
+    color: $white !important;
+    border: 1px solid $violet-19 !important;
+    background: $violet-19 !important;
   }
   &:disabled,
   &.disabled {
     color: $gray-43;
     border: 1px solid $gray-44;
     background: $gray-44;
+  }
+}
+.btn-save-task-event {
+  color: $white;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* Body - 16 R */
+  font-family: $font-stack-popins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+  padding: 0px 8px;
+  @include border-radius(8px);
+  border: 1px solid $violet-17;
+  background: $violet-17;
+  &:hover {
+    color: $white;
+    border: 1px solid $violet-18;
+    background: $violet-18;
+  }
+  &.active,
+  &:active,
+  &:focus {
+    color: $white !important;
+    border: 1px solid $violet-19 !important;
+    background: $violet-19 !important;
+  }
+  &:disabled,
+  &.disabled {
+    color: $violet-25;
+    border: 1px solid $violet-24;
+    background: $violet-24;
   }
 }
 .button-purple-1 {
@@ -520,6 +553,7 @@ button,
     fill: $gray;
     width: 24px;
     height: 24px;
+    @include transition(0.3s);
   }
   &:hover {
     background: $white;
@@ -556,6 +590,7 @@ button,
     fill: $gray;
     width: 24px;
     height: 24px;
+    @include transition(0.3s);
   }
   &:hover {
     background: $white;
@@ -584,7 +619,8 @@ button,
   @include border-radius(40px);
   border: none;
   background: $primary-default;
-  box-shadow: 0px 4px 4px 0px #dddcff inset;
+  box-shadow: 0px 4px 4px 0px $gray-45 inset;
+  @include transition(0.3s);
   svg {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
@@ -595,11 +631,11 @@ button,
   }
   &:hover {
     background: $violet-14;
-    box-shadow: 0px 4px 4px 0px #dddcff inset;
+    box-shadow: 0px 4px 4px 0px $gray-45 inset;
   }
   &:active {
     background: $violet-11;
-    box-shadow: 0px 4px 4px 0px #c0a2f6 inset;
+    box-shadow: 0px 4px 4px 0px $violet-23 inset;
   }
 }
 .btn-audio {
@@ -614,7 +650,8 @@ button,
   @include border-radius(40px);
   border: none;
   background: $primary-default;
-  box-shadow: 0px 4px 4px 0px #dddcff inset;
+  box-shadow: 0px 4px 4px 0px $gray-45 inset;
+  @include transition(0.3s);
   svg {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
@@ -625,11 +662,11 @@ button,
   }
   &:hover {
     background: $violet-14;
-    box-shadow: 0px 4px 4px 0px #dddcff inset;
+    box-shadow: 0px 4px 4px 0px $gray-45 inset;
   }
   &:active {
     background: $violet-11;
-    box-shadow: 0px 4px 4px 0px #c0a2f6 inset;
+    box-shadow: 0px 4px 4px 0px $violet-23 inset;
   }
 }
 .btn-add-plus {
@@ -644,6 +681,7 @@ button,
   border: 1px solid $gray-6;
   @include border-radius(50%);
   background: transparent;
+  @include transition(0.3s);
   svg {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
@@ -651,15 +689,30 @@ button,
     fill: $gray-6;
     width: 20px;
     height: 20px;
+    @include transition(0.3s);
   }
   &:hover {
     background: transparent;
-    border: 1px solid $white;
+    border: 1px solid #d3bff9;
+    svg {
+      fill: $primary-default;
+    }
   }
   &:active,
   &:focus {
     background: transparent;
-    border: 1px solid $white;
+    border: 1px solid $violet-11;
+    svg {
+      fill: $violet-11;
+    }
+  }
+  &.disabled,
+  &:disabled {
+    background: transparent;
+    border: 1px solid $black-color-4;
+    svg {
+      fill: $black-color-4;
+    }
   }
   &.show {
     border: 1px solid $violet-11;
@@ -737,6 +790,43 @@ button,
     fill: $gray;
     width: 24px;
     height: 24px;
+  }
+  &:hover {
+    background: $white;
+    svg {
+      fill: $black;
+    }
+  }
+  &.active,
+  &:active,
+  &:focus {
+    background: $white;
+    svg {
+      fill: $black;
+    }
+  }
+}
+.btn-events {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  @include border-radius(8px);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $gray;
+    width: 24px;
+    height: 24px;
+    @include transition(0.3s);
   }
   &:hover {
     background: $white;

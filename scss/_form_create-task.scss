@@ -1,6 +1,15 @@
 .form-create-task,
 .modal form.form-create-task {
   gap: 32px;
+  .wrap-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
   .section-inner {
     display: flex;
     flex-direction: column;
