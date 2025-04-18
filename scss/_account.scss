@@ -272,13 +272,13 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    @include transition(0.3s);
+    @include transition(0.4s);
     .tools {
       display: inline-flex;
       align-items: center;
       position: absolute;
       right: -160px;
-      @include transition(0.3s);
+      @include transition(0.4s);
       button {
         border: none;
       }
@@ -302,13 +302,16 @@
         background: $black-color-10;
       }
     }
-    &.show-tools {
+    &.show-tools,
+    &:hover {
       .user {
         background: $black-color-11;
         left: -50px;
+        @include transition(0.4s);
       }
       .tools {
         right: 0;
+        @include transition(0.4s);
       }
     }
   }
@@ -322,7 +325,8 @@
     flex: 0 0 100%;
     position: relative;
     left: 0;
-    @include transition(0.3s);
+    @include transition(0.4s);
+    cursor: pointer;
     img {
       width: 48px;
       height: 48px;

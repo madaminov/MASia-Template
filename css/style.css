@@ -16756,7 +16756,7 @@ h6,
 }
 
 .cursor-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .cursor-default {
@@ -20592,7 +20592,7 @@ footer.show-context-menu-user .btn-user {
 .family-members-section .personal-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 4px;
 }
 .family-members-section .personal-info .name {
@@ -22286,7 +22286,7 @@ footer.show-context-menu-user .btn-user {
   padding-bottom: 0px;
 }
 .wrapper-onboarding .swiper-onboarding .swiper-slide {
-  max-width: calc(100% - 36px);
+  width: calc(100% - 48px);
   transform: scaleY(0.9);
   transition: all 0.3s ease;
 }
@@ -23024,22 +23024,22 @@ footer.show-context-menu-user .btn-user {
   width: 100%;
   overflow: hidden;
   position: relative;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .family-list .item-user .tools {
   display: inline-flex;
   align-items: center;
   position: absolute;
   right: -160px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .family-list .item-user .tools button {
   border: none;
@@ -23064,12 +23064,22 @@ footer.show-context-menu-user .btn-user {
 .family-list .item-user .tools .btn-delete {
   background: #424242;
 }
-.family-list .item-user.show-tools .user {
+.family-list .item-user.show-tools .user, .family-list .item-user:hover .user {
   background: #2a2a2a;
   left: -50px;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.family-list .item-user.show-tools .tools {
+.family-list .item-user.show-tools .tools, .family-list .item-user:hover .tools {
   right: 0;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .family-list .user {
   display: flex;
@@ -23081,11 +23091,12 @@ footer.show-context-menu-user .btn-user {
   flex: 0 0 100%;
   position: relative;
   left: 0;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 .family-list .user img {
   width: 48px;
@@ -25381,6 +25392,7 @@ button.swiper-pagination-bullet {
   width: 40px;
   opacity: 1;
   background: #8044ee;
+  border-color: #8044ee;
   border-radius: 8px;
 }
 

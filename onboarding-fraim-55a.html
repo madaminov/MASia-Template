@@ -121,15 +121,26 @@
 
 	</script>
 	<script>
-		let onboardingSwiper = new Swiper(".onboardingSwiper", {
-			slidesPerView: "auto",
-			spaceBetween: 8,
+		swiperConfig = {
+			effect: "coverflow",
+			grabCursor: true,
 			centeredSlides: true,
-			loop: false,
+			slidesPerView: "auto",
+			spaceBetween: 24,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: false,
+				scale: 0.95,
+			},
 			pagination: {
 				el: ".swiper-pagination",
 			},
-		});
+		};
+		let onboardingSwiper = '';
+		onboardingSwiper = new Swiper(".onboardingSwiper", swiperConfig);
 		onboardingSwiper.on('slideChangeTransitionEnd', function () {
 			onboardingSwiper.slides.length
 			console.log(onboardingSwiper.activeIndex);
@@ -145,8 +156,7 @@
 		});
 		function slideNext() {
 			onboardingSwiper.slideNext();
-		}
-
+		}		
 	</script>
 </body>
 
