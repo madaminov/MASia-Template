@@ -156,6 +156,242 @@
       .btn-send-message {
         margin-bottom: 4px;
       }
+      .btn-file {
+        margin-bottom: 4px;
+      }
     }
+  }
+}
+.ai-chat-new-modal {
+  background: $black-color-15;
+  .modal-header {
+    padding: 40px 24px 12px 24px;
+  }
+  .modal-body {
+    position: relative;
+    z-index: 2;
+  }
+  .modal-footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border: none;
+    padding: 0;
+    display: block;
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 40px;
+    .bottom-menu {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      margin: 0;
+      z-index: 4;
+    }
+    .voice-record {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      .voice-naimation {
+        text-align: center;
+        flex: 1 0 0;
+      }
+    }
+  }
+  .modal-content {
+    &::before {
+      background: $black-color-15;
+      position: relative;
+      content: '';
+      border-radius: 764px;
+      opacity: 0.3;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #a67cf3 0%,
+        rgba(150, 131, 193, 0.02) 100%
+      );
+      filter: blur(27.4350643157959px);
+      display: block;
+      width: 150%;
+      height: calc(100% - 44px);
+      position: absolute;
+      z-index: 1;
+      top: auto;
+      bottom: 0;
+      left: -25%;
+    }
+  }
+  .title {
+    color: $white;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Headline - 18 R */
+    font-family: $font-stack-popins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 144.444% */
+    margin-bottom: 26px;
+  }
+
+  .group-help {
+    padding-left: 8px;
+    padding-right: 8px;
+    .group-help-ai-button {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      .item {
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        align-self: stretch;
+        justify-content: flex-start;
+        border-radius: 20px;
+        background: rgba(20, 20, 20, 0.8);
+        backdrop-filter: blur(10px);
+        width: calc(50% - 8px);
+        max-width: calc(50% - 8px);
+        min-height: 132px;
+        .wrap-icon {
+          width: 32px;
+          height: 32px;
+          flex-shrink: 0;
+          background-color: $black-color-17;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .bottom-menu {
+    .context-menu {
+      position: absolute;
+      z-index: 3;
+      bottom: calc(100% + 9px);
+      left: 0;
+      margin: 0;
+      width: 177px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      &.show {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+.wrap-message {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.dialog {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  .dialog-text-ai {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    .chat-img {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .text {
+    color: $white;
+    font-feature-settings: 'liga' off, 'clig' off;
+    /* Body - 16 R */
+    font-family: $font-stack-popins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.032px;
+    b {
+      font-weight: 500;
+    }
+  }
+}
+.wrap-dialog-sticker-ai {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 52px);
+  flex-direction: column;
+  gap: 8px;
+  margin-left: auto;
+  padding-right: 19px;
+  .dialog-sticker-ai {
+    display: inline-flex;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    .text {
+      color: $white;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+    }
+    .info {
+      color: $white;
+      font-feature-settings: 'liga' off, 'clig' off;
+      /* Body - 16 R */
+      font-family: $font-stack-popins;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: 0.032px;
+    }
+    b {
+      font-weight: 500;
+    }
+  }
+}
+.dialog-ai + .dialog-user {
+  margin-top: 8px;
+}
+.dialog-user {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 8px;
+  .dialog-sticker-user {
+    display: inline-flex;
+    padding: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 16px;
+    background: $violet-26;
+    width: calc(100% - 71px);
   }
 }

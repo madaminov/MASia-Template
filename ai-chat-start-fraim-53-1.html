@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MAS.AI</title>
+	<meta name="description" content="MAS.AI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div id="root" class="wrapper">
+
+			<!--modal-->
+			<div class="modal fullScreenModal ai-chat-modal ai-chat-new-modal fade" id="fullModal" tabindex="-1"
+				aria-labelledby="fullModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="btn-clock">
+								<svg>
+									<use href="images/icon-clock.svg#icon" />
+								</svg>
+							</button>
+							<h2 class="modal-title ms-auto me-auto" id="fullModalLabel"><img src="images/ai-stars.svg"
+									alt="MAS.AI Assistant" class="img-fluid"></h2>
+							<button type="button" class="btn-close-cross" data-bs-dismiss="modal" aria-label="Close">
+								<svg>
+									<use href="images/icon-cross.svg#icon" />
+								</svg>
+							</button>
+						</div>
+						<div class="modal-body overflow-auto scrollbar-hidden">
+							<h2 class="title text-center">Let MAS.Ai handle<br />it all for you!</h2>
+							<div class="wrap-message">
+								<div class="dialog dialog-ai">
+									<div class="dialog-text-ai">
+										<div class="chat-img">
+											<img src="images/ai-masya.png" alt="ai-masya">
+										</div>
+										<div class="text"><b>Hello, My Queen!</b></div>
+									</div>
+								</div>
+							</div>
+							<div class="group-help">
+								<div class="group-help-ai-button">
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/diamond.png" alt="">
+										</div>
+										<div class="name">View today's<br /> schedule</div>
+									</div>
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/magic-ball.png" alt="">
+										</div>
+										<div class="name">Check<br /> tomorrow's<br /> schedule</div>
+									</div>
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/start.png" alt="">
+										</div>
+										<div class="name">Create new<br /> activity</div>
+									</div>
+									<div class="item">
+										<div class="wrap-icon">
+											<img src="images/cup.png" alt="">
+										</div>
+										<div class="name">Review daily<br /> report</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="modal-footer">
+							<div class="voice-record d-none">
+								<div class="voice-naimation">
+									<img src="images/voice-animation.svg" alt="">
+								</div>
+								<button class="btn-stop">
+								</button>
+							</div>
+							<div class="bottom-menu">
+								<div class="prompt-box">
+									<button class="btn-file">
+										<svg>
+											<use href="images/icon-paper-clip.svg#icon" />
+										</svg>
+									</button>
+									<textarea name="text" onkeyup="textarea_resize(event, 15, 1);"
+										class="prompt-box-input" maxlength="2000"
+										placeholder="Ask a question..."></textarea>
+									<button class="btn-send-message">
+										<svg>
+											<use href="images/icon-send.svg#send" />
+										</svg>
+									</button>
+									<div id="text_area_div"></div>
+								</div>
+
+								<button class="btn-microphone-gradient">
+								</button>
+								<div class="context-menu grid bg-white">
+									<div class="row g-0 w-100">
+										<div class="col-12">
+											<button class="btn-edit">
+												<svg>
+													<use href="images/icon-camera.svg#icon"></use>
+												</svg>
+												Take a Photo
+											</button>
+										</div>
+										<div class="col-12">
+											<button class="btn-copy">
+												<svg>
+													<use href="images/icon-gallery.svg#icon"></use>
+												</svg>
+												Open Gallery
+											</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--modal end-->
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		let fullModal = new bootstrap.Modal(document.getElementById("fullModal"), {});
+		document.onreadystatechange = function () {
+			fullModal.show();
+		};
+		function textarea_resize(event, line_height, min_line_count) {
+			let min_line_height = min_line_count * line_height;
+			let obj = event.target;
+			let div = document.getElementById('text_area_div');
+			div.innerHTML = obj.value;
+			console.log(div.offsetHeight);
+			let obj_height = div.offsetHeight;
+			if (event.keyCode == 13)
+				obj_height += line_height;
+			else if (obj_height < min_line_height)
+				obj_height = min_line_height;
+			obj.style.height = obj_height + 'px';
+		}
+		document.querySelector('.btn-file').addEventListener('click', function () {
+			let context_menu = document.querySelector('.context-menu');
+			if (context_menu.classList.contains('show')) {
+				context_menu.classList.remove('show');
+			} else {
+				context_menu.classList.add('show');
+			}
+		});
+	</script>
+</body>
+
+</html>

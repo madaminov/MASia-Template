@@ -1141,6 +1141,32 @@ button,
     height: 17.455px;
   }
 }
+.btn-microphone-gradient {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid $gray-11;
+  background: url(../images/icon-mic.svg),
+    linear-gradient(180deg, #d3bff9 0%, #7360a2 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  @include border-radius(50%);
+  @include transition(0.3s);
+}
+.btn-stop {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid $gray-11;
+  background: url(../images/icon-stop.svg),
+    linear-gradient(180deg, #d3bff9 0%, #7360a2 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  @include border-radius(50%);
+  @include transition(0.3s);
+}
 .btn-send-message {
   display: flex;
   justify-content: center;
@@ -1160,6 +1186,35 @@ button,
     fill: $white;
     width: 16px;
     height: 16px;
+    @include transition(0.3s);
+  }
+}
+.btn-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  flex-shrink: 0;
+  border: none;
+  background-color: $black-color-15;
+  @include border-radius(0);
+  @include transition(0.3s);
+  svg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    fill: $white;
+    width: 16px;
+    height: 16px;
+    @include transition(0.3s);
+  }
+  &:hover,
+  &.active {
+    svg {
+      fill: $violet-7;
+    }
   }
 }
 .btn-collapse {
@@ -1311,5 +1366,50 @@ button,
     svg {
       fill: $black-color;
     }
+  }
+}
+.btn-clock {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  svg {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    fill: $white;
+  }
+  &:hover {
+    border-color: $white;
+  }
+}
+.btn-close-cross {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  background-image: none;
+  svg {
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    stroke: $white;
+  }
+  &:hover {
+    border-color: $white;
   }
 }

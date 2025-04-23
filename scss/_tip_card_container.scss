@@ -714,6 +714,8 @@
       height: 52px;
       flex: 0 0 auto;
       padding: 0;
+      position: static;
+      background-color: transparent !important;
     }
     .text {
       color: $black-color;

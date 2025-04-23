@@ -14675,6 +14675,46 @@ button.active, button:active, button:focus,
   height: 17.455px;
 }
 
+.btn-microphone-gradient {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid #666;
+  background: url(../images/icon-mic.svg), linear-gradient(180deg, #d3bff9 0%, #7360a2 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-stop {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid #666;
+  background: url(../images/icon-stop.svg), linear-gradient(180deg, #d3bff9 0%, #7360a2 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .btn-send-message {
   display: flex;
   justify-content: center;
@@ -14702,6 +14742,48 @@ button.active, button:active, button:focus,
   fill: #fff;
   width: 16px;
   height: 16px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  flex-shrink: 0;
+  border: none;
+  background-color: #141414;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-file svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-file:hover svg, .btn-file.active svg {
+  fill: #b38ff5;
 }
 
 .btn-collapse {
@@ -14850,6 +14932,53 @@ button.active, button:active, button:focus,
 }
 .btn-text-svg:hover svg {
   fill: #000000;
+}
+
+.btn-clock {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+}
+.btn-clock svg {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+.btn-clock:hover {
+  border-color: #fff;
+}
+
+.btn-close-cross {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  background-image: none;
+}
+.btn-close-cross svg {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+}
+.btn-close-cross:hover {
+  border-color: #fff;
 }
 
 .input-group-text {
@@ -21416,6 +21545,8 @@ footer.show-context-menu-user .btn-user {
   height: 52px;
   flex: 0 0 auto;
   padding: 0;
+  position: static;
+  background-color: transparent !important;
 }
 .tip_card_container-new-account .family-list .text {
   color: #000000;
@@ -21823,6 +21954,7 @@ footer.show-context-menu-user .btn-user {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  margin-bottom: 0;
 }
 
 .modal-content {
@@ -23891,7 +24023,7 @@ footer.show-context-menu-user .btn-user {
 
 .toast-container {
   padding: 12px 16px;
-  height: calc(100dvh - 69px);
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
@@ -24156,6 +24288,237 @@ footer.show-context-menu-user .btn-user {
 }
 .ai-chat-modal .bottom-menu .prompt-box .btn-send-message {
   margin-bottom: 4px;
+}
+.ai-chat-modal .bottom-menu .prompt-box .btn-file {
+  margin-bottom: 4px;
+}
+
+.ai-chat-new-modal {
+  background: #141414;
+}
+.ai-chat-new-modal .modal-header {
+  padding: 40px 24px 12px 24px;
+}
+.ai-chat-new-modal .modal-body {
+  position: relative;
+  z-index: 2;
+}
+.ai-chat-new-modal .modal-footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  border: none;
+  padding: 0;
+  display: block;
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 40px;
+}
+.ai-chat-new-modal .modal-footer .bottom-menu {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  z-index: 4;
+}
+.ai-chat-new-modal .modal-footer .voice-record {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+.ai-chat-new-modal .modal-footer .voice-record .voice-naimation {
+  text-align: center;
+  flex: 1 0 0;
+}
+.ai-chat-new-modal .modal-content::before {
+  background: #141414;
+  position: relative;
+  content: "";
+  border-radius: 764px;
+  opacity: 0.3;
+  background: radial-gradient(50% 50% at 50% 50%, #a67cf3 0%, rgba(150, 131, 193, 0.02) 100%);
+  filter: blur(27.4350643158px);
+  display: block;
+  width: 150%;
+  height: calc(100% - 44px);
+  position: absolute;
+  z-index: 1;
+  top: auto;
+  bottom: 0;
+  left: -25%;
+}
+.ai-chat-new-modal .title {
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Headline - 18 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 144.444% */
+  margin-bottom: 26px;
+}
+.ai-chat-new-modal .group-help {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.ai-chat-new-modal .group-help .group-help-ai-button {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ai-chat-new-modal .group-help .group-help-ai-button .item {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  justify-content: flex-start;
+  border-radius: 20px;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  width: calc(50% - 8px);
+  max-width: calc(50% - 8px);
+  min-height: 132px;
+}
+.ai-chat-new-modal .group-help .group-help-ai-button .item .wrap-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-color: #353535;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ai-chat-new-modal .bottom-menu .context-menu {
+  position: absolute;
+  z-index: 3;
+  bottom: calc(100% + 9px);
+  left: 0;
+  margin: 0;
+  width: 177px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.ai-chat-new-modal .bottom-menu .context-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wrap-message {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+.dialog .dialog-text-ai {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.dialog .dialog-text-ai .chat-img img {
+  width: 40px;
+  height: 40px;
+}
+.dialog .text {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
+.dialog .text b {
+  font-weight: 500;
+}
+
+.wrap-dialog-sticker-ai {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 52px);
+  flex-direction: column;
+  gap: 8px;
+  margin-left: auto;
+  padding-right: 19px;
+}
+.wrap-dialog-sticker-ai .dialog-sticker-ai {
+  display: inline-flex;
+  padding: 8px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+.wrap-dialog-sticker-ai .dialog-sticker-ai .text {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
+.wrap-dialog-sticker-ai .dialog-sticker-ai .info {
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body - 16 R */
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
+.wrap-dialog-sticker-ai .dialog-sticker-ai b {
+  font-weight: 500;
+}
+
+.dialog-ai + .dialog-user {
+  margin-top: 8px;
+}
+
+.dialog-user {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 8px;
+}
+.dialog-user .dialog-sticker-user {
+  display: inline-flex;
+  padding: 8px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 16px;
+  background: #8e60e4;
+  width: calc(100% - 71px);
 }
 
 .wrapper-page-404,
