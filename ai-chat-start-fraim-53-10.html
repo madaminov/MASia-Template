@@ -36,43 +36,62 @@
 							<h2 class="title text-center">Let MAS.Ai handle<br />it all for you!</h2>
 							<div class="wrap-message">
 								<div class="dialog dialog-ai">
+									<div class="chat-img mb-auto">
+										<img src="images/ai-masya.png" alt="ai-masya">
+									</div>
 									<div class="dialog-text-ai">
-										<div class="chat-img">
-											<img src="images/ai-masya.png" alt="ai-masya">
+										<div class="text">Great! Here’s your new meeting:</div>
+										<div class="wrap-dialog-sticker-ai">
+											<div class="dialog-sticker-ai">
+												<div class="text">📅 Meeting with Mark</div>
+												<div class="text">🕑 Tomorrow April 24th at 2:00 PM</div>
+												<div class="text">📍 Coffee shop</div>
+												<div class="text">⏰ Reminder set for 1:30 PM</div>
+												<div class="text">✅ Note: “Don’t forget to bring the documents.”</div>
+											</div>
 										</div>
-										<div class="text"><b>Hello, My Queen!</b></div>
+										<div class="text">Does everything look good?</div>
 									</div>
-								</div>
-							</div>
-							<div class="group-help">
-								<div class="group-help-ai-button">
-									<div class="item">
-										<div class="wrap-icon">
-											<img src="images/diamond.png" alt="">
-										</div>
-										<div class="name">View today's<br /> schedule</div>
-									</div>
-									<div class="item">
-										<div class="wrap-icon">
-											<img src="images/magic-ball.png" alt="">
-										</div>
-										<div class="name">Check<br /> tomorrow's<br /> schedule</div>
-									</div>
-									<div class="item">
-										<div class="wrap-icon">
-											<img src="images/start.png" alt="">
-										</div>
-										<div class="name">Create new<br /> activity</div>
-									</div>
-									<div class="item">
-										<div class="wrap-icon">
-											<img src="images/cup.png" alt="">
-										</div>
-										<div class="name">Review daily<br /> report</div>
-									</div>
-								</div>
-							</div>
 
+								</div>
+								<div class="dialog dialog-user">
+									<div class="dialog-sticker-user">
+										<div class="text">Great! Let's start with the third skill.</div>
+									</div>
+								</div>
+								<div class="dialog dialog-ai">
+									<div class="chat-img mb-auto">
+										<img src="images/ai-masya.png" alt="ai-masya">
+									</div>
+									<div class="dialog-text-ai">
+										<div class="text">All set! Here’s the updated info:</div>
+										<div class="wrap-dialog-sticker-ai">
+											<div class="dialog-sticker-ai">
+												<div class="text">📅 Meeting with Mark</div>
+												<div class="text">🕑 Tomorrow April 24th at 2:00 PM</div>
+												<div class="text">📍 Coffee shop</div>
+												<div class="text">⏰ Reminder set for 1:30 PM</div>
+												<div class="text">✅ Note: “Don’t forget to bring the documents.”</div>
+											</div>
+										</div>
+										<div class="text">Would you like me to save the changes?</div>
+										<div class="wrap-button">
+											<div class="btn-save">Save</div>
+											<div class="btn-cancel">Cancel</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="dialog dialog-ai">
+									<div class="chat-img mb-auto">
+										<img src="images/ai-masya.png" alt="ai-masya">
+									</div>
+									<div class="dialog-text-ai">
+										<div class="text">Awesome! I've added it to your schedule. Need help with
+											anything else? 😊</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="modal-footer">
 							<div class="voice-record d-none">
@@ -84,21 +103,6 @@
 							</div>
 							<div class="bottom-menu">
 								<div class="prompt-box">
-									<div class="inclide-files">
-										<div class="file">
-											<button class="btn-close-border"></button>
-											<img src="images/include-img-1.png" alt="" class="img-fluid">
-										</div>
-										<div class="file">
-											<button class="btn-close-border"></button>
-											<img src="images/include-img-1.png" alt="" class="img-fluid">
-										</div>
-										<div class="file">
-											<button class="btn-close-border"></button>
-											<img src="images/include-img-1.png" alt="" class="img-fluid">
-										</div>
-
-									</div>
 									<button class="btn-file">
 										<svg>
 											<use href="images/icon-paper-clip.svg#icon" />
@@ -146,16 +150,6 @@
 			</div>
 			<!--modal end-->
 
-			<!--modal-->
-			<div class="imageLightBox" id="imageLightBoxModal">
-				<div class="wrap-body">
-					<button class="btn-close-border"
-						onclick="document.getElementById('imageLightBoxModal').classList.remove('show');"></button>
-					<div class="wrap-img"></div>
-				</div>
-			</div>
-			<!--mdal end-->
-
 		</div>
 	</div>
 
@@ -187,22 +181,6 @@
 				context_menu.classList.add('show');
 			}
 		});
-		document.querySelectorAll('[data-box]').forEach(box => {
-			box.addEventListener('click', function (event) {
-				console.log(box);
-				event.preventDefault();
-				href = box.getAttribute('href');
-				console.log(href);
-				imageLightBoxModal = document.getElementById('imageLightBoxModal');
-				wrap_img = imageLightBoxModal.querySelector('.wrap-img')
-				//let imgElement = document.createElement("div");
-				//imgElement.setAttribute('src', href);
-				//modal_body.appendChild(imgElement);
-				wrap_img.innerHTML = '<img src="' + href + '" class="img-fluid"/>';
-				imageLightBoxModal.classList.add('show');
-			});
-		});
-
 	</script>
 </body>
 

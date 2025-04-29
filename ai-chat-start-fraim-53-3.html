@@ -36,41 +36,46 @@
 							<h2 class="title text-center">Let MAS.Ai handle<br />it all for you!</h2>
 							<div class="wrap-message">
 								<div class="dialog dialog-ai">
+									<div class="chat-img mb-auto">
+										<img src="images/ai-masya.png" alt="ai-masya">
+									</div>
 									<div class="dialog-text-ai">
-										<div class="chat-img">
-											<img src="images/ai-masya.png" alt="ai-masya">
-										</div>
 										<div class="text"><b>Hello, My Queen!</b></div>
 									</div>
 								</div>
 								<div class="dialog dialog-ai">
+									<div class="chat-img mb-auto">
+										<img src="images/ai-masya.png" alt="ai-masya">
+									</div>
 									<div class="dialog-text-ai">
-										<div class="chat-img">
-											<img src="images/ai-masya.png" alt="ai-masya">
-										</div>
 										<div class="text">Here are three helpful skills and the rewards for Princess
 											Anna
 											for completing them:</div>
-									</div>
-									<div class="wrap-dialog-sticker-ai">
-										<div class="dialog-sticker-ai">
-											<div class="text">Reading a book for 15 minutes a day for a month.</div>
-											<div class="info">
-												Reward: <b>20,000</b> <img src="images/icon-awards-small.png" alt="">
+										<div class="wrap-dialog-sticker-ai">
+											<div class="dialog-sticker-ai">
+												<div class="text">Reading a book for 15 minutes a day for a month.</div>
+												<div class="info">
+													Reward: <b>20,000</b> <img src="images/icon-awards-small.png"
+														alt="">
+												</div>
+											</div>
+											<div class="dialog-sticker-ai">
+												<div class="text">Cleaning up toys every evening for two weeks.</div>
+												<div class="info">
+													Reward: <b>15,000</b> <img src="images/icon-awards-small.png"
+														alt="">
+												</div>
+											</div>
+											<div class="dialog-sticker-ai">
+												<div class="text">Eating a healthy snack every day for 10 days.</div>
+												<div class="info">
+													Reward: <b>12,000</b> <img src="images/icon-awards-small.png"
+														alt="">
+												</div>
 											</div>
 										</div>
-										<div class="dialog-sticker-ai">
-											<div class="text">Cleaning up toys every evening for two weeks.</div>
-											<div class="info">
-												Reward: <b>15,000</b> <img src="images/icon-awards-small.png" alt="">
-											</div>
-										</div>
-										<div class="dialog-sticker-ai">
-											<div class="text">Eating a healthy snack every day for 10 days.</div>
-											<div class="info">
-												Reward: <b>12,000</b> <img src="images/icon-awards-small.png" alt="">
-											</div>
-										</div>
+
+
 									</div>
 								</div>
 								<div class="dialog dialog-user">
@@ -81,15 +86,14 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<div class="voice-record">
+							<div class="voice-record  d-none">
 								<div class="voice-naimation">
-									<img src="images/voice-animation.svg" alt="">
 								</div>
-								<button class="btn-stop">
+								<button class="btn-stop" id="stopVoice">
 								</button>
 							</div>
 
-							<div class="bottom-menu d-none">
+							<div class="bottom-menu">
 								<div class="prompt-box ">
 									<button class="btn-file">
 										<svg>
@@ -106,9 +110,7 @@
 									</button>
 									<div id="text_area_div"></div>
 								</div>
-
-
-								<button class="btn-microphone-gradient">
+								<button class="btn-microphone-gradient" id="startVoice">
 								</button>
 
 								<div class="context-menu grid bg-white">
@@ -171,6 +173,57 @@
 				context_menu.classList.add('show');
 			}
 		});
+	</script>
+	<script>
+		var num, array, width, context, equalizer, myElements, analyser, src, height;
+		//num = 50;
+		num = 200;
+		array = new Uint8Array(num * 2);
+		width = 2;
+		document.getElementById('startVoice').onclick = function () {
+			if (context) return;
+
+			for (var i = 0; i < num; i++) {
+				equalizer = document.createElement('div');
+				equalizer.className = 'equalizer';
+				equalizer.style.background = 'linear-gradient(180deg,rgba(209, 193, 255, 1) 50%, rgba(54, 29, 128, 1) 100%)';
+				equalizer.style.minWidth = width + 'px';
+				document.querySelector('.voice-naimation').appendChild(equalizer);
+			}
+			document.querySelector('.bottom-menu').classList.add('d-none');
+			document.querySelector('.voice-record').classList.remove('d-none');
+
+
+			myElements = document.getElementsByClassName('equalizer');
+			context = new AudioContext();
+			analyser = context.createAnalyser();
+
+			navigator.mediaDevices.getUserMedia({
+				audio: true
+			}).then(stream => {
+				src = context.createMediaStreamSource(stream);
+				src.connect(analyser);
+				loop();
+			}).catch(error => {
+				alert(error + '\r\n\ Rejected. The window will be refreshed!');
+				location.reload();
+			});
+		}
+		document.getElementById('stopVoice').onclick = function () {
+			context.close();
+			document.querySelector('.bottom-menu').classList.remove('d-none');
+			document.querySelector('.voice-record').classList.add('d-none');
+		}
+
+		function loop() {
+			window.requestAnimationFrame(loop);
+			analyser.getByteFrequencyData(array);
+			for (var i = 0; i < num; i++) {
+				height = array[i + num];
+				myElements[i].style.minHeight = (height - 40) + 'px';
+				myElements[i].style.opacity = 0.008 * height;
+			}
+		}
 	</script>
 </body>
 

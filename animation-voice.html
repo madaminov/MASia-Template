@@ -81,15 +81,15 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<div class="voice-record">
+							<div class="voice-record  d-none">
 								<div class="voice-naimation">
 									<div class="line"></div>
 								</div>
-								<button class="btn-microphone-gradient" id="start">
+								<button class="btn-stop" id="stopVoice">
 								</button>
 							</div>
 
-							<div class="bottom-menu d-none">
+							<div class="bottom-menu ">
 								<div class="prompt-box ">
 									<button class="btn-file">
 										<svg>
@@ -108,7 +108,7 @@
 								</div>
 
 
-								<button class="btn-microphone-gradient">
+								<button class="btn-microphone-gradient" id="startVoice">
 								</button>
 
 								<div class="context-menu grid bg-white">
@@ -207,36 +207,24 @@
 		});
 	</script>
 	<script>
-		var body, num, array, width, context, logo, myElements, analyser, src, height;
-
-		body = document.querySelector('body');
-
+		var num, array, width, context, equalizer, myElements, analyser, src, height;
 		//num = 50;
 		num = 200;
-
 		array = new Uint8Array(num * 2);
-
 		width = 2;
-
-		document.getElementById('start').onclick = function () {
-
+		document.getElementById('startVoice').onclick = function () {
 			if (context) return;
 
-			//body.querySelector('h1').remove();
-
 			for (var i = 0; i < num; i++) {
-				logo = document.createElement('div');
-				logo.className = 'equalizer';
-				logo.style.background = 'linear-gradient(180deg,rgba(209, 193, 255, 1) 50%, rgba(54, 29, 128, 1) 100%)';
-				/*
-				if (i % 2 === 0) {
-					logo.style.backgroundImage = 'linear-gradient(10deg,rgba(209, 193, 255, 1) 50%, rgba(54, 29, 128, 1) 100%)';
-				}
-				*/
-
-				logo.style.minWidth = width + 'px';
-				document.querySelector('.voice-naimation').appendChild(logo);
+				equalizer = document.createElement('div');
+				equalizer.className = 'equalizer';
+				equalizer.style.background = 'linear-gradient(180deg,rgba(209, 193, 255, 1) 50%, rgba(54, 29, 128, 1) 100%)';
+				equalizer.style.minWidth = width + 'px';
+				document.querySelector('.voice-naimation').appendChild(equalizer);
 			}
+			document.querySelector('.bottom-menu').classList.add('d-none');
+			document.querySelector('.voice-record').classList.remove('d-none');
+
 
 			myElements = document.getElementsByClassName('equalizer');
 			context = new AudioContext();
@@ -249,9 +237,14 @@
 				src.connect(analyser);
 				loop();
 			}).catch(error => {
-				alert(error + '\r\n\ Отклонено. Страница будет обновлена!');
+				alert(error + '\r\n\ Rejected. The window will be refreshed!');
 				location.reload();
 			});
+		}
+		document.getElementById('stopVoice').onclick = function () {
+			context.close();
+			document.querySelector('.bottom-menu').classList.remove('d-none');
+			document.querySelector('.voice-record').classList.add('d-none');
 		}
 
 		function loop() {
