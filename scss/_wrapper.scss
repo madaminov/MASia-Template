@@ -30,7 +30,9 @@
       }
     }
     .switch_view_calendar {
-      background-color: $blue-8;
+      &::before {
+        background-color: $blue-8;
+      }
     }
   }
 
@@ -116,7 +118,9 @@
       }
     }
     .switch_view_calendar {
-      background-color: $violet-7;
+      &::before {
+        background-color: $violet-7;
+      }
     }
   }
   .activity_info_container .text {
@@ -194,7 +198,9 @@
       }
     }
     .switch_view_calendar {
-      background-color: $violet-7;
+      &::before {
+        background-color: $violet-7;
+      }
     }
   }
 

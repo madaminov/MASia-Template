@@ -425,3 +425,87 @@
   background-color: $body-color;
   z-index: 1058;
 }
+
+.modal-kid-dashbord {
+  .modal-content {
+    background-color: $blue-11;
+  }
+  .modal-header {
+    background: $blue-11 !important;
+    .wrap_logo {
+      color: $white;
+      font-family: $font-stack-quicksand;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 28.8px */
+      text-decoration: none;
+    }
+    .user_badge {
+      gap: 12px 12px;
+      margin-left: auto;
+      .user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .user_name {
+        color: $white;
+        text-align: right;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Headline - 18 M */
+        font-family: $font-stack-popins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px; /* 144.444% */
+        margin-bottom: 2px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 200px;
+        @media (max-width: 480px) {
+          max-width: 170px;
+        }
+      }
+      .user_role {
+        color: $black-color-2;
+        font-feature-settings: 'liga' off, 'clig' off;
+        /* Caption1 - 12 M */
+        font-family: $font-stack-popins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px; /* 150% */
+        letter-spacing: 0.048px;
+        text-align: center;
+        padding: 2px 8px;
+        background-color: $white;
+        @include border-radius(8px);
+        @include transition(0.3s);
+      }
+    }
+    &.modal-header-prince {
+      .wrap_logo {
+        color: $black-color;
+      }
+      .user-img {
+        background-color: $blue-9;
+      }
+      .user_badge .user_name {
+        color: $black-color;
+      }
+    }
+    &.modal-header-princess {
+      .wrap_logo {
+        color: $black-color;
+      }
+      .user-img {
+        background-color: $violet-12;
+      }
+      .user_badge .user_name {
+        color: $black-color;
+      }
+    }
+  }
+}
