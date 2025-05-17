@@ -136,6 +136,7 @@
           box-shadow: none;
           outline: none;
         }
+        display: none;
       }
       #text_area_div {
         width: calc(100% - 64px);
@@ -148,10 +149,42 @@
         font-weight: 400;
         line-height: 24px; /* 150% */
         letter-spacing: 0.032px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        visibility: hidden;
-        position: absolute;
+        overflow: hidden;
+
+        max-height: 120px;
+        width: calc(100% - 52px);
+        outline: none;
+        position: relative;
+        transition: all 0.3s ease;
+        p {
+          color: $white;
+          position: relative;
+          white-space: pre-wrap;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          word-break: break-all;
+          margin: 0;
+          outline-style: none;
+          outline-width: 0;
+          height: 24px;
+          cursor: text;
+          &::before {
+            content: attr(data-placeholder);
+            cursor: text;
+            pointer-events: none;
+            color: #ffffff99;
+            position: absolute;
+          }
+          &.input-focused {
+            overflow: auto;
+            height: auto;
+            min-height: 24px;
+            max-height: 120px;
+            &::before {
+              display: none;
+            }
+          }
+        }
       }
       .btn-send-message {
         margin-bottom: 4px;

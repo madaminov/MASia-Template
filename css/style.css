@@ -24431,6 +24431,7 @@ footer.show-context-menu-user .btn-user {
   box-shadow: none;
   outline: none;
   transition: all 0.3s ease;
+  display: none;
 }
 .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -24451,10 +24452,41 @@ footer.show-context-menu-user .btn-user {
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.032px;
+  overflow: hidden;
+  max-height: 120px;
+  width: calc(100% - 52px);
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.ai-chat-modal .bottom-menu .prompt-box #text_area_div p {
+  color: #fff;
+  position: relative;
   white-space: pre-wrap;
+  text-overflow: ellipsis;
   word-wrap: break-word;
-  visibility: hidden;
+  word-break: break-all;
+  margin: 0;
+  outline-style: none;
+  outline-width: 0;
+  height: 24px;
+  cursor: text;
+}
+.ai-chat-modal .bottom-menu .prompt-box #text_area_div p::before {
+  content: attr(data-placeholder);
+  cursor: text;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.6);
   position: absolute;
+}
+.ai-chat-modal .bottom-menu .prompt-box #text_area_div p.input-focused {
+  overflow: auto;
+  height: auto;
+  min-height: 24px;
+  max-height: 120px;
+}
+.ai-chat-modal .bottom-menu .prompt-box #text_area_div p.input-focused::before {
+  display: none;
 }
 .ai-chat-modal .bottom-menu .prompt-box .btn-send-message {
   margin-bottom: 4px;

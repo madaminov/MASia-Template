@@ -100,15 +100,18 @@
 											<use href="images/icon-paper-clip.svg#icon" />
 										</svg>
 									</button>
-									<textarea name="text" onkeyup="textarea_resize(event, 15, 1);"
-										class="prompt-box-input" maxlength="2000"
+									<textarea name="text" class="prompt-box-input" maxlength="2000"
 										placeholder="Ask a question..."></textarea>
+									<div id="text_area_div">
+										<p data-placeholder="Ask a question..." onkeyup="textInput(event);"
+											onfocus="focusInElement(event)" onfocusout="focusOutElement(event)"
+											contenteditable="true"></p>
+									</div>
 									<button class="btn-send-message">
 										<svg>
 											<use href="images/icon-send.svg#send" />
 										</svg>
 									</button>
-									<div id="text_area_div"></div>
 								</div>
 								<button class="btn-microphone-gradient" id="startVoice">
 								</button>
@@ -152,6 +155,7 @@
 		document.onreadystatechange = function () {
 			fullModal.show();
 		};
+		/*
 		function textarea_resize(event, line_height, min_line_count) {
 			let min_line_height = min_line_count * line_height;
 			let obj = event.target;
@@ -165,6 +169,22 @@
 				obj_height = min_line_height;
 			obj.style.height = obj_height + 'px';
 		}
+		*/
+		function textInput(event) {
+			let objDiv = event.target;
+			objDiv.classList.add('input-focused')
+			document.querySelector('.prompt-box-input').value = objDiv.textContent;
+		}
+		function focusOutElement(event) {
+			if (event.target.textContent.length < 1) {
+				event.target.classList.remove('input-focused')
+			}
+		}
+		function focusInElement(event) {
+			event.target.classList.add('input-focused')
+		}
+
+
 		document.querySelector('.btn-file').addEventListener('click', function () {
 			let context_menu = document.querySelector('.context-menu');
 			if (context_menu.classList.contains('show')) {
