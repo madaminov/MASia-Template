@@ -22388,6 +22388,10 @@ footer.show-context-menu-user .btn-user {
   z-index: 1058;
 }
 
+.modal-z-index-step {
+  z-index: 1056;
+}
+
 .modal-kid-dashbord .modal-content {
   background-color: #f5f3f9;
 }
@@ -24431,7 +24435,6 @@ footer.show-context-menu-user .btn-user {
   box-shadow: none;
   outline: none;
   transition: all 0.3s ease;
-  display: none;
 }
 .ai-chat-modal .bottom-menu .prompt-box .prompt-box-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -24453,11 +24456,17 @@ footer.show-context-menu-user .btn-user {
   line-height: 24px; /* 150% */
   letter-spacing: 0.032px;
   overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  visibility: hidden;
+  position: absolute;
+  /*
   max-height: 120px;
   width: calc(100% - 52px);
   outline: none;
   position: relative;
   transition: all 0.3s ease;
+  */
 }
 .ai-chat-modal .bottom-menu .prompt-box #text_area_div p {
   color: #fff;
@@ -24667,7 +24676,7 @@ footer.show-context-menu-user .btn-user {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.dialog .dialog-text-ai .text:first-child {
+.dialog .dialog-text-ai .text:first-child, .dialog .dialog-text-ai .text > *:first-child {
   min-height: 40px;
   display: flex;
   align-items: center;
@@ -24683,9 +24692,22 @@ footer.show-context-menu-user .btn-user {
   line-height: 24px; /* 150% */
   letter-spacing: 0.032px;
   width: 100%;
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-.dialog .text b {
+.dialog .text * {
+  margin-bottom: 0;
+  width: 100%;
+  color: #fff;
+}
+.dialog .text b,
+.dialog .text strong {
   font-weight: 500;
+}
+.dialog .text a {
+  color: #fff;
+  text-decoration: underline;
 }
 .dialog .wrap-button {
   width: 100%;
@@ -25588,6 +25610,8 @@ footer.show-context-menu-user .btn-user {
   line-height: 20px;
   letter-spacing: 0.028px;
   margin-bottom: 0px;
+  border: none;
+  padding: 0;
 }
 
 .btn-action {

@@ -425,7 +425,9 @@
   background-color: $body-color;
   z-index: 1058;
 }
-
+.modal-z-index-step {
+  z-index: 1056;
+}
 .modal-kid-dashbord {
   .modal-content {
     background-color: $blue-11;
